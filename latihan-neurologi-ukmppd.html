@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latihan Neurologi UKMPPD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slide:#E7E9E4;
+  --surface:#FBFBF8;
+  --surface2:#F1F2ED;
+  --myelin:#1B3A6B;
+  --myelin-soft:#E2E7F0;
+  --nissl:#6E2F73;
+  --nissl-soft:#EFE4F0;
+  --ink:#16202B;
+  --muted:#666D76;
+  --line:#C9CCC4;
+  --ok:#1E6B49;
+  --ok-soft:#E1EEE7;
+  --no:#A02C28;
+  --no-soft:#F3E2E1;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--slide);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto;padding:28px 20px 80px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-0.01em}
+h1{font-size:1.75rem;line-height:1.2}
+h2{font-size:1.15rem}
+h3{font-size:.95rem}
+p{margin:0}
+button{font-family:inherit;font-size:inherit;cursor:pointer;border:none;background:none;color:inherit}
+button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible{
+  outline:2.5px solid var(--nissl);outline-offset:2px;border-radius:3px;
+}
+.hidden{display:none !important}
+
+/* ---------- masthead ---------- */
+.masthead{border-bottom:1.5px solid var(--myelin);padding-bottom:14px;margin-bottom:26px}
+.masthead h1{color:var(--myelin)}
+.masthead .sub{font-size:.875rem;color:var(--muted);margin-top:4px}
+
+/* ---------- panels ---------- */
+.panel{background:var(--surface);border:1px solid var(--line);padding:20px;margin-bottom:16px}
+.panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+.panel-head .hint{font-size:.8rem;color:var(--muted)}
+
+/* ---------- topic picker ---------- */
+.topic-tools{display:flex;gap:14px;margin-bottom:12px}
+.linkbtn{font-size:.8rem;color:var(--myelin);text-decoration:underline;text-underline-offset:3px;padding:2px 0}
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:2px}
+.topic{
+  display:flex;align-items:center;gap:9px;padding:8px 10px;
+  background:var(--surface2);border:1px solid transparent;transition:background .12s;
+}
+.topic:hover{background:var(--myelin-soft)}
+.topic input{width:16px;height:16px;accent-color:var(--myelin);margin:0;flex:none}
+.topic .nm{font-size:.875rem;flex:1;min-width:0}
+.topic .ct{font-size:.75rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.topic.on{background:var(--myelin-soft)}
+
+/* ---------- count row ---------- */
+.countrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.countrow input[type=number]{
+  width:88px;padding:9px 10px;font-family:inherit;font-size:1rem;font-variant-numeric:tabular-nums;
+  border:1px solid var(--line);background:var(--surface2);color:var(--ink);
+}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{padding:7px 13px;font-size:.82rem;border:1px solid var(--line);background:var(--surface2);color:var(--muted)}
+.chip:hover{border-color:var(--myelin);color:var(--myelin)}
+.chip.on{background:var(--myelin);border-color:var(--myelin);color:#fff}
+.pool{font-size:.82rem;color:var(--muted);margin-top:10px}
+.pool b{color:var(--ink);font-weight:600}
+.pool.warn{color:var(--no)}
+
+/* ---------- toggles ---------- */
+.toggles{display:flex;flex-direction:column}
+.tg{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.tg:first-child{border-top:none;padding-top:0}
+.tg-txt{flex:1;min-width:0}
+.tg-txt .nm{font-size:.925rem;font-weight:500}
+.tg-txt .ds{font-size:.8rem;color:var(--muted);margin-top:2px}
+.tg-sub{margin-top:8px;display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted)}
+.tg-sub input{width:66px;padding:5px 7px;font-family:inherit;font-size:.85rem;
+  border:1px solid var(--line);background:var(--surface2);color:var(--ink);font-variant-numeric:tabular-nums}
+.sw{flex:none;width:46px;height:26px;border-radius:13px;background:var(--line);position:relative;transition:background .16s;margin-top:2px}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;
+  background:var(--surface);transition:transform .16s}
+.sw.on{background:var(--myelin)}
+.sw.on::after{transform:translateX(20px)}
+
+/* ---------- primary action ---------- */
+.go{
+  width:100%;padding:16px;background:var(--myelin);color:#fff;font-size:1.05rem;font-weight:500;
+  letter-spacing:.01em;transition:background .14s;
+}
+.go:hover{background:#15305a}
+.go:disabled{background:var(--line);color:var(--muted);cursor:not-allowed}
+.go.ghost{background:transparent;color:var(--myelin);border:1.5px solid var(--myelin)}
+.go.ghost:hover{background:var(--myelin-soft)}
+
+/* ---------- quiz chrome ---------- */
+.qbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.qbar .left{display:flex;align-items:baseline;gap:10px;min-width:0}
+.qnum{font-size:.9rem;font-weight:600;font-variant-numeric:tabular-nums;color:var(--myelin)}
+.qtopic{font-size:.78rem;color:var(--nissl);background:var(--nissl-soft);padding:3px 9px;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.clock{font-size:.95rem;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:500}
+.clock.low{color:var(--no)}
+
+/* the trace */
+.trace{width:100%;height:38px;display:block;margin-bottom:16px;background:var(--surface);border:1px solid var(--line)}
+
+/* ---------- vignette ---------- */
+.vignette{
+  font-family:var(--serif);font-size:1.075rem;line-height:1.62;
+  background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--myelin);
+  padding:22px 24px;margin-bottom:14px;
+}
+@media (min-width:640px){.vignette{font-size:1.125rem}}
+
+/* ---------- options ---------- */
+.opts{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.opt{
+  display:flex;align-items:flex-start;gap:13px;padding:13px 15px;text-align:left;width:100%;
+  background:var(--surface);border:1px solid var(--line);transition:border-color .12s,background .12s;
+}
+.opt:hover:not(:disabled){border-color:var(--myelin);background:var(--myelin-soft)}
+.opt:disabled{cursor:default}
+.opt .lt{
+  flex:none;width:26px;height:26px;display:grid;place-items:center;font-size:.82rem;font-weight:600;
+  background:var(--surface2);color:var(--muted);border:1px solid var(--line);
+}
+.opt .tx{flex:1;font-size:.95rem;line-height:1.45;padding-top:2px}
+.opt.picked{border-color:var(--nissl);background:var(--nissl-soft)}
+.opt.picked .lt{background:var(--nissl);color:#fff;border-color:var(--nissl)}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.right .lt{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opt.wrong{border-color:var(--no);background:var(--no-soft)}
+.opt.wrong .lt{background:var(--no);color:#fff;border-color:var(--no)}
+
+/* ---------- feedback ---------- */
+.fb{border:1px solid var(--line);background:var(--surface);margin-bottom:16px}
+.fb-top{padding:11px 18px;font-size:.9rem;font-weight:600;color:#fff}
+.fb-top.ok{background:var(--ok)}
+.fb-top.no{background:var(--no)}
+.fb-body{padding:16px 18px}
+.fb-body .key{font-family:var(--serif);font-size:1.02rem;line-height:1.6}
+.fb-body .why{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);
+  display:flex;flex-direction:column;gap:7px}
+.why-row{display:flex;gap:10px;font-size:.855rem;line-height:1.45;color:var(--muted)}
+.why-row .lt{flex:none;width:19px;height:19px;display:grid;place-items:center;font-size:.7rem;font-weight:600;
+  background:var(--surface2);border:1px solid var(--line);margin-top:1px}
+.why-row.k{color:var(--ink)}
+.why-row.k .lt{background:var(--ok);color:#fff;border-color:var(--ok)}
+
+/* ---------- nav ---------- */
+.nav{display:flex;gap:8px;align-items:center}
+.nav .sp{flex:1}
+.nbtn{padding:12px 20px;border:1.5px solid var(--myelin);color:var(--myelin);font-weight:500;font-size:.925rem;white-space:nowrap}
+.nbtn:hover{background:var(--myelin-soft)}
+.nbtn.solid{background:var(--myelin);color:#fff}
+.nbtn.solid:hover{background:#15305a}
+.nbtn.quiet{border-color:var(--line);color:var(--muted)}
+.nbtn.quiet:hover{background:var(--surface2);color:var(--ink)}
+.nbtn:disabled{opacity:.35;cursor:not-allowed}
+.nbtn.flagged{border-color:var(--nissl);background:var(--nissl-soft);color:var(--nissl)}
+.kbdhint{font-size:.75rem;color:var(--muted);margin-top:12px;text-align:center}
+
+/* ---------- result ---------- */
+.score{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.score .big{font-size:3.1rem;font-weight:600;line-height:1;color:var(--myelin);font-variant-numeric:tabular-nums}
+.score .of{font-size:1rem;color:var(--muted)}
+.verdict{font-family:var(--serif);font-size:1.08rem;line-height:1.55;margin-top:10px}
+.meta{display:flex;gap:22px;flex-wrap:wrap;font-size:.83rem;color:var(--muted);margin-top:14px;
+  padding-top:14px;border-top:1px solid var(--line)}
+.meta b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.bars{display:flex;flex-direction:column;gap:9px}
+.bar{display:grid;grid-template-columns:1fr 46px;gap:10px;align-items:center}
+.bar .lbl{font-size:.85rem}
+.bar .track{height:7px;background:var(--surface2);border:1px solid var(--line);margin-top:5px}
+.bar .fill{height:100%;background:var(--myelin)}
+.bar .fill.mid{background:var(--nissl)}
+.bar .fill.low{background:var(--no)}
+.bar .pc{font-size:.8rem;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.rev{border-top:1px solid var(--line);padding:16px 0}
+.rev:first-of-type{border-top:none;padding-top:0}
+.rev-h{display:flex;gap:10px;align-items:baseline;margin-bottom:8px}
+.rev-h .tag{font-size:.72rem;font-weight:600;padding:2px 8px;color:#fff;flex:none}
+.rev-h .tag.ok{background:var(--ok)}
+.rev-h .tag.no{background:var(--no)}
+.rev-h .tag.sk{background:var(--muted)}
+.rev-h .n{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.rev-q{font-family:var(--serif);font-size:.98rem;line-height:1.55;margin-bottom:8px}
+.rev-a{font-size:.86rem;line-height:1.5;color:var(--muted)}
+.rev-a b{color:var(--ink);font-weight:600}
+.rev-e{font-size:.86rem;line-height:1.55;margin-top:7px;padding-left:11px;border-left:2px solid var(--line)}
+.hist{display:flex;flex-direction:column;gap:0}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 0;
+  border-top:1px solid var(--line);font-size:.85rem}
+.hrow:first-child{border-top:none}
+.hrow .dt{color:var(--muted)}
+.hrow .sc{font-weight:600;font-variant-numeric:tabular-nums}
+.empty{font-size:.87rem;color:var(--muted);line-height:1.55}
+.note{font-size:.8rem;color:var(--muted);line-height:1.5;margin-top:12px}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+@media (max-width:520px){
+  .wrap{padding:20px 14px 60px}
+  h1{font-size:1.4rem}
+  .panel{padding:16px}
+  .vignette{padding:18px 16px;font-size:1.03rem}
+  .score .big{font-size:2.5rem}
+  .nbtn{padding:11px 11px;font-size:.83rem}
+  .nav{gap:6px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1>Latihan Neurologi UKMPPD</h1>
+  <p class="sub">89 soal vignette dari materi bimbingan neurologi</p>
+</header>
+
+<!-- ============ SETUP ============ -->
+<section id="setup">
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Materi</h2>
+      <div class="topic-tools">
+        <button class="linkbtn" id="selAll">Pilih semua</button>
+        <button class="linkbtn" id="selNone">Kosongkan</button>
+      </div>
+    </div>
+    <div class="topics" id="topics"></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><h2>Jumlah soal</h2></div>
+    <div class="countrow">
+      <input type="number" id="count" min="1" max="89" value="20" aria-label="Jumlah soal per sesi">
+      <div class="chips" id="presets"></div>
+    </div>
+    <p class="pool" id="pool"></p>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Fitur</h2>
+      <span class="hint">Semua bisa dimatikan</span>
+    </div>
+    <div class="toggles" id="toggles"></div>
+  </div>
+
+  <div class="panel" id="histPanel">
+    <div class="panel-head">
+      <h2>Riwayat</h2>
+      <button class="linkbtn hidden" id="clearHist">Hapus riwayat</button>
+    </div>
+    <div id="histBody"></div>
+  </div>
+
+  <button class="go" id="start">Mulai latihan</button>
+  <button class="go ghost hidden" id="startWrong" style="margin-top:8px">Ulangi soal yang pernah salah</button>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section id="quiz" class="hidden">
+  <div class="qbar">
+    <div class="left">
+      <span class="qnum" id="qnum"></span>
+      <span class="qtopic" id="qtopic"></span>
+    </div>
+    <span class="clock" id="clock"></span>
+  </div>
+  <svg class="trace" id="trace" viewBox="0 0 1000 38" preserveAspectRatio="none" aria-hidden="true"></svg>
+  <div class="vignette" id="vignette"></div>
+  <div class="opts" id="opts"></div>
+  <div class="fb hidden" id="fb">
+    <div class="fb-top" id="fbTop"></div>
+    <div class="fb-body">
+      <p class="key" id="fbKey"></p>
+      <div class="why" id="fbWhy"></div>
+    </div>
+  </div>
+  <div class="nav">
+    <button class="nbtn quiet" id="prev">Sebelumnya</button>
+    <button class="nbtn quiet" id="flag">Tandai ragu</button>
+    <span class="sp"></span>
+    <button class="nbtn solid" id="next">Berikutnya</button>
+  </div>
+  <p class="kbdhint">Tekan 1–5 atau A–E untuk menjawab, Enter untuk lanjut</p>
+  <div style="margin-top:20px;text-align:center">
+    <button class="linkbtn" id="finish">Selesaikan sesi sekarang</button>
+  </div>
+</section>
+
+<!-- ============ RESULT ============ -->
+<section id="result" class="hidden">
+  <div class="panel">
+    <div class="score">
+      <span class="big" id="scBig"></span>
+      <span class="of" id="scOf"></span>
+    </div>
+    <p class="verdict" id="verdict"></p>
+    <div class="meta" id="scMeta"></div>
+  </div>
+  <div class="panel" id="topicPanel">
+    <div class="panel-head"><h2>Per materi</h2></div>
+    <div class="bars" id="bars"></div>
+  </div>
+  <div class="panel" id="revPanel">
+    <div class="panel-head">
+      <h2 id="revTitle">Pembahasan</h2>
+      <button class="linkbtn" id="revToggle"></button>
+    </div>
+    <div id="revBody"></div>
+  </div>
+  <button class="go" id="again">Sesi baru</button>
+  <button class="go ghost hidden" id="retryWrong" style="margin-top:8px">Ulangi soal yang salah tadi</button>
+</section>
+
+</div>
+<script>
+const BANK = [
+{i:1,t:"kepala",q:"Perempuan 32 tahun datang dengan keluhan nyeri kepala sejak 3 bulan terakhir, hampir setiap hari. Nyeri dirasakan di kedua sisi kepala, terutama daerah dahi dan belakang kepala, seperti tertekan dan diikat kencang. Nyeri tidak berdenyut, tidak disertai mual, muntah, maupun silau. Pasien mengaku sedang banyak tekanan pekerjaan. Pemeriksaan neurologis dalam batas normal. Apakah diagnosis yang paling mungkin?",
+o:["Tension type headache","Migrain dengan aura","Migrain tanpa aura","Cluster headache","Neuralgia trigeminal"],a:0,
+e:"Nyeri bilateral, kualitas tertekan/diikat, lokasi frontal dan oksipital, tanpa mual/fotofobia, dan dipicu stres adalah gambaran klasik tension type headache (TTH).",
+w:["Benar. Bilateral + rasa diikat + frontal-oksipital = TTH.","Migrain berdenyut, unilateral, dan didahului aura visual.","Migrain tanpa aura tetap unilateral dan berdenyut, biasanya disertai mual/fotofobia.","Cluster nyerinya unilateral sangat berat di orbita disertai lakrimasi dan rinorea.","Neuralgia trigeminal nyerinya singkat seperti tersetrum di wajah, dipicu sentuhan."]},
+
+{i:2,t:"kepala",q:"Laki-laki 28 tahun mengeluh nyeri kepala bilateral seperti terikat sejak pagi. Tidak ada mual, muntah, atau fotofobia. Tanda vital normal, pemeriksaan neurologis normal. Tidak ada riwayat alergi obat maupun gangguan lambung. Apakah obat pilihan utama untuk serangan akut pasien ini?",
+o:["Sumatriptan 50 mg PO","Ibuprofen","Ergotamin 2 mg PO","Verapamil 240 mg","Karbamazepin 200 mg"],a:1,
+e:"Pada TTH, tatalaksana serangan akut adalah analgetik sederhana. Ibuprofen merupakan drug of choice; alternatif lain parasetamol 1.000 mg.",
+w:["Sumatriptan adalah abortif migrain dan cluster, bukan TTH.","Benar. Ibuprofen DOC untuk serangan akut TTH; alternatif parasetamol 1.000 mg.","Ergotamin untuk serangan migrain/cluster, bukan TTH.","Verapamil adalah preventif cluster headache.","Karbamazepin untuk neuralgia trigeminal."]},
+
+{i:3,t:"kepala",q:"Perempuan 25 tahun mengeluh nyeri kepala berdenyut di sisi kanan, daerah pelipis menjalar ke belakang mata, sejak 6 jam lalu. Sebelum nyeri muncul, pasien melihat kilatan cahaya bergerigi selama sekitar 20 menit. Saat serangan pasien merasa silau dan terganggu suara bising, sehingga memilih berbaring di kamar gelap. Apakah diagnosis yang paling tepat?",
+o:["Tension type headache","Migrain dengan aura","Migrain tanpa aura","Cluster headache","Perdarahan subaraknoid"],a:1,
+e:"Nyeri unilateral berdenyut di frontotemporal dan okular, didahului aura visual, disertai fotofobia dan fonofobia = migrain klasik (dengan aura).",
+w:["TTH bilateral, seperti diikat, dan tidak berdenyut.","Benar. Adanya aura visual mendahului nyeri menegakkan migrain klasik.","Bila tanpa aura, barulah disebut migrain common. Di sini aura jelas ada.","Cluster disertai lakrimasi, mata merah, dan rinorea ipsilateral.","SAH nyerinya thunderclap sangat hebat mendadak dengan rangsang meningeal."]},
+
+{i:4,t:"kepala",q:"Perempuan 30 tahun datang dengan nyeri kepala berdenyut di sisi kiri sejak kemarin, terutama daerah pelipis dan sekitar mata. Nyeri disertai mual dan silau. Pasien menyangkal adanya gangguan penglihatan atau gejala apa pun yang mendahului nyeri. Tidak ada lakrimasi maupun hidung berair. Apakah diagnosis yang paling mungkin?",
+o:["Migrain dengan aura","Migrain tanpa aura","Cluster headache","Tension type headache","Sinusitis frontalis"],a:1,
+e:"Karakter nyeri sama dengan migrain klasik (unilateral, berdenyut, frontotemporal-okular, fotofobia) tetapi tanpa gejala aura yang mendahului, sehingga disebut migrain common atau migrain tanpa aura.",
+w:["Migrain dengan aura mensyaratkan gejala neurologis mendahului nyeri, yang di sini disangkal.","Benar. Migrain tanpa gejala pendahulu = migrain common.","Cluster wajib ada gejala otonom ipsilateral seperti lakrimasi dan rinorea.","TTH bilateral dan tidak berdenyut.","Sinusitis memberi nyeri wajah dengan sekret purulen dan nyeri ketok sinus."]},
+
+{i:5,t:"kepala",q:"Perempuan 27 tahun dengan diagnosis migrain datang saat serangan. Nyeri kepala unilateral berdenyut disertai mual. Tekanan darah 110/70 mmHg, tidak sedang hamil, tidak ada riwayat penyakit jantung. Apakah obat abortif yang paling tepat diberikan?",
+o:["Sumatriptan 25-100 mg PO","Amitriptilin 25 mg PO","Propranolol 40 mg PO","Verapamil 80 mg PO","Fenitoin 100 mg PO"],a:0,
+e:"Abortif serangan migrain adalah sumatriptan 25-100 mg PO yang dapat diulang tiap 2 jam dengan dosis maksimal 200 mg/hari. Alternatifnya ergotamin 1-2 mg/jam PO, maksimal 3 dosis dalam 24 jam.",
+w:["Benar. Sumatriptan 25-100 mg PO, maksimal 200 mg per hari.","Amitriptilin adalah terapi preventif, bukan abortif.","Propranolol juga preventif migrain, tidak menghentikan serangan yang sedang berlangsung.","Verapamil digunakan sebagai preventif cluster headache.","Fenitoin adalah antiepilepsi, tidak berperan pada migrain."]},
+
+{i:6,t:"kepala",q:"Laki-laki 35 tahun mengalami serangan migrain 5 kali dalam sebulan terakhir sehingga sering absen kerja. Saat ini pasien tidak dalam serangan dan meminta obat agar serangan lebih jarang. Tekanan darah 130/80 mmHg, nadi 78 kali/menit, tidak ada riwayat asma. Apakah terapi yang paling tepat?",
+o:["Sumatriptan","Ergotamin","Propranolol","Oksigen 100%","Ibuprofen"],a:2,
+e:"Terapi preventif migrain adalah propranolol atau amitriptilin. Obat abortif seperti triptan dan ergotamin hanya diberikan saat serangan.",
+w:["Sumatriptan hanya untuk menghentikan serangan yang sedang terjadi.","Ergotamin juga abortif, dan pemakaian rutin justru memicu medication overuse headache.","Benar. Propranolol (atau amitriptilin) adalah preventif migrain.","Oksigen adalah abortif untuk cluster headache.","Ibuprofen analgetik untuk serangan, bukan pencegahan."]},
+
+{i:7,t:"kepala",q:"Laki-laki 40 tahun datang dengan nyeri kepala hebat di sekitar mata kanan dan pelipis kanan, terasa seperti ditusuk dan mata kanan seolah terdorong keluar. Serangan terjadi setiap malam sekitar pukul 02.00 selama 1 jam, sudah berlangsung 3 minggu. Saat serangan mata kanan merah dan berair, serta hidung kanan meler. Apakah diagnosis yang paling tepat?",
+o:["Migrain dengan aura","Tension type headache","Cluster headache","Neuralgia trigeminal","Glaukoma akut"],a:2,
+e:"Nyeri unilateral orbital-temporal yang sangat berat, mata terasa terdorong keluar, disertai lakrimasi, mata merah, dan rinorea ipsilateral, dengan pola serangan berkelompok pada jam yang sama adalah cluster headache.",
+w:["Migrain tidak disertai gejala otonom mencolok seperti rinorea dan mata merah.","TTH bilateral, ringan-sedang, dan tidak episodik seperti ini.","Benar. Trias nyeri orbital hebat + gejala otonom ipsilateral + pola berkelompok.","Neuralgia trigeminal berlangsung hitungan detik dan dipicu sentuhan wajah.","Glaukoma akut memberi mata merah dengan visus turun, kornea keruh, dan pupil mid-dilatasi."]},
+
+{i:8,t:"kepala",q:"Laki-laki 38 tahun dengan riwayat cluster headache datang ke IGD saat serangan. Nyeri sangat hebat di orbita kiri, disertai lakrimasi dan rinorea. Apakah tatalaksana awal yang paling tepat diberikan di IGD?",
+o:["Oksigen","Amitriptilin","Verapamil","Karbamazepin","Prednison"],a:0,
+e:"Tatalaksana akut cluster headache adalah oksigen; alternatif abortif lain sumatriptan atau ergotamin. Verapamil dan amitriptilin adalah preventif.",
+w:["Benar. Oksigen adalah pilihan abortif cluster; alternatif sumatriptan atau ergotamin.","Amitriptilin dipakai sebagai preventif, efeknya tidak segera.","Verapamil juga preventif, bukan untuk menghentikan serangan akut.","Karbamazepin untuk neuralgia trigeminal.","Prednison adalah terapi Bell's palsy, bukan abortif cluster."]},
+
+{i:9,t:"kepala",q:"Laki-laki 42 tahun didiagnosis cluster headache. Serangan sudah mereda, namun pasien ingin mencegah serangan berikutnya karena sangat mengganggu pekerjaannya. Apakah obat preventif yang paling tepat?",
+o:["Sumatriptan","Ergotamin","Verapamil","Ibuprofen","Oksigen"],a:2,
+e:"Preventif cluster headache adalah calcium channel blocker yaitu verapamil, dapat juga amitriptilin.",
+w:["Sumatriptan hanya abortif saat serangan.","Ergotamin juga abortif.","Benar. Verapamil (CCB) adalah preventif utama cluster; alternatif amitriptilin.","Ibuprofen analgetik untuk TTH, tidak efektif mencegah cluster.","Oksigen dipakai saat serangan, bukan pencegahan."]},
+
+{i:10,t:"kepala",q:"Laki-laki 45 tahun mengalami serangan nyeri kepala orbital hebat berulang yang sudah berlangsung terus-menerus selama 2 tahun tanpa periode bebas serangan yang berarti; masa remisi terpanjang hanya sekitar 1 minggu. Apakah klasifikasi yang paling tepat untuk kasus ini?",
+o:["Cluster headache episodik","Cluster headache kronik","Migrain kronik","Tension type headache kronik","Hemikrania paroksismal"],a:1,
+e:"Cluster kronik bila serangan berlangsung lebih dari 1 tahun tanpa remisi, atau dengan remisi kurang dari 2 minggu. Cluster episodik berdurasi 7 hari sampai 1 tahun dengan remisi minimal 2 minggu.",
+w:["Episodik bila ada remisi minimal 2 minggu; di sini remisi hanya 1 minggu.","Benar. Durasi lebih dari 1 tahun dengan remisi kurang dari 2 minggu = kronik.","Nyerinya bukan tipe migrain karena disertai gejala otonom khas cluster.","TTH bilateral dan tidak disertai gejala otonom.","Hemikrania paroksismal serangannya jauh lebih singkat dan sangat responsif indometasin."]},
+
+{i:11,t:"trigeminal",q:"Perempuan 55 tahun mengeluh nyeri wajah sisi kanan sejak 4 bulan. Nyeri muncul mendadak seperti tertusuk atau tersetrum, berlangsung beberapa detik, menjalar ke daerah rahang atas dan bawah kanan. Nyeri dipicu saat menyikat gigi, mengunyah, dan minum air dingin. Di antara serangan pasien tidak merasakan keluhan. Pemeriksaan neurologis lain normal. Apakah diagnosis yang paling mungkin?",
+o:["Neuralgia trigeminal","Bell's palsy","Cluster headache","Migrain tanpa aura","Sindrom temporomandibular"],a:0,
+e:"Nyeri wajah unilateral rekuren yang singkat seperti tersetrum, mengikuti distribusi nervus trigeminus (maksila dan mandibula), dan dipicu aktivitas ringan seperti menyikat gigi atau mengunyah, adalah neuralgia trigeminal (tic douloureux).",
+w:["Benar. Pola nyeri singkat, unilateral, dengan pemicu sentuhan = neuralgia trigeminal.","Bell's palsy memberi kelemahan otot wajah, bukan nyeri tajam berulang.","Cluster nyerinya orbital, berlangsung 15-180 menit, dan disertai lakrimasi serta rinorea.","Migrain nyerinya berdenyut dan berlangsung berjam-jam.","Gangguan sendi temporomandibular disertai bunyi klik dan nyeri tekan pada sendi."]},
+
+{i:12,t:"trigeminal",q:"Perempuan 58 tahun didiagnosis neuralgia trigeminal. Fungsi ginjal dan hati baik, tidak ada riwayat alergi. Apakah tatalaksana farmakologis pilihan pertama?",
+o:["Parasetamol 1.000 mg","Karbamazepin 200 mg/hari","Sumatriptan 50 mg","Amitriptilin 25 mg","Prednison 1 mg/kgBB/hari"],a:1,
+e:"Obat pilihan pertama pada neuralgia trigeminal adalah karbamazepin 200 mg/hari. Analgetik biasa umumnya tidak efektif karena nyerinya bersifat neuropatik.",
+w:["Analgetik sederhana tidak efektif pada nyeri neuropatik.","Benar. Karbamazepin 200 mg/hari adalah lini pertama.","Sumatriptan hanya untuk migrain dan cluster.","Amitriptilin dipakai untuk preventif nyeri kepala primer, bukan lini pertama neuralgia trigeminal.","Prednison adalah terapi Bell's palsy."]},
+
+{i:13,t:"trigeminal",q:"Seorang pasien mengeluh nyeri wajah unilateral berulang yang dikenal juga dengan istilah tic douloureux. Nyeri mengikuti distribusi saraf tertentu di wajah. Nervus kranialis manakah yang terlibat?",
+o:["N. IV","N. V","N. VI","N. VII","N. IX"],a:1,
+e:"Neuralgia trigeminal, dikenal juga sebagai tic douloureux, melibatkan nervus trigeminus atau N. V, yang mempersarafi sensorik wajah termasuk cabang oftalmika, maksila, dan mandibula.",
+w:["N. IV (troklearis) mengurus otot obliqus superior mata.","Benar. Nervus trigeminus (N. V) adalah saraf sensorik wajah.","N. VI (abdusens) mengurus otot rektus lateralis.","N. VII (fasialis) adalah saraf motorik wajah, terlibat pada Bell's palsy.","N. IX (glosofaringeus) terlibat pada neuralgia glosofaringeal dengan nyeri di tenggorok."]},
+
+{i:14,t:"motorik",q:"Laki-laki 60 tahun pasca stroke. Pada pemeriksaan, tungkai kanan dapat diangkat dari tempat tidur melawan gravitasi, namun langsung jatuh ketika pemeriksa memberikan tahanan ringan. Berapakah nilai kekuatan motorik tungkai kanan pasien?",
+o:["1","2","3","4","5"],a:2,
+e:"Skala kekuatan motorik: 0 tidak ada kontraksi, 1 hanya teraba kontraksi, 2 dapat bergerak namun tidak melawan gravitasi, 3 dapat melawan gravitasi tetapi tidak melawan tahanan, 4 dapat melawan tahanan ringan, 5 kekuatan penuh. Mampu melawan gravitasi namun jatuh saat diberi tahanan = nilai 3.",
+w:["Nilai 1 berarti hanya teraba kontraksi otot tanpa gerakan sendi.","Nilai 2 berarti dapat bergerak tetapi tidak mampu melawan gravitasi.","Benar. Melawan gravitasi tetapi tidak mampu melawan tahanan = nilai 3.","Nilai 4 berarti masih mampu menahan tahanan ringan dari pemeriksa.","Nilai 5 adalah kekuatan normal penuh."]},
+
+{i:15,t:"motorik",q:"Perempuan 65 tahun dengan hemiparesis. Saat diminta menggerakkan lengan kiri, tidak tampak gerakan sama sekali pada sendi, namun pemeriksa dapat meraba adanya kontraksi otot biseps. Berapakah nilai kekuatan motorik lengan kiri?",
+o:["0","1","2","3","4"],a:1,
+e:"Teraba kontraksi otot tanpa gerakan sendi yang terlihat bernilai 1. Bila sama sekali tidak ada kontraksi, nilainya 0.",
+w:["Nilai 0 berarti lumpuh total tanpa kontraksi sama sekali, sedangkan di sini kontraksi teraba.","Benar. Hanya ada kontraksi tanpa gerakan = nilai 1.","Nilai 2 sudah ada gerakan namun tidak mampu melawan gravitasi.","Nilai 3 sudah mampu melawan gravitasi.","Nilai 4 mampu melawan tahanan ringan."]},
+
+{i:16,t:"bell",q:"Laki-laki 30 tahun bangun tidur mendapati wajah sisi kanan tidak dapat digerakkan. Pasien semalam mengendarai sepeda motor jarak jauh tanpa pelindung wajah. Pemeriksaan: dahi kanan tidak dapat berkerut, lipatan nasolabial kanan mendatar, sudut mulut jatuh ke kanan, dan mata kanan tidak dapat menutup rapat. Kekuatan motorik keempat ekstremitas normal. Apakah diagnosis yang paling mungkin?",
+o:["Stroke iskemik","Bell's palsy","Miastenia gravis","Neuralgia trigeminal","Sindrom Ramsay Hunt"],a:1,
+e:"Paralisis akut N. VII perifer unilateral dengan keterlibatan dahi (dahi tidak dapat berkerut, no forehead sparing), tanpa defisit motorik ekstremitas, khas untuk Bell's palsy yang sering dipicu paparan angin dingin lama.",
+w:["Stroke memberi lesi sentral dengan forehead sparing dan biasanya disertai hemiparesis.","Benar. Lesi N. VII perifer memotong seluruh jalur sehingga dahi ikut lumpuh.","Miastenia gravis memberi ptosis dan kelemahan yang memburuk saat aktivitas, biasanya bilateral.","Neuralgia trigeminal memberi nyeri, bukan kelemahan otot wajah.","Ramsay Hunt disertai vesikel pada liang telinga dan nyeri hebat."]},
+
+{i:17,t:"bell",q:"Laki-laki 65 tahun datang dengan kelemahan wajah sisi kiri mendadak. Pada pemeriksaan, dahi pasien masih dapat berkerut simetris, namun sudut mulut kiri jatuh. Terdapat pula kelemahan lengan dan tungkai kiri. Manakah pernyataan yang paling tepat mengenai letak lesi pasien ini?",
+o:["Lesi perifer N. VII kiri","Lesi sentral dengan forehead sparing","Lesi perifer N. V kanan","Lesi neuromuscular junction","Lesi kornu anterior medula spinalis"],a:1,
+e:"Dahi mendapat persarafan bilateral dari korteks, sehingga pada lesi sentral (misalnya stroke) dahi masih dapat berkerut atau forehead sparing, dan hanya bibir yang jatuh. Pada lesi perifer seperti Bell's palsy tidak ada forehead sparing.",
+w:["Bila lesi perifer, dahi ikut lumpuh dan tidak dapat berkerut.","Benar. Forehead sparing plus hemiparesis mengarah ke lesi sentral.","N. V adalah saraf sensorik wajah, tidak menyebabkan kelemahan otot wajah.","Gangguan neuromuscular junction memberi kelemahan fluktuatif bilateral, bukan hemiparesis mendadak.","Lesi kornu anterior memberi kelemahan tipe LMN pada ekstremitas tanpa gangguan wajah sentral."]},
+
+{i:18,t:"bell",q:"Perempuan 28 tahun, berat badan 50 kg, didiagnosis Bell's palsy sejak 1 hari yang lalu. Tidak ada kontraindikasi steroid. Apakah tatalaksana farmakologis utama yang paling tepat?",
+o:["Prednison 1 mg/kgBB/hari selama 6 hari lalu tapering","Karbamazepin 200 mg/hari","Piridostigmin 60 mg tiga kali sehari","Betahistin mesilat 6 mg tiga kali sehari","Levodopa 3 x 50 mg"],a:0,
+e:"Terapi utama Bell's palsy adalah kortikosteroid, yaitu prednison 1 mg/kgBB/hari selama 6 hari kemudian tapering off selama 10 hari. Dapat ditambahkan antiviral asiklovir 5 x 400 mg selama 10 hari.",
+w:["Benar. Prednison 1 mg/kgBB/hari 6 hari dilanjutkan tapering 10 hari.","Karbamazepin untuk neuralgia trigeminal.","Piridostigmin untuk miastenia gravis.","Betahistin untuk vertigo perifer.","Levodopa untuk penyakit Parkinson."]},
+
+{i:19,t:"bell",q:"Laki-laki 35 tahun dengan Bell's palsy dicurigai memiliki infeksi varicella zoster sebagai pemicu. Selain kortikosteroid, dokter berencana memberikan antiviral. Berapakah dosis asiklovir yang tepat pada kondisi ini?",
+o:["5 x 200 mg selama 5 hari","5 x 400 mg selama 10 hari","5 x 800 mg selama 10 hari","3 x 500 mg selama 7 hari","2 x 1.000 mg selama 14 hari"],a:2,
+e:"Pada Bell's palsy, asiklovir diberikan 5 x 400 mg selama 10 hari. Bila dicurigai varicella zoster, dosis dinaikkan menjadi 5 x 800 mg.",
+w:["Dosis ini terlalu rendah untuk indikasi ini.","Ini dosis untuk Bell's palsy tanpa kecurigaan varicella zoster.","Benar. Kecurigaan varicella zoster menaikkan dosis menjadi 5 x 800 mg.","Regimen ini bukan dosis asiklovir untuk indikasi neurologis ini.","Regimen ini juga tidak sesuai."]},
+
+{i:20,t:"bell",q:"Perempuan 40 tahun dengan Bell's palsy mengeluh mata kanannya perih dan terasa kering karena tidak dapat menutup sempurna. Selain steroid dan antiviral, apakah tatalaksana tambahan yang paling penting untuk melindungi mata pasien?",
+o:["Tetes mata antibiotik dosis tinggi","Artificial tear dan plester mata saat tidur","Tetes mata timolol","Kompres hangat berulang","Injeksi kortikosteroid intraokular"],a:1,
+e:"Lagoftalmus pada Bell's palsy berisiko menimbulkan keratitis akibat kornea yang terpapar. Perlindungan mata dengan artificial tear dan menutup mata dengan plester saat tidur adalah tatalaksana penting, di samping rehabilitasi fisik.",
+w:["Antibiotik tidak diperlukan bila belum ada infeksi.","Benar. Artificial tear plus plester mata saat tidur mencegah kerusakan kornea.","Timolol adalah obat glaukoma, tidak berperan di sini.","Kompres hangat tidak melindungi kornea dari paparan.","Injeksi intraokular tidak memiliki indikasi pada kasus ini."]},
+
+{i:21,t:"bell",q:"Saat pasien Bell's palsy diminta memejamkan mata dengan kuat, mata pada sisi yang lumpuh tidak menutup sempurna dan bola mata tampak berputar ke arah atas. Apakah nama tanda pemeriksaan ini?",
+o:["Myerson sign","Bell's phenomenon","Gower sign","Tinnel sign","Brudzinski sign"],a:1,
+e:"Bell's phenomenon adalah bola mata yang berputar ke atas saat pasien berusaha menutup mata pada sisi yang mengalami paralisis N. VII perifer.",
+w:["Myerson sign atau glabellar reflex positif ditemukan pada penyakit Parkinson.","Benar. Bola mata memutar ke atas saat menutup mata = Bell's phenomenon.","Gower sign ditemukan pada Duchenne muscular dystrophy.","Tinnel sign digunakan untuk menilai carpal tunnel syndrome.","Brudzinski sign adalah tanda rangsang meningeal."]}
+,
+{i:22,t:"stroke",q:"Laki-laki 62 tahun dibawa ke IGD karena kelemahan lengan dan tungkai kanan mendadak saat sedang menonton televisi 5 jam lalu. Pasien sadar penuh, tidak ada nyeri kepala maupun muntah. Riwayat hipertensi tidak terkontrol dan merokok. Pemeriksaan: TD 170/100 mmHg, hemiparesis kanan dengan refleks fisiologis meningkat dan refleks Babinski positif. Apakah diagnosis yang paling mungkin?",
+o:["Stroke iskemik","Stroke hemoragik intraserebral","Perdarahan subaraknoid","Tumor otak","Ensefalitis"],a:0,
+e:"Defisit neurologis akut berupa hemiparesis dengan kesadaran tetap baik, tanpa nyeri kepala hebat maupun muntah proyektil, serta adanya tanda UMN, mengarah ke stroke iskemik. Onset saat istirahat menyokong mekanisme trombus.",
+w:["Benar. Kesadaran baik tanpa nyeri kepala dan muntah khas untuk stroke iskemik.","Stroke hemoragik disertai penurunan kesadaran, nyeri kepala hebat, dan muntah proyektil.","SAH ditandai nyeri kepala hebat mendadak dengan tanda rangsang meningeal positif.","Tumor otak memberi defisit progresif perlahan, bukan mendadak.","Ensefalitis didahului demam dan penurunan kesadaran."]},
+
+{i:23,t:"stroke",q:"Perempuan 68 tahun dibawa ke IGD dengan penurunan kesadaran sejak 2 jam lalu. Sebelumnya pasien mengeluh nyeri kepala sangat hebat lalu muntah menyemprot beberapa kali. Riwayat hipertensi lama tidak terkontrol. Pemeriksaan: TD 210/120 mmHg, GCS E2M4V2, hemiparesis kiri dengan refleks patologis positif, kaku kuduk negatif. Apakah diagnosis yang paling mungkin?",
+o:["Stroke iskemik trombotik","Stroke iskemik emboli","Stroke hemoragik intraserebral","Perdarahan subaraknoid","Transient ischemic attack"],a:2,
+e:"Defisit neurologis akut disertai penurunan kesadaran, nyeri kepala hebat, dan muntah proyektil pada pasien hipertensi menunjukkan stroke hemoragik. Kaku kuduk yang negatif menyingkirkan perdarahan subaraknoid, sehingga jenisnya intraserebral.",
+w:["Stroke iskemik umumnya tidak menurunkan kesadaran dan tidak disertai muntah proyektil.","Emboli juga jenis iskemik, gambarannya tidak sesuai.","Benar. Perdarahan intraserebral: penurunan kesadaran, nyeri kepala, muntah proyektil, tanpa rangsang meningeal.","Pada SAH akan ditemukan rangsang meningeal positif.","TIA membaik total dalam 24 jam dan tidak menurunkan kesadaran."]},
+
+{i:24,t:"stroke",q:"Laki-laki 70 tahun dengan penurunan kesadaran mendadak dan nyeri kepala hebat. Pada pemeriksaan ditemukan kaku kuduk positif, tanda Kernig dan Brudzinski positif, tanpa riwayat demam. Manakah kemungkinan diagnosis yang paling tepat?",
+o:["Perdarahan intraserebral","Perdarahan subaraknoid","Stroke iskemik emboli","Meningitis bakterial","Ensefalitis viral"],a:1,
+e:"Stroke hemoragik terbagi menjadi perdarahan intraserebral yang tidak memberi rangsangan meningeal, dan perdarahan subaraknoid yang memberi rangsangan meningeal positif. Tanpa demam, rangsang meningeal positif pada onset mendadak mengarah ke perdarahan subaraknoid.",
+w:["Perdarahan intraserebral tidak memberi tanda rangsang meningeal.","Benar. Rangsang meningeal positif pada stroke hemoragik menandakan perdarahan subaraknoid.","Stroke iskemik tidak memberi rangsang meningeal.","Meningitis bakterial didahului demam tinggi.","Ensefalitis justru memberi rangsang meningeal negatif dan disertai demam."]},
+
+{i:25,t:"stroke",q:"Laki-laki 65 tahun diduga mengalami stroke. Untuk membedakan stroke iskemik dan hemoragik pada fase akut, apakah pemeriksaan penunjang baku emas yang paling tepat?",
+o:["MRI kepala tanpa kontras","Head CT scan","Elektroensefalografi","Pungsi lumbal","Angiografi serebral"],a:1,
+e:"Baku emas untuk membedakan stroke iskemik dan hemoragik adalah head CT scan. Lesi hipodens (gelap) menunjukkan iskemik, sedangkan lesi hiperdens (terang) menunjukkan perdarahan.",
+w:["MRI lebih sensitif untuk infark dini, namun baku emas dan pilihan awal pada kasus stroke akut adalah CT scan.","Benar. Head CT scan adalah baku emas dan cepat tersedia di fase akut.","EEG dipakai untuk epilepsi, bukan stroke.","Pungsi lumbal berbahaya bila ada peningkatan tekanan intrakranial.","Angiografi dipakai untuk menilai pembuluh darah, bukan pemeriksaan awal stroke."]},
+
+{i:26,t:"stroke",q:"Perempuan 60 tahun dengan hemiparesis mendadak menjalani head CT scan. Hasil menunjukkan lesi hiperdens (tampak terang/putih) di area ganglia basalis kanan. Apakah interpretasi yang paling tepat?",
+o:["Infark serebri","Perdarahan intraserebral","Edema serebri","Abses otak","Tumor metastasis"],a:1,
+e:"Pada CT scan, darah akut tampak hiperdens atau putih terang, menandakan stroke hemoragik. Sebaliknya, lesi hipodens atau gelap menunjukkan infark serebri pada stroke iskemik.",
+w:["Infark memberi gambaran hipodens (gelap), bukan hiperdens.","Benar. Lesi hiperdens = perdarahan.","Edema serebri tampak hipodens dengan efek desak ruang.","Abses tampak sebagai lesi dengan ring enhancement setelah kontras.","Metastasis biasanya multipel dengan edema perilesional, bukan hiperdens homogen akut."]},
+
+{i:27,t:"stroke",q:"Laki-laki 58 tahun datang ke IGD dengan hemiparesis kanan yang muncul 2 jam yang lalu. Head CT scan menunjukkan tidak ada perdarahan. Tidak terdapat kontraindikasi trombolisis. Apakah tatalaksana yang paling tepat?",
+o:["Manitol 0,5 g/kgBB","rt-PA intravena","Kraniotomi dekompresi","Nifedipin sublingual","Fenitoin loading dose"],a:1,
+e:"Trombolitik rt-PA diberikan pada stroke iskemik yang datang dalam jendela waktu 3 sampai 4,5 jam sejak onset dan tanpa kontraindikasi. Pasien datang 2 jam setelah onset sehingga memenuhi syarat.",
+w:["Manitol dipakai pada stroke hemoragik dengan peningkatan tekanan intrakranial.","Benar. Onset 2 jam masuk jendela terapi rt-PA.","Pembedahan adalah tatalaksana definitif stroke hemoragik, bukan iskemik akut.","Penurunan tekanan darah mendadak justru memperburuk perfusi penumbra.","Fenitoin adalah antiepilepsi, tidak ada indikasi di sini."]},
+
+{i:28,t:"stroke",q:"Laki-laki 66 tahun dengan stroke iskemik datang 12 jam setelah onset sehingga tidak memenuhi syarat trombolisis. Tekanan darah 180/95 mmHg. Apakah tatalaksana farmakologis yang paling tepat diberikan?",
+o:["rt-PA intravena","Aspirin","Manitol","Antihipertensi intravena agresif","Warfarin dosis tinggi segera"],a:1,
+e:"Bila jendela trombolisis terlewat, terapi stroke iskemik adalah antiplatelet berupa aspirin. Antihipertensi baru diberikan bila tekanan darah sistolik melebihi 220 mmHg. Neuroprotektan seperti citicolin atau pirasetam dapat ditambahkan.",
+w:["Jendela rt-PA sudah terlewat, pemberiannya justru meningkatkan risiko perdarahan.","Benar. Aspirin adalah terapi standar stroke iskemik di luar jendela trombolisis.","Manitol untuk stroke hemoragik dengan tanda peningkatan tekanan intrakranial.","Tekanan darah 180/95 mmHg belum melewati ambang 220 mmHg, penurunan agresif berbahaya.","Antikoagulan dosis tinggi segera meningkatkan risiko transformasi hemoragik."]},
+
+{i:29,t:"stroke",q:"Perempuan 72 tahun dengan perdarahan intraserebral menunjukkan tanda peningkatan tekanan intrakranial berupa penurunan kesadaran progresif, muntah proyektil, dan papiledema. Apakah terapi farmakologis yang paling tepat untuk menurunkan tekanan intrakranial?",
+o:["Aspirin","rt-PA","Manitol","Sumatriptan","Piridostigmin"],a:2,
+e:"Pada stroke hemoragik dengan peningkatan tekanan intrakranial diberikan manitol sebagai diuretik osmotik. Tatalaksana definitifnya adalah pembedahan, dan tekanan darah diturunkan sekitar 25 persen dari MAP.",
+w:["Aspirin justru memperburuk perdarahan.","rt-PA merupakan kontraindikasi mutlak pada perdarahan.","Benar. Manitol menurunkan tekanan intrakranial pada stroke hemoragik.","Sumatriptan tidak berperan pada stroke.","Piridostigmin adalah terapi miastenia gravis."]},
+
+{i:30,t:"stroke",q:"Laki-laki 55 tahun dengan hemiparesis mendadak yang timbul ketika sedang bermain bulu tangkis. Pasien memiliki riwayat fibrilasi atrium. Kesadaran baik, tidak ada nyeri kepala. Apakah mekanisme stroke yang paling mungkin?",
+o:["Trombus","Emboli","Perdarahan intraserebral","Perdarahan subaraknoid","Vaskulitis"],a:1,
+e:"Stroke iskemik emboli khas terjadi saat pasien sedang beraktivitas dan berkaitan dengan kelainan jantung seperti fibrilasi atrium. Sebaliknya, stroke trombotik cenderung terjadi saat pasien beristirahat atau bangun tidur.",
+w:["Trombus umumnya muncul saat istirahat atau saat bangun tidur.","Benar. Onset saat aktivitas dengan sumber kardiak mengarah ke emboli.","Kesadaran baik tanpa nyeri kepala menyingkirkan perdarahan.","SAH memberi nyeri kepala hebat dan rangsang meningeal.","Vaskulitis memberi gejala sistemik dan onset lebih perlahan."]},
+
+{i:31,t:"stroke",q:"Manakah pernyataan yang paling tepat mengenai definisi stroke?",
+o:["Defisit neurologis fokal yang membaik sempurna dalam 24 jam","Defisit neurologis mendadak yang berlangsung lebih dari 24 jam atau menyebabkan kematian","Nyeri kepala hebat mendadak tanpa defisit neurologis","Penurunan kesadaran akibat gangguan metabolik","Kejang berulang tanpa demam"],a:1,
+e:"Stroke adalah kumpulan gejala defisit neurologis yang terjadi mendadak dan berlangsung lebih dari 24 jam atau menyebabkan kematian. Faktor risikonya meliputi usia, hipertensi, kelainan jantung, diabetes, riwayat TIA, dan merokok.",
+w:["Ini adalah definisi transient ischemic attack, bukan stroke.","Benar. Mendadak, defisit neurologis, lebih dari 24 jam atau fatal.","Nyeri kepala saja tanpa defisit bukan definisi stroke.","Ini menggambarkan ensefalopati metabolik.","Ini adalah definisi epilepsi."]},
+
+{i:32,t:"iskemik",q:"Laki-laki 63 tahun mengalami kelemahan lengan dan tungkai kanan mendadak yang membaik sempurna dalam 6 jam. Saat diperiksa esok harinya, pemeriksaan neurologis sepenuhnya normal. Head CT scan tidak menunjukkan lesi infark. Apakah diagnosis yang paling tepat?",
+o:["Transient ischemic attack","Reversibel ischemic neurologic deficit","Stroke iskemik minor","Stroke hemoragik","Sinkop vasovagal"],a:0,
+e:"Transient ischemic attack adalah defisit neurologis akut yang membaik sempurna dalam 24 jam, akibat iskemia otak yang tidak menyebabkan infark. Bila gejala melewati 24 jam tetapi membaik dalam 72 jam, disebut RIND.",
+w:["Benar. Perbaikan sempurna dalam 24 jam tanpa infark = TIA.","RIND bila gejala melewati 24 jam namun membaik dalam 72 jam.","Stroke mensyaratkan defisit menetap lebih dari 24 jam.","Tidak ada gambaran perdarahan pada kasus ini.","Sinkop berupa hilang kesadaran sesaat, bukan defisit fokal."]},
+
+{i:33,t:"iskemik",q:"Perempuan 60 tahun mengalami hemiparesis kiri yang muncul mendadak. Gejala masih ada saat 30 jam setelah onset, namun pada jam ke-60 pasien sudah pulih sempurna tanpa gejala sisa. Apakah diagnosis yang paling tepat?",
+o:["Transient ischemic attack","Reversibel ischemic neurologic deficit","Stroke iskemik komplet","Stroke in evolution","Migrain hemiplegik"],a:1,
+e:"RIND atau reversibel ischemic neurologic deficit adalah defisit neurologis yang berlanjut melewati 24 jam tetapi membaik dalam 72 jam setelah onset, dan tidak menyebabkan infark.",
+w:["TIA membaik dalam 24 jam, sedangkan pasien ini masih bergejala di jam ke-30.","Benar. Lebih dari 24 jam namun pulih dalam 72 jam = RIND.","Stroke komplet meninggalkan defisit menetap.","Stroke in evolution adalah defisit yang justru memburuk progresif.","Migrain hemiplegik disertai nyeri kepala berdenyut khas migrain."]},
+
+{i:34,t:"iskemik",q:"Laki-laki 67 tahun mengeluh serangan pusing berputar disertai telinga berdenging, penglihatan ganda, dan beberapa kali tiba-tiba jatuh tanpa kehilangan kesadaran. Pada pemeriksaan ditemukan nistagmus. Sistem pembuluh darah manakah yang paling mungkin terlibat?",
+o:["Sistem karotis","Sistem vertebrobasiler","Arteri serebri media saja","Sinus sagitalis superior","Arteri meningea media"],a:1,
+e:"Gangguan sistem vertebrobasiler memberi gejala tinitus, vertigo, drop attack, nistagmus, diplopia, dan black out, karena memperdarahi batang otak dan serebelum. Sistem karotis tidak memberi gangguan keseimbangan.",
+w:["Sistem karotis memberi hemiparese kontralateral dan amaurosis fugax, tanpa gangguan keseimbangan.","Benar. Vertigo, tinitus, drop attack, diplopia, dan nistagmus khas vertebrobasiler.","Arteri serebri media termasuk sirkulasi anterior sistem karotis.","Trombosis sinus memberi nyeri kepala dan kejang, bukan sindrom ini.","Arteri meningea media terkait perdarahan epidural akibat trauma."]},
+
+{i:35,t:"iskemik",q:"Laki-laki 64 tahun mengalami kelemahan sesisi tubuh yang bersifat kontralateral terhadap lesi, disertai riwayat kehilangan penglihatan sesaat pada satu mata seperti tertutup tirai. Tidak ada vertigo maupun gangguan keseimbangan. Sistem manakah yang paling mungkin terganggu?",
+o:["Sistem karotis","Sistem vertebrobasiler","Medula spinalis servikal","Pleksus brakialis","Nervus optikus perifer murni"],a:0,
+e:"Sistem karotis memberi hemiparese kontralateral dan amaurosis fugax, dengan gangguan bahasa berupa disartria. Ciri pembeda utamanya adalah tidak adanya gangguan keseimbangan seperti vertigo, tinitus, dan drop attack yang khas pada vertebrobasiler.",
+w:["Benar. Hemiparese kontralateral plus amaurosis fugax tanpa gangguan keseimbangan.","Vertebrobasiler memberi hemiparese alternans disertai vertigo dan nistagmus.","Lesi medula spinalis servikal tidak menyebabkan gangguan penglihatan.","Lesi pleksus brakialis terbatas pada satu ekstremitas atas.","Lesi nervus optikus saja tidak menimbulkan hemiparese."]},
+
+{i:36,t:"iskemik",q:"Pada gangguan sistem vertebrobasiler, pola kelumpuhan yang khas ditemukan adalah kelemahan nervus kranialis pada satu sisi disertai kelemahan ekstremitas pada sisi berlawanan. Apakah istilah untuk pola kelumpuhan ini?",
+o:["Hemiparese kontralateral","Hemiparese alternans","Paraparese inferior","Tetraparese flasid","Monoparese"],a:1,
+e:"Hemiparese alternans adalah ciri khas lesi batang otak pada sistem vertebrobasiler, sedangkan sistem karotis memberi hemiparese kontralateral biasa.",
+w:["Hemiparese kontralateral adalah pola pada gangguan sistem karotis.","Benar. Hemiparese alternans khas untuk sistem vertebrobasiler.","Paraparese inferior menandakan lesi medula spinalis torakolumbal.","Tetraparese flasid ditemukan pada lesi servikal tinggi atau GBS.","Monoparese hanya mengenai satu ekstremitas."]},
+
+{i:37,t:"vertigo",q:"Perempuan 45 tahun mengeluh pusing berputar hebat yang muncul mendadak saat berguling di tempat tidur dan saat menoleh ke kanan. Serangan berlangsung kurang dari 1 menit, disertai mual. Tidak ada gangguan pendengaran maupun telinga berdenging. Pemeriksaan neurologis fokal normal. Apakah diagnosis yang paling mungkin?",
+o:["Benign paroxysmal positional vertigo","Meniere disease","Labirinitis","Vertigo sentral","Motion sickness"],a:0,
+e:"BPPV disebabkan kanalit di dalam kanalis semisirkularis dan memberi vertigo episodik singkat yang dipicu perubahan posisi kepala, tanpa gangguan pendengaran.",
+w:["Benar. Vertigo dipicu perubahan posisi tanpa gangguan pendengaran = BPPV.","Meniere memberi trias vertigo, tinitus, dan penurunan pendengaran.","Labirinitis didahului riwayat OMSK dan tanda infeksi seperti demam.","Vertigo sentral terasa melayang, kontinu, dan dapat disertai defisit neurologis fokal.","Motion sickness muncul saat perjalanan, bukan saat berguling di tempat tidur."]},
+
+{i:38,t:"vertigo",q:"Perempuan 45 tahun dengan vertigo yang dipicu perubahan posisi kepala. Dokter ingin memastikan diagnosis dengan pemeriksaan provokasi posisi. Apakah pemeriksaan penunjang yang paling tepat?",
+o:["Manuver Dix-Hallpike","Manuver Epley","Manuver Brandt-Daroff","Tes Romberg","Tes Tensilon"],a:0,
+e:"Manuver Dix-Hallpike digunakan untuk menegakkan diagnosis BPPV. Manuver Epley dan Semont adalah terapi yang dilakukan dokter, sedangkan Brandt-Daroff dilakukan sendiri oleh pasien di rumah.",
+w:["Benar. Dix-Hallpike adalah manuver diagnostik BPPV.","Epley adalah manuver terapi reposisi kanalit oleh dokter.","Brandt-Daroff adalah latihan terapi yang dikerjakan pasien sendiri.","Romberg menilai keseimbangan, tidak spesifik untuk BPPV.","Tes Tensilon untuk miastenia gravis."]},
+
+{i:39,t:"vertigo",q:"Perempuan 48 tahun terdiagnosis BPPV. Dokter ingin mengajarkan latihan yang dapat dikerjakan sendiri oleh pasien di rumah untuk mengurangi keluhan. Apakah manuver yang paling tepat diajarkan?",
+o:["Manuver Epley","Manuver Semont","Manuver Brandt-Daroff","Manuver Dix-Hallpike","Manuver Valsalva"],a:2,
+e:"Manuver Brandt-Daroff adalah latihan yang dilakukan sendiri oleh pasien di rumah. Manuver Epley dan Semont dilakukan oleh dokter, sedangkan Dix-Hallpike adalah manuver diagnostik.",
+w:["Epley dikerjakan oleh dokter, bukan pasien sendiri.","Semont juga dikerjakan oleh dokter.","Benar. Brandt-Daroff adalah latihan mandiri pasien.","Dix-Hallpike adalah pemeriksaan diagnostik.","Valsalva tidak digunakan sebagai terapi BPPV."]},
+
+{i:40,t:"vertigo",q:"Perempuan 50 tahun mengeluh serangan pusing berputar berulang yang berlangsung beberapa jam, disertai telinga kiri berdenging dan pendengaran telinga kiri makin menurun setiap serangan. Apakah diagnosis dan mekanisme yang paling tepat?",
+o:["BPPV akibat kanalit di kanalis semisirkularis","Meniere disease akibat penumpukan cairan endolimfe","Labirinitis akibat infeksi bakteri","Neuroma akustik akibat tumor N. VIII","Vertigo sentral akibat infark serebelum"],a:1,
+e:"Meniere disease disebabkan oleh terlalu banyak cairan endolimfe di dalam kanalis semisirkularis dan memberi trias vertigo, tinitus, serta penurunan pendengaran.",
+w:["BPPV tidak menimbulkan tinitus maupun penurunan pendengaran.","Benar. Trias vertigo, tinitus, dan tuli = Meniere akibat hidrops endolimfe.","Labirinitis didahului riwayat OMSK dan tanda infeksi.","Neuroma akustik memberi gejala progresif menetap, bukan serangan episodik berulang.","Vertigo sentral memberi nistagmus vertikal dan defisit neurologis fokal."]},
+
+{i:41,t:"vertigo",q:"Perempuan 52 tahun dengan Meniere disease datang saat serangan vertigo hebat disertai mual muntah. Selain betahistin mesilat dan dimenhidrinat, apakah obat yang dapat diberikan untuk mengatasi serangan akut?",
+o:["Diazepam","Levodopa","Karbamazepin","Piridostigmin","Manitol"],a:0,
+e:"Pada serangan akut Meniere dapat diberikan diazepam sebagai supresan vestibular. Untuk pencegahan digunakan HCT dan steroid.",
+w:["Benar. Diazepam diberikan saat serangan akut Meniere.","Levodopa untuk Parkinson.","Karbamazepin untuk neuralgia trigeminal dan epilepsi parsial.","Piridostigmin untuk miastenia gravis.","Manitol untuk peningkatan tekanan intrakranial."]},
+
+{i:42,t:"vertigo",q:"Laki-laki 40 tahun mengeluh pusing berputar hebat sejak 2 hari disertai demam. Pasien memiliki riwayat keluar cairan dari telinga kanan berulang sejak kecil dan pendengaran telinga kanan menurun. Pemeriksaan laboratorium menunjukkan leukositosis. Apakah diagnosis yang paling mungkin dan pemeriksaan baku emasnya?",
+o:["BPPV, dengan Dix-Hallpike","Meniere disease, dengan audiometri","Labirinitis, dengan MRI dengan kontras","Motion sickness, dengan anamnesis","Neuritis vestibular, dengan EEG"],a:2,
+e:"Riwayat tuli konduktif akibat OMSK yang disertai tanda infeksi seperti demam dan leukositosis mengarah ke labirinitis. Baku emasnya adalah MRI dengan kontras, dan tatalaksananya meklizin ditambah steroid.",
+w:["BPPV tidak disertai demam maupun riwayat infeksi telinga.","Meniere tidak disertai demam dan leukositosis.","Benar. OMSK plus tanda infeksi = labirinitis, baku emas MRI dengan kontras.","Motion sickness hanya muncul saat perjalanan dan tidak disertai demam.","EEG tidak berperan dalam evaluasi vertigo perifer."]},
+
+{i:43,t:"vertigo",q:"Laki-laki 55 tahun mengeluh rasa melayang dan kehilangan keseimbangan yang berlangsung terus-menerus sejak 3 hari. Keluhan tidak disertai mual muntah berarti. Pemeriksaan menunjukkan nistagmus vertikal, tes Romberg positif, dan tes tunjuk hidung terganggu. Apakah diagnosis yang paling mungkin?",
+o:["BPPV","Meniere disease","Labirinitis","Vertigo sentral","Motion sickness"],a:3,
+e:"Vertigo sentral berasal dari batang otak, serebelum, atau serebrum. Cirinya rasa melayang atau kehilangan keseimbangan, serangan kontinu, jarang disertai mual muntah, nistagmus vertikal, serta Romberg dan finger to nose yang terganggu. Vertigo perifer sebaliknya terasa berputar, episodik, sering mual muntah, dan nistagmusnya horizontal.",
+w:["BPPV episodik, singkat, dan nistagmusnya horizontal.","Meniere disertai tinitus dan tuli, dengan nistagmus horizontal.","Labirinitis termasuk vertigo perifer dan disertai tanda infeksi.","Benar. Nistagmus vertikal plus gangguan serebelar mengarah ke vertigo sentral.","Motion sickness hanya terjadi saat perjalanan."]},
+
+{i:44,t:"vertigo",q:"Seorang anak 10 tahun selalu mengeluh pusing berputar dan mual setiap kali bepergian dengan mobil dalam perjalanan jauh. Keluhan menghilang setelah tiba di tujuan. Apakah tatalaksana yang paling tepat?",
+o:["Dimenhidrinat","Karbamazepin","Piridostigmin","Levodopa","Manitol"],a:0,
+e:"Motion sickness atau mabuk perjalanan ditatalaksana dengan dimenhidrinat.",
+w:["Benar. Dimenhidrinat adalah pilihan untuk motion sickness.","Karbamazepin untuk neuralgia trigeminal dan epilepsi.","Piridostigmin untuk miastenia gravis.","Levodopa untuk Parkinson.","Manitol untuk menurunkan tekanan intrakranial."]}
+,
+{i:45,t:"parkinson",q:"Laki-laki 68 tahun dibawa keluarganya karena tangan kanan bergetar sejak 1 tahun, terutama saat istirahat, dengan pola seperti sedang menghitung uang koin. Gerakan pasien makin lambat, langkah kecil-kecil, dan tubuh terasa kaku. Pemeriksaan menunjukkan rigiditas dengan fenomena roda gigi dan refleks glabela positif. Apakah diagnosis yang paling mungkin?",
+o:["Penyakit Parkinson","Tremor esensial","Stroke lakunar","Huntington disease","Miastenia gravis"],a:0,
+e:"Penyakit Parkinson adalah degenerasi ganglia basalis terutama substansia nigra pars kompakta disertai Lewy bodies, sehingga kadar dopamin menurun. Gejalanya TRAP: tremor pill rolling, rigiditas cogwheel, akinesia atau bradikinesia, dan instabilitas postural, dengan Myerson sign positif.",
+w:["Benar. TRAP lengkap dengan pill rolling tremor dan glabellar reflex positif.","Tremor esensial muncul saat gerakan, bukan saat istirahat, dan tidak ada rigiditas.","Stroke lakunar memberi defisit mendadak, bukan progresif menahun.","Huntington memberi gerakan korea, bukan bradikinesia dan rigiditas.","Miastenia gravis memberi kelemahan fluktuatif tanpa tremor."]},
+
+{i:46,t:"parkinson",q:"Pada pasien dengan kecurigaan penyakit Parkinson, dokter melakukan ketukan berulang pada daerah glabela dan mendapati pasien terus berkedip tanpa habituasi. Apakah nama tanda ini?",
+o:["Bell's phenomenon","Myerson sign","Gower sign","Kernig sign","Lasegue sign"],a:1,
+e:"Glabellar reflex atau Myerson sign yang positif merupakan tanda pemeriksaan pada penyakit Parkinson.",
+w:["Bell's phenomenon ditemukan pada Bell's palsy.","Benar. Glabellar reflex atau Myerson sign positif pada Parkinson.","Gower sign ditemukan pada Duchenne muscular dystrophy.","Kernig adalah tanda rangsang meningeal.","Lasegue digunakan untuk menilai HNP lumbal."]},
+
+{i:47,t:"parkinson",q:"Laki-laki 70 tahun dengan penyakit Parkinson. Pemeriksaan menunjukkan gejala sudah bilateral, terdapat gangguan postur dan cara berjalan, namun kecacatan masih ringan dan pasien masih mandiri. Apakah stadium Hoehn dan Yahr yang tepat?",
+o:["Grade I","Grade II","Grade III","Grade IV","Grade V"],a:1,
+e:"Stadium Hoehn dan Yahr: Grade I mengenai satu sisi tanpa cacat; Grade II bilateral dengan cacat ringan disertai gangguan postur dan gait; Grade III tubuh melambat dengan gangguan keseimbangan saat berjalan; Grade IV gejala berat dan tidak mampu hidup sendiri; Grade V stadium kaheksia dengan invalid total.",
+w:["Grade I hanya mengenai satu sisi tanpa kecacatan.","Benar. Bilateral, cacat ringan, gangguan postur dan gait = Grade II.","Grade III sudah disertai gangguan keseimbangan saat berjalan.","Grade IV pasien tidak mampu hidup sendiri.","Grade V pasien tidak dapat berdiri maupun berjalan dan harus selalu dirawat."]},
+
+{i:48,t:"parkinson",q:"Laki-laki 66 tahun didiagnosis penyakit Parkinson dan akan dimulai terapi farmakologis. Apakah regimen yang paling tepat?",
+o:["Levodopa 3 x 50 mg ditambah benserazid 3 x 12,5 mg","Haloperidol 2 x 5 mg","Amitriptilin 25 mg malam hari","Piridostigmin 3 x 60 mg","Karbamazepin 2 x 200 mg"],a:0,
+e:"Tatalaksana penyakit Parkinson adalah levodopa 3 x 50 mg dikombinasi benserazid 3 x 12,5 mg. Perlu dibedakan dengan sindrom Parkinson yang etiologinya penggunaan obat antipsikotik atau stroke.",
+w:["Benar. Levodopa plus benserazid adalah terapi standar.","Haloperidol adalah antipsikotik yang justru menyebabkan sindrom Parkinson.","Amitriptilin adalah antidepresan trisiklik, bukan terapi Parkinson.","Piridostigmin untuk miastenia gravis.","Karbamazepin untuk epilepsi dan neuralgia trigeminal."]},
+
+{i:49,t:"parkinson",q:"Laki-laki 45 tahun dengan skizofrenia yang rutin mengonsumsi antipsikotik selama 1 tahun kini mengalami tremor, rigiditas, dan gerakan yang melambat. Apakah diagnosis yang paling tepat?",
+o:["Penyakit Parkinson idiopatik","Sindrom Parkinson akibat obat","Tremor esensial","Distonia akut","Diskinesia tardif"],a:1,
+e:"Sindrom Parkinson memiliki gejala menyerupai penyakit Parkinson tetapi etiologinya diketahui, misalnya penggunaan obat antipsikotik atau stroke. Ini berbeda dengan penyakit Parkinson idiopatik yang disebabkan degenerasi substansia nigra dengan Lewy bodies.",
+w:["Penyakit Parkinson idiopatik tidak memiliki penyebab yang dapat diidentifikasi.","Benar. Gejala parkinsonian dengan pemicu antipsikotik = sindrom Parkinson.","Tremor esensial hanya berupa tremor saat gerakan tanpa rigiditas.","Distonia akut muncul dalam jam sampai hari sebagai kontraksi otot tonik mendadak.","Diskinesia tardif berupa gerakan involunter orofasial, bukan bradikinesia."]},
+
+{i:50,t:"nmj",q:"Perempuan 32 tahun mengeluh kelopak mata terasa berat dan turun, terutama menjelang sore hari setelah beraktivitas. Keluhan membaik setelah pasien beristirahat. Pasien juga mengeluh suara menjadi sengau bila berbicara terlalu lama. Kekuatan motorik ekstremitas awalnya normal namun menurun setelah gerakan berulang. Apakah diagnosis yang paling mungkin?",
+o:["Miastenia gravis","Guillain Barre syndrome","Poliomielitis","Bell's palsy bilateral","Duchenne muscular dystrophy"],a:0,
+e:"Miastenia gravis adalah defek neuromuscular junction akibat proses autoimun. Cirinya kelemahan pada otot yang sering digunakan, memburuk saat aktivitas dan membaik dengan istirahat, dengan otot kelopak mata paling sering terkena.",
+w:["Benar. Kelemahan fluktuatif yang memburuk dengan aktivitas khas miastenia gravis.","GBS memberi kelumpuhan bilateral ascending yang progresif, bukan fluktuatif.","Poliomielitis memberi kelumpuhan disertai demam dan bersifat asimetris.","Bell's palsy memberi paralisis wajah menetap, bukan fluktuatif.","DMD adalah kelainan genetik pada anak dengan kelemahan otot proksimal progresif."]},
+
+{i:51,t:"nmj",q:"Perempuan 30 tahun dicurigai miastenia gravis. Dokter melakukan beberapa uji di poliklinik. Manakah pemeriksaan yang paling sesuai untuk menunjang diagnosis?",
+o:["Tes Tensilon atau edrofonium","Pungsi lumbal","Manuver Dix-Hallpike","Elektroensefalografi","Tes Patrick"],a:0,
+e:"Pemeriksaan penunjang miastenia gravis meliputi tes Wartenberg, tes pita suara, tes Tensilon atau edrofonium, dan ice test yang positif.",
+w:["Benar. Tes Tensilon (edrofonium) adalah uji penunjang miastenia gravis.","Pungsi lumbal adalah baku emas GBS, bukan miastenia gravis.","Dix-Hallpike untuk BPPV.","EEG untuk epilepsi.","Tes Patrick untuk menilai sendi sakroiliaka pada nyeri punggung bawah."]},
+
+{i:52,t:"nmj",q:"Perempuan 35 tahun terdiagnosis miastenia gravis dengan gejala ptosis dan kelemahan otot yang memburuk saat aktivitas. Apakah tatalaksana lini pertama yang paling tepat?",
+o:["Intravena immunoglobulin","Piridostigmin","Levodopa","Prednison 1 mg/kgBB selama 6 hari","Asiklovir 5 x 400 mg"],a:1,
+e:"Tatalaksana miastenia gravis adalah asetilkolinesterase inhibitor seperti piridostigmin atau neostigmin, yang meningkatkan ketersediaan asetilkolin di celah sinaps.",
+w:["IVIG adalah terapi Guillain Barre syndrome.","Benar. Piridostigmin atau neostigmin sebagai asetilkolinesterase inhibitor.","Levodopa untuk Parkinson.","Regimen prednison itu adalah terapi Bell's palsy.","Asiklovir adalah antiviral, bukan terapi miastenia gravis."]},
+
+{i:53,t:"nmj",q:"Laki-laki 25 tahun datang dengan kelemahan kedua tungkai sejak 3 hari yang kini menjalar ke kedua lengan. Dua minggu lalu pasien mengalami diare. Pemeriksaan: kelemahan simetris keempat ekstremitas dengan refleks fisiologis menurun, tidak ada gangguan sensorik berat. Apakah diagnosis dan organisme pencetus yang paling mungkin?",
+o:["Guillain Barre syndrome, Campylobacter jejuni","Miastenia gravis, Epstein Barr virus","Poliomielitis, virus polio","Botulisme, Clostridium botulinum","Mielitis transversa, Mycoplasma"],a:0,
+e:"Guillain Barre syndrome adalah demielinisasi saraf tepi akibat proses autoimun, sering didahului riwayat ISPA yang berkaitan dengan EBV atau riwayat diare yang berkaitan dengan Campylobacter jejuni. Kelumpuhannya bilateral dan ascending.",
+w:["Benar. Kelumpuhan ascending bilateral pasca diare mengarah ke GBS akibat C. jejuni.","Miastenia gravis tidak memberi kelumpuhan ascending progresif seperti ini.","Poliomielitis memberi kelumpuhan asimetris dengan demam.","Botulisme memberi kelumpuhan descending, bukan ascending.","Mielitis transversa memberi batas sensorik setinggi lesi yang jelas."]},
+
+{i:54,t:"nmj",q:"Laki-laki 27 tahun dengan kecurigaan Guillain Barre syndrome. Apakah pemeriksaan baku emas dan gambaran khas yang diharapkan?",
+o:["EEG dengan gelombang paku ombak","Pungsi lumbal dengan disosiasi sitoalbumin","CT scan kepala dengan lesi hipodens","Biopsi otot dengan degenerasi serat otot","Tes Tensilon yang positif"],a:1,
+e:"Baku emas GBS adalah pungsi lumbal yang menunjukkan disosiasi sitoalbumin, yaitu protein meningkat tanpa peningkatan jumlah sel. Pemeriksaan penunjang lain adalah EMG dan NCV.",
+w:["EEG dipakai pada epilepsi.","Benar. Disosiasi sitoalbumin dengan protein meningkat adalah baku emas GBS.","CT kepala normal pada GBS karena lesinya di saraf tepi.","Biopsi otot dipakai pada distrofi otot.","Tes Tensilon untuk miastenia gravis."]},
+
+{i:55,t:"nmj",q:"Laki-laki 28 tahun dengan Guillain Barre syndrome mengalami sesak napas berat. Pemeriksaan menunjukkan gerakan napas dangkal dan pasien tidak mampu menyelesaikan satu kalimat penuh. Apakah komplikasi yang terjadi dan tindakan paling utama?",
+o:["Paralisis diafragma, dilakukan intubasi trakea","Bronkospasme, diberikan salbutamol nebulisasi","Edema paru, diberikan furosemid","Emboli paru, diberikan heparin","Pneumotoraks, dilakukan needle decompression"],a:0,
+e:"Komplikasi utama GBS adalah paralisis diafragma yang menyebabkan gagal napas. Bila terjadi gagal napas, dilakukan intubasi trakea. Terapi definitif GBS adalah IVIG atau plasmaferesis.",
+w:["Benar. Paralisis diafragma menyebabkan gagal napas dan memerlukan intubasi.","Tidak ada gambaran obstruksi jalan napas bawah pada kasus ini.","Tidak ada tanda kelebihan cairan.","Tidak ada gambaran nyeri dada pleuritik mendadak dengan hipoksia berat.","Tidak ada tanda pneumotoraks seperti hipersonor dan deviasi trakea."]},
+
+{i:56,t:"nmj",q:"Perempuan 29 tahun dengan Guillain Barre syndrome dirawat di rumah sakit dengan kelumpuhan ascending yang progresif. Apakah tatalaksana definitif yang paling tepat?",
+o:["Piridostigmin oral","Intravena immunoglobulin atau plasmaferesis","Levodopa dan benserazid","Karbamazepin dosis tinggi","Manitol intravena"],a:1,
+e:"Tatalaksana GBS adalah IVIG atau plasmaferesis, dapat ditambah kortikosteroid, serta intubasi trakea bila terjadi gagal napas.",
+w:["Piridostigmin adalah terapi miastenia gravis.","Benar. IVIG atau plasmaferesis adalah terapi definitif GBS.","Levodopa untuk Parkinson.","Karbamazepin tidak berperan pada GBS.","Manitol untuk peningkatan tekanan intrakranial."]},
+
+{i:57,t:"polio",q:"Anak laki-laki 5 tahun dibawa dengan demam sejak 4 hari, diikuti kelemahan kedua tungkai yang menjalar ke atas. Riwayat imunisasi tidak lengkap. Pemeriksaan menunjukkan kelemahan tipe flasid dengan refleks menurun. Diketahui penularannya melalui jalur fekal-oral. Struktur manakah yang mengalami kerusakan?",
+o:["Kornu anterior medula spinalis","Selubung mielin saraf tepi","Neuromuscular junction","Substansia nigra","Selaput meningen"],a:0,
+e:"Poliomielitis adalah infeksi virus polio yang menular secara fekal-oral dan menghancurkan sel neuron di kornu anterior medula spinalis, menyebabkan demam dan kelumpuhan ascending. Tatalaksananya suportif berupa tirah baring, steroid, dan fisioterapi.",
+w:["Benar. Virus polio merusak sel neuron kornu anterior medula spinalis.","Demielinisasi saraf tepi terjadi pada GBS.","Gangguan neuromuscular junction terjadi pada miastenia gravis.","Substansia nigra terkena pada penyakit Parkinson.","Selaput meningen meradang pada meningitis."]},
+
+{i:58,t:"polio",q:"Anak 6 tahun didiagnosis poliomielitis dengan kelumpuhan tungkai. Apakah tatalaksana yang paling tepat?",
+o:["Antiviral asiklovir dosis tinggi","Suportif berupa tirah baring, steroid, dan fisioterapi","Antibiotik seftriakson intravena","Plasmaferesis segera","Piridostigmin oral"],a:1,
+e:"Tidak ada terapi antiviral spesifik untuk poliomielitis. Tatalaksananya bersifat suportif berupa tirah baring, steroid, dan fisioterapi.",
+w:["Asiklovir tidak efektif terhadap virus polio.","Benar. Terapi poliomielitis bersifat suportif.","Antibiotik tidak berperan pada infeksi virus.","Plasmaferesis adalah terapi GBS.","Piridostigmin adalah terapi miastenia gravis."]},
+
+{i:59,t:"meningitis",q:"Laki-laki 25 tahun dibawa dengan demam tinggi sejak 2 hari, nyeri kepala hebat, dan kejang satu kali. Pemeriksaan menunjukkan kaku kuduk positif, Kernig positif, serta Brudzinski I dan II positif. Kesadaran somnolen. Apakah diagnosis yang paling mungkin?",
+o:["Meningitis","Ensefalitis","Stroke hemoragik","Abses serebri","Epilepsi umum"],a:0,
+e:"Meningitis adalah peradangan pada selaput otak dengan gejala demam tinggi, nyeri kepala, dan kejang, disertai tanda rangsangan meningeal positif seperti kaku kuduk, Kernig, dan Brudzinski.",
+w:["Benar. Rangsang meningeal positif dengan demam mengarah ke meningitis.","Ensefalitis justru memberi rangsang meningeal negatif dengan refleks patologis positif.","Stroke hemoragik tidak didahului demam.","Abses serebri memberi defisit fokal progresif dengan lesi ring enhancement.","Epilepsi umum tidak disertai demam dan rangsang meningeal."]},
+
+{i:60,t:"meningitis",q:"Perempuan 30 tahun datang dengan demam dan nyeri kepala sejak 3 hari, disertai kejang dan penurunan kesadaran. Pemeriksaan menunjukkan tanda rangsangan meningeal negatif, namun refleks patologis positif. Apakah diagnosis dan etiologi tersering yang paling mungkin?",
+o:["Meningitis, Streptococcus pneumoniae","Ensefalitis, virus","Meningitis, Neisseria meningitidis","Abses otak, Staphylococcus aureus","Meningitis TB, Mycobacterium tuberculosis"],a:1,
+e:"Ensefalitis adalah peradangan pada jaringan parenkim otak, paling sering disebabkan virus. Cirinya demam, nyeri kepala, kejang, dan penurunan kesadaran, dengan rangsang meningeal negatif dan refleks patologis positif.",
+w:["Meningitis memberi rangsang meningeal positif, yang di sini negatif.","Benar. Rangsang meningeal negatif dengan refleks patologis positif = ensefalitis viral.","Sama seperti pilihan pertama, meningitis memberi rangsang meningeal positif.","Abses otak memberi defisit fokal dengan lesi desak ruang.","Meningitis TB perjalanannya subakut dengan rangsang meningeal positif."]},
+
+{i:61,t:"meningitis",q:"Laki-laki 40 tahun dengan kecurigaan meningitis menjalani pungsi lumbal. Hasil: cairan serebrospinal keruh dan opalesen, glukosa menurun, protein meningkat, dengan jumlah sel 4.500 didominasi sel polimorfonuklear. Apakah etiologi yang paling mungkin?",
+o:["Bakteri","Tuberkulosis","Virus","Jamur Cryptococcus","Parasit"],a:0,
+e:"Karakteristik LCS bakterial adalah warna keruh dan opalesen, glukosa menurun, protein meningkat, dengan sel PMN 1.000 sampai 10.000. LCS TB berwarna xantokrom dengan sel MN 200 sampai 500, sedangkan LCS viral jernih dengan sel MN 50 sampai 100 serta glukosa dan protein normal.",
+w:["Benar. Keruh, glukosa turun, protein naik, PMN dominan = meningitis bakterial.","Meningitis TB memberi cairan xantokrom dengan dominasi sel mononuklear.","Meningitis viral memberi cairan jernih dengan glukosa dan protein normal.","Meningitis kriptokokus umumnya pada pasien imunokompromais dengan gambaran mononuklear.","Meningitis parasit tidak memberi profil PMN sebesar ini."]},
+
+{i:62,t:"meningitis",q:"Perempuan 35 tahun dengan nyeri kepala dan demam subfebris sejak 3 minggu, disertai penurunan berat badan. Hasil pungsi lumbal: cairan xantokrom, glukosa menurun, protein meningkat, jumlah sel 300 didominasi mononuklear. Apakah tatalaksana yang paling tepat?",
+o:["Seftriakson 4 gram per hari selama 2-3 minggu","Obat anti tuberkulosis selama 9-12 bulan disertai injeksi deksametason","Asiklovir 10 mg/kgBB IV setiap 8 jam selama 14-21 hari","Amfoterisin B ditambah flusitosin","Sefotaksim 12 gram per hari selama 1 minggu"],a:1,
+e:"Gambaran LCS xantokrom dengan glukosa menurun, protein meningkat, dan sel mononuklear 200 sampai 500 adalah khas meningitis TB. Tatalaksananya OAT selama 9 sampai 12 bulan ditambah injeksi deksametason.",
+w:["Seftriakson adalah terapi meningitis bakterial akut.","Benar. Profil LCS ini khas TB, terapinya OAT 9-12 bulan plus deksametason.","Asiklovir adalah terapi ensefalitis viral.","Amfoterisin B plus flusitosin adalah terapi meningitis kriptokokus atau kandida.","Sefotaksim juga untuk meningitis bakterial, dan durasinya bukan 1 minggu."]},
+
+{i:63,t:"meningitis",q:"Laki-laki 45 tahun dengan meningitis bakterial akan mendapat terapi antibiotik empiris. Apakah regimen dan durasi yang paling tepat sesuai etiologi tersering?",
+o:["Seftriakson 4 gram dalam 2-3 dosis selama 2-3 minggu","Asiklovir 10 mg/kgBB setiap 8 jam selama 14 hari","OAT selama 9 bulan","Flukonazol oral selama 6 minggu","Metronidazol intravena selama 10 hari"],a:0,
+e:"Etiologi tersering meningitis bakterial adalah Streptococcus pneumoniae atau Neisseria meningitidis. Terapinya seftriakson 4 gram dibagi 2 sampai 3 dosis, atau sefotaksim 12 gram, selama 2 sampai 3 minggu.",
+w:["Benar. Seftriakson 4 gram per hari selama 2-3 minggu.","Asiklovir untuk ensefalitis viral.","OAT untuk meningitis TB.","Flukonazol untuk meningitis fungal.","Metronidazol menyasar anaerob, bukan patogen tersering meningitis."]},
+
+{i:64,t:"meningitis",q:"Laki-laki 38 tahun dengan HIV stadium lanjut datang dengan nyeri kepala kronik dan demam. Pemeriksaan cairan serebrospinal menunjukkan infeksi Cryptococcus. Apakah tatalaksana yang paling tepat?",
+o:["Seftriakson dan vankomisin","Amfoterisin B, flusitosin, dan flukonazol","Obat anti tuberkulosis kategori 1","Asiklovir intravena","Itrakonazol tunggal seumur hidup"],a:1,
+e:"Meningitis kriptokokus ditatalaksana dengan amfoterisin B, flusitosin, dan flukonazol. Untuk Coccidioides immitis digunakan flukonazol, amfoterisin B, atau itrakonazol; untuk Histoplasma capsulatum digunakan liposomal amfoterisin B dan itrakonazol; sedangkan Candida diterapi amfoterisin B ditambah 5-flusitosin.",
+w:["Antibiotik bakterial tidak efektif terhadap jamur.","Benar. Amfoterisin B, flusitosin, dan flukonazol untuk meningitis kriptokokus.","OAT untuk meningitis TB.","Asiklovir untuk infeksi virus.","Itrakonazol tunggal bukan regimen untuk kriptokokus."]}
+,
+{i:65,t:"epilepsi",q:"Anak laki-laki 10 tahun sering tiba-tiba berhenti beraktivitas, tatapan kosong selama sekitar 10 detik, lalu melanjutkan kembali kegiatannya seolah tidak terjadi apa-apa. Kejadian ini berulang beberapa kali sehari tanpa demam. Tidak ada gerakan kejang tonik klonik. Apakah diagnosis yang paling tepat?",
+o:["Epilepsi parsial sederhana","Epilepsi parsial kompleks","Epilepsi umum tipe absans tipikal","Epilepsi umum tipe mioklonik","Epilepsi umum tonik klonik"],a:2,
+e:"Bangkitan absans atau petit mal berupa bengong sesaat tanpa gerakan motorik berarti. Pada absans tipikal pasien dapat melanjutkan aktivitas kembali, sedangkan pada absans atipikal pasien tidak dapat melanjutkan aktivitas.",
+w:["Parsial sederhana memberi gejala motorik atau sensorik fokal dengan kesadaran baik.","Parsial kompleks diawali sadar lalu kesadaran menurun, sering disertai automatisme.","Benar. Bengong singkat lalu langsung melanjutkan aktivitas = absans tipikal.","Mioklonik berupa kontraksi otot singkat dan spontan.","Tonik klonik disertai kekakuan dan kelojotan seluruh tubuh."]},
+
+{i:66,t:"epilepsi",q:"Laki-laki 22 tahun mengalami kejang berulang tanpa disertai demam. Kejang diawali kedutan pada tangan kanan selama beberapa detik sementara pasien tetap sadar dan dapat menceritakan kejadiannya. Apakah jenis bangkitan yang paling tepat?",
+o:["Parsial sederhana","Parsial kompleks","Umum sekunder","Absans atipikal","Tonik klonik umum"],a:0,
+e:"Epilepsi parsial berasal dari bagian tertentu korteks serebri. Parsial sederhana ditandai kesadaran yang tetap baik dengan gejala motorik atau sensorik fokal; parsial kompleks diawali sadar kemudian tidak sadar; umum sekunder bila bangkitan parsial menjalar ke seluruh tubuh diikuti hilangnya kesadaran.",
+w:["Benar. Fokal dengan kesadaran tetap baik = parsial sederhana.","Parsial kompleks disertai penurunan kesadaran setelah awalnya sadar.","Umum sekunder bila menjalar ke seluruh tubuh dan pasien menjadi tidak sadar.","Absans adalah bangkitan umum, bukan fokal.","Tonik klonik umum melibatkan seluruh tubuh sejak awal dengan hilangnya kesadaran."]},
+
+{i:67,t:"epilepsi",q:"Perempuan 24 tahun mengalami kejang yang diawali kedutan wajah kiri saat pasien masih sadar, kemudian menjalar ke seluruh tubuh dan pasien kehilangan kesadaran. Apakah jenis bangkitan yang paling tepat?",
+o:["Parsial sederhana","Parsial kompleks","Umum sekunder","Absans tipikal","Mioklonik"],a:2,
+e:"Bangkitan umum sekunder adalah bangkitan yang berawal dari parsial sederhana atau kompleks kemudian menjalar ke seluruh tubuh dan diikuti hilangnya kesadaran.",
+w:["Parsial sederhana tidak menjalar ke seluruh tubuh dan kesadaran tetap baik.","Parsial kompleks kesadarannya menurun tanpa penjalaran ke seluruh tubuh.","Benar. Awalnya fokal lalu menjalar umum dengan hilangnya kesadaran = umum sekunder.","Absans tidak diawali gejala fokal.","Mioklonik hanya kontraksi singkat tanpa penjalaran seperti ini."]},
+
+{i:68,t:"epilepsi",q:"Laki-laki 20 tahun didiagnosis epilepsi umum tonik klonik. Apakah pemeriksaan penunjang yang paling tepat untuk menegakkan diagnosis?",
+o:["Elektroensefalografi","Head CT scan","Pungsi lumbal","Elektromiografi","MRI lumbal"],a:0,
+e:"Pemeriksaan penunjang untuk epilepsi adalah elektroensefalografi (EEG) yang merekam aktivitas listrik otak.",
+w:["Benar. EEG adalah pemeriksaan penunjang epilepsi.","CT scan dipakai untuk mencari lesi struktural, bukan menegakkan diagnosis epilepsi.","Pungsi lumbal dipakai pada infeksi susunan saraf pusat dan GBS.","EMG menilai otot dan saraf tepi.","MRI lumbal untuk HNP."]},
+
+{i:69,t:"epilepsi",q:"Perempuan 26 tahun dengan epilepsi umum tonik klonik sedang merencanakan kehamilan. Manakah obat antiepilepsi yang harus dihindari karena berisiko menyebabkan spina bifida pada janin?",
+o:["Asam valproat","Levetirasetam","Fenobarbital","Ethosuximide","Diazepam"],a:0,
+e:"Asam valproat dikontraindikasikan pada ibu hamil karena berisiko menyebabkan spina bifida. Karbamazepin juga dikontraindikasikan karena risiko dismorfik tubuh anak. Fenitoin menyebabkan gusi bengkak dan defisiensi asam folat, sedangkan fenobarbital menyebabkan defisiensi asam folat dan retardasi mental.",
+w:["Benar. Asam valproat berkaitan dengan defek penutupan tabung saraf berupa spina bifida.","Levetirasetam relatif lebih aman pada kehamilan.","Fenobarbital berkaitan dengan defisiensi asam folat dan retardasi mental.","Ethosuximide dipakai pada bangkitan absans.","Diazepam bukan antiepilepsi rumatan."]},
+
+{i:70,t:"epilepsi",q:"Laki-laki 30 tahun dengan epilepsi yang rutin mengonsumsi obat antiepilepsi datang dengan keluhan gusi membengkak dan mudah berdarah. Manakah obat yang paling mungkin menyebabkan keluhan ini?",
+o:["Asam valproat","Fenitoin","Karbamazepin","Ethosuximide","Fenobarbital"],a:1,
+e:"Efek samping khas fenitoin adalah hipertrofi gingiva atau gusi bengkak, serta defisiensi asam folat.",
+w:["Asam valproat berisiko spina bifida pada janin dan gangguan hati.","Benar. Gusi bengkak adalah efek samping klasik fenitoin.","Karbamazepin berisiko dismorfik tubuh anak bila diberikan pada ibu hamil.","Ethosuximide tidak menyebabkan hipertrofi gingiva.","Fenobarbital menyebabkan defisiensi asam folat dan retardasi mental."]},
+
+{i:71,t:"statusep",q:"Laki-laki 28 tahun dibawa ke IGD dalam keadaan kejang yang sudah berlangsung sekitar 40 menit tanpa berhenti. Di antara kejang pasien tidak sadar. Berat badan 60 kg. Apakah tatalaksana yang paling tepat?",
+o:["Diazepam 0,15 mg/kgBB intravena","Lorazepam 0,1 mg/kgBB intravena","Fenitoin 20 mg/kgBB","Asam valproat oral","Karbamazepin oral"],a:2,
+e:"Pada status epileptikus, bila durasi kejang lebih dari 30 menit diberikan fenitoin 20 mg/kgBB. Bila durasi kejang kurang dari 30 menit diberikan lorazepam 0,1 mg/kgBB atau diazepam 0,15 mg/kgBB.",
+w:["Diazepam dipilih bila durasi kejang masih kurang dari 30 menit.","Lorazepam juga untuk durasi kejang kurang dari 30 menit.","Benar. Kejang lebih dari 30 menit diberikan fenitoin 20 mg/kgBB.","Obat oral tidak dapat diberikan pada pasien yang sedang kejang.","Karbamazepin oral juga tidak sesuai untuk kondisi kegawatan ini."]},
+
+{i:72,t:"statusep",q:"Perempuan 35 tahun dibawa ke IGD dengan kejang yang berlangsung sekitar 12 menit dan belum berhenti. Berat badan 50 kg. Apakah tatalaksana yang paling tepat?",
+o:["Fenitoin 20 mg/kgBB","Diazepam 0,15 mg/kgBB intravena","Asam valproat 1.000 mg oral","Manitol 0,5 g/kgBB","Piridostigmin intravena"],a:1,
+e:"Bila durasi kejang kurang dari 30 menit, diberikan lorazepam 0,1 mg/kgBB atau diazepam 0,15 mg/kgBB. Fenitoin 20 mg/kgBB diberikan bila kejang melebihi 30 menit.",
+w:["Fenitoin dipilih bila kejang sudah melewati 30 menit.","Benar. Kejang kurang dari 30 menit diberikan diazepam 0,15 mg/kgBB atau lorazepam 0,1 mg/kgBB.","Obat oral tidak dapat diberikan saat pasien kejang.","Manitol untuk peningkatan tekanan intrakranial.","Piridostigmin untuk miastenia gravis."]},
+
+{i:73,t:"statusep",q:"Manakah pernyataan yang paling tepat mengenai status epileptikus konvulsif?",
+o:["Bangkitan dengan durasi lebih dari 5 menit atau bangkitan berulang dua kali atau lebih tanpa pulihnya kesadaran di antara bangkitan","Bangkitan berupa perubahan kesadaran tanpa manifestasi motorik yang jelas","Kejang tunggal yang berhenti sendiri dalam 2 menit dengan kesadaran pulih penuh","Kejang yang selalu didahului demam tinggi pada anak","Kejang yang hanya terjadi saat tidur"],a:0,
+e:"Status epileptikus konvulsif adalah bangkitan dengan durasi lebih dari 5 menit atau bangkitan berulang dua kali atau lebih tanpa pulihnya kesadaran di antara bangkitan. Status epileptikus non konvulsif berupa perubahan kesadaran atau perilaku tanpa manifestasi motorik jelas, namun EEG menunjukkan aktivitas bangkitan elektrografik.",
+w:["Benar. Ini definisi status epileptikus konvulsif.","Ini definisi status epileptikus non konvulsif.","Kejang yang berhenti sendiri dengan kesadaran pulih bukan status epileptikus.","Ini menggambarkan kejang demam.","Waktu kejadian kejang tidak menentukan definisi status epileptikus."]},
+
+{i:74,t:"spina",q:"Bayi baru lahir tampak benjolan di daerah punggung bawah berupa kantong kistik berisi cairan yang menonjol melalui celah pada arkus vertebra. Pemeriksaan menunjukkan gerakan kedua tungkai normal, tonus baik, dan tidak ada gangguan berkemih. Isi kantong hanya berupa selaput dura dan araknoid tanpa jaringan saraf. Apakah diagnosis yang paling tepat?",
+o:["Spina bifida okulta","Meningokel","Mielomeningokel","Mieloskisis","Ensefalokel"],a:1,
+e:"Meningokel adalah pembesaran kistik dari dura dan araknoid yang berprotrusi melalui defek pada arkus vertebra, tanpa jaringan medula spinalis, sehingga umumnya tidak disertai defisit neurologis.",
+w:["Spina bifida okulta tidak membentuk benjolan kistik dan sering tanpa gejala.","Benar. Kantong berisi dura dan araknoid saja tanpa jaringan saraf = meningokel.","Mielomeningokel isinya ikut mengandung jaringan medula spinalis sehingga ada defisit neurologis.","Mieloskisis berarti korda spinalis terekspos di permukaan punggung tanpa terbungkus selaput.","Ensefalokel terjadi di kepala, bukan tulang belakang."]},
+
+{i:75,t:"spina",q:"Bayi baru lahir dengan benjolan di punggung bawah. Pada pemeriksaan, jaringan medula spinalis ikut terekstensi ke dalam kantong, dan bayi menunjukkan kelemahan kedua tungkai serta rembesan urin terus-menerus. Apakah diagnosis yang paling tepat?",
+o:["Spina bifida okulta","Meningokel","Mielomeningokel","Mieloskisis","Lipoma spinalis"],a:2,
+e:"Mielomeningokel adalah kondisi ketika jaringan medula spinalis ikut terekstensi ke dalam meningokel, sehingga disertai defisit neurologis seperti kelemahan tungkai dan gangguan berkemih.",
+w:["Spina bifida okulta tidak memberi benjolan dan sering tanpa defisit.","Meningokel isinya hanya dura dan araknoid sehingga umumnya tanpa defisit neurologis.","Benar. Jaringan medula spinalis ikut masuk kantong dan menimbulkan defisit neurologis.","Pada mieloskisis korda spinalis terekspos tanpa terbungkus selaput sama sekali.","Lipoma spinalis berupa massa lemak, bukan herniasi meningen."]},
+
+{i:76,t:"spina",q:"Seorang ibu hamil datang untuk konseling prakonsepsi. Ia memiliki riwayat epilepsi dan mengonsumsi asam valproat. Dokter menjelaskan risiko defek penutupan tabung saraf pada janin. Selain penggantian obat, apakah faktor penyebab lain spina bifida yang paling penting untuk dicegah?",
+o:["Kekurangan asam folat","Kelebihan vitamin A","Kekurangan zat besi","Kelebihan yodium","Kekurangan vitamin D"],a:0,
+e:"Etiologi spina bifida meliputi faktor genetik, kekurangan asam folat, efek samping asam valproat, dan konsumsi alkohol. Suplementasi asam folat prakonsepsi adalah pencegahan utamanya.",
+w:["Benar. Defisiensi asam folat adalah penyebab yang paling dapat dicegah.","Kelebihan vitamin A bersifat teratogenik namun bukan penyebab utama spina bifida.","Kekurangan zat besi menyebabkan anemia, bukan defek tabung saraf.","Kelebihan yodium tidak berkaitan dengan spina bifida.","Kekurangan vitamin D berkaitan dengan gangguan tulang, bukan defek tabung saraf."]},
+
+{i:77,t:"nervus",q:"Laki-laki 30 tahun mengalami patah tulang humerus setelah kecelakaan. Setelah pemasangan bidai, pasien mengeluh tidak dapat mengangkat pergelangan tangan kanan sehingga tangan tampak menggantung. Apakah nervus yang mengalami cedera?",
+o:["Nervus radialis","Nervus medianus","Nervus ulnaris","Nervus aksilaris","Nervus muskulokutaneus"],a:0,
+e:"Cedera nervus radialis menyebabkan wrist drop atau drop hand. Cedera nervus medianus memberi benedict hand atau ape hand, sedangkan cedera nervus ulnaris memberi claw hand.",
+w:["Benar. Wrist drop atau drop hand khas untuk cedera nervus radialis.","Cedera nervus medianus memberi ape hand atau benedict hand.","Cedera nervus ulnaris memberi claw hand.","Nervus aksilaris mengurus otot deltoid untuk abduksi bahu.","Nervus muskulokutaneus mengurus fleksi siku."]},
+
+{i:78,t:"nervus",q:"Laki-laki 35 tahun mengalami luka sayat di pergelangan tangan sisi medial. Setelah sembuh, jari keempat dan kelima tampak dalam posisi menekuk menyerupai cakar. Apakah nervus yang mengalami cedera?",
+o:["Nervus radialis","Nervus medianus","Nervus ulnaris","Nervus aksilaris","Nervus tibialis"],a:2,
+e:"Cedera nervus ulnaris menimbulkan gambaran claw hand, terutama pada jari keempat dan kelima.",
+w:["Cedera nervus radialis memberi wrist drop.","Cedera nervus medianus memberi ape hand atau benedict hand.","Benar. Claw hand khas untuk cedera nervus ulnaris.","Nervus aksilaris tidak mempersarafi tangan.","Nervus tibialis berada di tungkai bawah."]},
+
+{i:79,t:"nervus",q:"Perempuan 42 tahun, pekerja penjahit, mengeluh kesemutan dan kebas pada ibu jari, telunjuk, dan jari tengah tangan kanan, terutama saat malam hari. Keluhan membaik bila tangan dikibas-kibaskan. Apakah diagnosis yang paling mungkin dan nervus yang tertekan?",
+o:["Carpal tunnel syndrome, nervus medianus","Cubital tunnel syndrome, nervus ulnaris","Radial tunnel syndrome, nervus radialis","Tarsal tunnel syndrome, nervus tibialis","Thoracic outlet syndrome, pleksus brakialis"],a:0,
+e:"Carpal tunnel syndrome adalah kumpulan tanda dan gejala akibat penekanan nervus medianus, berupa kesemutan, kebas, dan nyeri yang biasanya memberat pada malam hari. Perbaikan keluhan setelah tangan dikibaskan disebut flick test yang positif.",
+w:["Benar. Distribusi nervus medianus dengan keluhan nokturnal dan flick test positif = CTS.","Cubital tunnel mengenai nervus ulnaris dengan gejala di jari keempat dan kelima.","Radial tunnel memberi nyeri lengan bawah bagian dorsal.","Tarsal tunnel mengenai kaki, bukan tangan.","Thoracic outlet syndrome memberi gejala pada seluruh lengan disertai gangguan vaskular."]},
+
+{i:80,t:"nervus",q:"Perempuan 45 tahun dicurigai carpal tunnel syndrome. Dokter melakukan perkusi ringan pada daerah nervus medianus di pergelangan tangan dan pasien merasakan kesemutan menjalar ke jari. Apakah nama pemeriksaan ini?",
+o:["Tinnel sign","Phalen manuver","Flick test","Tourniquet test","Lasegue test"],a:0,
+e:"Pemeriksaan fisik CTS meliputi Tinnel sign berupa perkusi ringan pada nervus medianus, Phalen manuver, flick test yaitu tangan dikibaskan lalu keluhan membaik, dan tourniquet test.",
+w:["Benar. Perkusi ringan pada nervus medianus adalah Tinnel sign.","Phalen manuver dilakukan dengan memfleksikan pergelangan tangan.","Flick test adalah mengibaskan tangan sehingga keluhan membaik.","Tourniquet test menggunakan manset untuk memprovokasi gejala.","Lasegue test digunakan untuk menilai HNP lumbal."]},
+
+{i:81,t:"nervus",q:"Perempuan 48 tahun dengan carpal tunnel syndrome sudah menjalani terapi konservatif selama beberapa bulan tanpa perbaikan. Pemeriksaan kini menunjukkan atrofi otot tenar. Apakah tatalaksana yang paling tepat?",
+o:["Melanjutkan NSAID dan fisioterapi","Splint pergelangan tangan saja","Injeksi steroid berulang","Tindakan operatif","Observasi tanpa terapi"],a:3,
+e:"Tatalaksana CTS meliputi splint pergelangan tangan, steroid, NSAID, dan fisioterapi. Tindakan operatif diindikasikan bila sudah terjadi atrofi otot, terutama otot tenar. Penunjangnya adalah nerve conduction velocity dan EMG.",
+w:["Terapi konservatif sudah gagal dan atrofi menandakan kerusakan lanjut.","Splint saja tidak akan memperbaiki atrofi yang sudah terjadi.","Injeksi steroid berulang tidak mengatasi kompresi yang sudah menimbulkan atrofi.","Benar. Atrofi otot tenar adalah indikasi operatif.","Observasi berisiko menimbulkan kerusakan permanen."]},
+
+{i:82,t:"hnp",q:"Laki-laki 45 tahun mengeluh nyeri punggung bawah sejak 2 bulan, menjalar ke paha belakang hingga betis kanan. Nyeri memberat saat batuk dan mengejan. Pemeriksaan menunjukkan tes Lasegue positif pada 30 derajat dan kelemahan dorsofleksi kaki kanan. Apakah diagnosis yang paling mungkin dan lokasi tersering kelainannya?",
+o:["Hernia nukleus pulposus, L4-L5 dan L5-S1","Spondilitis TB, torakal 8-9","Fraktur kompresi, L1","Spondilolistesis, C5-C6","Tumor medula spinalis, torakal 12"],a:0,
+e:"HNP adalah turunnya kandungan anulus fibrosus dari diskus intervertebralis lumbal ke kanalis spinalis sehingga menekan radiks saraf. Lokasi tersering adalah L4-L5 dan L5-S1, dengan gejala nyeri punggung bawah menjalar ke paha disertai kelemahan.",
+w:["Benar. Nyeri radikuler dengan Lasegue positif dan lokasi tersering L4-L5 serta L5-S1.","Spondilitis TB memberi gejala konstitusional dan gibus.","Fraktur kompresi umumnya didahului trauma atau osteoporosis.","C5-C6 berada di servikal, tidak menimbulkan nyeri tungkai.","Tumor medula spinalis memberi defisit progresif dengan batas sensorik jelas."]},
+
+{i:83,t:"hnp",q:"Laki-laki 50 tahun dicurigai HNP lumbal. Apakah pemeriksaan penunjang baku emas yang paling tepat?",
+o:["Foto polos lumbosakral","MRI lumbal","CT scan kepala","Elektroensefalografi","Bone scan"],a:1,
+e:"Pemeriksaan baku emas untuk HNP adalah MRI, karena mampu menampilkan jaringan lunak berupa diskus intervertebralis dan radiks saraf yang tertekan.",
+w:["Foto polos hanya menampilkan tulang, tidak dapat menilai diskus.","Benar. MRI adalah baku emas HNP.","CT kepala tidak relevan untuk kelainan lumbal.","EEG merekam aktivitas listrik otak.","Bone scan digunakan untuk mencari metastasis tulang."]},
+
+{i:84,t:"hnp",q:"Laki-laki 47 tahun didiagnosis HNP lumbal dengan nyeri radikuler tanpa defisit neurologis berat maupun gangguan berkemih. Apakah tatalaksana awal yang paling tepat?",
+o:["Tirah baring disertai NSAID dan muscle relaxant","Operasi diskektomi segera","Traksi servikal","Injeksi kortikosteroid intratekal","Fisioterapi berat segera"],a:0,
+e:"Tatalaksana awal HNP adalah tirah baring, ditambah NSAID dan muscle relaxant seperti benzodiazepin. Operasi dipertimbangkan bila gejalanya berat atau terdapat defisit neurologis progresif.",
+w:["Benar. Tirah baring dengan NSAID dan muscle relaxant adalah tatalaksana awal.","Operasi baru dipertimbangkan pada gejala berat atau defisit progresif.","Traksi servikal untuk kelainan leher, bukan lumbal.","Injeksi intratekal bukan tatalaksana awal.","Aktivitas berat pada fase akut justru memperberat nyeri."]},
+
+{i:85,t:"hnp",q:"Laki-laki 44 tahun dengan nyeri punggung bawah menjalar ke tungkai. Dokter melakukan pemeriksaan dengan mengangkat tungkai lurus pasien dalam posisi berbaring, dan nyeri radikuler muncul pada sudut 40 derajat. Apakah nama pemeriksaan ini?",
+o:["Tes Lasegue","Tes Patrick","Tes Kontrapatrick","Tes Tinnel","Tes Phalen"],a:0,
+e:"Pemeriksaan fisik pada HNP meliputi tes Bragard dan Sicard, tes Lasegue yaitu mengangkat tungkai lurus, serta tes Patrick dan kontrapatrick untuk menilai sendi sakroiliaka.",
+w:["Benar. Mengangkat tungkai lurus untuk memprovokasi nyeri radikuler adalah tes Lasegue.","Tes Patrick menilai sendi panggul dan sakroiliaka.","Tes kontrapatrick juga menilai sendi sakroiliaka.","Tes Tinnel untuk carpal tunnel syndrome.","Tes Phalen juga untuk carpal tunnel syndrome."]},
+
+{i:86,t:"lainnya",q:"Laki-laki 38 tahun, pemain tenis amatir, mengeluh nyeri pada sisi luar siku kanan yang memberat saat menggenggam raket dan memutar pergelangan tangan. Nyeri tekan ditemukan pada epikondilus lateral humerus. Apakah diagnosis yang paling tepat?",
+o:["Tennis elbow syndrome","Golfer elbow syndrome","Carpal tunnel syndrome","Bursitis olekranon","Fraktur kaput radii"],a:0,
+e:"Tennis elbow syndrome memberi nyeri pada daerah epikondilus lateral akibat penggunaan siku yang berlebihan. Golfer elbow syndrome memberi nyeri pada epikondilus medial yang melibatkan tendon otot fleksor karpi radialis dan pronator teres.",
+w:["Benar. Nyeri epikondilus lateral akibat overuse = tennis elbow.","Golfer elbow nyerinya di sisi medial siku.","CTS mengenai pergelangan tangan dengan kesemutan pada distribusi nervus medianus.","Bursitis olekranon memberi pembengkakan pada ujung siku posterior.","Fraktur memerlukan riwayat trauma akut dengan nyeri hebat dan deformitas."]},
+
+{i:87,t:"lainnya",q:"Laki-laki 45 tahun, pemain golf, mengeluh nyeri pada sisi dalam siku kiri. Nyeri tekan ditemukan pada epikondilus medial. Otot manakah yang paling berkaitan dengan keluhan pasien?",
+o:["Ekstensor karpi radialis brevis","Fleksor karpi radialis dan pronator teres","Triseps brakii","Supinator","Deltoid"],a:1,
+e:"Golfer elbow syndrome melibatkan gangguan pada epikondilus medial, tempat perlekatan tendon otot fleksor karpi radialis dan pronator teres.",
+w:["Ekstensor karpi radialis brevis berkaitan dengan tennis elbow di sisi lateral.","Benar. Fleksor karpi radialis dan pronator teres melekat di epikondilus medial.","Triseps melekat pada olekranon, bukan epikondilus medial.","Supinator berkaitan dengan sisi lateral lengan bawah.","Deltoid berada di bahu."]},
+
+{i:88,t:"lainnya",q:"Anak laki-laki 6 tahun dibawa karena sering jatuh dan kesulitan berdiri dari posisi duduk di lantai. Untuk berdiri, anak harus memanjat tubuhnya sendiri dengan bertumpu pada kedua tangan. Cara berjalannya terlihat berayun. Ibu pasien menyebut ada saudara laki-lakinya yang mengalami hal serupa. Apakah diagnosis yang paling mungkin?",
+o:["Duchenne muscular dystrophy","Poliomielitis","Guillain Barre syndrome","Miastenia gravis","Spina bifida okulta"],a:0,
+e:"Duchenne muscular dystrophy adalah kelainan genetik X-linked resesif dengan gejala kelemahan otot proksimal, Gower sign positif, retardasi mental, dan waddling gait. Pola pewarisan X-linked menjelaskan mengapa yang terkena adalah anak laki-laki dalam keluarga.",
+w:["Benar. Gower sign dan waddling gait pada anak laki-laki dengan riwayat keluarga = DMD.","Poliomielitis memberi kelumpuhan akut disertai demam, bukan progresif menahun.","GBS memberi kelumpuhan ascending akut pasca infeksi.","Miastenia gravis memberi kelemahan fluktuatif dengan ptosis.","Spina bifida okulta umumnya asimtomatik."]},
+
+{i:89,t:"lainnya",q:"Anak laki-laki 7 tahun dicurigai Duchenne muscular dystrophy. Apakah pemeriksaan penunjang yang paling tepat untuk memastikan diagnosis serta tatalaksana farmakologisnya?",
+o:["Biopsi otot dan PCR mutasi gen distrofin, dengan prednison 0,75 mg/kgBB per 24 jam selama 6 bulan","Pungsi lumbal, dengan IVIG","EEG, dengan asam valproat","MRI lumbal, dengan NSAID","Tes Tensilon, dengan piridostigmin"],a:0,
+e:"Pemeriksaan penunjang DMD adalah biopsi otot yang menunjukkan peningkatan serum kreatin, NCV, EMG, serta PCR untuk melihat mutasi gen distrofin. Tatalaksananya prednison 0,75 mg/kgBB per 24 jam selama 6 bulan.",
+w:["Benar. Biopsi otot dan PCR gen distrofin, terapi prednison 0,75 mg/kgBB per 24 jam selama 6 bulan.","Pungsi lumbal dan IVIG adalah pendekatan untuk GBS.","EEG dan asam valproat adalah pendekatan untuk epilepsi.","MRI lumbal untuk HNP.","Tes Tensilon dan piridostigmin untuk miastenia gravis."]}
+];
+const TOPICS = {
+  kepala:"Nyeri kepala", trigeminal:"Neuralgia trigeminal", motorik:"Kekuatan motorik",
+  bell:"Bell's palsy", stroke:"Stroke", iskemik:"Sistem vaskular & TIA", vertigo:"Vertigo",
+  parkinson:"Parkinson", nmj:"Miastenia gravis & GBS", polio:"Poliomielitis",
+  meningitis:"Meningitis & ensefalitis", epilepsi:"Epilepsi", statusep:"Status epileptikus",
+  spina:"Spina bifida", nervus:"Cedera nervus & CTS", hnp:"HNP", lainnya:"Elbow syndrome & DMD"
+};
+const LET = ["A","B","C","D","E"];
+const $ = id => document.getElementById(id);
+
+/* ---------------- penyimpanan ---------------- */
+/* Tiga tingkat, dipilih otomatis sesuai tempat file ini dibuka:
+   1. window.storage  - saat berjalan sebagai artifact di dalam Claude
+   2. localStorage    - saat file di-host sendiri atau dibuka langsung dari disk
+   3. memori          - kalau dua-duanya diblokir; progres hanya bertahan selama tab terbuka */
+const mem = {};
+function localOK(){
+  try{
+    const t = "neuro:__t";
+    window.localStorage.setItem(t, "1");
+    window.localStorage.removeItem(t);
+    return true;
+  }catch(e){ return false; }
+}
+const store = {
+  mode: (typeof window !== "undefined" && window.storage) ? "claude" : (localOK() ? "local" : "mem"),
+  async get(k, dflt){
+    try{
+      if(this.mode === "claude"){
+        const r = await window.storage.get(k);
+        return r ? JSON.parse(r.value) : dflt;
+      }
+      if(this.mode === "local"){
+        const r = window.localStorage.getItem(k);
+        return r === null ? dflt : JSON.parse(r);
+      }
+    }catch(e){ return k in mem ? mem[k] : dflt; }
+    return k in mem ? mem[k] : dflt;
+  },
+  async set(k, v){
+    mem[k] = v;
+    try{
+      if(this.mode === "claude") await window.storage.set(k, JSON.stringify(v));
+      else if(this.mode === "local") window.localStorage.setItem(k, JSON.stringify(v));
+    }catch(e){}
+  },
+  async del(k){
+    delete mem[k];
+    try{
+      if(this.mode === "claude") await window.storage.delete(k);
+      else if(this.mode === "local") window.localStorage.removeItem(k);
+    }catch(e){}
+  }
+};
+
+/* ---------------- konfigurasi ---------------- */
+const DEFAULT_CFG = {
+  topics: Object.keys(TOPICS),
+  count: 20,
+  fb: true,        // pembahasan
+  timer: false,    // timer
+  track: true,     // simpan progres
+  review: true,    // kumpulkan & tinjau soal salah
+  secPerQ: 80
+};
+let cfg = {...DEFAULT_CFG};
+let hist = [];
+let wrongSet = {};
+
+const TOGGLE_DEFS = [
+  {k:"fb",     nm:"Pembahasan tiap soal",   ds:"Jawaban benar dan alasan tiap pilihan langsung muncul setelah kamu menjawab."},
+  {k:"timer",  nm:"Timer",                  ds:"Hitung mundur seperti simulasi ujian. Sesi berakhir sendiri saat waktu habis."},
+  {k:"track",  nm:"Simpan skor & progres",  ds:"Riwayat sesi dan capaian per materi tersimpan untuk sesi berikutnya."},
+  {k:"review", nm:"Kumpulkan soal salah",   ds:"Soal yang kamu jawab salah bisa ditinjau di akhir dan diulang jadi sesi tersendiri."}
+];
+
+/* ---------------- state sesi ---------------- */
+let S = null;
+
+/* ---------------- setup ---------------- */
+function renderTopics(){
+  const counts = {};
+  BANK.forEach(q => counts[q.t] = (counts[q.t]||0)+1);
+  $("topics").innerHTML = Object.keys(TOPICS).map(k => {
+    const on = cfg.topics.includes(k);
+    return `<label class="topic${on?" on":""}" data-t="${k}">
+      <input type="checkbox" ${on?"checked":""} data-t="${k}">
+      <span class="nm">${TOPICS[k]}</span>
+      <span class="ct">${counts[k]}</span>
+    </label>`;
+  }).join("");
+  $("topics").querySelectorAll("input").forEach(inp => {
+    inp.addEventListener("change", () => {
+      const t = inp.dataset.t;
+      cfg.topics = inp.checked ? [...new Set([...cfg.topics, t])] : cfg.topics.filter(x => x !== t);
+      inp.closest(".topic").classList.toggle("on", inp.checked);
+      saveCfg(); renderPool();
+    });
+  });
+}
+
+function poolSize(){ return BANK.filter(q => cfg.topics.includes(q.t)).length; }
+
+function renderPool(){
+  const n = poolSize();
+  const el = $("pool");
+  $("count").max = Math.max(1, n);
+  if(n === 0){
+    el.className = "pool warn";
+    el.innerHTML = "Belum ada materi yang dipilih. Pilih minimal satu untuk mulai.";
+  } else {
+    el.className = "pool";
+    const use = Math.min(cfg.count, n);
+    el.innerHTML = `Tersedia <b>${n}</b> soal dari materi yang dipilih. Sesi ini akan memakai <b>${use}</b> soal, diacak.`;
+  }
+  $("presets").querySelectorAll(".chip").forEach(c => {
+    const v = c.dataset.v === "all" ? n : +c.dataset.v;
+    c.classList.toggle("on", v === cfg.count || (c.dataset.v === "all" && cfg.count >= n && n > 0));
+  });
+  $("start").disabled = n === 0;
+  $("start").textContent = n === 0 ? "Pilih materi dulu" : `Mulai latihan · ${Math.min(cfg.count, n)} soal`;
+}
+
+function renderPresets(){
+  $("presets").innerHTML = [10,20,30,50,"all"].map(v =>
+    `<button class="chip" data-v="${v}">${v==="all"?"Semua":v}</button>`).join("");
+  $("presets").querySelectorAll(".chip").forEach(c => {
+    c.addEventListener("click", () => {
+      cfg.count = c.dataset.v === "all" ? poolSize() : +c.dataset.v;
+      $("count").value = cfg.count; saveCfg(); renderPool();
+    });
+  });
+}
+
+function renderToggles(){
+  $("toggles").innerHTML = TOGGLE_DEFS.map(t => `
+    <div class="tg">
+      <div class="tg-txt">
+        <p class="nm">${t.nm}</p>
+        <p class="ds">${t.ds}</p>
+        ${t.k === "timer" ? `<div class="tg-sub" id="secWrap">
+            <label for="secPerQ">Waktu per soal</label>
+            <input type="number" id="secPerQ" min="10" max="600" value="${cfg.secPerQ}">
+            <span>detik</span></div>` : ""}
+      </div>
+      <button class="sw${cfg[t.k]?" on":""}" data-k="${t.k}" role="switch"
+        aria-checked="${cfg[t.k]}" aria-label="${t.nm}"></button>
+    </div>`).join("");
+  $("toggles").querySelectorAll(".sw").forEach(b => {
+    b.addEventListener("click", () => {
+      const k = b.dataset.k;
+      cfg[k] = !cfg[k];
+      b.classList.toggle("on", cfg[k]);
+      b.setAttribute("aria-checked", cfg[k]);
+      if(k === "timer") $("secWrap").style.display = cfg.timer ? "" : "none";
+      if(k === "track" || k === "review") renderHistory();
+      saveCfg();
+    });
+  });
+  $("secWrap").style.display = cfg.timer ? "" : "none";
+  $("secPerQ").addEventListener("change", e => {
+    cfg.secPerQ = Math.max(10, Math.min(600, +e.target.value || 80));
+    e.target.value = cfg.secPerQ; saveCfg();
+  });
+}
+
+function renderHistory(){
+  const body = $("histBody");
+  const nWrong = Object.keys(wrongSet).length;
+  $("startWrong").classList.toggle("hidden", !(cfg.review && nWrong > 0));
+  if(cfg.review && nWrong > 0) $("startWrong").textContent = `Ulangi ${nWrong} soal yang pernah salah`;
+
+  if(!cfg.track){
+    $("clearHist").classList.add("hidden");
+    body.innerHTML = `<p class="empty">Penyimpanan progres sedang dimatikan, jadi sesi ini tidak akan dicatat.</p>`;
+    return;
+  }
+  if(!hist.length){
+    $("clearHist").classList.add("hidden");
+    body.innerHTML = `<p class="empty">Belum ada sesi tercatat. Skor dan capaian per materi akan muncul di sini setelah sesi pertama.</p>`;
+    return;
+  }
+  $("clearHist").classList.remove("hidden");
+  const rows = hist.slice(0,6).map(h => {
+    const pc = Math.round(h.correct/h.total*100);
+    return `<div class="hrow">
+      <span class="dt">${h.date} · ${h.total} soal</span>
+      <span class="sc">${h.correct}/${h.total} · ${pc}%</span></div>`;
+  }).join("");
+  const agg = {};
+  hist.forEach(h => Object.entries(h.byTopic||{}).forEach(([k,v]) => {
+    agg[k] = agg[k] || {c:0,t:0}; agg[k].c += v.c; agg[k].t += v.t;
+  }));
+  const weak = Object.entries(agg).filter(([,v]) => v.t >= 3)
+    .map(([k,v]) => ({k, pc: v.c/v.t})).sort((a,b) => a.pc - b.pc).slice(0,3);
+  const weakHtml = weak.length
+    ? `<p class="note">Materi dengan capaian terendah sejauh ini: ${weak.map(w =>
+        `${TOPICS[w.k]} (${Math.round(w.pc*100)}%)`).join(", ")}.</p>` : "";
+  body.innerHTML = `<div class="hist">${rows}</div>${weakHtml}`;
+}
+
+function saveCfg(){ store.set("neuro:cfg", cfg); }
+
+/* ---------------- mulai sesi ---------------- */
+function shuffle(a){
+  const r = [...a];
+  for(let i = r.length-1; i > 0; i--){ const j = Math.floor(Math.random()*(i+1)); [r[i],r[j]] = [r[j],r[i]]; }
+  return r;
+}
+
+function startSession(pool, label){
+  const n = Math.min(cfg.count, pool.length);
+  const qs = shuffle(pool).slice(0, n);
+  S = {
+    qs, label, i: 0,
+    ans: new Array(n).fill(null),
+    flags: new Array(n).fill(false),
+    graded: cfg.fb,
+    startedAt: Date.now(),
+    left: cfg.timer ? n * cfg.secPerQ : null,
+    tick: null, done: false
+  };
+  $("setup").classList.add("hidden");
+  $("result").classList.add("hidden");
+  $("quiz").classList.remove("hidden");
+  if(cfg.timer){
+    S.tick = setInterval(() => {
+      S.left--;
+      renderClock();
+      if(S.left <= 0){ clearInterval(S.tick); finishSession(true); }
+    }, 1000);
+  }
+  renderQ();
+  window.scrollTo(0,0);
+}
+
+/* ---------------- render soal ---------------- */
+function renderClock(){
+  const el = $("clock");
+  if(!cfg.timer){ el.textContent = ""; return; }
+  const m = Math.floor(Math.max(0,S.left)/60), s = Math.max(0,S.left)%60;
+  el.textContent = `${m}:${String(s).padStart(2,"0")}`;
+  el.classList.toggle("low", S.left <= 60);
+}
+
+function renderTrace(){
+  const n = S.qs.length, W = 1000, base = 19, seg = W/n;
+  let out = `<line x1="0" y1="${base}" x2="${W}" y2="${base}" stroke="#B4B8AE" stroke-width="1" vector-effect="non-scaling-stroke"/>`;
+  for(let i = 0; i < n; i++){
+    const a = S.ans[i];
+    if(a === null){
+      if(S.flags[i]) out += `<circle cx="${i*seg+seg/2}" cy="${base}" r="2.4" fill="var(--nissl)"/>`;
+      continue;
+    }
+    const xc = i*seg + seg/2, w = seg;
+    let col, pts;
+    if(S.graded || S.done){
+      const right = a === S.qs[i].a;
+      col = right ? "var(--ok)" : "var(--no)";
+      const peak = right ? base-14 : base+14;
+      const dip  = right ? base+4  : base-4;
+      pts = `${i*seg},${base} ${xc-w*.3},${base} ${xc-w*.16},${dip} ${xc},${peak} ${xc+w*.16},${dip} ${xc+w*.3},${base} ${(i+1)*seg},${base}`;
+    } else {
+      col = "var(--nissl)";
+      pts = `${i*seg},${base} ${xc-w*.22},${base} ${xc},${base-9} ${xc+w*.22},${base} ${(i+1)*seg},${base}`;
+    }
+    out += `<polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>`;
+  }
+  const cx = S.i*seg + seg/2;
+  out += `<line x1="${cx}" y1="2" x2="${cx}" y2="36" stroke="var(--myelin)" stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke" opacity=".55"/>`;
+  $("trace").innerHTML = out;
+}
+
+function renderQ(){
+  const q = S.qs[S.i], picked = S.ans[S.i], show = S.graded && picked !== null;
+  $("qnum").textContent = `Soal ${S.i+1} / ${S.qs.length}`;
+  $("qtopic").textContent = TOPICS[q.t];
+  renderClock();
+  renderTrace();
+  $("vignette").textContent = q.q;
+  $("opts").innerHTML = q.o.map((o,k) => {
+    let cls = "opt";
+    if(show){
+      if(k === q.a) cls += " right";
+      else if(k === picked) cls += " wrong";
+    } else if(k === picked) cls += " picked";
+    return `<button class="${cls}" data-k="${k}" ${show?"disabled":""}>
+      <span class="lt">${LET[k]}</span><span class="tx">${o}</span></button>`;
+  }).join("");
+  $("opts").querySelectorAll(".opt").forEach(b =>
+    b.addEventListener("click", () => pick(+b.dataset.k)));
+
+  if(show){
+    const right = picked === q.a;
+    $("fb").classList.remove("hidden");
+    $("fbTop").className = "fb-top " + (right ? "ok" : "no");
+    $("fbTop").textContent = right
+      ? `Benar — jawaban ${LET[q.a]}`
+      : `Kurang tepat — jawaban yang benar ${LET[q.a]}`;
+    $("fbKey").textContent = q.e;
+    $("fbWhy").innerHTML = q.w.map((w,k) =>
+      `<div class="why-row${k===q.a?" k":""}"><span class="lt">${LET[k]}</span><span>${w}</span></div>`).join("");
+  } else {
+    $("fb").classList.add("hidden");
+  }
+
+  $("prev").disabled = S.i === 0;
+  $("next").textContent = S.i === S.qs.length-1 ? "Lihat hasil" : "Berikutnya";
+  const f = $("flag");
+  f.classList.toggle("flagged", S.flags[S.i]);
+  f.textContent = S.flags[S.i] ? "Ditandai ragu" : "Tandai ragu";
+}
+
+function pick(k){
+  if(S.graded && S.ans[S.i] !== null) return;
+  S.ans[S.i] = k;
+  renderQ();
+}
+
+function move(d){
+  const ni = S.i + d;
+  if(ni < 0) return;
+  if(ni >= S.qs.length){ finishSession(false); return; }
+  S.i = ni; renderQ(); window.scrollTo({top:0, behavior:"smooth"});
+}
+
+/* ---------------- selesai & hasil ---------------- */
+function finishSession(byTimer){
+  if(S.tick) clearInterval(S.tick);
+  S.done = true;
+  S.elapsed = Math.round((Date.now() - S.startedAt)/1000);
+  S.byTimer = !!byTimer;
+
+  const byTopic = {};
+  let correct = 0, answered = 0;
+  S.qs.forEach((q,i) => {
+    const a = S.ans[i];
+    byTopic[q.t] = byTopic[q.t] || {c:0, t:0};
+    byTopic[q.t].t++;
+    if(a !== null){
+      answered++;
+      if(a === q.a){ correct++; byTopic[q.t].c++; }
+    }
+  });
+  S.correct = correct; S.answered = answered; S.byTopic = byTopic;
+
+  if(cfg.review){
+    S.qs.forEach((q,i) => {
+      if(S.ans[i] !== null && S.ans[i] !== q.a) wrongSet[q.i] = true;
+      else if(S.ans[i] === q.a) delete wrongSet[q.i];
+    });
+    store.set("neuro:wrong", wrongSet);
+  }
+  if(cfg.track){
+    const d = new Date();
+    hist.unshift({
+      date: `${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}/${d.getFullYear()}`,
+      total: S.qs.length, correct, byTopic, sec: S.elapsed
+    });
+    hist = hist.slice(0,50);
+    store.set("neuro:hist", hist);
+  }
+  renderResult();
+}
+
+function fmtDur(s){
+  const m = Math.floor(s/60);
+  return m >= 1 ? `${m} menit ${s%60} detik` : `${s} detik`;
+}
+
+function renderResult(){
+  const n = S.qs.length, pc = Math.round(S.correct/n*100);
+  $("quiz").classList.add("hidden");
+  $("result").classList.remove("hidden");
+  $("scBig").textContent = `${pc}%`;
+  $("scOf").textContent = `${S.correct} benar dari ${n} soal`;
+
+  let v;
+  if(S.byTimer) v = "Waktu habis sebelum semua soal terjawab. ";
+  else v = "";
+  if(pc >= 85) v += "Penguasaan materinya sudah kuat. Pertahankan dengan pengulangan berkala, dan mulai campur materi lain supaya terbiasa berpindah bidang.";
+  else if(pc >= 66) v += "Sudah di atas ambang kelulusan, tapi belum ada jarak aman. Kejar materi yang capaiannya paling rendah di bawah ini.";
+  else if(pc >= 50) v += "Separuh materi sudah masuk, separuh lagi belum. Baca ulang bab yang capaiannya di bawah 60 persen sebelum menambah soal baru.";
+  else v += "Fondasinya masih perlu dibangun. Kembali ke materi dulu per bab, baru latihan soal per bab yang sama, jangan langsung sesi campuran.";
+  $("verdict").textContent = v;
+
+  const meta = [
+    `Terjawab <b>${S.answered}</b> dari ${n}`,
+    `Waktu <b>${fmtDur(S.elapsed)}</b>`,
+    `Rata-rata <b>${Math.round(S.elapsed/n)} detik</b> per soal`
+  ];
+  const nf = S.flags.filter(Boolean).length;
+  if(nf) meta.push(`Ditandai ragu <b>${nf}</b>`);
+  $("scMeta").innerHTML = meta.map(m => `<span>${m}</span>`).join("");
+
+  const entries = Object.entries(S.byTopic).sort((a,b) => (a[1].c/a[1].t) - (b[1].c/b[1].t));
+  $("bars").innerHTML = entries.map(([k,v]) => {
+    const p = Math.round(v.c/v.t*100);
+    const cls = p >= 70 ? "" : p >= 50 ? " mid" : " low";
+    return `<div class="bar">
+      <div><span class="lbl">${TOPICS[k]}</span>
+        <div class="track"><div class="fill${cls}" style="width:${p}%"></div></div></div>
+      <span class="pc">${v.c}/${v.t}</span></div>`;
+  }).join("");
+
+  S.revWrongOnly = cfg.review;
+  renderReview();
+
+  const nWrong = S.qs.filter((q,i) => S.ans[i] !== null && S.ans[i] !== q.a).length;
+  const rw = $("retryWrong");
+  rw.classList.toggle("hidden", !(cfg.review && nWrong > 0));
+  rw.textContent = `Ulangi ${nWrong} soal yang salah tadi`;
+  window.scrollTo(0,0);
+}
+
+function renderReview(){
+  const only = S.revWrongOnly;
+  const rows = S.qs.map((q,i) => ({q, i})).filter(({q,i}) =>
+    !only || S.ans[i] === null || S.ans[i] !== q.a);
+  $("revTitle").textContent = only ? "Soal yang belum tepat" : "Pembahasan semua soal";
+  $("revToggle").textContent = only ? "Tampilkan semua soal" : "Tampilkan yang salah saja";
+  $("revToggle").classList.toggle("hidden", !cfg.review);
+  if(!rows.length){
+    $("revBody").innerHTML = `<p class="empty">Tidak ada soal yang salah di sesi ini. Semua terjawab tepat.</p>`;
+    return;
+  }
+  $("revBody").innerHTML = rows.map(({q,i}) => {
+    const a = S.ans[i];
+    const state = a === null ? "sk" : (a === q.a ? "ok" : "no");
+    const label = a === null ? "Tidak dijawab" : (a === q.a ? "Benar" : "Salah");
+    const yours = a === null ? "" :
+      `<p class="rev-a">Jawabanmu <b>${LET[a]}. ${q.o[a]}</b></p>`;
+    return `<div class="rev">
+      <div class="rev-h">
+        <span class="tag ${state}">${label}</span>
+        <span class="n">Soal ${i+1} · ${TOPICS[q.t]}${S.flags[i]?" · ditandai ragu":""}</span>
+      </div>
+      <p class="rev-q">${q.q}</p>
+      ${yours}
+      <p class="rev-a">Kunci <b>${LET[q.a]}. ${q.o[q.a]}</b></p>
+      <p class="rev-e">${q.e}</p>
+    </div>`;
+  }).join("");
+}
+
+/* ---------------- kontrol ---------------- */
+$("selAll").addEventListener("click", () => { cfg.topics = Object.keys(TOPICS); saveCfg(); renderTopics(); renderPool(); });
+$("selNone").addEventListener("click", () => { cfg.topics = []; saveCfg(); renderTopics(); renderPool(); });
+$("count").addEventListener("input", e => {
+  const n = poolSize();
+  cfg.count = Math.max(1, Math.min(n || 89, +e.target.value || 1));
+  saveCfg(); renderPool();
+});
+$("count").addEventListener("blur", e => { e.target.value = cfg.count; });
+
+$("start").addEventListener("click", () => {
+  const pool = BANK.filter(q => cfg.topics.includes(q.t));
+  if(pool.length) startSession(pool, "campuran");
+});
+$("startWrong").addEventListener("click", () => {
+  const pool = BANK.filter(q => wrongSet[q.i]);
+  if(pool.length){ const keep = cfg.count; cfg.count = pool.length; startSession(pool, "ulang"); cfg.count = keep; }
+});
+$("clearHist").addEventListener("click", () => {
+  hist = []; wrongSet = {};
+  store.set("neuro:hist", hist);
+  store.set("neuro:wrong", wrongSet);
+  renderHistory();
+});
+
+$("prev").addEventListener("click", () => move(-1));
+$("next").addEventListener("click", () => move(1));
+$("flag").addEventListener("click", () => { S.flags[S.i] = !S.flags[S.i]; renderQ(); });
+let finishArmed = false;
+$("finish").addEventListener("click", () => {
+  const un = S.ans.filter(a => a === null).length;
+  if(un && !finishArmed){
+    finishArmed = true;
+    $("finish").textContent = `Masih ada ${un} soal kosong — klik lagi untuk menyelesaikan`;
+    setTimeout(() => {
+      finishArmed = false;
+      $("finish").textContent = "Selesaikan sesi sekarang";
+    }, 5000);
+    return;
+  }
+  finishArmed = false;
+  $("finish").textContent = "Selesaikan sesi sekarang";
+  finishSession(false);
+});
+
+$("revToggle").addEventListener("click", () => { S.revWrongOnly = !S.revWrongOnly; renderReview(); });
+$("again").addEventListener("click", () => {
+  $("result").classList.add("hidden");
+  $("setup").classList.remove("hidden");
+  renderTopics(); renderPool(); renderHistory();
+  window.scrollTo(0,0);
+});
+$("retryWrong").addEventListener("click", () => {
+  const pool = S.qs.filter((q,i) => S.ans[i] !== null && S.ans[i] !== q.a);
+  if(pool.length){ const keep = cfg.count; cfg.count = pool.length; startSession(pool, "ulang"); cfg.count = keep; }
+});
+
+document.addEventListener("keydown", e => {
+  if($("quiz").classList.contains("hidden")) return;
+  if(e.target.tagName === "INPUT") return;
+  const k = e.key.toUpperCase();
+  const li = LET.indexOf(k);
+  const ni = "12345".indexOf(k);
+  if(li > -1){ e.preventDefault(); pick(li); }
+  else if(ni > -1){ e.preventDefault(); pick(ni); }
+  else if(e.key === "Enter" || e.key === "ArrowRight"){ e.preventDefault(); move(1); }
+  else if(e.key === "ArrowLeft"){ e.preventDefault(); move(-1); }
+});
+
+/* ---------------- init ---------------- */
+(async function init(){
+  const saved = await store.get("neuro:cfg", null);
+  if(saved) cfg = {...DEFAULT_CFG, ...saved};
+  if(!Array.isArray(cfg.topics) || !cfg.topics.length) cfg.topics = Object.keys(TOPICS);
+  hist = await store.get("neuro:hist", []) || [];
+  wrongSet = await store.get("neuro:wrong", {}) || {};
+  $("count").value = cfg.count;
+  renderTopics(); renderPresets(); renderToggles(); renderPool(); renderHistory();
+})();
+</script>
+</body>
+</html>
