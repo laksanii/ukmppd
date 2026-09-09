@@ -34,9 +34,15 @@ data/
   topics.json              daftar materi
   neurologi-dasar.json     89 soal
   neurologi-lanjut.json    60 soal
+sumber/
+  materi/                  catatan & bahan bacaan mentah
+  soal/                    naskah soal mentah sebelum diolah ke data/
 scripts/
   validate-bank.mjs        pemeriksa konsistensi bank soal
 ```
+
+Isi `data/` adalah bank soal yang dipakai aplikasi; isi `sumber/` adalah bahan
+mentahnya dan tidak ikut dimuat. Lihat `sumber/README.md`.
 
 ## Menambah soal
 
