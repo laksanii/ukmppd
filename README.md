@@ -12,6 +12,7 @@ npm run dev       # http://localhost:5173
 npm run build     # validasi bank soal lalu bundel ke dist/
 npm run preview   # cek hasil build
 npm run validate  # cek konsistensi bank soal saja
+npm run import -- sumber/soal/x.md   # naskah Markdown -> bank soal JSON
 ```
 
 Hasil `npm run build` di `dist/` adalah file statis biasa, bisa langsung ditaruh di
@@ -39,6 +40,7 @@ sumber/
   soal/                    naskah soal mentah sebelum diolah ke data/
 scripts/
   validate-bank.mjs        pemeriksa konsistensi bank soal
+  import-soal.mjs          naskah Markdown -> data/*.json
 ```
 
 Isi `data/` adalah bank soal yang dipakai aplikasi; isi `sumber/` adalah bahan
@@ -69,6 +71,18 @@ Buka file level yang sesuai di `data/`, tambahkan satu objek:
 Aturannya: `id` unik di dalam satu file, `topic` harus ada di `data/topics.json`,
 `options` dan `why` tepat lima item, `answer` indeks 0-4. Jalankan `npm run validate`
 untuk memastikan.
+
+Kalau soalnya banyak, jangan diketik langsung ke JSON. Simpan naskahnya sebagai
+Markdown di `sumber/soal/` lalu impor:
+
+```bash
+npm run import -- sumber/soal/psikiatri.md --dry   # pratinjau
+npm run import -- sumber/soal/psikiatri.md         # tulis ke data/
+```
+
+Formatnya ada di `sumber/soal/_TEMPLATE.md`. Bagian pembahasan yang belum ada di
+naskah diisi penanda `TODO:`, dan `npm run validate` menolak selama penanda itu
+belum dibereskan.
 
 ## Menambah level kesulitan
 

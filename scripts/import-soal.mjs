@@ -1,0 +1,209 @@
+/* Ubah naskah soal Markdown di sumber/soal/ menjadi bank soal JSON di data/.
+   Lihat sumber/soal/_TEMPLATE.md untuk format yang dikenali.
+
+   Pemakaian:
+     npm run import -- sumber/soal/psikiatri.md
+     npm run import -- sumber/soal/psikiatri.md --level lanjut --topic kepala
+     npm run import -- sumber/soal/psikiatri.md --dry      (lihat hasil, tanpa menulis)
+*/
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, join, resolve } from "node:path";
+
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const LET = ["a", "b", "c", "d", "e"];
+const TODO = "TODO: ";
+
+/* ---------------- argumen ---------------- */
+const argv = process.argv.slice(2);
+const opt = { dry: false };
+const bebas = [];
+for (let i = 0; i < argv.length; i++) {
+  const a = argv[i];
+  if (a === "--dry") opt.dry = true;
+  else if (a === "--level") opt.level = argv[++i];
+  else if (a === "--topic") opt.topic = argv[++i];
+  else if (a === "--out") opt.out = argv[++i];
+  else if (a.startsWith("--")) fatal(`opsi tidak dikenal: ${a}`);
+  else bebas.push(a);
+}
+if (bebas.length !== 1) fatal("pemakaian: npm run import -- <file.md> [--level id] [--topic kode] [--out data/x.json] [--dry]");
+
+const berkas = resolve(root, bebas[0]);
+if (!existsSync(berkas)) fatal(`file tidak ditemukan: ${bebas[0]}`);
+
+function fatal(pesan) {
+  console.error(`\nGagal: ${pesan}\n`);
+  process.exit(1);
+}
+
+/* ---------------- frontmatter ---------------- */
+let teks = readFileSync(berkas, "utf8").replace(/\r\n/g, "\n");
+const fm = {};
+const mfm = teks.match(/^---\n([\s\S]*?)\n---\n/);
+if (mfm) {
+  mfm[1].split("\n").forEach(b => {
+    const m = b.match(/^\s*([a-zA-Z_]+)\s*:\s*(.+?)\s*$/);
+    if (m) fm[m[1]] = m[2];
+  });
+  teks = teks.slice(mfm[0].length);
+}
+
+const topics = JSON.parse(readFileSync(join(root, "data/topics.json"), "utf8"));
+const levels = JSON.parse(readFileSync(join(root, "data/levels.json"), "utf8"));
+const topikDefault = opt.topic || fm.topic || null;
+const levelId = opt.level || fm.level || null;
+
+let tujuan = opt.out || fm.file;
+if (!tujuan && levelId) {
+  const lv = levels.find(l => l.id === levelId);
+  if (!lv) fatal(`level "${levelId}" tidak ada di data/levels.json. Yang tersedia: ${levels.map(l => l.id).join(", ")}`);
+  tujuan = `data/${lv.file}`;
+}
+if (!tujuan) fatal("tujuan tidak diketahui. Beri --level <id>, atau --out data/namafile.json, atau tulis level: di frontmatter naskah.");
+if (!tujuan.startsWith("data/")) tujuan = `data/${tujuan}`;
+
+/* ---------------- parser ---------------- */
+const baris = teks.split("\n");
+const soal = [];
+const galat = [];
+let q = null, mode = null;
+
+const simpan = () => { if (q) soal.push(q); q = null; mode = null; };
+const rapikan = s => s.replace(/\s+/g, " ").trim();
+
+baris.forEach((brs, idx) => {
+  const no = idx + 1;
+  const b = brs.trim();
+
+  // judul bagian: "# HOME WORK NEUROLOGI" -> diabaikan
+  if (/^#{1,6}\s+[^\d]/.test(b)) return;
+
+  // awal soal: "1. vignette", "## 1. vignette", "1. [kepala] vignette"
+  const mSoal = b.match(/^#{0,6}\s*(\d+)\.\s+(?:\[([a-zA-Z0-9_-]+)\]\s*)?(.*)$/);
+  if (mSoal && !/^[a-e][.)]/i.test(b)) {
+    simpan();
+    q = {
+      no: +mSoal[1], baris: no, topic: mSoal[2] || topikDefault,
+      vignette: mSoal[3] ? [mSoal[3]] : [], options: [], answer: null,
+      key: [], why: new Array(5).fill(null)
+    };
+    mode = "vignette";
+    return;
+  }
+  if (!q) return;
+
+  // penanda blok
+  if (/^pembahasan\s*:/i.test(b)) { mode = "key"; q.key.push(b.replace(/^pembahasan\s*:/i, "").trim()); return; }
+  if (/^alasan\s*:?$/i.test(b)) { mode = "why"; return; }
+  if (/^topik\s*:/i.test(b)) { q.topic = b.replace(/^topik\s*:/i, "").trim(); return; }
+  if (/^kunci\s*:/i.test(b)) {
+    const h = b.replace(/^kunci\s*:/i, "").trim().toLowerCase()[0];
+    const k = LET.indexOf(h);
+    if (k < 0) galat.push(`baris ${no}: kunci "${h}" bukan a-e`);
+    else q.answer = k;
+    return;
+  }
+
+  // alasan per pilihan: "- a: ..." atau "a: ..."
+  const mWhy = b.match(/^[-*]?\s*([a-eA-E])\s*:\s*(.+)$/);
+  if (mWhy && (mode === "why" || mode === "key")) {
+    mode = "why";
+    q.why[LET.indexOf(mWhy[1].toLowerCase())] = mWhy[2].trim();
+    return;
+  }
+
+  // pilihan jawaban: "a. teks", "a) teks", "**c. teks**"
+  const mOpt = b.match(/^(\*\*)?\s*([a-eA-E])[.)]\s*(.+?)\s*(\*\*)?$/);
+  if (mOpt && (mode === "vignette" || mode === "options")) {
+    mode = "options";
+    const k = LET.indexOf(mOpt[2].toLowerCase());
+    const tebal = (mOpt[1] && mOpt[4]) || /^\*\*.*\*\*$/.test(b);
+    let isi = mOpt[3].replace(/\*\*/g, "").trim();
+    if (k !== q.options.length) galat.push(`soal ${q.no} (baris ${no}): urutan pilihan melompat, harusnya "${LET[q.options.length]}."`);
+    q.options.push(isi);
+    if (tebal) {
+      if (q.answer !== null && q.answer !== k) galat.push(`soal ${q.no}: kunci ganda`);
+      q.answer = k;
+    }
+    return;
+  }
+
+  if (!b) return;
+  if (mode === "vignette") q.vignette.push(b);
+  else if (mode === "key") q.key.push(b);
+});
+simpan();
+
+if (!soal.length) fatal("tidak ada soal yang terbaca. Cek formatnya di sumber/soal/_TEMPLATE.md");
+
+/* ---------------- rapikan & periksa ---------------- */
+const perluDiisi = [];
+const hasil = soal.map(q => {
+  const at = `soal ${q.no}`;
+  if (!q.topic) galat.push(`${at}: topik belum ditentukan. Tambah "[kode]" setelah nomor, baris "Topik: kode", frontmatter topic:, atau opsi --topic`);
+  else if (!topics[q.topic]) galat.push(`${at}: topik "${q.topic}" tidak ada di data/topics.json`);
+  if (q.options.length !== 5) galat.push(`${at}: pilihan ada ${q.options.length}, harus 5`);
+  if (q.answer === null) galat.push(`${at}: kunci belum ditandai (tebalkan pilihannya atau tulis "Kunci: c")`);
+  const vignette = rapikan(q.vignette.join(" "));
+  if (vignette.length < 40) galat.push(`${at}: vignette kosong atau terlalu pendek`);
+
+  const key = rapikan(q.key.join(" "));
+  const kosongKey = !key;
+  const why = q.why.map((w, k) => {
+    if (w) return rapikan(w);
+    return k === q.answer ? `${TODO}Benar. alasan pilihan ${LET[k].toUpperCase()} benar.` : `${TODO}alasan pilihan ${LET[k].toUpperCase()} salah.`;
+  });
+  if (kosongKey || q.why.some(w => !w)) perluDiisi.push(q.no);
+
+  return {
+    topic: q.topic, vignette, options: q.options,
+    answer: q.answer, key: kosongKey ? `${TODO}pembahasan kunci ${at}.` : key, why
+  };
+});
+
+if (galat.length) {
+  console.error(`\n${galat.length} masalah pada naskah:`);
+  galat.forEach(g => console.error(`  x ${g}`));
+  process.exit(1);
+}
+
+/* ---------------- gabung ke bank ---------------- */
+const jalurTujuan = join(root, tujuan);
+const lama = existsSync(jalurTujuan) ? JSON.parse(readFileSync(jalurTujuan, "utf8")) : [];
+const sidik = v => v.toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 90);
+const sudahAda = new Set(lama.map(x => sidik(x.vignette)));
+let idBerikut = lama.reduce((m, x) => Math.max(m, x.id), 0) + 1;
+
+const baru = [], duplikat = [];
+for (const q of hasil) {
+  if (sudahAda.has(sidik(q.vignette))) { duplikat.push(q); continue; }
+  sudahAda.add(sidik(q.vignette));
+  baru.push({ id: idBerikut++, ...q });
+}
+
+console.log(`\nNaskah  : ${bebas[0]}`);
+console.log(`Tujuan  : ${tujuan}${lama.length ? ` (sudah ada ${lama.length} soal)` : " (file baru)"}`);
+console.log(`Terbaca : ${hasil.length} soal`);
+if (duplikat.length) console.log(`Dilewati: ${duplikat.length} soal (vignette-nya sudah ada di bank)`);
+console.log(`Ditambah: ${baru.length} soal${baru.length ? `, id ${baru[0].id}-${baru[baru.length - 1].id}` : ""}`);
+
+const topikDipakai = {};
+baru.forEach(q => topikDipakai[q.topic] = (topikDipakai[q.topic] || 0) + 1);
+if (baru.length) console.log(`Topik   : ${Object.entries(topikDipakai).map(([k, v]) => `${k} ${v}`).join(", ")}`);
+
+if (perluDiisi.length) {
+  console.log(`\nMasih perlu diisi tangan (pembahasan/alasan belum ada di naskah):`);
+  console.log(`  soal nomor ${perluDiisi.join(", ")}`);
+  console.log(`  cari penanda "${TODO.trim()}" di ${tujuan}. npm run validate akan menolak selama penanda ini masih ada.`);
+}
+
+if (opt.dry) {
+  console.log(`\n--dry: tidak ada file yang ditulis. Contoh hasil soal pertama:\n`);
+  console.log(JSON.stringify(baru[0] || hasil[0], null, 2));
+  process.exit(0);
+}
+if (!baru.length) { console.log("\nTidak ada yang ditulis."); process.exit(0); }
+
+writeFileSync(jalurTujuan, JSON.stringify([...lama, ...baru], null, 2) + "\n");
+console.log(`\nDitulis ke ${tujuan}. Jalankan: npm run validate`);

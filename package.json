@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "npm run validate && vite build",
     "preview": "vite preview",
-    "validate": "node scripts/validate-bank.mjs"
+    "validate": "node scripts/validate-bank.mjs",
+    "import": "node scripts/import-soal.mjs"
   },
   "devDependencies": {
     "vite": "^7.1.5"

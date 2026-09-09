@@ -47,6 +47,9 @@ for (const lv of levels) {
     if (!Array.isArray(q.options) || q.options.length !== 5) errs.push(`${at}: harus ada tepat 5 pilihan`);
     if (!Number.isInteger(q.answer) || q.answer < 0 || q.answer > 4) errs.push(`${at}: answer harus 0-4`);
     if (!q.key) errs.push(`${at}: key (pembahasan utama) kosong`);
+    // sisa hasil import yang belum dilengkapi tangan
+    const todo = [q.key, ...(Array.isArray(q.why) ? q.why : [])].filter(s => typeof s === "string" && s.startsWith("TODO:"));
+    if (todo.length) errs.push(`${at}: masih ada ${todo.length} penanda TODO dari hasil import yang belum diisi`);
     if (!Array.isArray(q.why) || q.why.length !== 5) errs.push(`${at}: why harus 5 baris, satu per pilihan`);
     else if (q.why[q.answer] && !/^benar/i.test(q.why[q.answer])) {
       warns.push(`${at}: why pada pilihan kunci sebaiknya diawali "Benar."`);
