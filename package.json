@@ -1,0 +1,16 @@
+{
+  "name": "ukmppd-latihan",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Latihan soal UKMPPD dengan bank soal berjenjang",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run validate && vite build",
+    "preview": "vite preview",
+    "validate": "node scripts/validate-bank.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.1.5"
+  }
+}

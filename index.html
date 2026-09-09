@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latihan Neurologi UKMPPD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1>Latihan Neurologi UKMPPD</h1>
+  <p class="sub" id="bankNote">Memuat bank soal…</p>
+</header>
+
+<!-- ============ SETUP ============ -->
+<section id="setup">
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Level kesulitan</h2>
+      <span class="hint">Boleh dicampur</span>
+    </div>
+    <div class="levels" id="levels"></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Materi</h2>
+      <div class="topic-tools">
+        <button class="linkbtn" id="selAll">Pilih semua</button>
+        <button class="linkbtn" id="selNone">Kosongkan</button>
+      </div>
+    </div>
+    <div class="topics" id="topics"></div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><h2>Jumlah soal</h2></div>
+    <div class="countrow">
+      <input type="number" id="count" min="1" value="20" aria-label="Jumlah soal per sesi">
+      <div class="chips" id="presets"></div>
+    </div>
+    <p class="pool" id="pool"></p>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Fitur</h2>
+      <span class="hint">Semua bisa dimatikan</span>
+    </div>
+    <div class="toggles" id="toggles"></div>
+  </div>
+
+  <div class="panel" id="histPanel">
+    <div class="panel-head">
+      <h2>Riwayat</h2>
+      <button class="linkbtn hidden" id="clearHist">Hapus riwayat</button>
+    </div>
+    <div id="histBody"></div>
+  </div>
+
+  <button class="go" id="start">Mulai latihan</button>
+  <button class="go ghost hidden" id="startWrong" style="margin-top:8px">Ulangi soal yang pernah salah</button>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section id="quiz" class="hidden">
+  <div class="qbar">
+    <div class="left">
+      <span class="qnum" id="qnum"></span>
+      <span class="qtopic" id="qtopic"></span>
+      <span class="lvtag" id="qlevel"></span>
+    </div>
+    <span class="clock" id="clock"></span>
+  </div>
+  <svg class="trace" id="trace" viewBox="0 0 1000 38" preserveAspectRatio="none" aria-hidden="true"></svg>
+  <div class="vignette" id="vignette"></div>
+  <div class="opts" id="opts"></div>
+  <div class="fb hidden" id="fb">
+    <div class="fb-top" id="fbTop"></div>
+    <div class="fb-body">
+      <p class="key" id="fbKey"></p>
+      <div class="why" id="fbWhy"></div>
+    </div>
+  </div>
+  <div class="nav">
+    <button class="nbtn quiet" id="prev">Sebelumnya</button>
+    <button class="nbtn quiet" id="flag">Tandai ragu</button>
+    <span class="sp"></span>
+    <button class="nbtn solid" id="next">Berikutnya</button>
+  </div>
+  <p class="kbdhint">Tekan 1–5 atau A–E untuk menjawab, Enter untuk lanjut</p>
+  <div style="margin-top:20px;text-align:center">
+    <button class="linkbtn" id="finish">Selesaikan sesi sekarang</button>
+  </div>
+</section>
+
+<!-- ============ RESULT ============ -->
+<section id="result" class="hidden">
+  <div class="panel">
+    <div class="score">
+      <span class="big" id="scBig"></span>
+      <span class="of" id="scOf"></span>
+    </div>
+    <p class="verdict" id="verdict"></p>
+    <div class="meta" id="scMeta"></div>
+  </div>
+  <div class="panel hidden" id="levelPanel">
+    <div class="panel-head"><h2>Per level</h2></div>
+    <div class="bars" id="levelBars"></div>
+  </div>
+  <div class="panel" id="topicPanel">
+    <div class="panel-head"><h2>Per materi</h2></div>
+    <div class="bars" id="bars"></div>
+  </div>
+  <div class="panel" id="revPanel">
+    <div class="panel-head">
+      <h2 id="revTitle">Pembahasan</h2>
+      <button class="linkbtn" id="revToggle"></button>
+    </div>
+    <div id="revBody"></div>
+  </div>
+  <button class="go" id="again">Sesi baru</button>
+  <button class="go ghost hidden" id="retryWrong" style="margin-top:8px">Ulangi soal yang salah tadi</button>
+</section>
+
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "dasar",
+    "name": "Dasar",
+    "blurb": "Soal bimbingan neurologi: satu vignette, satu konsep inti.",
+    "file": "neurologi-dasar.json"
+  },
+  {
+    "id": "lanjut",
+    "name": "Lanjut",
+    "blurb": "Home work neurologi: vignette lebih panjang, menuntut lokalisasi lesi, dosis, dan pilihan pemeriksaan.",
+    "file": "neurologi-lanjut.json"
+  }
+]
