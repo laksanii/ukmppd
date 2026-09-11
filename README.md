@@ -18,6 +18,24 @@ npm run import -- sumber/soal/x.md   # naskah Markdown -> bank soal JSON
 Hasil `npm run build` di `dist/` adalah file statis biasa, bisa langsung ditaruh di
 GitHub Pages, Netlify, atau server statis apa pun (`base` sudah relatif).
 
+## Deployment otomatis ke VPS
+
+Workflow `.github/workflows/ci-cd.yml` menjalankan validasi bank soal dan build pada
+setiap pull request ke `main`. Setiap push yang masuk ke `main` otomatis mengunggah
+hasil build ke VPS dan mengaktifkannya di `/var/www/ukmppd/public`.
+
+Tambahkan secrets berikut di **Settings > Secrets and variables > Actions**:
+
+- `VPS_HOST`: hostname atau IP VPS.
+- `VPS_USER`: user SSH di VPS.
+- `VPS_SSH_KEY`: private key SSH untuk user tersebut.
+- `VPS_PORT`: port SSH (opsional, default `22`).
+- `VPS_KNOWN_HOSTS`: output `ssh-keyscan -p PORT HOST` (disarankan).
+
+User SSH perlu memiliki akses `sudo` tanpa password untuk `rsync` dan `chown` yang
+dipakai saat aktivasi release. Konfigurasi Nginx saat ini mengarah ke
+`/var/www/ukmppd/public`.
+
 ## Struktur
 
 ```

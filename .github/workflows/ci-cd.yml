@@ -1,0 +1,97 @@
+name: CI/CD
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Validate and build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate and build
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ukmppd-dist-${{ github.sha }}
+          path: dist
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    name: Deploy to VPS
+    if: github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://ukmppd.mahesvara.net
+    permissions:
+      contents: read
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: ukmppd-dist-${{ github.sha }}
+          path: dist
+
+      - name: Configure SSH
+        uses: webfactory/ssh-agent@v0.9.1
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: Trust VPS host key
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_PORT: ${{ secrets.VPS_PORT || 22 }}
+          VPS_KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}
+        run: |
+          mkdir -p "$HOME/.ssh"
+          chmod 700 "$HOME/.ssh"
+          if [ -n "$VPS_KNOWN_HOSTS" ]; then
+            printf '%s\n' "$VPS_KNOWN_HOSTS" >> "$HOME/.ssh/known_hosts"
+          else
+            ssh-keyscan -p "$VPS_PORT" "$VPS_HOST" >> "$HOME/.ssh/known_hosts"
+          fi
+          chmod 600 "$HOME/.ssh/known_hosts"
+
+      - name: Upload and activate release
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_PORT: ${{ secrets.VPS_PORT || 22 }}
+          RELEASE_ID: ${{ github.sha }}
+        run: |
+          set -eu
+          remote_tmp="/tmp/ukmppd-${RELEASE_ID}"
+          ssh -p "$VPS_PORT" "$VPS_USER@$VPS_HOST" "rm -rf '$remote_tmp' && mkdir -p '$remote_tmp'"
+          rsync -az --delete -e "ssh -p $VPS_PORT" dist/ "$VPS_USER@$VPS_HOST:$remote_tmp/"
+          ssh -p "$VPS_PORT" "$VPS_USER@$VPS_HOST" \
+            "sudo rsync -a --delete '$remote_tmp/' /var/www/ukmppd/public/ && \
+             sudo chown -R root:www-data /var/www/ukmppd/public && \
+             rm -rf '$remote_tmp'"
