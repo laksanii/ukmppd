@@ -1258,5 +1258,425 @@
       "Prayer hand atau prayer sign adalah tanda keterbatasan sendi pada diabetes lama.",
       "Benediction hand muncul saat mencoba mengepal pada lesi n. medianus proksimal."
     ]
+  },
+  {
+    "id": 61,
+    "topic": "bell",
+    "vignette": "Laki-laki 40 tahun datang ke puskesmas dengan keluhan keluar air dari mulut sisi kirinya saat berkumur sejak 2 hari ini. Keluhan disertai mata terasa gatal dan mengganjal serta keluar air mata pada kiri. Pemeriksaan neurologis tampak sudut mulut deviasi ke kanan, dahi kiri lebih tegas dan dalam lekukannya saat mengernyitkan dahi dibandingkan kanan dan kelopak mata kiri tidak dapat menutup dengan sempurna. Tatalaksana yang tepat adalah",
+    "options": [
+      "Prednisone 3 x 60mg selama 7 hari",
+      "Prednisone 1 x 60mg, single dose",
+      "Prednisone 1 x 60mg selama 6 hari",
+      "Prednisone 1 x 60mg selama 14 hari",
+      "Prednisone 3 x 60mg selama 14 hari"
+    ],
+    "answer": 2,
+    "key": "Mulut tertarik ke sisi kanan dan kelopak mata kiri tidak menutup sempurna menandakan parese N. VII perifer kiri, yaitu Bell's palsy. Terapinya kortikosteroid yang dimulai dalam 72 jam pertama: prednison 60 mg sekali sehari selama 6 hari, lalu diturunkan bertahap, disertai proteksi kornea.",
+    "why": [
+      "Prednison 3x60 mg berarti 180 mg per hari, jauh di atas dosis yang dianjurkan dan menambah risiko efek samping tanpa manfaat tambahan.",
+      "Dosis tunggal sekali pemberian terlalu singkat untuk menekan proses inflamasi pada nervus fasialis.",
+      "Benar. Prednison 60 mg per hari selama 6 hari lalu tapering off adalah regimen standar Bell's palsy.",
+      "Pemberian penuh selama 14 hari memperpanjang paparan steroid tanpa memperbaiki luaran.",
+      "Dosis 180 mg per hari selama 14 hari berlebihan pada dosis sekaligus durasinya."
+    ]
+  },
+  {
+    "id": 62,
+    "topic": "neuropati",
+    "vignette": "Laki-laki 50 tahun datang ke praktek dokter dengan keluhan nyeri seperti ditusuk dan dibakar di area dada sejak 1 bulan terakhir. Awalnya di area dada terdapat gelembung kecil kecil namun sekarang sudah hilang. Pemeriksaan status lokalis tampak macula patch hiperpigmentasi yang sesuai dermatome T4. Tatalaksana yang dapat diberikan adalah:",
+    "options": [
+      "Asiklovir",
+      "Pregabalin",
+      "Natrium diclofenak",
+      "Prednisone",
+      "Paracetamol"
+    ],
+    "answer": 1,
+    "key": "Nyeri seperti terbakar dan tertusuk yang menetap lebih dari 1 bulan setelah lesi vesikel hilang, sesuai satu dermatom dan menyisakan hiperpigmentasi, adalah neuralgia pascaherpetik. Nyeri ini bersifat neuropatik sehingga diobati dengan antikonvulsan seperti pregabalin atau gabapentin, atau antidepresan trisiklik.",
+    "why": [
+      "Asiklovir hanya bermanfaat pada fase akut herpes zoster dalam 72 jam pertama; pada pasien ini lesinya sudah menghilang.",
+      "Benar. Pregabalin adalah pilihan untuk neuralgia pascaherpetik.",
+      "Natrium diklofenak adalah OAINS yang bekerja pada nyeri nosiseptif, bukan nyeri neuropatik.",
+      "Prednison tidak terbukti mencegah maupun mengatasi neuralgia pascaherpetik yang sudah terbentuk.",
+      "Parasetamol tidak efektif pada nyeri neuropatik."
+    ]
+  },
+  {
+    "id": 63,
+    "topic": "kepala",
+    "vignette": "Laki-laki 25 tahun datang ke puskesmas dengan keluhan nyeri kepala sejak 1 bulan terakhir. Nyeri dirasakan pada kepala sisi kanan, durasi sekitar 2 jam, berdenyut, dan kadang disertai mual. Nyeri kepala diperberat oleh aktifitas dan membaik dengan istirahat. Pemeriksaan fisik didapatkan VAS 5. Tidak ada defisit neurologis fokal lain. Tatalaksana tepat pada kasus diatas adalah:",
+    "options": [
+      "Deksametason 3x5mg",
+      "Ergotamin 3x1mg",
+      "Paracetamol 3x500mg",
+      "Amitriptilin 2x25mg",
+      "Ibuprofen 2x200mg"
+    ],
+    "answer": 1,
+    "key": "Nyeri kepala unilateral, berdenyut, disertai mual, dan diperberat aktivitas adalah migrain. Untuk serangan sedang sampai berat, terapi abortif spesifik berupa ergotamin atau triptan; ergotamin 1-2 mg diulang tiap jam dengan maksimal 3 dosis dalam 24 jam.",
+    "why": [
+      "Deksametason bukan terapi abortif migrain dan tidak berperan pada serangan rutin.",
+      "Benar. Ergotamin adalah abortif spesifik migrain; alternatifnya sumatriptan.",
+      "Parasetamol hanya memadai untuk serangan ringan, sedangkan pasien sudah VAS 5 dengan mual.",
+      "Amitriptilin adalah terapi preventif, tidak menghentikan serangan yang sedang berlangsung.",
+      "Ibuprofen 2x200 mg adalah dosis analgetik ringan dan bukan terapi spesifik migrain."
+    ]
+  },
+  {
+    "id": 64,
+    "topic": "kepala",
+    "vignette": "Wanita usia 22 tahun datang ke poliklinik umum dengan keluhan nyeri kepala hilang timbul yang dirasakan pada seluruh kepala seperti ditindih beban berat sejak 6 bulan yang lalu. Nyeri kepala dirasakan terutama jika sedang banyak aktivitas berat, Nyeri kepala membaik dengan istirahat, Pada pemeriksaan fisik terdapat ketegangan pada otot-otot leher. Apakah tatalaksana non-medikamentosa yang paling mungkin",
+    "options": [
+      "Diet rendah natriurn",
+      "Relaksasi",
+      "Olahraga aerobik",
+      "Hindari konsumsi kopi",
+      "Hindari konsumsi keju, coklat"
+    ],
+    "answer": 1,
+    "key": "Nyeri kepala bilateral seperti ditindih beban, tanpa mual maupun fotofobia, disertai ketegangan otot leher adalah tension type headache. Terapi non-medikamentosa utamanya adalah relaksasi dan manajemen stres, ditambah perbaikan postur kerja.",
+    "why": [
+      "Diet rendah natrium ditujukan untuk hipertensi dan penyakit Meniere.",
+      "Benar. Relaksasi menurunkan ketegangan otot perikranial yang menjadi sumber nyeri pada TTH.",
+      "Olahraga aerobik bermanfaat secara umum, tetapi pada pasien ini nyeri justru dipicu aktivitas berat.",
+      "Menghindari kopi lebih relevan untuk insomnia dan ansietas, bukan pencetus utama TTH.",
+      "Pantangan keju dan coklat berlaku untuk migrain karena kandungan tiraminnya."
+    ]
+  },
+  {
+    "id": 65,
+    "topic": "nervus",
+    "vignette": "Laki-laki 28 tahun datang ke IGD dengan keluhan kelemahan pada tangan kanannya. Pasien mengalami kecelakaan lalu lintas dengan stang motor menabrak leher dan bahunya 3 jam SMRS. Riwayat DM dan hipertensi disangkal. Riwayat keluarga dengan keluhan serupa disangkal. Dari pemeriksaan fisik didapatkan kesadaran compos mentis, tanda-tanda vital tekanan darah 130/90 mmHg, nadi 82 x/menit, pernafasan 21 x/menit, suhu afebris. Dari pemeriksaan neurologis didapati kesulitan melakukan dorsofleksi tangan kanan dan penurunan sensasi raba serta suhu pada dorsum manus kanan. Phalen test dan Tinnel test (-), krepitasi pada bagian bahu dan lengan (-). Belum dilakukan pemeriksaan penunjang lain. Apakah saraf yang terlibat da kejadian tersebut",
+    "options": [
+      "N. Axillaris",
+      "N. Ulnaris",
+      "N. Peroneus",
+      "N. Medianus",
+      "N. Radialis"
+    ],
+    "answer": 4,
+    "key": "Kesulitan dorsofleksi pergelangan tangan disertai penurunan sensasi pada dorsum manus setelah trauma pada leher dan bahu menunjukkan lesi n. radialis, yang membawa persarafan motorik ekstensor lengan bawah dan sensorik punggung tangan sisi radial.",
+    "why": [
+      "N. aksilaris mengurus abduksi bahu dan sensasi di area deltoid, bukan pergelangan tangan.",
+      "Lesi n. ulnaris memberi gangguan pada jari manis dan kelingking disertai claw hand.",
+      "N. peroneus berada di tungkai dan lesinya menyebabkan drop foot.",
+      "Lesi n. medianus memberi gangguan pada tiga setengah jari sisi radial dengan Tinel dan Phalen positif, sedangkan pada pasien ini keduanya negatif.",
+      "Benar. Drop hand dengan hipestesi dorsum manus adalah lesi n. radialis."
+    ]
+  },
+  {
+    "id": 66,
+    "topic": "vertigo",
+    "vignette": "Wanita usia 30 tahun datang ke klinik dengan keluhan pusing berputar yang sudah berlangsung selama beberapa hari yang tidak dipengaruhi dengan gerakan kepala. Keluhan ini disertai dengan mual dan muntah. Pasien juga mengeluhkan penurunan pendengaran pada telinga kanan. Pasien baru saja sembuh dari batuk pilek 1 minggu yang lalu. Pada pemeriksaan fisik ditemukan membran timpani suram dan retraksi. Diagnosis yang paling mungkin pada kasus ini adalah",
+    "options": [
+      "BPPV",
+      "Otitis media serosa",
+      "Labirinitis",
+      "Penyakit Meniere",
+      "Motion sickness"
+    ],
+    "answer": 2,
+    "key": "Vertigo yang berlangsung terus-menerus beberapa hari, tidak dipengaruhi posisi kepala, disertai penurunan pendengaran dan didahului infeksi saluran napas adalah labirinitis, yaitu peradangan labirin yang mengenai organ vestibular sekaligus koklea.",
+    "why": [
+      "BPPV berlangsung sangat singkat, dipicu perubahan posisi kepala, dan tidak mengganggu pendengaran.",
+      "Otitis media serosa menjelaskan membran timpani yang suram dan retraksi, tetapi tidak menerangkan vertigo berat berhari-hari; labirinitis adalah komplikasi yang terjadi.",
+      "Benar. Vertigo menetap dengan gangguan pendengaran pascainfeksi adalah labirinitis.",
+      "Penyakit Meniere bersifat episodik berulang dengan tinitus dan rasa penuh di telinga, bukan serangan tunggal pascainfeksi.",
+      "Motion sickness muncul saat perjalanan dan tidak disertai penurunan pendengaran."
+    ]
+  },
+  {
+    "id": 67,
+    "topic": "vertigo",
+    "vignette": "Wanita 45 tahun datang ke praktek dokter dengan keluhan pusing berputar sejak 1 hari yang lalu. Keluhan terjadi tiba-tiba saat bangun dari tempat tidur. Keluhan pusing bertambah bila menoleh ke kiri dan membuka mata. Keluhan disertai dengan mual, muntah dan keringat dingin. Pemeriksaan fisik: TD 120/80 mmHg, nadi 90 x/menit, RR 20 x/menit. Etiologi yang mendasari keluhan diatas adalah:",
+    "options": [
+      "Ketidakseimbangan vestibular",
+      "Degenerasi inner & outer hair cell",
+      "Hydrops endolimfe",
+      "Kerusakan organ corti",
+      "Otolithiasis"
+    ],
+    "answer": 4,
+    "key": "Vertigo mendadak saat bangun tidur, memberat saat menoleh, berlangsung singkat dan disertai gejala otonom adalah BPPV. Penyebabnya otolit yang terlepas dari makula utrikulus dan berpindah ke kanalis semisirkularis.",
+    "why": [
+      "Ketidakseimbangan masukan vestibular dan visual adalah mekanisme motion sickness.",
+      "Degenerasi sel rambut dalam dan luar koklea menyebabkan presbiakusis.",
+      "Hidrops endolimfe adalah mekanisme penyakit Meniere yang disertai tuli dan tinitus.",
+      "Kerusakan organ Corti bermanifestasi sebagai gangguan pendengaran, bukan vertigo posisional.",
+      "Benar. Otolitiasis atau kanalitiasis adalah dasar patofisiologi BPPV."
+    ]
+  },
+  {
+    "id": 68,
+    "topic": "parkinson",
+    "vignette": "Laki-laki 65 tahun dibawa ke Puskesmas dengan keluhan tremor sejak 1 tahun yang lalu. Keluarga pasien juga mengeluhkan pasien berjalan lebih lambat dari biasanya dan sering mengalami kekakuan tubuh. Pemeriksaan fisik didapatkan pill-rolling tremor yang menghilang bila dokter memerintahkan pasien untuk mengambil suatu benda. Tatalaksana farmakologis yang paling tepat ialah",
+    "options": [
+      "Acetilkolinesterase inhibitor",
+      "SSRI",
+      "Antikolinergik",
+      "Agonis dopamin",
+      "Precursor dopamin"
+    ],
+    "answer": 4,
+    "key": "Trias tremor istirahat, bradikinesia, dan rigiditas pada usia lanjut adalah penyakit Parkinson. Pada pasien berusia di atas 60-65 tahun, terapi farmakologis pilihan adalah levodopa, yaitu prekursor dopamin yang dapat menembus sawar darah otak.",
+    "why": [
+      "Penghambat asetilkolinesterase dipakai pada demensia Alzheimer.",
+      "SSRI ditujukan untuk depresi yang dapat menyertai, bukan untuk gejala motorik utama.",
+      "Antikolinergik seperti triheksifenidil dipertimbangkan pada pasien muda dengan tremor dominan dan berisiko mengganggu kognisi pada usia lanjut.",
+      "Agonis dopamin lebih dipilih pada pasien berusia di bawah 60 tahun untuk menunda komplikasi motorik levodopa.",
+      "Benar. Levodopa sebagai prekursor dopamin adalah pilihan utama pada usia lanjut."
+    ]
+  },
+  {
+    "id": 69,
+    "topic": "vertigo",
+    "vignette": "Wanita 20 tahun datang ke Puskesmas dengan keluhan kepala pusing dan mual muntah. Keluhan baru terjadi setelah pasien naik kapal menyebrangi pulau. Pemeriksaan fisik didapatkan TD 120/70 mmHg, nadi 80 x/menit, RR 22 x/menit, pasien tampak lemah. Keluhan tidak disertai dengan perubahan posisi. Tatalaksana yang dapat diberikan adalah:",
+    "options": [
+      "Dimenhidrinate",
+      "Betahistine mesilat",
+      "Diphendyramine",
+      "Sumatriptan",
+      "Paracetamol"
+    ],
+    "answer": 0,
+    "key": "Pusing, mual, dan muntah yang muncul saat perjalanan dan tidak dipengaruhi perubahan posisi adalah motion sickness. Terapinya antihistamin antivertigo, dan sediaan yang secara khusus diindikasikan untuk mabuk perjalanan adalah dimenhidrinat.",
+    "why": [
+      "Benar. Dimenhidrinat adalah obat pilihan untuk motion sickness.",
+      "Betahistin ditujukan untuk penyakit Meniere dengan memperbaiki aliran mikrosirkulasi telinga dalam.",
+      "Difenhidramin punya efek antivertigo, tetapi indikasi utamanya alergi dan sedasi, bukan sediaan baku mabuk perjalanan.",
+      "Sumatriptan adalah abortif migrain.",
+      "Parasetamol hanya analgetik dan tidak mengatasi keluhan vestibular."
+    ]
+  },
+  {
+    "id": 70,
+    "topic": "nervus",
+    "vignette": "Wanita 25 tahun datang ke Puskesmas dengan keluhan kebas di ibu jari, telunjuk, jari tengah terutama tangan kiri. Pasien sehari-hari bekerja sebagai petugas administrasi di sebuah Perusahaan. Keluhan dirasakan membaik dengan mengibaskan tangan. Pemeriksaan fisik: tanda vital dalam batas normal dan tinel sign (+) dan phalen sign (+). Nervus yang mengalami cedera pada kasus diatas adalah:",
+    "options": [
+      "Nervus ulnaris",
+      "Nervus medianus",
+      "Nervus radialis",
+      "Nervus medianus, radialis",
+      "Nervus radialis, ulnaris"
+    ],
+    "answer": 1,
+    "key": "Kebas pada ibu jari, telunjuk, dan jari tengah yang membaik dengan mengibaskan tangan, disertai Tinel dan Phalen positif, adalah carpal tunnel syndrome akibat jepitan n. medianus di terowongan karpal.",
+    "why": [
+      "N. ulnaris mempersarafi jari manis dan kelingking, tidak sesuai dengan distribusi keluhan pasien.",
+      "Benar. N. medianus mempersarafi tiga setengah jari sisi radial dan terjepit di terowongan karpal.",
+      "N. radialis mengurus sensasi punggung tangan dan ekstensi pergelangan tangan.",
+      "Kombinasi medianus dan radialis tidak sesuai dengan pola keluhan yang terbatas pada tiga jari radial sisi volar.",
+      "Kombinasi radialis dan ulnaris justru melewatkan saraf yang benar-benar terkena."
+    ]
+  },
+  {
+    "id": 71,
+    "topic": "kepala",
+    "vignette": "Laki-laki 25 tahun datang ke klinik dengan keluhan nyeri kepala yang dialami berulang kali seperti diikat di kedua sisi kepala. Keluhan mual muntah dan rinorea disangkal. Setelah dianamnesa, pasien mengakui bahwa akhir-akhir ini sedang stress karena memikirkan persiapan untuk ujian. Pemeriksaan tanda vital dalam batas normal. Pemeriksaan nervus kranialis dalam batas normal. Diagnosis yang tepat:",
+    "options": [
+      "Nyeri kepala tipe tegang",
+      "Migraine with aura",
+      "Migraine common",
+      "Nyeri kepala tipe cluster",
+      "Trigeminal neuralgia"
+    ],
+    "answer": 0,
+    "key": "Nyeri kepala berulang di kedua sisi dengan kualitas seperti diikat, tanpa mual, muntah, maupun gejala otonom, dan dipicu stres psikis adalah tension type headache.",
+    "why": [
+      "Benar. Nyeri bilateral seperti diikat yang dipicu stres tanpa gejala penyerta adalah TTH.",
+      "Migrain dengan aura didahului gejala neurologis fokal seperti kilatan cahaya atau skotoma.",
+      "Migrain common bersifat unilateral, berdenyut, dan umumnya disertai mual serta fotofobia.",
+      "Cluster headache unilateral sangat berat di sekitar orbita disertai lakrimasi dan rinorea, yang justru disangkal pasien.",
+      "Neuralgia trigeminal berupa nyeri singkat seperti tersetrum di wajah yang dipicu sentuhan."
+    ]
+  },
+  {
+    "id": 72,
+    "topic": "bell",
+    "vignette": "Laki-laki 55 tahun datang ke poli RS dengan kelemahan sisi tubuh kanan sejak 1 jam yang lalu. Kekuatan otot 3333/5555. Wajah tidak simetris, lipatan nasolabial kanan lebih mendatar dibanding sebelah kiri, kerutan dahi masih simetris. Pasien memiliki riwayat DM dan HT namun tidak terkontrol. Penyebab yang terjadi pada pasien adalah:",
+    "options": [
+      "Paresis n. facialis kanan sentral",
+      "Paresis n. facialis kiri sentral",
+      "Paresis n. facialis kanan perifer",
+      "Paresis n. facialis kiri perifer",
+      "Paresis n. facialis bilateral"
+    ],
+    "answer": 0,
+    "key": "Kerutan dahi yang masih simetris menandakan lesi upper motor neuron, karena otot dahi mendapat persarafan dari kedua hemisfer. Sisi yang parese adalah kanan, sesuai lipatan nasolabial kanan yang mendatar dan hemiparesis kanan.",
+    "why": [
+      "Benar. Dahi simetris menunjukkan tipe sentral, dan tanda-tanda kelemahannya ada di sisi kanan.",
+      "Sisinya keliru; yang mendatar adalah lipatan nasolabial kanan, sejalan dengan kelemahan tubuh kanan.",
+      "Pada tipe perifer, kerutan dahi sisi lesi ikut menghilang, sedangkan dahi pasien masih simetris.",
+      "Selain tipe perifer yang tidak sesuai, sisi lesinya juga keliru.",
+      "Parese bilateral akan mengenai kedua sisi wajah, bukan satu sisi seperti pada pasien."
+    ]
+  },
+  {
+    "id": 73,
+    "topic": "vertigo",
+    "vignette": "Laki-laki 22 tahun datang ke klinik dengan keluhan pusing berputar sejak 2 hari yang lalu. Keluhan disertai mual dan muntah. Keluhan pusing berputar diperberat saat pergerakan kepala. Pemeriksaan tanda vital TD 120/80 mmHg, nadi 88 x/menit, RR 22 x/menit, temp 37 C. Tatalaksana farmakologi yang dapat diberikan adalah:",
+    "options": [
+      "Dimenhidrinate",
+      "Betahistine",
+      "Sumatriptan",
+      "Paracetamol",
+      "Karbamazepin"
+    ],
+    "answer": 1,
+    "key": "Vertigo perifer dengan mual dan muntah yang diperberat gerakan kepala diterapi dengan obat antivertigo. Betahistin, suatu analog histamin, memperbaiki mikrosirkulasi telinga dalam dan menjadi pilihan pada vertigo vestibular perifer.",
+    "why": [
+      "Dimenhidrinat adalah supresan vestibular yang lebih ditujukan untuk mabuk perjalanan dan sebaiknya tidak dipakai lama karena menghambat kompensasi vestibular.",
+      "Benar. Betahistin adalah pilihan farmakologis untuk vertigo vestibular perifer.",
+      "Sumatriptan adalah abortif migrain.",
+      "Parasetamol hanya analgetik dan tidak mengatasi keluhan vestibular.",
+      "Karbamazepin dipakai pada neuralgia trigeminal."
+    ]
+  },
+  {
+    "id": 74,
+    "topic": "nmj",
+    "vignette": "Laki-laki 29 tahun datang ke Puskesmas dengan keluhan mata sulit untuk membuka sejak 2 minggu. Keluhan terasa memberat pada saat sore dan malam hari dan mata bisa membuka sempurna lagi pada pagi hari. Pada pemeriksaan fisik didapatkan ptosis bilateral. Pemeriksaan fisik: TD 120/70 mmHg, nadi 88 x/menit, RR 22 x/menit, temp 37 C. Diagnosis yang tepat adalah:",
+    "options": [
+      "Guillan barre syndrome",
+      "Myasthenia gravis",
+      "Poliomyelitis",
+      "Radikulopati servikal",
+      "Hernia nucleus pulposus"
+    ],
+    "answer": 1,
+    "key": "Ptosis bilateral yang memberat pada sore dan malam hari lalu membaik setelah istirahat menunjukkan fatigabilitas otot, ciri khas miastenia gravis akibat autoantibodi terhadap reseptor asetilkolin.",
+    "why": [
+      "GBS memberi kelemahan asendens simetris pada ekstremitas dengan refleks fisiologis menurun.",
+      "Benar. Kelemahan yang berfluktuasi mengikuti aktivitas adalah miastenia gravis.",
+      "Poliomielitis menyebabkan paralisis flaksid asimetris pascademam, umumnya pada anak dengan imunisasi tidak lengkap.",
+      "Radikulopati servikal memberi nyeri yang menjalar ke lengan, bukan ptosis.",
+      "HNP memberi nyeri radikuler pada tulang belakang dan ekstremitas."
+    ]
+  },
+  {
+    "id": 75,
+    "topic": "epilepsi",
+    "vignette": "Anak 10 tahun dibawa ibunya ke Poliklinik Saraf dengan keluhan anak tampak sering melamun dengan pandangan kosong. Keadaan berlangsung beberapa kali dalam sehari dengan durasi 1 menit setiap kali kejadian, namun setelah itu anak dapat kembali beraktivitas secara normal. Konsentrasi dan nilai di sekolah menurun. Diagnosis yang tepat adalah:",
+    "options": [
+      "Absence seizure",
+      "Grand mall",
+      "Kejang tonik",
+      "Kejang klonik",
+      "Tonik klonik"
+    ],
+    "answer": 0,
+    "key": "Bengong mendadak dengan pandangan kosong yang berlangsung singkat, berulang beberapa kali sehari, dan langsung pulih tanpa kebingungan pascaiktal adalah bangkitan absans. Gangguan konsentrasi dan penurunan nilai sekolah sering menjadi keluhan pertama.",
+    "why": [
+      "Benar. Bengong berulang yang pulih segera tanpa fase pascaiktal adalah absence seizure.",
+      "Grand mal berupa kejang tonik klonik dengan penurunan kesadaran dan kebingungan setelahnya.",
+      "Kejang tonik berupa kekakuan otot yang menetap.",
+      "Kejang klonik berupa hentakan berirama berulang.",
+      "Kejang tonik klonik menggabungkan fase kaku dan fase hentakan, jelas terlihat oleh pengamat."
+    ]
+  },
+  {
+    "id": 76,
+    "topic": "nervus",
+    "vignette": "Laki-laki 22 tahun mengeluh nyeri seperti rasa terbakar dan kebas pada pergelangan kaki kanan menjalar hingga ke jari-jari dan telapak kaki. Keluhan membaik saat istirahat. Pemeriksaan fisik: tanda vital dbn. Saat dilakukan perkusi pada malleolus medial terdapat penjalaran ke jari-jari dan telapak kaki. Diagnosis yang tepat adalah:",
+    "options": [
+      "Carpal tunnel syndrome",
+      "Radikulopati servikal",
+      "Radikulopati lumbal",
+      "Tarsal tunnel syndrome",
+      "Guyon tunnel syndrome"
+    ],
+    "answer": 3,
+    "key": "Nyeri terbakar dan kebas di telapak kaki serta jari-jari, dengan perkusi di belakang maleolus medialis yang menimbulkan penjalaran (Tinel positif), adalah tarsal tunnel syndrome akibat jepitan n. tibialis posterior.",
+    "why": [
+      "Carpal tunnel syndrome terjadi di pergelangan tangan pada n. medianus.",
+      "Radikulopati servikal memberi nyeri menjalar dari leher ke lengan.",
+      "Radikulopati lumbal memberi nyeri dari pinggang yang menjalar ke tungkai dengan Laseque positif, bukan titik nyeri lokal di maleolus medialis.",
+      "Benar. Tinel positif di maleolus medialis adalah tanda tarsal tunnel syndrome.",
+      "Guyon tunnel syndrome adalah jepitan n. ulnaris di pergelangan tangan."
+    ]
+  },
+  {
+    "id": 77,
+    "topic": "nmj",
+    "vignette": "Laki-laki 20 tahun dibawa ke IGD RS dengan keluhan sulit berjalan sejak 3 hari yang lalu. Awalnya dirasakan kelemahan pada kedua tungkai namun semakin lama semakin memberat dan disertai dengan kelemahan pada kedua lengan. Pasien memiliki riwayat flue 2 minggu yang lalu. Pemeriksaan fisik: sens CM, tanda vital dbn. Pada pemeriksaan neurologi: tetraparase flaksid tipe LMN, pemeriksaan reflex fisiologis menurun, namun pemeriksaan sensoris dalam batas normal. Diagnosis yang tepat adalah:",
+    "options": [
+      "Bell palsy",
+      "Meningitis",
+      "Myasthenia gravis",
+      "Guillan barre syndrome",
+      "Poliomyelitis"
+    ],
+    "answer": 3,
+    "key": "Kelemahan asendens simetris yang dimulai dari kedua tungkai lalu naik ke lengan, bersifat flaksid tipe LMN dengan refleks menurun dan sensorik normal, didahului infeksi 2 minggu sebelumnya, adalah Guillain-Barre syndrome.",
+    "why": [
+      "Bell's palsy hanya mengenai otot wajah satu sisi.",
+      "Meningitis menonjolkan demam dengan tanda rangsang meningeal, bukan tetraparesis flaksid.",
+      "Miastenia gravis memberi kelemahan yang berfluktuasi dengan refleks fisiologis yang tetap normal.",
+      "Benar. Pola asendens simetris pascainfeksi dengan arefleksia adalah GBS.",
+      "Poliomielitis memberi kelumpuhan flaksid yang asimetris disertai demam saat awitan."
+    ]
+  },
+  {
+    "id": 78,
+    "topic": "kepala",
+    "vignette": "Wanita 27 tahun datang ke klinik dengan keluhan sering nyeri kepala sebelah kanan, Nyeri kadang dirasakan di kepala kiri. Sebelumnya mata kiri buram kurang lebih 15 menit, baru timbul nyeri kepala. Mual muntah (+). Pemeriksaan fisik: TD 110/70, nadi 88, RR 20, temp 36 C. Diagnosis yang tepat adalah:",
+    "options": [
+      "Cluster headache",
+      "Migraine without aura",
+      "Migraine with aura",
+      "Tension type headache",
+      "Migraine sekunder"
+    ],
+    "answer": 2,
+    "key": "Pandangan buram pada satu mata selama sekitar 15 menit yang mendahului nyeri kepala adalah aura visual. Nyeri kepala berulang yang didahului aura dan disertai mual muntah adalah migrain dengan aura.",
+    "why": [
+      "Cluster headache disertai gejala otonom ipsilateral seperti mata merah, lakrimasi, dan rinorea.",
+      "Migrain tanpa aura tidak didahului gejala neurologis, sedangkan pasien jelas mengalaminya.",
+      "Benar. Aura visual 15 menit sebelum nyeri menegakkan migrain dengan aura.",
+      "TTH bersifat bilateral seperti diikat dan tidak didahului aura.",
+      "Istilah migrain sekunder tidak dipakai; nyeri kepala sekunder disebabkan kelainan struktural atau sistemik yang mendasari."
+    ]
+  },
+  {
+    "id": 79,
+    "topic": "trigeminal",
+    "vignette": "Laki-laki 40 tahun datang ke praktek dokter dengan keluhan nyeri pada pipi kanan. Nyeri dirasakan seperti disetrum. Nyeri bertambah berat bila mengunyah, dan sikat gigi. Keluhan nyeri dirasakan sering hilang timbul setiap hari. Nyeri hanya berkurang sedikit setelah diberi obat anti nyeri. Diagnosis yang tepat ialah:",
+    "options": [
+      "Neuralgia oksipital",
+      "Neuralgia glossofaringeus",
+      "Neuralgia trigeminal",
+      "Ramsay hunt syndrome",
+      "Tolosa hunt syndrome"
+    ],
+    "answer": 2,
+    "key": "Nyeri wajah unilateral yang singkat seperti tersetrum, dipicu aktivitas ringan seperti mengunyah dan menyikat gigi, serta tidak responsif terhadap analgetik biasa, adalah neuralgia trigeminal. Terapinya karbamazepin.",
+    "why": [
+      "Neuralgia oksipital memberi nyeri di belakang kepala sepanjang perjalanan n. oksipitalis.",
+      "Neuralgia glosofaringeus menimbulkan nyeri di tenggorok dan telinga yang dipicu menelan.",
+      "Benar. Nyeri seperti tersetrum di pipi dengan pencetus sentuhan ringan adalah neuralgia trigeminal.",
+      "Ramsay Hunt syndrome memberi parese fasialis perifer dengan vesikel di liang telinga.",
+      "Tolosa-Hunt syndrome berupa oftalmoplegia nyeri akibat peradangan di sinus kavernosus."
+    ]
+  },
+  {
+    "id": 80,
+    "topic": "meningitis",
+    "vignette": "Laki-laki 22 tahun dibawa ke IGD RS dengan keluhan demam dan nyeri kepala sejak 3 hari. Keluhan disertai kejang dan penurunan kesadaran. Pemeriksaan fisik: sens somnolen, TD 120/80, nadi 90, RR 24, Temp 38.9 C. Dokter mencurigai mengalami infeksi selaput otak. Berikut ini yang termasuk tanda rangsangan meningeal adalah:",
+    "options": [
+      "Babinsky",
+      "Chaddock",
+      "Oppenheim",
+      "Brudzinsky",
+      "Hoffman thromner"
+    ],
+    "answer": 3,
+    "key": "Tanda rangsang meningeal meliputi kaku kuduk, Kernig, Laseque, dan Brudzinski I sampai IV. Tanda-tanda ini muncul karena peradangan selaput otak membuat peregangan meningen terasa nyeri.",
+    "why": [
+      "Babinski adalah refleks patologis yang menandakan lesi upper motor neuron.",
+      "Chaddock adalah varian refleks patologis UMN yang dirangsang di bawah maleolus lateralis.",
+      "Oppenheim juga refleks patologis UMN, dirangsang dengan mengurut tibia.",
+      "Benar. Brudzinski adalah tanda rangsang meningeal.",
+      "Hoffmann-Tromner adalah tanda lesi UMN pada ekstremitas atas."
+    ]
   }
 ]
