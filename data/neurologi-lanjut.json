@@ -409,14 +409,14 @@
       "Frequent tension type headache",
       "Chronic tension type headache"
     ],
-    "answer": 4,
-    "key": "TTH diklasifikasikan menurut frekuensi: infrequent bila kurang dari 1 hari per bulan, frequent bila 1-14 hari per bulan, dan kronik bila 15 hari atau lebih per bulan selama lebih dari 3 bulan. Serangan minimal 12 hari per bulan selama 6 bulan pada soal ini dikategorikan sebagai TTH kronik.",
+    "answer": 3,
+    "key": "TTH dikelompokkan menurut frekuensi serangan: infrequent episodic bila kurang dari 1 hari per bulan, frequent episodic bila 1-14 hari per bulan selama minimal 3 bulan, dan kronik bila 15 hari atau lebih per bulan selama lebih dari 3 bulan. Serangan 12 hari per bulan selama 6 bulan masih berada dalam rentang 1-14 hari, sehingga tergolong frequent episodic tension type headache.",
     "why": [
-      "Migrain unilateral dan berdenyut, bukan seperti terikat di seluruh kepala.",
-      "Cluster headache unilateral orbital dengan gejala otonom ipsilateral.",
-      "Infrequent TTH bila serangan kurang dari 1 hari per bulan.",
-      "Frequent TTH bila serangan 1-14 hari per bulan dan berlangsung kurang dari 3 bulan.",
-      "Benar. Serangan yang sudah berjalan 6 bulan dengan frekuensi tinggi tiap bulan dinilai sebagai TTH kronik."
+      "Common migrain atau migrain tanpa aura bersifat unilateral dan berdenyut disertai mual, bukan nyeri seperti terikat di seluruh kepala.",
+      "Cluster headache unilateral sangat berat di sekitar orbita dengan gejala otonom ipsilateral seperti lakrimasi dan rinorea.",
+      "Infrequent episodic TTH bila serangan kurang dari 1 hari per bulan, jauh lebih jarang daripada pasien ini.",
+      "Benar. Serangan 12 hari per bulan berada dalam rentang 1-14 hari per bulan dan sudah berlangsung lebih dari 3 bulan.",
+      "TTH kronik baru ditegakkan bila serangan mencapai 15 hari atau lebih per bulan, sedangkan pasien ini 12 hari."
     ]
   },
   {
