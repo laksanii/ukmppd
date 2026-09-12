@@ -1,5 +1,5 @@
 /* Penyimpanan, konfigurasi, riwayat, dan state sesi yang sedang berjalan. */
-import { BANK, LEVEL_IDS, TOPICS } from "./bank.js";
+import { BANK, LEVEL_IDS, SUBJECT_IDS, ALL_TOPICS } from "./bank.js";
 
 export const LET = ["A", "B", "C", "D", "E"];
 export const $ = id => document.getElementById(id);
@@ -45,12 +45,14 @@ export const store = {
 
 /* ---------------- konfigurasi ---------------- */
 export const DEFAULT_CFG = {
+  subjects: [...SUBJECT_IDS],
   levels: [...LEVEL_IDS],
-  topics: Object.keys(TOPICS),
-  // level & materi yang sudah pernah tampil di layar pemakai; dipakai untuk
-  // mengenali tambahan bank soal baru saat aplikasi diperbarui
+  topics: [...ALL_TOPICS],
+  // mata uji, level & materi yang sudah pernah tampil di layar pemakai; dipakai
+  // untuk mengenali tambahan bank soal baru saat aplikasi diperbarui
+  seenSubjects: [...SUBJECT_IDS],
   seenLevels: [...LEVEL_IDS],
-  seenTopics: Object.keys(TOPICS),
+  seenTopics: [...ALL_TOPICS],
   count: 20,
   fb: true,        // pembahasan langsung
   timer: false,    // hitung mundur
@@ -78,8 +80,9 @@ export const saveCfg = () => store.set("neuro:cfg", app.cfg);
 
 /* ---------------- kumpulan soal ---------------- */
 export function pool() {
-  const { levels, topics } = app.cfg;
-  return BANK.filter(q => levels.includes(q.level) && topics.includes(q.topic));
+  const { subjects, levels, topics } = app.cfg;
+  return BANK.filter(q =>
+    subjects.includes(q.subject) && levels.includes(q.level) && topics.includes(q.topic));
 }
 
 /* soal yang pernah dijawab salah dan masih ada di bank */

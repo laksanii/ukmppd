@@ -20,5 +20,28 @@
   "neuropati": "Neuropati & nyeri neuropatik",
   "hnp": "HNP & radikulopati",
   "medspin": "Medula spinalis & kauda ekuina",
-  "lainnya": "Lain-lain"
+  "lainnya": "Lain-lain",
+
+  "neonatus": "Neonatologi & bayi baru lahir",
+  "ikterus": "Ikterus neonatorum",
+  "jantunganak": "Penyakit jantung bawaan",
+  "diareanak": "Diare & dehidrasi anak",
+  "nutrisianak": "Gizi & pertumbuhan anak",
+  "neuroanak": "Kejang & neurologi anak",
+  "napasanak": "Infeksi saluran napas anak",
+  "infeksianak": "Infeksi & eksantema anak",
+  "imunisasi": "Imunisasi",
+  "endokrinanak": "Endokrin & metabolik anak",
+  "genetikanak": "Kelainan genetik & kromosom",
+  "alergianak": "Alergi & intoleransi makanan",
+
+  "dispepsia": "Dispepsia, gastritis & ulkus",
+  "gerd": "GERD & esofagus",
+  "diareinfeksi": "Diare infeksi & disentri",
+  "ibd": "IBD & kolitis",
+  "keganasangi": "Keganasan saluran cerna",
+  "perdarahangi": "Perdarahan saluran cerna",
+  "mulut": "Kelainan rongga mulut",
+  "intoksikasi": "Keracunan & zat korosif",
+  "fungsional": "IBS & dispepsia fungsional"
 }

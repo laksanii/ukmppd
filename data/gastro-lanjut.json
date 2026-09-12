@@ -1,0 +1,1220 @@
+[
+  {
+    "id": 1,
+    "topic": "mulut",
+    "vignette": "Wanita 28 tahun ke klinik dengan keluhan lidah terasa perih dan panas terutama saat makan makanan pedas dan asam. Pasien memiliki riwayat menstruasi lebih banyak dalam 6 bulan terakhir, durasi haid mencapai 1 bulan lebih. Hasil pemeriksaan fisik tampak pucat, konjungtiva anemis (+/+), status lokalis mulut tampak sebagai berikut. Apakah diagnosis penyakit yang paling tepat:",
+    "options": [
+      "Stomatitis aftosa",
+      "Glositis atrofi",
+      "Kandidiasis oral",
+      "Defisiensi vitamin C",
+      "Lingua plicata"
+    ],
+    "answer": 1,
+    "key": "Lidah perih dan panas pada wanita dengan menoragia berkepanjangan dan konjungtiva anemis adalah glositis atrofi karena anemia defisiensi besi. Papila lidah menghilang sehingga permukaan lidah tampak licin, merah, dan mengkilap.",
+    "why": [
+      "Stomatitis aftosa memberi ulkus dangkal berbatas tegas yang nyeri, bukan lidah licin merata.",
+      "Benar. Lidah licin tanpa papila pada pasien anemia defisiensi besi adalah glositis atrofi.",
+      "Kandidiasis oral memberi plak putih yang dapat dikerok dengan dasar eritem.",
+      "Defisiensi vitamin C memberi gusi bengkak mudah berdarah, bukan atrofi papila lidah.",
+      "Lingua plicata adalah lidah berlipat yang umumnya tidak bergejala dan tidak berkaitan dengan anemia."
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "dispepsia",
+    "vignette": "Wanita 40 tahun datang ke praktek dokter dengan keluhan muntah darah sejak 1 jam yang lalu. Keluhan disertai rasa perih dan nyeri ulu hati. Pasien memiliki riwayat konsumsi obat nyeri yang dibeli di warung untuk mengurangi nyeri lutut. Pemeriksaan fisik tanda vital dalam batas normal. Bagaimana patofisiologi pada kasus diatas:",
+    "options": [
+      "Peningkatan sekresi asam lambung akibat NSAID",
+      "NSAID bersifat toksik di lambung",
+      "Penurunan sekresi pepsin oleh NSAID",
+      "Penurunan mucus gaster akibat NSAID",
+      "Peningkatan sekresi gastrin oleh NSAID"
+    ],
+    "answer": 3,
+    "key": "Hematemesis pada pemakai NSAID terjadi karena penghambatan COX-1 menekan sintesis prostaglandin mukosa. Prostaglandin dibutuhkan untuk produksi mukus dan bikarbonat serta aliran darah mukosa, sehingga penurunannya membuat mukosa lambung tidak terlindungi dan mudah erosi.",
+    "why": [
+      "NSAID tidak meningkatkan sekresi asam lambung; yang berkurang adalah pertahanan mukosanya.",
+      "Efek toksik langsung memang ada, tetapi mekanisme utamanya sistemik lewat hambatan prostaglandin.",
+      "Sekresi pepsin tidak diturunkan oleh NSAID.",
+      "Benar. NSAID menurunkan prostaglandin sehingga produksi mukus pelindung lambung berkurang.",
+      "Gastrin tidak dirangsang oleh NSAID."
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "keganasangi",
+    "vignette": "Laki-laki 55 tahun datang ke poliklinik RS dengan keluhan nyeri perut, mual muntah. Keluhan dialami hilang timbul sejak 3 bulan terakhir. Pemeriksaan tanda vital dalam batas normal, pemeriksaan abdomen didapatkan bising usus menurun. Pemeriksaan penunjang histopatologi didapatkan spindle cell. Diagnosis yang mungkin adalah:",
+    "options": [
+      "Ulkus duodenum",
+      "Gastrointestinal tumor",
+      "Ulkus gaster",
+      "Gastritis",
+      "Divertikulitis"
+    ],
+    "answer": 1,
+    "key": "Tumor saluran cerna dengan gambaran histopatologi spindle cell adalah gastrointestinal stromal tumor, yang berasal dari sel interstisial Cajal dan umumnya positif CD117 (c-KIT).",
+    "why": [
+      "Ulkus duodenum memberi nyeri epigastrium yang membaik dengan makan, tanpa gambaran spindle cell.",
+      "Benar. Gambaran spindle cell adalah ciri gastrointestinal stromal tumor.",
+      "Ulkus gaster memberi lesi mukosa, bukan tumor sel gelendong.",
+      "Gastritis menunjukkan infiltrasi sel radang, bukan proliferasi sel gelendong.",
+      "Divertikulitis adalah peradangan kantong kolon, gambarannya bukan tumor."
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "intoksikasi",
+    "vignette": "Anak usia 3 tahun dibawa ke IGD RS setelah tidak sengaja meminum cairan pemutih baju. Anak tampak lemas. Pemeriksaan fisik: TD 90/60 mmHg, nadi 100x/menit, RR 28 x/menit, nafas tampak sesak dan terdapat bunyi stridor. Dokter memberikan terapi proton pump inhibitor, apakah fungsi obat tersebut pada kasus diatas",
+    "options": [
+      "Obat menurunkan produksi HCl sehingga menurunkan kejadian lesi korosif pada esofagus",
+      "Obat menurunkan produksi HCl sehingga mencegah lesi korosif pada esophagus terpapar asam lambung",
+      "Obat bekerja membentuk selaput yang melindungi lambung dari zat korosif",
+      "Obat bekerja meningkatkan prostaglandin untuk melindungi lambung",
+      "Obat bereaksi dengan cairan pemutih baju dan menciptakan suasana netral pada lambung"
+    ],
+    "answer": 0,
+    "key": "Pada tertelan zat korosif, mukosa esofagus sudah cedera dan sangat rentan terhadap paparan asam lambung yang naik. Proton pump inhibitor menekan produksi HCl sehingga lesi korosif yang sudah ada tidak diperburuk oleh asam lambung dan penyembuhan lebih baik.",
+    "why": [
+      "Benar. PPI menekan produksi HCl sehingga cedera korosif tidak diperberat oleh asam lambung.",
+      "Pilihan ini menyiratkan lesi belum terjadi, padahal cederanya sudah ada sejak zat tertelan.",
+      "Yang membentuk lapisan pelindung adalah sukralfat, bukan PPI.",
+      "Peningkatan prostaglandin adalah kerja misoprostol, bukan PPI.",
+      "PPI tidak bereaksi kimia dengan zat pemutih dan tidak menetralkan isi lambung."
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "fungsional",
+    "vignette": "Wanita 25 tahun datang ke praktek dokter dengan keluhan nyeri perut dan jarang BAB. Keluhan berlangsung sejak 3 bulan. Nyeri perut dirasa membaik setelah pasien BAB, BAB padat dan bergumpal. Saat ini pasien sedang sibuk mempersiapkan ujian kompetensi. Pemeriksaan fisik tanda vital dalam batas normal. Tatalaksana yang dapat diberikan pada kasus diatas, kecuali",
+    "options": [
+      "Diet tinggi serat",
+      "Laksatif",
+      "Psikoterapi",
+      "Probiotik",
+      "Antidepresan"
+    ],
+    "answer": 4,
+    "key": "Nyeri perut yang membaik setelah BAB dengan tinja padat bergumpal selama tiga bulan pada pasien yang sedang stres adalah irritable bowel syndrome tipe konstipasi. Terapinya diet tinggi serat, laksatif, probiotik, dan psikoterapi. Antidepresan bukan lini pertama dan dicadangkan untuk kasus refrakter.",
+    "why": [
+      "Diet tinggi serat adalah langkah awal pada IBS tipe konstipasi.",
+      "Laksatif diberikan bila serat saja belum memperbaiki pola BAB.",
+      "Psikoterapi bermanfaat karena stres adalah pencetus utama pada pasien ini.",
+      "Probiotik membantu memperbaiki gejala kembung dan pola defekasi.",
+      "Benar. Antidepresan bukan tatalaksana awal IBS, sehingga inilah pilihan yang dikecualikan."
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "intoksikasi",
+    "vignette": "Laki-laki 30 tahun datang ke praktek dokter dengan keluhan kelemahan seluruh tubuh yang memberat sejak 2 jam yang lalu. Keluhan juga disertai mual muntah, sulit menelan dan pandangan ganda. Sebelumnya pasien makan makanan kaleng yang tidak dipanaskan. Pemeriksaan fisik tanda vital dalam batas normal. Pemeriksaan abdomen: perkusi hipertimpani, bising usus menurun. Manakah pernyataan berikut yang benar:",
+    "options": [
+      "Terinfeksi coccus gram positive",
+      "Bakteri menyerang neuro-muscular junction",
+      "Bakteri dapat menyebabkan GBS",
+      "Antibiotik yang dapat diberikan adalah levofloksasin",
+      "Komplikasi jika tidak segera ditangani adalah prolaps rekti"
+    ],
+    "answer": 1,
+    "key": "Kelemahan menyeluruh dengan diplopia dan disfagia setelah makan makanan kaleng yang tidak dipanaskan adalah botulisme. Toksin Clostridium botulinum bekerja di neuromuscular junction dengan menghambat pelepasan asetilkolin sehingga terjadi paralisis flaksid desendens.",
+    "why": [
+      "Clostridium botulinum adalah basil gram positif anaerob, bukan kokus.",
+      "Benar. Toksin botulinum menghambat pelepasan asetilkolin di neuromuscular junction.",
+      "Guillain-Barre syndrome berkaitan dengan Campylobacter jejuni, bukan botulisme.",
+      "Terapi utamanya antitoksin dan suportif; levofloksasin bukan andalan.",
+      "Komplikasi yang ditakuti adalah gagal napas akibat paralisis otot pernapasan, bukan prolaps rekti."
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "diareinfeksi",
+    "vignette": "Anak 12 bulan dibawa ke PKM dengan keluhan diare cair seperti air cucian beras. Hasil pemeriksaan feses ditemukan bakteri berbentuk batang, gram negative dan berflagel. Patofisiologi dari kasus diatas adalah:",
+    "options": [
+      "Enterotoksin yang meningkatkan peristaltic usus",
+      "Enterotoksin yang merusak vili usus",
+      "Kuman yang menghambat protein kanal air di usus",
+      "Kuman yang menghambat protein kanal natrium, chlorida di usus",
+      "Toksin yang meningkatkan aktivitas enzim adenil siklase"
+    ],
+    "answer": 4,
+    "key": "Diare seperti air cucian beras dengan bakteri batang gram negatif berflagel adalah kolera. Toksin kolera mengaktifkan adenil siklase sehingga cAMP intrasel meningkat, kanal klorida terbuka, dan air serta elektrolit tersekresi masif ke lumen usus.",
+    "why": [
+      "Peristaltik yang meningkat adalah akibat, bukan mekanisme dasar sekresi cairan pada kolera.",
+      "Vili usus tetap utuh pada kolera; kerusakan vili terjadi pada rotavirus.",
+      "Toksin kolera tidak menghambat kanal air.",
+      "Kanal natrium dan klorida justru diaktifkan untuk sekresi, bukan dihambat.",
+      "Benar. Toksin kolera meningkatkan aktivitas adenil siklase sehingga cAMP naik dan sekresi cairan masif."
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "gerd",
+    "vignette": "Laki-laki 33 tahun ke klinik dengan keluhan nyeri ulu hati sejak 3 bulan belakangan. Keluhan disertai dengan rasa panas di dada yang menjalar ke leher dan mulut terasa pahit. Pasien memiliki kebiasaan merokok dan minum kopi. Pemeriksaan fisik: nyeri tekan epigastrium (+). Dokter melanjutkan dengan melakukan terapi uji coba PPI 2 minggu dan gejala mengalami perbaikan. Tatalaksana selanjutnya yang dapat dilakukan adalah:",
+    "options": [
+      "Omeprazole 2x40 mg selama 8 minggu",
+      "Ranitidine 2x150 mg selama 4 minggu",
+      "Sukralfat 2x1 sendok makan selama 4 minggu",
+      "Domperidon 3x10 mg selama 4 minggu",
+      "Edukasi gaya hidup dan terapi PPI pemeliharaan"
+    ],
+    "answer": 4,
+    "key": "Nyeri ulu hati dengan rasa panas menjalar ke leher dan mulut pahit yang membaik dengan uji terapi PPI dua minggu menegakkan GERD. Setelah respons positif, terapinya dilanjutkan sebagai PPI pemeliharaan disertai perbaikan gaya hidup.",
+    "why": [
+      "Omeprazol 2x40 mg adalah dosis ganda yang berlebihan untuk pemeliharaan.",
+      "Ranitidin kurang efektif dibandingkan PPI dan bukan pilihan pemeliharaan.",
+      "Sukralfat hanya melapisi mukosa dan tidak mengendalikan refluks asam.",
+      "Domperidon hanya prokinetik tambahan, tidak menggantikan penekan asam.",
+      "Benar. Setelah uji terapi berhasil, dilanjutkan PPI pemeliharaan bersama edukasi gaya hidup."
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "mulut",
+    "vignette": "Bayi usia 8 bulan dibawa ke klinik dokter dengan keluhan adanya bercak putih di mulut dan lidah sejak 1 minggu. Riwayat bayi minum susu formula dengan menggunakan dot. Pemeriksaan fisik: tanda vital dalam batas normal. Tatalaksana yang tepat adalah:",
+    "options": [
+      "Swab dengan kasa",
+      "Bilas dengan larutan NaCl 0.9%",
+      "Antibiotik drop",
+      "Antivirus drop",
+      "Antijamur drop"
+    ],
+    "answer": 4,
+    "key": "Bercak putih di mulut dan lidah pada bayi pengguna dot adalah kandidiasis oral (oral thrush). Terapinya antijamur topikal berupa nistatin drop yang dioleskan pada rongga mulut.",
+    "why": [
+      "Swab kasa hanya membersihkan sementara tanpa membunuh jamur, dan plak akan muncul kembali.",
+      "Bilas NaCl tidak memiliki efek antijamur.",
+      "Antibiotik justru dapat memperberat pertumbuhan Candida.",
+      "Penyebabnya jamur, bukan virus, sehingga antivirus tidak berperan.",
+      "Benar. Kandidiasis oral diterapi antijamur topikal seperti nistatin drop."
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "perdarahangi",
+    "vignette": "Wanita 55 tahun datang ke klinik dengan keluhan nyeri ulu hati disertai dengan muntah warna hitam. Pasien juga mengeluhkan BAB warna hitam. Pasien selama ini memiliki riwayat konsumsi NSAID untuk mengurangi nyeri sendi. Pemeriksaan fisik: TD 100/60, nadi 80, RR 22. Hasil lab: Hb 8 g/dl, leukosit 9.500, trombosit 220.000. Patogenesis yang terjadi pada kasus diatas adalah:",
+    "options": [
+      "Terjadinya ruptur esophagus",
+      "Terjadinya peningkatan tekanan vena porta",
+      "Kolonisasi H.pylori yang menyebabkan ulkus dilambung",
+      "Proses autoimun di dalam saluran cerna",
+      "Terjadinya hambatan prostaglandin di lambung oleh cox 1 inhibitor"
+    ],
+    "answer": 4,
+    "key": "Hematemesis melena dengan anemia pada pemakai NSAID kronik adalah perdarahan saluran cerna atas akibat ulkus peptikum. NSAID menghambat COX-1 sehingga prostaglandin pelindung mukosa berkurang dan terbentuk ulkus yang mengerosi pembuluh darah.",
+    "why": [
+      "Ruptur esofagus akibat muntah hebat adalah sindrom Boerhaave, gejalanya nyeri dada hebat dan emfisema subkutis.",
+      "Peningkatan tekanan vena porta menyebabkan varises esofagus, yang berkaitan dengan sirosis, bukan NSAID.",
+      "H. pylori memang penyebab ulkus tersering, tetapi pada pasien ini pencetusnya jelas NSAID.",
+      "Proses autoimun mendasari gastritis atrofi tipe A, bukan ulkus akibat obat.",
+      "Benar. Hambatan prostaglandin oleh COX-1 inhibitor menyebabkan ulkus yang berdarah."
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "diareinfeksi",
+    "vignette": "Anak usia 6 tahun dibawa ibunya ke Puskesmas dikarenakan diare sejak 3 hari yang lalu. Diare cair 6x sehari, disertai dengan nyeri perut, jarang buang air kecil dan anak terlihat lemas. Pemeriksaan fisik: pasien tampak lemah, mata agak cekung, turgor kulit kembali lambat. Dilakukan pemeriksaan feses ditemukan gambaran parasit berbentuk pear dengan dua inti dan flagel. Terapi yang digunakan oleh dokter adalah untuk mencegah dari:",
+    "options": [
+      "Pengeluaran PGE2 Oleh Parasit",
+      "Penurunan Lapisan Musin",
+      "Defisiensi Enzim Disakaridase",
+      "Pengeluaran Cysteine Proteinase Oleh Parasite",
+      "Sekresi Ion Kalium"
+    ],
+    "answer": 2,
+    "key": "Parasit berbentuk pear dengan dua inti dan flagel adalah Giardia lamblia. Parasit ini menempel pada mukosa duodenum dan merusak brush border sehingga terjadi defisiensi enzim disakaridase dan malabsorpsi; terapi metronidazol mencegah keadaan itu berlanjut.",
+    "why": [
+      "Giardia tidak bekerja lewat pelepasan PGE2.",
+      "Penurunan lapisan musin bukan mekanisme utama diare pada giardiasis.",
+      "Benar. Kerusakan brush border oleh Giardia menyebabkan defisiensi enzim disakaridase.",
+      "Cysteine proteinase adalah faktor virulensi Entamoeba histolytica.",
+      "Sekresi ion kalium bukan mekanisme diare pada infeksi Giardia."
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "dispepsia",
+    "vignette": "Wanita 30 tahun, datang ke klinik anda dengan keluhan nyeri ulu hati. Pasien mengeluh sering terbangun malam hari karena nyeri. Nyeri bertambah bila perut diisi makanan dan berkurang saat perut kosong. Pemeriksaan fisik: TD 130/90mmHg, Nadi 82x/menit, R 18x/menit, S afebris. Nyeri tekan epigastrium (++). Bila diberikan lansoprazol, maka obat ini akan meredakan nyeri dengan cara:",
+    "options": [
+      "Menghambat sekresi asam lambung melalui antagonisme reseptor gastrin",
+      "Menghambat enzim Na/K ATP ase untuk transport aktif H+",
+      "Menetralkan asam lambung sehingga membentuk garam di lambung",
+      "Menghambat sekresi asam lambung melalui antagonisme reseptor H2",
+      "Menghambat aktivasi reseptor asetilkolin"
+    ],
+    "answer": 1,
+    "key": "Lansoprazol adalah proton pump inhibitor yang mengikat pompa H+/K+ ATPase pada sel parietal secara ireversibel. Dengan begitu tahap akhir sekresi asam lambung dihambat, apa pun rangsangan yang mendahuluinya.",
+    "why": [
+      "PPI tidak bekerja pada reseptor gastrin.",
+      "Benar. PPI menghambat pompa H+/K+ ATPase sehingga transpor aktif ion H+ ke lumen berhenti.",
+      "Menetralkan asam dan membentuk garam adalah kerja antasida.",
+      "Antagonisme reseptor H2 adalah kerja ranitidin atau famotidin.",
+      "Penghambatan reseptor asetilkolin adalah kerja antikolinergik seperti pirenzepin."
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "gerd",
+    "vignette": "Laki-laki 45 tahun datang ke praktek dokter mengeluh nyeri pada bagian ulu hati, nyeri dirasakan menjalar ke dada hingga terasa panas, dan mulut menjadi pahit. Nyeri dada dirasakan tidak menjalar. Pasien memiliki kebiasaan berbaring setelah makan. Patofisiologi terjadinya kasus pasien adalah:",
+    "options": [
+      "Asam lambung terlalu banyak",
+      "Pylorus spasme",
+      "Sfingter esophagus bawah melemah",
+      "Sfingter esophagus bawah menguat",
+      "Sfingter esophagus atas melemah"
+    ],
+    "answer": 2,
+    "key": "Nyeri ulu hati yang menjalar ke dada disertai rasa panas dan mulut pahit pada orang yang terbiasa berbaring setelah makan adalah GERD. Dasarnya adalah tonus sfingter esofagus bawah yang melemah sehingga isi lambung naik kembali ke esofagus.",
+    "why": [
+      "Jumlah asam lambung pada GERD umumnya normal; masalahnya pada mekanisme penahan refluks.",
+      "Spasme pilorus menyebabkan muntah dan retensi lambung, bukan rasa panas retrosternal.",
+      "Benar. Melemahnya sfingter esofagus bawah memungkinkan isi lambung naik ke esofagus.",
+      "Sfingter yang menguat justru menghambat aliran turun makanan, gambarannya akalasia.",
+      "Sfingter esofagus atas berperan mencegah aspirasi, bukan penyebab refluks gastroesofageal."
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "diareinfeksi",
+    "vignette": "Laki-laki 25 tahun ke puskesmas dengan keluhan diare berdarah sejak 3 hari lalu. Frekuensi BAB sekitar 5 kali per hari, ada nyeri perut, dan feses seperti bau telur busuk. Pemeriksaan fisik: TD 110/70, HR 88, RR 20, T 38.5, abdomen: bising usus (+) meningkat dan nyeri tekan ringan regio abdomen bawah. Pemeriksaan feses ditemukan parasit yang mengandung eritrosit. Tatalaksana yang tepat adalah:",
+    "options": [
+      "Omeprazole",
+      "Albendazole",
+      "Metronidazole",
+      "Ciprofloksasin",
+      "Doksisiklin"
+    ],
+    "answer": 2,
+    "key": "Diare berdarah dengan parasit yang mengandung eritrosit di dalam sitoplasmanya adalah amebiasis oleh Entamoeba histolytica. Trofozoit hematofag itu khas, dan terapinya metronidazol.",
+    "why": [
+      "Omeprazol tidak berperan pada infeksi parasit usus.",
+      "Albendazol untuk cacing, bukan protozoa.",
+      "Benar. Metronidazol adalah terapi amebiasis intestinal.",
+      "Siprofloksasin dipakai untuk disentri basiler, bukan disentri amuba.",
+      "Doksisiklin dipakai pada kolera sebagai adjuvan, bukan amebiasis."
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "dispepsia",
+    "vignette": "Wanita 45 tahun datang ke poli RS dengan keluhan nyeri ulu hati sejak 3 hari, keluhan disertai mual dan kembung. Pasien sehari-hari mengonsumsi asam mefenamat untuk menghilangkan nyeri sendi. Pemeriksaan fisik: tanda vital dalam batas normal dan didapatkan nyeri tekan epigastrium. Mekanisme penyebab nyeri ulu hati pada pasien adalah:",
+    "options": [
+      "pH lambung meningkat",
+      "Sfingter lower esophagus melemah",
+      "Sfingter lower esophagus menguat",
+      "Produksi prostaglandin endogen mukosa lambung menurun",
+      "Produksi prostaglandin endogen mukosa lambung meningkat"
+    ],
+    "answer": 3,
+    "key": "Nyeri ulu hati pada pengguna asam mefenamat rutin adalah gastropati NSAID. Penghambatan COX-1 menurunkan produksi prostaglandin endogen mukosa lambung, sehingga mukus, bikarbonat, dan aliran darah mukosa berkurang.",
+    "why": [
+      "pH lambung tidak meningkat; keluhan justru muncul karena pertahanan terhadap asam melemah.",
+      "Melemahnya sfingter esofagus bawah adalah mekanisme GERD.",
+      "Sfingter yang menguat berkaitan dengan akalasia, bukan nyeri epigastrium akibat NSAID.",
+      "Benar. NSAID menurunkan prostaglandin endogen mukosa lambung sehingga mukosa mudah cedera.",
+      "Prostaglandin justru menurun, bukan meningkat."
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "dispepsia",
+    "vignette": "Wanita 50 tahun datang ke praktek dokter dengan keluhan mual dan muntah sejak 3 hari yang lalu. Pasien memiliki kebiasaan makan terlambat. Keluhan sering dirasakan berulang sejak 1 tahun terakhir. Pemeriksaan fisik tanda vital normal, nyeri tekan ulu hati (+). Hasil pemeriksaan endoskopi: mukosa gaster eritema. Pemeriksaan histologi tampak infiltrasi yang terdiri dari limfosit dan sel plasma ke dalam lamina propia dan kelenjar mukosa berkurang. Diagnosis yang tepat adalah:",
+    "options": [
+      "Gastritis akut",
+      "Gastritis kronik",
+      "Ulkus duodenum",
+      "Ulkus peptikum",
+      "Dispepsia fungsional"
+    ],
+    "answer": 1,
+    "key": "Keluhan berulang selama satu tahun dengan endoskopi mukosa gaster eritema dan histologi menunjukkan infiltrasi limfosit serta sel plasma di lamina propria disertai berkurangnya kelenjar mukosa adalah gastritis kronik. Infiltrat mononuklear dan atrofi kelenjar adalah penanda kronisitas.",
+    "why": [
+      "Gastritis akut menunjukkan infiltrasi neutrofil, bukan limfosit dan sel plasma.",
+      "Benar. Infiltrat limfosit dan sel plasma dengan atrofi kelenjar adalah gastritis kronik.",
+      "Ulkus duodenum memberi lesi berbatas di duodenum, bukan gambaran histologi ini.",
+      "Ulkus peptikum ditandai defek mukosa yang menembus muskularis mukosa.",
+      "Dispepsia fungsional justru tidak menunjukkan kelainan pada endoskopi maupun histologi."
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "diareinfeksi",
+    "vignette": "Anak usia 5 tahun dibawa orangtuanya ke puskesmas dengan keluhan BAB cair berdarah sejak 3 hari, keluhan juga disertai nyeri perut dan demam tinggi. Pemeriksaan fisik: nadi 100, RR 27, temp 30 C, tanda dehidrasi (-). Pemeriksaan penunjang yang sebaiknya dilakukan adalah:",
+    "options": [
+      "Kultur feses",
+      "Darah lengkap",
+      "USG abdomen",
+      "BNO IVP",
+      "Feses lengkap"
+    ],
+    "answer": 4,
+    "key": "BAB cair berdarah dengan nyeri perut dan demam pada anak tanpa dehidrasi memerlukan pemeriksaan feses lengkap. Pemeriksaan ini menilai leukosit, eritrosit, serta ada tidaknya parasit, sehingga membedakan disentri basiler dari amuba dan menentukan antibiotik.",
+    "why": [
+      "Kultur feses lebih lama, mahal, dan tidak tersedia di puskesmas untuk keputusan awal.",
+      "Darah lengkap hanya menunjukkan tanda infeksi umum tanpa menunjuk penyebab diare.",
+      "USG abdomen tidak berperan pada diare akut berdarah.",
+      "BNO IVP adalah pemeriksaan saluran kemih, tidak relevan.",
+      "Benar. Feses lengkap adalah pemeriksaan awal yang tepat untuk membedakan penyebab disentri."
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "alergianak",
+    "vignette": "Laki-laki usia 33 tahun datang ke praktek dokter dengan keluhan BAB cair dengan frekuensi 5x/hari. Keluhan disertai mual dan muntah sejak 2 hari yang lalu. Riwayat sebelumnya pasien mengonsumsi minuman yoghurt. Pasien baru pertama kali mengonsumsinya. Riwayat alergi sebelumnya disangkal. Pemeriksaan fisik tanda vital dalam batas normal, auskultasi didapatkan peningkatan peristaltic. Diagnosis yang mungkin adalah:",
+    "options": [
+      "GERD",
+      "Gastritis",
+      "Gastroenteritis",
+      "Intoleransi makanan",
+      "Alergi makanan"
+    ],
+    "answer": 3,
+    "key": "Diare, mual, dan muntah setelah pertama kali minum yoghurt tanpa gejala kulit atau sesak menunjukkan reaksi non-imunologis terhadap makanan, yaitu intoleransi makanan. Pada kasus produk susu, penyebab tersering adalah laktosa yang tidak tercerna.",
+    "why": [
+      "GERD memberi rasa panas retrosternal, bukan diare akut setelah makan.",
+      "Gastritis memberi nyeri epigastrium, bukan peningkatan peristaltik dengan diare.",
+      "Gastroenteritis infeksius biasanya disertai demam dan tidak terpaut satu jenis makanan tertentu.",
+      "Benar. Reaksi non-imunologis terhadap komponen makanan adalah intoleransi makanan.",
+      "Alergi makanan diperantarai IgE dan disertai urtikaria, angioedema, atau sesak."
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "ibd",
+    "vignette": "Laki-laki 30 tahun datang ke poli RS dengan keluhan diare yang dirasakan hilang timbul sejak 2 bulan terakhir. Diare disertai dengan darah dan lendir. Terdapat nyeri perut yang hilang timbul, saat BAB pasien merasa tidak lampias. Hasil pemeriksaan colonoscopy tampak gambaran sebagai berikut. Pernyataan yang mendukung kasus diatas ialah:",
+    "options": [
+      "Respon hipersensitivitas yang diperantarai oleh histamin",
+      "Toksin helicobacter pylori yang menginflamasi mukosa",
+      "Inflamasi colon sedalam transmural",
+      "Inflamasi rectum, colon sedalam mukosa dan submukosa",
+      "Inflamasi mukosa colon akibat toksin basil gram positive"
+    ],
+    "answer": 2,
+    "key": "Diare hilang timbul dua bulan dengan darah dan lendir, nyeri perut, dan tenesmus dengan gambaran kolonoskopi khas mengarah ke inflammatory bowel disease. Ciri penyakit Crohn adalah peradangan transmural yang menembus seluruh lapisan dinding usus dan bersifat skip lesion.",
+    "why": [
+      "Hipersensitivitas yang diperantarai histamin adalah alergi makanan, bukan IBD.",
+      "H. pylori menimbulkan gastritis dan ulkus di lambung, bukan kolitis kronik.",
+      "Benar. Inflamasi transmural adalah ciri khas penyakit Crohn.",
+      "Inflamasi terbatas mukosa dan submukosa yang dimulai dari rektum adalah kolitis ulseratif.",
+      "Toksin basil gram positif mengarah ke kolitis pseudomembran oleh Clostridioides difficile."
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "diareinfeksi",
+    "vignette": "Laki-laki 20 tahun datang ke praktek dokter dengan keluhan diare yang dirasakan sejak 3 hari. Diare disertai lendir dan darah. Keluhan disertai mual, muntah dan demam. Tatalaksana yang tepat adalah:",
+    "options": [
+      "Metronidazole 500 mg/12 jam",
+      "Metronidazole 500 mg/8 jam",
+      "Cotrimoxazole 960 mg/12 jam",
+      "Amoksilin 500 mg/8 jam",
+      "Kloramfenikol 500 mg/ 6 jam"
+    ],
+    "answer": 1,
+    "key": "Diare berlendir dan berdarah dengan mual, muntah, serta demam pada dewasa umumnya disentri. Metronidazol diberikan 500 mg tiap 8 jam (3 x 500 mg) selama 5-7 hari.",
+    "why": [
+      "Metronidazol 500 mg tiap 12 jam memberi dosis harian kurang dari yang dianjurkan.",
+      "Benar. Metronidazol 500 mg tiap 8 jam adalah dosis baku untuk disentri amuba.",
+      "Kotrimoksazol bukan lini pertama disentri pada dewasa karena resistensinya tinggi.",
+      "Amoksisilin tidak efektif terhadap amuba maupun Shigella.",
+      "Kloramfenikol dicadangkan untuk demam tifoid dan berisiko supresi sumsum tulang."
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "gerd",
+    "vignette": "Wanita 60 tahun datang ke poliklinik RS dengan keluhan dada terasa terbakar, nyeri, erosi mukosa mulut dan gigi. Pasien sering bersendawa dan terlambat makan. Pemeriksaan fisik: tanda vital dalam batas normal, nyeri tekan epigastrium (+). Pemeriksaan penunjang yang selanjutnya diusulkan adalah:",
+    "options": [
+      "USG abdomen",
+      "Foto polos abdomen",
+      "CT scan abdomen non kontras",
+      "CT scan abdomen dengan kontras",
+      "Esophagogastroduodenoscopy"
+    ],
+    "answer": 4,
+    "key": "Rasa terbakar di dada dengan erosi mukosa mulut dan gigi menandakan GERD yang sudah menimbulkan manifestasi ekstraesofageal. Adanya tanda alarm dan usia di atas 55 tahun menjadi indikasi esofagogastroduodenoskopi untuk menilai esofagitis, Barrett, atau keganasan.",
+    "why": [
+      "USG abdomen tidak dapat menilai mukosa esofagus.",
+      "Foto polos abdomen tidak memberi informasi tentang refluks maupun mukosa esofagus.",
+      "CT scan non kontras tidak menilai perubahan mukosa halus pada esofagitis.",
+      "CT scan dengan kontras berguna untuk staging tumor, bukan diagnosis awal GERD.",
+      "Benar. Esofagogastroduodenoskopi adalah pemeriksaan pilihan untuk menilai mukosa esofagus dan lambung."
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "diareinfeksi",
+    "vignette": "Laki-laki 25 tahun datang ke Puskesmas dengan keluhan diare berlendir dan berdarah sejak 2 minggu, keluhan disertai nyeri perut hebat saat BAB. Pemeriksaan fisik tanda vital dalam batas normal. Pemeriksaan penunjang fecal smear didapatkan organisme berbentuk oval, berinti satu, bervakuola, ektoplasma dan terdapat eritrosit didalamnya. Tatalaksana yang dapat diberikan adalah:",
+    "options": [
+      "Amoksilin 3 x 50 mg selama 5 hari",
+      "Tetrasiklin 4 x 500 mg selama 5 hari",
+      "Kotrimoksazol 2 x 480 mg selama 5 hari",
+      "Ciprofloksasin 2 x 500 mg selama 5 hari",
+      "Metronidazole 3 x 500 mg selama 5 hari"
+    ],
+    "answer": 4,
+    "key": "Organisme oval berinti satu, bervakuola, dengan ektoplasma dan eritrosit di dalamnya adalah trofozoit hematofag Entamoeba histolytica. Terapinya metronidazol 3 x 500 mg selama 5-7 hari.",
+    "why": [
+      "Amoksisilin tidak memiliki aktivitas antiprotozoa.",
+      "Tetrasiklin bukan terapi amebiasis dan dosis itu tidak dianjurkan.",
+      "Kotrimoksazol tidak efektif terhadap Entamoeba histolytica.",
+      "Siprofloksasin dipakai untuk disentri basiler, bukan amuba.",
+      "Benar. Metronidazol 3 x 500 mg selama 5 hari adalah terapi amebiasis intestinal."
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "diareinfeksi",
+    "vignette": "Laki-laki 40 tahun datang ke praktek dokter dengan keluhan diare yang dialami sejak 1 minggu yang lalu. Sebelumnya pasien didiagnosa bronkopneumonia dan diresepkan antibiotik spektrum luas. Hasil pemeriksaan laboratorium: bakteri anaerob (+). Pemeriksaan colonoscopy didapatkan pseudomembran (+). Tindakan yang tepat adalah:",
+    "options": [
+      "Melanjutkan terapi dan memberikan antidiare",
+      "Mengkombinasi antibiotik dengan metronidazole",
+      "Menghentikan obat dan memberikan metronidazole dan vankomisin",
+      "Mengganti obat dan diberikan metronidazole",
+      "Menggantikan obat dengan sefalosporin generasi III"
+    ],
+    "answer": 3,
+    "key": "Diare setelah pemakaian antibiotik spektrum luas dengan bakteri anaerob dan pseudomembran pada kolonoskopi adalah kolitis pseudomembran oleh Clostridioides difficile. Antibiotik pencetus dihentikan atau diganti, lalu diberikan metronidazol oral.",
+    "why": [
+      "Melanjutkan terapi mempertahankan pencetus, dan antidiare justru meningkatkan risiko megakolon toksik.",
+      "Mengombinasikan antibiotik pencetus dengan metronidazol tidak menyelesaikan penyebabnya.",
+      "Kombinasi metronidazol dan vankomisin sekaligus dicadangkan untuk kasus fulminan.",
+      "Benar. Antibiotik pencetus diganti dan diberikan metronidazol untuk kolitis pseudomembran.",
+      "Sefalosporin generasi III justru salah satu antibiotik yang paling sering mencetuskan C. difficile."
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "dispepsia",
+    "vignette": "Wanita 20 tahun datang ke IGD RS dengan keluhan nyeri ulu hati sejak 1 jam yang lalu. Keluhan disertai mual muntah. Sebelumnya pasien memakan seblak dan teman pasien menderita keluhan yang sama. Pemeriksaan fisik: nyeri tekan epigastrium (+) dan timpani pada saat diperkusi. Penyebab dari keluhan diatas adalah:",
+    "options": [
+      "H.pylori",
+      "Autoimun",
+      "Drug induced",
+      "Parasit",
+      "Zat iritan"
+    ],
+    "answer": 4,
+    "key": "Nyeri ulu hati mendadak setelah makan makanan pedas bersama teman yang mengalami keluhan sama adalah gastritis akut karena zat iritan. Cabai, alkohol, dan makanan sangat pedas merusak sawar mukosa lambung secara langsung.",
+    "why": [
+      "H. pylori menimbulkan gastritis kronik dengan keluhan berulang berbulan-bulan.",
+      "Gastritis autoimun berjalan menahun dan berkaitan dengan anemia pernisiosa.",
+      "Drug induced gastritis memerlukan riwayat NSAID atau steroid, yang tidak ada di sini.",
+      "Parasit tidak menyebabkan gastritis akut dengan awitan satu jam setelah makan.",
+      "Benar. Makanan yang sangat pedas berperan sebagai zat iritan langsung pada mukosa lambung."
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "mulut",
+    "vignette": "Laki-laki 25 tahun datang ke Puskesmas, mengeluh mulut terasa nyeri. Pasien sering mengalami keluhan yang sama dan sembuh sendiri. Pemeriksaan fisik: tampak ulkus dangkal tepi eritema di labium internum region posterior ukuran 5 mm, bagian tengah berwarna putih kekuningan. Tatalaksana yang dapat diberikan adalah:",
+    "options": [
+      "Vitamin A",
+      "Steroid oral",
+      "Nystatin drop",
+      "Triamcinolone salep",
+      "Asiklovir salep"
+    ],
+    "answer": 3,
+    "key": "Ulkus dangkal bertepi eritema dengan dasar putih kekuningan di mukosa labial yang berulang dan sembuh sendiri adalah stomatitis aftosa rekuren. Terapinya kortikosteroid topikal seperti triamsinolon dalam basis salep oral.",
+    "why": [
+      "Vitamin A tidak berperan pada penyembuhan ulkus aftosa.",
+      "Steroid oral hanya dipakai pada aftosa mayor yang luas dan berat.",
+      "Nistatin ditujukan untuk kandidiasis oral yang gambarannya plak putih, bukan ulkus.",
+      "Benar. Triamsinolon salep adalah terapi topikal baku untuk stomatitis aftosa.",
+      "Asiklovir dipakai untuk stomatitis herpetika dengan lesi vesikel berkelompok."
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "keganasangi",
+    "vignette": "Wanita 60 tahun datang ke poli RS dengan keluhan BAB berdarah sudah 3 bulan ini. Awalnya pasien mengeluhkan lemas dan sulit BAB 1 bulan terakhir. Keluhan disertai dengan penurunan nafsu makan dan penurunan berat badan 5 kg dalam 2 bulan ini. Pada pemeriksaan barium enema dijumpai gambaran napkin ring. Apakah pemeriksaan baku emas pada kasus tersebut:",
+    "options": [
+      "Analisa feses",
+      "Kultur feses",
+      "Biopsi",
+      "CT scan dengan kontras",
+      "Foto polos abdomen 3 posisi"
+    ],
+    "answer": 2,
+    "key": "BAB berdarah dengan perubahan pola BAB, penurunan berat badan, dan gambaran napkin ring pada barium enema sangat mengarah ke karsinoma kolon. Baku emas diagnosisnya biopsi jaringan melalui kolonoskopi untuk konfirmasi histopatologi.",
+    "why": [
+      "Analisis feses tidak dapat memastikan keganasan.",
+      "Kultur feses mencari kuman patogen, bukan sel ganas.",
+      "Benar. Biopsi dengan pemeriksaan histopatologi adalah baku emas diagnosis karsinoma kolorektal.",
+      "CT scan kontras berguna untuk staging, bukan penegakan diagnosis pasti.",
+      "Foto polos abdomen hanya menilai obstruksi atau perforasi."
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "dispepsia",
+    "vignette": "Wanita 30 tahun usia kehamilan 30 minggu datang ke praktek dokter dengan keluhan nyeri ulu hati yang disertai mual, keluhan dialami sejak 3 hari yang lalu. Pasien gemar mengonsumsi makanan pedas dan mie instan. Pemeriksaan tanda vital dalam batas normal. Dokter ingin memberikan obat untuk meredakan keluhan pasien. Apakah mekanisme obat yang harus dihindari pada kasus diatas:",
+    "options": [
+      "Penetralisir asam lambung",
+      "Antihistamin H2",
+      "Melapisi mukosa lambung",
+      "Menghambat sekresi ion H",
+      "Analog prostaglandin"
+    ],
+    "answer": 4,
+    "key": "Pada kehamilan, obat dispepsia yang harus dihindari adalah analog prostaglandin (misoprostol) karena merangsang kontraksi uterus dan dapat mencetuskan abortus atau persalinan prematur.",
+    "why": [
+      "Antasida termasuk aman dan menjadi pilihan awal pada kehamilan.",
+      "Antagonis H2 seperti ranitidin dan famotidin masih dapat dipakai dalam kehamilan.",
+      "Sukralfat yang melapisi mukosa hampir tidak diserap sehingga aman.",
+      "PPI yang menghambat sekresi ion H dinilai relatif aman pada kehamilan.",
+      "Benar. Analog prostaglandin merangsang kontraksi uterus sehingga dikontraindikasikan pada kehamilan."
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "ibd",
+    "vignette": "Laki-laki 44 tahun datang ke Poliklinik RS dengan keluhan diare disertai darah sejak 1 bulan terakhir. Pemeriksaan tanda vital dalam batas normal. Dokter menganjurkan untuk pemeriksaan barium enema, dan didapatkan gambaran papilomatosa sepanjang mukosa. Pemeriksaan CT scan tampak streaky mesenteric fat. Diagnosis yang mungkin ialah",
+    "options": [
+      "Diverticulum meckel",
+      "Crohn disease",
+      "Ulcerative colitis",
+      "Diverticulitis",
+      "Multiple polip"
+    ],
+    "answer": 2,
+    "key": "Diare berdarah kronik dengan gambaran papilomatosa (pseudopolip) sepanjang mukosa dan streaky mesenteric fat pada CT scan mengarah ke kolitis ulseratif. Peradangannya kontinu, terbatas mukosa dan submukosa, dan dimulai dari rektum.",
+    "why": [
+      "Divertikulum Meckel memberi perdarahan tanpa nyeri pada anak, bukan diare kronik satu bulan.",
+      "Penyakit Crohn memberi skip lesion dengan cobblestone dan inflamasi transmural.",
+      "Benar. Pseudopolip yang kontinu sepanjang mukosa adalah gambaran kolitis ulseratif.",
+      "Divertikulitis memberi nyeri kuadran kiri bawah akut dengan demam, bukan diare berdarah menahun.",
+      "Multiple polip tidak menimbulkan inflamasi difus maupun streaky mesenteric fat."
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "dispepsia",
+    "vignette": "Laki-laki usia 50 tahun datang ke poli RS dengan keluhan nyeri ulu hati sejak 3 bulan terakhir. Nyeri dirasakan semakin memberat setelah makan dan saat perut kosong. Pemeriksaan endoskopi tampak lesi pada mukosa lambung dengan dasar ulkus yang dalam. Patofisiologi yang mendasari keluhan diatas adalah:",
+    "options": [
+      "Kerusakan mukosa lambung yang meluas hingga menembus muscularis mukosa dan mencapai lapisan submucosa",
+      "Peningkatan sekresi mucus lambung yang menyebabkan hambatan difusi asam lambung",
+      "Hipertrofi sel parietal lambung yang menyebabkan peningkatan sekresi asam secara difus",
+      "Gangguan motilitas lambung yang menyebabkan obstruksi",
+      "Inflamasi superfisial mukosa lambung"
+    ],
+    "answer": 0,
+    "key": "Lesi mukosa lambung dengan dasar ulkus yang dalam pada endoskopi adalah ulkus peptikum. Yang membedakannya dari erosi adalah kerusakan menembus muskularis mukosa hingga mencapai submukosa.",
+    "why": [
+      "Benar. Ulkus didefinisikan sebagai defek yang menembus muskularis mukosa sampai submukosa.",
+      "Sekresi mukus pada ulkus justru berkurang, bukan meningkat.",
+      "Hipertrofi sel parietal difus adalah gambaran sindrom Zollinger-Ellison, bukan ulkus biasa.",
+      "Gangguan motilitas dengan obstruksi adalah komplikasi lanjut, bukan patofisiologi dasarnya.",
+      "Inflamasi superfisial tanpa menembus muskularis mukosa adalah gastritis atau erosi."
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "diareinfeksi",
+    "vignette": "Anak 8 tahun dibawa orangtuanya ke puskesmas dengan keluhan diare sejak 2 hari yang lalu. Keluhan diare disertai lendir dan darah dengan frekuensi 4-5x/hari. Anak mengeluh nyeri perut setiap mau BAB. Tanda vital dalam batas normal. Kemungkinan penyebab diare pasien ialah:",
+    "options": [
+      "Infeksi rotavirus",
+      "Intoleransi laktosa",
+      "Infeksi bakteri",
+      "Infeksi parasite",
+      "Infeksi amoeba"
+    ],
+    "answer": 4,
+    "key": "Diare berlendir dan berdarah dengan tenesmus (nyeri perut setiap akan BAB) tanpa demam tinggi dan keadaan umum baik lebih mengarah ke disentri amuba oleh Entamoeba histolytica.",
+    "why": [
+      "Rotavirus memberi diare cair tanpa lendir dan darah.",
+      "Intoleransi laktosa memberi tinja asam berbuih tanpa darah.",
+      "Infeksi bakteri seperti Shigella umumnya disertai demam tinggi dan keadaan umum tampak sakit berat.",
+      "Infeksi parasit cacing memberi keluhan kronik tanpa disentri akut.",
+      "Benar. Disentri dengan tenesmus dan tanda vital yang masih baik khas untuk amebiasis."
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "diareinfeksi",
+    "vignette": "Laki-laki 33 tahun datang ke puskesmas dengan keluhan diare dan muntah sejak 2 hari yang lalu. Keluhan BAB cair dengan frekuensi 10 kali warna seperti cucian beras. Pemeriksaan fisik didapatkan TD 120/80 mmHg, nadi 88 x/menit, RR 22 x/menit, temp 37.7 C, washer woman hand (+) turgor kulit lambat. Ion yang mengalami gangguan pada kasus diatas adalah:",
+    "options": [
+      "Kalium",
+      "Kalsium",
+      "Natrium",
+      "Klorida",
+      "Magnesium"
+    ],
+    "answer": 3,
+    "key": "Diare seperti air cucian beras dengan washer woman hand adalah kolera. Toksin kolera membuka kanal CFTR sehingga ion klorida tersekresi masif ke lumen usus, diikuti natrium dan air.",
+    "why": [
+      "Kalium memang ikut hilang dan menyebabkan hipokalemia, tetapi bukan ion yang langsung disekresikan oleh mekanisme toksin.",
+      "Kalsium tidak terlibat dalam mekanisme sekresi cairan pada kolera.",
+      "Natrium mengikuti klorida secara pasif, bukan ion yang dipompa keluar lebih dulu.",
+      "Benar. Toksin kolera membuka kanal CFTR sehingga sekresi ion klorida meningkat masif.",
+      "Magnesium tidak berperan pada patofisiologi kolera."
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "gerd",
+    "vignette": "Laki-laki 55 tahun datang ke poli RS dengan keluhan dada terasa panas. Keluhan dialami sejak 1 tahun terakhir. Keluhan diperberat setelah makan dan saat berbaring. Pemeriksaan endoskopi tampak perubahan mukosa distal esophagus dari epitel pucat menjadi kemerahan seperti mukosa usus. Diagnosis yang tepat pada kasus diatas ialah:",
+    "options": [
+      "Karsinoma sel skuamosa esophagus akibat iritasi mekanik kronik",
+      "Limfoma esophagus akibat proliferasi jaringan limfoid",
+      "Gastrointestinal tumor akibat mutasi sel",
+      "Karsinoma lambung akibat metastase metaplasia esofagus",
+      "Adenokarsinoma esophagus akibat metaplasia kronik"
+    ],
+    "answer": 4,
+    "key": "Perubahan mukosa distal esofagus dari epitel pucat menjadi kemerahan menyerupai mukosa usus adalah esofagus Barrett, yaitu metaplasia intestinal akibat refluks kronik. Komplikasi jangka panjangnya adenokarsinoma esofagus.",
+    "why": [
+      "Karsinoma sel skuamosa esofagus berkaitan dengan rokok dan alkohol, bukan metaplasia Barrett.",
+      "Limfoma esofagus sangat jarang dan tidak berkaitan dengan refluks kronik.",
+      "Gastrointestinal stromal tumor berasal dari sel Cajal, bukan dari metaplasia epitel.",
+      "Karsinoma lambung tidak terjadi sebagai metastasis metaplasia esofagus.",
+      "Benar. Metaplasia Barrett yang kronik dapat berkembang menjadi adenokarsinoma esofagus."
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "diareinfeksi",
+    "vignette": "Wanita 20 tahun datang ke Puskesmas dengan keluhan diare yang disertai lendir dan darah sejak 3 hari yang lalu. Pasien juga mengeluh nyeri perut, terutama saat mau BAB. Pemeriksaan fisik tanda vital dalam batas normal. Hasil pemeriksaan feses didapatkan gambaran parasite berinti dua. Komplikasi yang dapat terjadi jika tidak ditangani ialah:",
+    "options": [
+      "Varises esophagus",
+      "Hepatoma",
+      "Barret esophagus",
+      "Abses hepar",
+      "Kista hepar"
+    ],
+    "answer": 3,
+    "key": "Diare berlendir dan berdarah dengan tenesmus dan parasit berinti dua pada tinja mengarah ke amebiasis. Bila tidak diobati, trofozoit dapat menembus dinding usus dan menyebar lewat vena porta sehingga terbentuk abses hepar amuba.",
+    "why": [
+      "Varises esofagus adalah komplikasi hipertensi porta pada sirosis.",
+      "Hepatoma berkaitan dengan hepatitis B, C, dan sirosis kronik.",
+      "Barrett esofagus adalah komplikasi GERD kronik.",
+      "Benar. Abses hepar amuba adalah komplikasi ekstraintestinal tersering amebiasis.",
+      "Kista hepar umumnya bawaan atau akibat Echinococcus, bukan Entamoeba histolytica."
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "ibd",
+    "vignette": "Laki-laki 56 tahun datang ke poli RS dengan keluhan nyeri perut kiri bawah. Nyeri dirasakan terus menerus terutama saat BAB. Keluhan disertai BAB berdarah, mual dan nafsu makan menurun. Pemeriksaan fisik: hiperperistaltik, dan nyeri tekan abdomen kuadran kiri bawah. Pemeriksaan colonoscopy: inflamasi dan pseudopolip pada lumen kolon desendens hingga rektum. Diagnosis yang tepat adalah:",
+    "options": [
+      "Kolitis ulseratif",
+      "Appendicitis",
+      "Divertikulitis",
+      "Penyakit crohn",
+      "Polip colon"
+    ],
+    "answer": 0,
+    "key": "Nyeri kuadran kiri bawah dengan BAB berdarah dan kolonoskopi menunjukkan inflamasi serta pseudopolip dari kolon desenden hingga rektum adalah kolitis ulseratif. Peradangannya kontinu dari rektum ke proksimal dan terbatas pada mukosa.",
+    "why": [
+      "Benar. Inflamasi kontinu dengan pseudopolip dari rektum ke proksimal adalah kolitis ulseratif.",
+      "Apendisitis memberi nyeri kuadran kanan bawah dengan McBurney positif.",
+      "Divertikulitis memberi nyeri kiri bawah akut dengan demam, tanpa pseudopolip difus.",
+      "Penyakit Crohn memberi skip lesion dan lebih sering mengenai ileum terminal.",
+      "Polip kolon tidak menimbulkan inflamasi difus sepanjang mukosa."
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "diareinfeksi",
+    "vignette": "Wanita 20 tahun datang ke klinik dengan keluhan BAB cair yang disertai demam dan nyeri perut. Diare disertai lendir dan darah. Pasien mengatakan, kalau frekuensi diare > 10 kali dalam sehari. Pemeriksaan fisik: pasien tampak lemas, TD 100/75 mmHg, temp 37.8 C. Hasil pemeriksaan gram ditemukan gambaran koloni berbentuk batang berwarna merah muda. Terapi yang dapat diberikan adalah:",
+    "options": [
+      "Metronidazole 3 x 500 mg",
+      "Tetrasiklin 4 x 500 mg",
+      "Eritromisin 4 x 500 mg",
+      "Kloramfenikol 4 x 500 mg",
+      "Ciprofloksasin 2 x 500 mg"
+    ],
+    "answer": 4,
+    "key": "Diare lebih dari 10 kali sehari dengan lendir, darah, demam, dan koloni batang gram negatif berwarna merah muda adalah disentri basiler oleh Shigella. Terapinya siprofloksasin 2 x 500 mg selama 3-5 hari.",
+    "why": [
+      "Metronidazol ditujukan untuk disentri amuba, bukan basiler.",
+      "Tetrasiklin bukan pilihan untuk shigelosis karena tingginya resistensi.",
+      "Eritromisin tidak efektif terhadap kuman batang gram negatif enterik.",
+      "Kloramfenikol dicadangkan untuk demam tifoid.",
+      "Benar. Siprofloksasin 2 x 500 mg adalah terapi pilihan disentri basiler pada dewasa."
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "keganasangi",
+    "vignette": "Laki-laki 58 tahun datang ke poli RS dengan keluhan BAB berdarah sejak 2 bulan terakhir. Keluhan disertai penurunan berat badan 15 kg dalam 1 bulan, walaupun nafsu makan baik. Pasien sejak muda jarang mengonsumsi junk food dan sate. Pemeriksaan radiologi: adanya filling defect dengan gambaran apple core. Pemeriksaan marker yang dianjurkan adalah:",
+    "options": [
+      "AFP",
+      "CA 125",
+      "CEA",
+      "PSA",
+      "Cyfra 21"
+    ],
+    "answer": 2,
+    "key": "Filling defect dengan gambaran apple core pada pemeriksaan radiologi kolon adalah tanda karsinoma kolorektal. Penanda tumor yang dianjurkan untuk pemantauan adalah carcinoembryonic antigen (CEA).",
+    "why": [
+      "AFP adalah penanda karsinoma hepatoselular dan tumor sel germinal.",
+      "CA 125 adalah penanda karsinoma ovarium.",
+      "Benar. CEA adalah penanda yang dipakai pada karsinoma kolorektal.",
+      "PSA adalah penanda karsinoma prostat.",
+      "Cyfra 21-1 dipakai pada karsinoma paru sel non kecil."
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "diareinfeksi",
+    "vignette": "Laki-laki 23 tahun dengan keluhan diare sejak 3 hari. Keluhan diare cair, ampas sedikit, lendir dan darah disangkal. Keluhan disertai demam, nyeri perut dan mual muntah. Pemeriksaan fisik: TD 110/70 mmHg, nadi 90, RR 22, temp 37.8 C, turgor kembali 3 detik. Pemeriksaan dengan McConkey didapatkan bakteri gram negatif, koloni bundar, halus, warna merah bata, fermentasi laktosa (+), tes indol (+). Tatalaksana farmakologi yang dapat diberikan:",
+    "options": [
+      "Ciprofloksasin",
+      "Metronidazole",
+      "Tetrasiklin",
+      "Doksisiklin",
+      "Eritromisin"
+    ],
+    "answer": 0,
+    "key": "Koloni merah bata pada MacConkey dengan fermentasi laktosa positif dan indol positif adalah Escherichia coli. Pada diare akut dengan demam dan nyeri perut yang memerlukan antibiotik, pilihannya siprofloksasin.",
+    "why": [
+      "Benar. Siprofloksasin adalah antibiotik pilihan untuk diare E. coli yang memerlukan terapi.",
+      "Metronidazol hanya untuk amuba, Giardia, dan kuman anaerob.",
+      "Tetrasiklin bukan pilihan untuk enterik E. coli dan resistensinya tinggi.",
+      "Doksisiklin dipakai pada kolera sebagai adjuvan.",
+      "Eritromisin dipakai pada infeksi Campylobacter, bukan E. coli."
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "diareinfeksi",
+    "vignette": "Anak 10 tahun dibawa ibunya ke puskesmas dengan keluhan diare yang disertai lendir dan darah. Dalam satu hari diare dirasakan 6-10 kali. Pemeriksaan fisik: keadaan umum anak baik, nadi 110, RR 24, temp 38 C, mata cowong, perut kembung. Pemeriksaan feses ditemukan eritrosit +3, leukosit +3 dan tidak didapatkan adanya parasit. Tatalaksana yang dapat diberikan pada kasus diatas adalah:",
+    "options": [
+      "Amoksilin",
+      "Ciprofloksasin",
+      "Metronidazole",
+      "Kotrimoksazole",
+      "Tetrasiklin"
+    ],
+    "answer": 3,
+    "key": "Diare berlendir dan berdarah dengan eritrosit dan leukosit banyak pada tinja tanpa parasit adalah disentri basiler. Pada anak, kotrimoksazol masih menjadi pilihan yang lazim dan aman untuk shigelosis.",
+    "why": [
+      "Amoksisilin tidak efektif terhadap Shigella karena resistensinya tinggi.",
+      "Siprofloksasin adalah golongan kuinolon yang secara umum dihindari pada anak.",
+      "Metronidazol ditujukan untuk disentri amuba, sedangkan pada tinja ini tidak ditemukan parasit.",
+      "Benar. Kotrimoksazol adalah pilihan untuk disentri basiler pada anak.",
+      "Tetrasiklin dikontraindikasikan pada anak di bawah 8 tahun."
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "dispepsia",
+    "vignette": "Wanita 25 tahun datang ke praktek dokter dengan keluhan nyeri ulu hati sejak 3 hari yang lalu. Keluhan juga disertai rasa mual, namun tidak muntah. Pemeriksaan fisik didapatkan tanda vital dalam batas normal, nyeri tekan epigastrium (+). Edukasi yang dapat diberikan adalah:",
+    "options": [
+      "Diet tinggi serat",
+      "Makan makanan kecil sebelum tidur",
+      "Diet rendah serat",
+      "Makan porsi kecil dan sering",
+      "Jangan berbaring minimal 15-30 menit setelah makan"
+    ],
+    "answer": 3,
+    "key": "Pada dispepsia tanpa tanda bahaya, edukasi utamanya mengatur pola makan: porsi kecil tetapi sering, agar lambung tidak terlalu lama kosong dan tidak terlalu penuh sehingga sekresi asam lebih terkendali.",
+    "why": [
+      "Diet tinggi serat bermanfaat untuk konstipasi, bukan keluhan nyeri epigastrium.",
+      "Makan menjelang tidur justru memicu refluks dan sekresi asam malam hari.",
+      "Diet rendah serat tidak berkaitan dengan perbaikan gejala dispepsia.",
+      "Benar. Makan porsi kecil dan sering menjaga lambung tidak kosong terlalu lama.",
+      "Anjuran tidak berbaring setelah makan benar, tetapi jedanya minimal 2-3 jam, bukan 15-30 menit."
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "perdarahangi",
+    "vignette": "Wanita 40 tahun datang ke IGD dengan keluhan muntah disertai darah berwarna kehitaman sejak 1 hari yang lalu. Pasien diketahui riwayat minum jamu-jamuan sejak 5 tahun terakhir. Pada pemeriksaan fisik ditemukan nyeri epigastrium. Pada saat di endoskopi ditentukan mukosa gaster eritema, edema, dan rugae flat erosif. Apakah terapi kombinasi awal yang diberikan pada pasien tersebut:",
+    "options": [
+      "Antibiotik dan analgetik",
+      "Antibiotik dan mukoprotektan",
+      "Antasida dan mukoprotektan",
+      "Antasida dan H2 reseptor antagonist",
+      "PPI dan mukoprotektan"
+    ],
+    "answer": 4,
+    "key": "Hematemesis dengan mukosa gaster eritema, edema, dan rugae flat erosif pada endoskopi adalah gastritis erosif. Terapi kombinasi awalnya proton pump inhibitor untuk menekan asam dan mukoprotektan untuk melapisi mukosa yang terkikis.",
+    "why": [
+      "Antibiotik hanya diberikan bila terbukti infeksi H. pylori, dan analgetik justru memperberat lesi.",
+      "Antibiotik tanpa penekan asam tidak menghentikan kerusakan mukosa yang sedang berlangsung.",
+      "Antasida hanya menetralkan asam sesaat dan tidak cukup pada gastritis erosif dengan perdarahan.",
+      "Antagonis H2 kurang kuat dibandingkan PPI untuk menghentikan perdarahan.",
+      "Benar. Kombinasi PPI dan mukoprotektan adalah terapi awal gastritis erosif dengan hematemesis."
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "diareinfeksi",
+    "vignette": "Laki-laki 17 tahun dengan keluhan diare sejak 3 hari. Keluhan diare cair, ampas sedikit, lendir dan darah disangkal. Keluhan disertai demam, nyeri perut dan mual muntah. Pemeriksaan fisik: TD 110/70 mmHg, nadi 90, RR 22, temp 37.8 C, turgor kembali 3 detik. Pemeriksaan dengan McConkey didapatkan bakteri gram negatif, koloni bundar, halus, warna merah bata, fermentasi laktosa (+), tes indol (+). Etiologi dari kasus diatas adalah:",
+    "options": [
+      "Enterotoxigenic E.coli",
+      "Enterohemorrhagic E.coli",
+      "Enteroinvasive E.coli",
+      "Enteropathogenic E.coli",
+      "Enteroaggregative E.coli"
+    ],
+    "answer": 2,
+    "key": "Koloni merah bata pada MacConkey, fermentasi laktosa positif, dan indol positif menunjukkan Escherichia coli. Gambaran diare dengan demam, nyeri perut, mual, dan muntah sesuai dengan galur enteroinvasive E. coli yang menginvasi mukosa kolon.",
+    "why": [
+      "Enterotoxigenic E. coli memberi diare cair tanpa demam, khas pada traveler diarrhea.",
+      "Enterohemorrhagic E. coli memberi diare berdarah tanpa demam tinggi dan berisiko sindrom uremik hemolitik.",
+      "Benar. Enteroinvasive E. coli menginvasi mukosa kolon sehingga menimbulkan demam dan nyeri perut.",
+      "Enteropathogenic E. coli menyerang bayi dengan diare cair menahun.",
+      "Enteroaggregative E. coli menyebabkan diare persisten pada anak, bukan diare akut dengan demam."
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "intoksikasi",
+    "vignette": "Wanita 30 tahun datang ke IGD RS dengan keluhan mual muntah sejak 1 jam setelah makan makanan yang ada di acara pernikahan tetangga nya. Keluhan juga disertai diare dan nyeri perut. Pemeriksaan fisik: peristaltic meningkat. Diagnosis yang mungkin adalah:",
+    "options": [
+      "Irritable bowel syndrome",
+      "Intoleransi makanan",
+      "Alergi makanan",
+      "Bulimia",
+      "Intoksikasi makanan"
+    ],
+    "answer": 4,
+    "key": "Mual, muntah, diare, dan nyeri perut yang muncul cepat setelah menyantap makanan pada acara bersama adalah intoksikasi makanan, umumnya karena toksin bakteri yang sudah terbentuk pada makanan seperti Staphylococcus aureus.",
+    "why": [
+      "Irritable bowel syndrome berlangsung kronik dan tidak terkait satu kali makan.",
+      "Intoleransi makanan berkaitan dengan komponen makanan tertentu yang berulang, bukan wabah setelah satu acara.",
+      "Alergi makanan diperantarai IgE dan disertai urtikaria atau sesak.",
+      "Bulimia adalah gangguan makan dengan muntah yang disengaja.",
+      "Benar. Gejala cepat setelah makan bersama mengarah ke intoksikasi makanan oleh toksin bakteri."
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "dispepsia",
+    "vignette": "Wanita 45 tahun datang ke poli RS dengan keluhan nyeri ulu hati, keluhan disertai mual muntah dan sering bersendawa. Keluhan sering kambuh-kambuhan dalam 6 bulan. Pemeriksaan fisik tanda vital dalam batas normal, nyeri epigastrium (+). Hasil pemeriksaan UBT (+). Saat dilakukan uji resistensi, pasien resistensi terhadap claritromisin. Tatalaksana yang tepat pada kasus diatas:",
+    "options": [
+      "Lansoprazol, bismuth, tetrasiklin dan metronidazole",
+      "Omeprazol, bismuth, amoksisilin dan metronidazole",
+      "Lansoprazol, amoksisilin dan klaritromisin",
+      "Omeprazole, ciprofloksasin dan metronidazole",
+      "Lansoprazol, domperidone dan ciprofloksasin"
+    ],
+    "answer": 0,
+    "key": "Dispepsia berulang dengan urea breath test positif adalah infeksi H. pylori. Bila terdapat resistensi klaritromisin, digunakan terapi kuadrupel berbasis bismut: PPI, bismut, tetrasiklin, dan metronidazol selama 10-14 hari.",
+    "why": [
+      "Benar. Terapi kuadrupel bismut dengan tetrasiklin dan metronidazol dipakai pada resistensi klaritromisin.",
+      "Amoksisilin dalam regimen bismut tidak sesuai; kombinasi bakunya tetrasiklin dan metronidazol.",
+      "Regimen ini mengandung klaritromisin, justru obat yang sudah resisten.",
+      "Siprofloksasin bukan komponen baku regimen eradikasi H. pylori lini kedua.",
+      "Domperidon hanya prokinetik dan tidak berperan pada eradikasi kuman."
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "diareinfeksi",
+    "vignette": "Wanita 20 tahun datang ke klinik dengan keluhan BAB cair sejak 3 hari yang lalu. Keluhan disertai mual, muntah dan perut terasa melilit. Pemeriksaan fisik, TD 110/70, nadi 80, RR 22, Temp 37.6 C, bising usus meningkat. Pemeriksaan feses: tampak feses berminyak dan ditemukan mikroorganisme berflagel. Tatalaksana farmakologi yang dapat diberikan pada kasus diatas adalah:",
+    "options": [
+      "Albendazole",
+      "Miconazole",
+      "Ciprofloksasin",
+      "Metronidazole",
+      "Trimetoprim sulfametoksazole"
+    ],
+    "answer": 3,
+    "key": "Diare dengan tinja berminyak (steatorea) dan mikroorganisme berflagel pada pemeriksaan feses adalah giardiasis. Terapinya metronidazol.",
+    "why": [
+      "Albendazol ditujukan untuk infeksi cacing.",
+      "Mikonazol adalah antijamur topikal.",
+      "Siprofloksasin untuk infeksi bakteri enterik, bukan protozoa berflagel.",
+      "Benar. Metronidazol adalah terapi pilihan giardiasis.",
+      "Trimetoprim sulfametoksazol dipakai pada Cyclospora dan Isospora, bukan Giardia."
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "keganasangi",
+    "vignette": "Laki-laki 60 tahun datang ke poli RS dengan keluhan BAB berlendir berdarah sejak 2 tahun. Sejak 6 bulan yang lalu pasien BAB seperti kotoran kambing. Pasien merasa tidak nyaman jika buang air besar, pasien sering merasakan ingin buang air besar tetapi tidak mengeluarkan kotoran. Diagnosis yang tepat adalah:",
+    "options": [
+      "Polip rekti",
+      "Crohn's disease",
+      "Kolitis ulserativa",
+      "Hemoroid interna grade 1",
+      "Karsinoma rekti"
+    ],
+    "answer": 4,
+    "key": "BAB berlendir dan berdarah menahun dengan tinja mengecil seperti kotoran kambing serta tenesmus yang menetap sangat mengarah ke karsinoma rekti. Massa di rektum mempersempit lumen dan menimbulkan rasa ingin BAB terus menerus.",
+    "why": [
+      "Polip rekti memberi perdarahan tanpa perubahan bentuk tinja yang menetap dan tanpa tenesmus berat.",
+      "Penyakit Crohn lebih sering mengenai ileum terminal dengan diare kronik dan fistula.",
+      "Kolitis ulserativa memberi diare berdarah, tetapi tidak menyebabkan penyempitan lumen dengan tinja seperti kotoran kambing.",
+      "Hemoroid interna derajat 1 memberi perdarahan segar tanpa lendir dan tanpa perubahan kaliber tinja.",
+      "Benar. Tenesmus dengan tinja mengecil menahun adalah gambaran karsinoma rekti."
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "intoksikasi",
+    "vignette": "Wanita 22 tahun dibawa ke IGD RS dengan keluhan nyeri menelan. Keluhan disertai rasa panas pada dada. Pasien bekerja sebagai cleaning service dan baru saja kontak dengan bahan korosif tanpa masker dan sarung tangan. Keluhan mual muntah disangkal. Pemeriksaan penunjang yang tepat adalah:",
+    "options": [
+      "Colonoscopy",
+      "USG abdomen",
+      "Endoskopi",
+      "Esofagogram",
+      "CT scan"
+    ],
+    "answer": 3,
+    "key": "Nyeri menelan dengan rasa panas di dada setelah kontak bahan korosif memerlukan penilaian jalur esofagus. Pada fase awal, esofagogram dengan kontras larut air dipilih untuk menilai kebocoran dan derajat cedera tanpa menambah risiko perforasi.",
+    "why": [
+      "Kolonoskopi menilai kolon dan tidak berkaitan dengan cedera esofagus.",
+      "USG abdomen tidak dapat menilai lumen esofagus.",
+      "Endoskopi memang berperan, tetapi berisiko memperberat perforasi bila dikerjakan tanpa penilaian awal.",
+      "Benar. Esofagogram dipilih untuk menilai cedera dan kebocoran esofagus akibat zat korosif.",
+      "CT scan dipakai bila dicurigai perforasi luas, bukan pemeriksaan awal pilihan."
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "gerd",
+    "vignette": "Laki-laki 50 tahun datang ke praktek dokter dengan keluhan nyeri dada yang terasa panas, tenggorokan panas. Keluhan dirasakan hilang timbul sejak 1 bulan. Pasien sering mengonsumsi kopi 3 kali sehari. Keluhan disertai mual dan muntah. Hasil pemeriksaan ditemukan erosi pada distal esophagus. Terapi yang dapat diberikan adalah:",
+    "options": [
+      "Antasida dan paracetamol",
+      "Omeprazole dan antasida",
+      "Ranitidine dan acetaminophen",
+      "Paracetamol dan ondansetron",
+      "Domperidone dan lansoprazole"
+    ],
+    "answer": 4,
+    "key": "Nyeri dada terasa panas dengan tenggorokan panas pada peminum kopi berat dan erosi pada esofagus distal adalah GERD dengan esofagitis erosif. Terapinya PPI seperti lansoprazol, dapat dikombinasikan prokinetik domperidon untuk mempercepat pengosongan lambung.",
+    "why": [
+      "Antasida hanya meredakan sesaat dan parasetamol tidak berperan pada refluks.",
+      "Omeprazol sudah tepat, tetapi antasida bukan pasangan yang menambah manfaat bermakna pada esofagitis erosif.",
+      "Ranitidin kurang kuat dibandingkan PPI untuk penyembuhan erosi esofagus.",
+      "Parasetamol dan ondansetron hanya simtomatik tanpa menyentuh mekanisme refluks.",
+      "Benar. Kombinasi lansoprazol dan domperidon menekan asam sekaligus memperbaiki motilitas."
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "dispepsia",
+    "vignette": "Wanita 55 tahun datang ke poliklinik dengan keluhan nyeri ulu hati yang disertai muntah hitam sebanyak setengah gelas, keluhan dialami sejak 1 yang lalu. Keluhan juga disertai BAB hitam seperti aspal. Keluhan disertai demam tinggi. Pemeriksaan fisik: TD 100/70, nadi 100x, RR 22, temp 39 C. Hasil laboratorium didapatkan Hb 8, leukosit 24.000, trombosit 200.000. Pemeriksaan urea breath test (+). Pemeriksaan gold standard pada kasus diatas adalah:",
+    "options": [
+      "Endoskopi",
+      "USG abdomen",
+      "CT scan abdomen",
+      "Kolonoskopi",
+      "Kultur aspirasi cairan lambung"
+    ],
+    "answer": 4,
+    "key": "Urea breath test positif menandakan infeksi H. pylori. Baku emas pemastian kuman ini adalah kultur, yang diperoleh dari aspirasi cairan lambung atau biopsi mukosa lambung, dan sekaligus memungkinkan uji resistensi antibiotik.",
+    "why": [
+      "Endoskopi adalah sarana pengambilan sampel dan menilai lesi, tetapi bukan baku emas identifikasi kuman.",
+      "USG abdomen tidak dapat mendeteksi H. pylori.",
+      "CT scan abdomen tidak berperan dalam diagnosis infeksi H. pylori.",
+      "Kolonoskopi menilai kolon, bukan lambung.",
+      "Benar. Kultur dari aspirasi cairan lambung adalah baku emas sekaligus memberi hasil uji resistensi."
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "gerd",
+    "vignette": "Wanita 40 tahun datang ke praktek dokter dengan keluhan nyeri dada seperti terbakar sejak 1 minggu, keluhan disertai rasa asam di tenggorokan. Pasien sudah diberi antasida sirup namun keluhan tidak membaik. Hasil endoskopi: mucosal streak di esophagus. Komplikasi yang dapat terjadi pada kasus tersebut:",
+    "options": [
+      "Akalasia esophagus",
+      "Esophagitis",
+      "Gastritis erosive",
+      "Varises esophagus",
+      "Squamous cell carcinoma esophagus"
+    ],
+    "answer": 1,
+    "key": "Nyeri dada seperti terbakar dengan rasa asam di tenggorokan yang tidak membaik dengan antasida dan mucosal streak pada endoskopi adalah GERD. Paparan asam yang berlanjut menimbulkan peradangan mukosa esofagus, yaitu esofagitis.",
+    "why": [
+      "Akalasia adalah gangguan relaksasi sfingter esofagus bawah, bukan komplikasi refluks.",
+      "Benar. Paparan asam kronik pada mukosa esofagus menimbulkan esofagitis.",
+      "Gastritis erosif mengenai lambung, bukan komplikasi langsung refluks pada esofagus.",
+      "Varises esofagus adalah akibat hipertensi porta pada sirosis hati.",
+      "Karsinoma sel skuamosa berkaitan dengan rokok dan alkohol; komplikasi GERD adalah adenokarsinoma."
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "fungsional",
+    "vignette": "Wanita 30 tahun datang ke praktek dokter dengan keluhan nyeri ulu hati sejak 3 hari terakhir. Pemeriksaan fisik didapatkan tanda vital dalam batas normal, nyeri tekan epigastrium (+). Riwayat konsumsi obat anti nyeri dan steroid disangkal. Hasil endoskopi tidak ada kelainan. Diagnosis yang tepat adalah:",
+    "options": [
+      "Ulkus peptikum",
+      "Ulkus gaster",
+      "Dispepsia fungsional",
+      "Dispepsia non fungsional",
+      "GERD"
+    ],
+    "answer": 2,
+    "key": "Nyeri ulu hati tanpa riwayat NSAID maupun steroid dengan hasil endoskopi yang tidak menunjukkan kelainan adalah dispepsia fungsional. Diagnosis ini ditegakkan setelah kelainan struktural disingkirkan.",
+    "why": [
+      "Ulkus peptikum akan tampak sebagai defek mukosa pada endoskopi.",
+      "Ulkus gaster juga memberi lesi yang terlihat jelas saat endoskopi.",
+      "Benar. Keluhan dispepsia dengan endoskopi normal adalah dispepsia fungsional.",
+      "Istilah dispepsia non fungsional tidak dipakai dalam klasifikasi baku.",
+      "GERD memberi keluhan panas retrosternal dan regurgitasi asam sebagai gejala utama."
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "mulut",
+    "vignette": "Wanita 60 tahun mengeluh ada lesi keputihan di lidahnya sejak 2 minggu yang lalu. Lesi tidak terasa nyeri maupun gatal, namun sedikit mengganjal. Pasien sering merokok sejak masih remaja. Pada inspeksi dijumpai plak putih pada lidah pasien yang tidak dapat dikerok, nyeri tekan lesi (-). Pemeriksaan penunjang baku emas pada kasus ini adalah:",
+    "options": [
+      "KOH 10%",
+      "KOH 20%",
+      "Pewarnaan gram",
+      "Lampu wood",
+      "Biopsi kerokan lesi"
+    ],
+    "answer": 4,
+    "key": "Plak putih pada lidah yang tidak dapat dikerok pada perokok lama adalah leukoplakia, suatu lesi prakanker. Baku emasnya biopsi untuk menilai derajat displasia dan menyingkirkan karsinoma sel skuamosa.",
+    "why": [
+      "KOH 10 persen dipakai untuk mencari jamur pada plak yang dapat dikerok.",
+      "KOH 20 persen juga untuk pemeriksaan jamur, bukan lesi prakanker.",
+      "Pewarnaan Gram dipakai untuk infeksi bakteri.",
+      "Lampu Wood dipakai pada kelainan kulit tertentu, bukan lesi mukosa mulut.",
+      "Benar. Biopsi adalah baku emas untuk memastikan ada tidaknya displasia pada leukoplakia."
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "mulut",
+    "vignette": "Bayi 5 bulan dibawa orangtuanya ke poli RS dengan keluhan oral thrush. Pemeriksaan status lokalis tampak plak putih dengan maserasi jika diangkat. Pemeriksaan penunjang yang tepat adalah:",
+    "options": [
+      "Swab tenggorok",
+      "Pemeriksaan darah lengkap",
+      "Kultur feses",
+      "Pemeriksaan KOH",
+      "Hapusan darah tepi"
+    ],
+    "answer": 3,
+    "key": "Plak putih dengan maserasi bila diangkat pada bayi adalah kandidiasis oral. Pemeriksaan penunjangnya kerokan lesi dengan KOH untuk melihat pseudohifa dan blastospora.",
+    "why": [
+      "Swab tenggorok ditujukan untuk kultur bakteri faring.",
+      "Darah lengkap tidak menegakkan diagnosis infeksi jamur lokal.",
+      "Kultur feses tidak berkaitan dengan lesi mulut.",
+      "Benar. Pemeriksaan KOH menunjukkan pseudohifa dan blastospora khas Candida.",
+      "Hapusan darah tepi dipakai untuk menilai kelainan sel darah, bukan infeksi mulut."
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "dispepsia",
+    "vignette": "Wanita 30 tahun datang ke praktek dokter dengan keluhan susah BAB sejak 2 hari terakhir. Sebelumnya pasien mengeluh mual, muntah dan nyeri ulu hati sehingga pasien minum antasida. Pemeriksaan fisik tanda vital dalam batas normal. Senyawa apa yang menyebabkan keluhan pasien:",
+    "options": [
+      "NaCl",
+      "AL (OH)3",
+      "Mg(OH)2",
+      "NaHCO3",
+      "Na2CO3"
+    ],
+    "answer": 1,
+    "key": "Sulit BAB setelah minum antasida disebabkan komponen aluminium hidroksida, yang memperlambat motilitas usus. Sebaliknya magnesium hidroksida cenderung menyebabkan diare, sehingga keduanya sering dikombinasikan.",
+    "why": [
+      "NaCl tidak terkandung dalam antasida dan tidak menyebabkan konstipasi.",
+      "Benar. Aluminium hidroksida menyebabkan konstipasi.",
+      "Magnesium hidroksida justru bersifat laksatif dan menyebabkan diare.",
+      "Natrium bikarbonat menimbulkan kembung dan alkalosis, bukan konstipasi.",
+      "Natrium karbonat tidak dipakai sebagai antasida lazim dan bukan penyebab konstipasi."
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "perdarahangi",
+    "vignette": "Laki-laki 50 tahun datang ke praktek dokter dengan keluhan muntah darah sejak 1 hari yang lalu. Keluhan disertai perut kembung dan nyeri ulu hati. Pasien rutin mengonsumsi obat pengencer darah, dan pasien juga sering terlambat makan. Diagnosis yang tepat adalah:",
+    "options": [
+      "Gastritis korosif",
+      "Refluks esophagus",
+      "Infeksi H.pylori",
+      "Colitis ulserativa",
+      "Gastritis ulserative"
+    ],
+    "answer": 4,
+    "key": "Hematemesis dengan nyeri ulu hati pada pemakai obat pengencer darah yang sering terlambat makan adalah gastritis erosif atau ulseratif. Antiplatelet dan antikoagulan memperberat perdarahan pada mukosa lambung yang sudah terkikis.",
+    "why": [
+      "Gastritis korosif terjadi setelah menelan zat kimia kuat, yang tidak ada pada riwayat pasien.",
+      "Refluks esofagus memberi rasa panas retrosternal, bukan muntah darah.",
+      "Infeksi H. pylori memang dapat menyebabkan ulkus, tetapi pada kasus ini pencetusnya jelas obat pengencer darah.",
+      "Kolitis ulserativa mengenai kolon dan memberi diare berdarah, bukan hematemesis.",
+      "Benar. Gastritis ulseratif akibat obat pengencer darah menjelaskan hematemesis pada pasien ini."
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "diareinfeksi",
+    "vignette": "Laki-laki 26 tahun datang ke poli RS dengan keluhan diare 15 kali dalam satu hari yang disertai lendir dan darah. Pemeriksaan fisik: pasien tampak lemah, TD 90/60 mmHg, nadi 100 x/menit, RR 22 x/menit, temp 30 C. Pemeriksaan laboratorium didapatkan peningkatan leukosit dan peningkatan LED. Etiologi dari kasus diatas adalah:",
+    "options": [
+      "Entamoeba histolitica",
+      "Balantidium coli",
+      "Escheriae coli",
+      "Giardia lamblia",
+      "Shigella dysentriae"
+    ],
+    "answer": 4,
+    "key": "Diare 15 kali sehari dengan lendir dan darah disertai tanda syok awal, leukositosis, dan LED meningkat adalah disentri basiler berat. Penyebab yang paling berat gejalanya adalah Shigella dysenteriae, yang menghasilkan toksin Shiga.",
+    "why": [
+      "Entamoeba histolytica memberi disentri dengan keadaan umum yang umumnya lebih baik dan tanpa leukositosis mencolok.",
+      "Balantidium coli jarang dan berkaitan dengan kontak babi.",
+      "Escherichia coli enteroinvasif memberi gambaran mirip tetapi lebih ringan daripada Shigella dysenteriae.",
+      "Giardia lamblia memberi diare berminyak tanpa darah.",
+      "Benar. Shigella dysenteriae menyebabkan disentri basiler paling berat karena toksin Shiga."
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "intoksikasi",
+    "vignette": "Anak 6 tahun dibawa orangtuanya ke puskesmas dengan keluhan nyeri perut, mual muntah dan diare sejak 2 hari yang lalu. Keluhan dirasakan setelah anak memakan makanan kaleng. Pemeriksaan fisik: bising usus meningkat, mulut kering dan kelemahan otot kelopak mata. Etiologi dari kasus diatas ialah:",
+    "options": [
+      "Toksin clostridium",
+      "Toksin botulinum",
+      "Shigatoksin",
+      "Enterotoksin",
+      "Endotoksin"
+    ],
+    "answer": 1,
+    "key": "Mual, muntah, diare, mulut kering, dan kelemahan otot kelopak mata (ptosis) setelah makan makanan kaleng adalah botulisme. Toksin botulinum menghambat pelepasan asetilkolin sehingga terjadi paralisis flaksid dan gejala antikolinergik.",
+    "why": [
+      "Toksin Clostridium terlalu umum; yang dimaksud spesifik adalah toksin botulinum.",
+      "Benar. Toksin botulinum menjelaskan ptosis, mulut kering, dan kelemahan otot setelah makanan kaleng.",
+      "Shigatoksin menyebabkan diare berdarah dan sindrom uremik hemolitik, bukan ptosis.",
+      "Enterotoksin menyebabkan diare sekretorik tanpa gejala neurologis.",
+      "Endotoksin adalah lipopolisakarida gram negatif yang memicu sepsis, bukan paralisis."
+    ]
+  },
+  {
+    "id": 57,
+    "topic": "perdarahangi",
+    "vignette": "Laki-laki 55 tahun dibawa ke IGD RS dengan keluhan muntah darah sejak 1 jam yang lalu. Keluhan juga disertai BAB warna hitam. Pasien rutin mengonsumsi obat untuk menghilangkan nyeri sendi yang dibeli sendiri. Pemeriksaan fisik: konjungtiva anemis. Diagnosis tepat ialah:",
+    "options": [
+      "Hematemesis hematochezia e.c ulkus peptikum",
+      "Hematemesis hematochezia e.c GERD",
+      "Hematemesis melena e.c GERD",
+      "Hematemesis melena e.c rupture varises esophagus",
+      "Hematemesis melena e.c ulkus peptikum"
+    ],
+    "answer": 4,
+    "key": "Muntah darah dengan BAB hitam pada pemakai obat antinyeri rutin adalah hematemesis melena akibat ulkus peptikum karena NSAID. Melena menandakan darah yang sudah tercerna di saluran cerna atas, berbeda dari hematokezia yang berasal dari saluran cerna bawah.",
+    "why": [
+      "Hematokezia berasal dari saluran cerna bawah, tidak sesuai dengan BAB hitam pada pasien ini.",
+      "Selain istilah hematokezia yang keliru, GERD tidak menyebabkan perdarahan masif.",
+      "GERD bukan penyebab hematemesis melena dengan anemia.",
+      "Ruptur varises esofagus terjadi pada sirosis dengan hipertensi porta, sedangkan pasien ini pemakai NSAID.",
+      "Benar. Hematemesis melena akibat ulkus peptikum karena pemakaian NSAID."
+    ]
+  },
+  {
+    "id": 58,
+    "topic": "intoksikasi",
+    "vignette": "Wanita 20 tahun datang ke praktek dokter dengan keluhan nyeri perut disertai mual, muntah dan diare. Keluhan terjadi setelah pasien memakan ikan kaleng, namun sudah kadaluarsa. Pemeriksaan fisik: sens CM, tanda vital dbn, mukosa mulut kering. Tatalaksana yang tepat adalah:",
+    "options": [
+      "Analgetik",
+      "Antipiretik",
+      "Antispasmodic",
+      "Antibiotik",
+      "Antitoxin"
+    ],
+    "answer": 4,
+    "key": "Nyeri perut, mual, muntah, dan diare setelah makan ikan kaleng kedaluwarsa mengarah ke keracunan toksin botulinum. Terapi spesifiknya pemberian antitoksin untuk menetralkan toksin yang belum terikat pada saraf.",
+    "why": [
+      "Analgetik hanya meredakan nyeri tanpa menyentuh penyebabnya.",
+      "Antipiretik tidak diperlukan karena pasien tidak demam.",
+      "Antispasmodik hanya mengurangi kram perut secara simtomatik.",
+      "Antibiotik tidak menetralkan toksin yang sudah terbentuk dalam makanan.",
+      "Benar. Antitoksin adalah terapi spesifik keracunan toksin botulinum."
+    ]
+  }
+]

@@ -3,7 +3,8 @@
 
    Pemakaian:
      npm run import -- sumber/soal/psikiatri.md
-     npm run import -- sumber/soal/psikiatri.md --level lanjut --topic kepala
+     npm run import -- sumber/soal/psikiatri.md --subject anak --level lanjut
+     npm run import -- sumber/soal/psikiatri.md --topic kepala
      npm run import -- sumber/soal/psikiatri.md --dry      (lihat hasil, tanpa menulis)
 */
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
@@ -22,12 +23,13 @@ for (let i = 0; i < argv.length; i++) {
   const a = argv[i];
   if (a === "--dry") opt.dry = true;
   else if (a === "--level") opt.level = argv[++i];
+  else if (a === "--subject") opt.subject = argv[++i];
   else if (a === "--topic") opt.topic = argv[++i];
   else if (a === "--out") opt.out = argv[++i];
   else if (a.startsWith("--")) fatal(`opsi tidak dikenal: ${a}`);
   else bebas.push(a);
 }
-if (bebas.length !== 1) fatal("pemakaian: npm run import -- <file.md> [--level id] [--topic kode] [--out data/x.json] [--dry]");
+if (bebas.length !== 1) fatal("pemakaian: npm run import -- <file.md> [--subject id] [--level id] [--topic kode] [--out data/x.json] [--dry]");
 
 const berkas = resolve(root, bebas[0]);
 if (!existsSync(berkas)) fatal(`file tidak ditemukan: ${bebas[0]}`);
@@ -51,16 +53,25 @@ if (mfm) {
 
 const topics = JSON.parse(readFileSync(join(root, "data/topics.json"), "utf8"));
 const levels = JSON.parse(readFileSync(join(root, "data/levels.json"), "utf8"));
+const subjects = JSON.parse(readFileSync(join(root, "data/subjects.json"), "utf8"));
 const topikDefault = opt.topic || fm.topic || null;
 const levelId = opt.level || fm.level || null;
+const subjectId = opt.subject || fm.subject || null;
 
+/* Tujuan tulis ditentukan pasangan mata uji x level, sesuai "banks" pada
+   data/subjects.json. --out tetap bisa dipakai untuk menimpa penentuan itu. */
 let tujuan = opt.out || fm.file;
-if (!tujuan && levelId) {
-  const lv = levels.find(l => l.id === levelId);
-  if (!lv) fatal(`level "${levelId}" tidak ada di data/levels.json. Yang tersedia: ${levels.map(l => l.id).join(", ")}`);
-  tujuan = `data/${lv.file}`;
+if (!tujuan && (subjectId || levelId)) {
+  if (!subjectId) fatal(`mata uji belum ditentukan. Beri --subject <id> atau tulis subject: di frontmatter. Yang tersedia: ${subjects.map(s => s.id).join(", ")}`);
+  if (!levelId) fatal(`level belum ditentukan. Beri --level <id> atau tulis level: di frontmatter. Yang tersedia: ${levels.map(l => l.id).join(", ")}`);
+  const sj = subjects.find(s => s.id === subjectId);
+  if (!sj) fatal(`mata uji "${subjectId}" tidak ada di data/subjects.json. Yang tersedia: ${subjects.map(s => s.id).join(", ")}`);
+  if (!levels.some(l => l.id === levelId)) fatal(`level "${levelId}" tidak ada di data/levels.json. Yang tersedia: ${levels.map(l => l.id).join(", ")}`);
+  const file = sj.banks && sj.banks[levelId];
+  if (!file) fatal(`mata uji "${subjectId}" belum punya bank untuk level "${levelId}". Tambahkan dulu pasangan itu di "banks" pada data/subjects.json.`);
+  tujuan = `data/${file}`;
 }
-if (!tujuan) fatal("tujuan tidak diketahui. Beri --level <id>, atau --out data/namafile.json, atau tulis level: di frontmatter naskah.");
+if (!tujuan) fatal("tujuan tidak diketahui. Beri --subject <id> --level <id>, atau --out data/namafile.json, atau tulis subject: dan level: di frontmatter naskah.");
 if (!tujuan.startsWith("data/")) tujuan = `data/${tujuan}`;
 
 /* ---------------- parser ---------------- */
@@ -97,6 +108,9 @@ baris.forEach((brs, idx) => {
   if (/^pembahasan\s*:/i.test(b)) { mode = "key"; q.key.push(b.replace(/^pembahasan\s*:/i, "").trim()); return; }
   if (/^alasan\s*:?$/i.test(b)) { mode = "why"; return; }
   if (/^topik\s*:/i.test(b)) { q.topic = b.replace(/^topik\s*:/i, "").trim(); return; }
+  // naskah aslinya cacat (pilihan terpotong, kunci tidak jelas): biarkan di
+  // naskah sebagai catatan, tapi jangan ikut diimpor dan jangan bikin gagal
+  if (/^lewati\s*:/i.test(b)) { q.lewati = b.replace(/^lewati\s*:/i, "").trim() || "ditandai lewati"; return; }
   if (/^kunci\s*:/i.test(b)) {
     const h = b.replace(/^kunci\s*:/i, "").trim().toLowerCase()[0];
     const k = LET.indexOf(h);
@@ -138,8 +152,9 @@ simpan();
 if (!soal.length) fatal("tidak ada soal yang terbaca. Cek formatnya di sumber/soal/_TEMPLATE.md");
 
 /* ---------------- rapikan & periksa ---------------- */
+const dilewati = soal.filter(q => q.lewati);
 const perluDiisi = [];
-const hasil = soal.map(q => {
+const hasil = soal.filter(q => !q.lewati).map(q => {
   const at = `soal ${q.no}`;
   if (!q.topic) galat.push(`${at}: topik belum ditentukan. Tambah "[kode]" setelah nomor, baris "Topik: kode", frontmatter topic:, atau opsi --topic`);
   else if (!topics[q.topic]) galat.push(`${at}: topik "${q.topic}" tidak ada di data/topics.json`);
@@ -185,7 +200,11 @@ for (const q of hasil) {
 console.log(`\nNaskah  : ${bebas[0]}`);
 console.log(`Tujuan  : ${tujuan}${lama.length ? ` (sudah ada ${lama.length} soal)` : " (file baru)"}`);
 console.log(`Terbaca : ${hasil.length} soal`);
-if (duplikat.length) console.log(`Dilewati: ${duplikat.length} soal (vignette-nya sudah ada di bank)`);
+if (dilewati.length) {
+  console.log(`Ditandai lewati: ${dilewati.length} soal`);
+  dilewati.forEach(q => console.log(`  - soal ${q.no}: ${q.lewati}`));
+}
+if (duplikat.length) console.log(`Duplikat: ${duplikat.length} soal (vignette-nya sudah ada di bank)`);
 console.log(`Ditambah: ${baru.length} soal${baru.length ? `, id ${baru[0].id}-${baru[baru.length - 1].id}` : ""}`);
 
 const topikDipakai = {};

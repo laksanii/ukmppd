@@ -1,15 +1,51 @@
-/* Layar persiapan: pilih level, materi, jumlah soal, dan fitur sesi. */
-import { LEVELS, TOPICS, BANK, levelName, topicName } from "./bank.js";
+/* Layar persiapan: pilih mata uji, level, materi, jumlah soal, dan fitur sesi. */
+import { SUBJECTS, LEVELS, TOPICS, BANK, subjectName, levelName, topicName, topicsForSubjects } from "./bank.js";
 import { $, app, saveCfg, pool, wrongPool, TOGGLE_DEFS } from "./state.js";
 
-/* jumlah soal per level & per topik, mengikuti level yang sedang dipilih */
+/* Jumlah soal per mata uji, per level, dan per topik. Tiap hitungan mengikuti
+   pilihan pada sumbu di atasnya: level dihitung dalam mata uji yang dipilih,
+   topik dihitung dalam mata uji dan level yang dipilih. */
 function counts() {
-  const byLevel = {}, byTopic = {};
+  const bySubject = {}, byLevel = {}, byTopic = {};
   BANK.forEach(q => {
-    byLevel[q.level] = (byLevel[q.level] || 0) + 1;
-    if (app.cfg.levels.includes(q.level)) byTopic[q.topic] = (byTopic[q.topic] || 0) + 1;
+    const sjOn = app.cfg.subjects.includes(q.subject);
+    bySubject[q.subject] = (bySubject[q.subject] || 0) + 1;
+    if (sjOn) byLevel[q.level] = (byLevel[q.level] || 0) + 1;
+    if (sjOn && app.cfg.levels.includes(q.level)) byTopic[q.topic] = (byTopic[q.topic] || 0) + 1;
   });
-  return { byLevel, byTopic };
+  return { bySubject, byLevel, byTopic };
+}
+
+export function renderSubjects() {
+  const { bySubject } = counts();
+  $("subjects").innerHTML = SUBJECTS.map(sj => {
+    const on = app.cfg.subjects.includes(sj.id);
+    return `<label class="level${on ? " on" : ""}">
+      <input type="checkbox" ${on ? "checked" : ""} data-sj="${sj.id}">
+      <span class="lv-txt">
+        <span class="nm">${sj.name}</span>
+        <span class="ds">${sj.blurb}</span>
+      </span>
+      <span class="ct">${bySubject[sj.id] || 0} soal</span>
+    </label>`;
+  }).join("");
+  $("subjects").querySelectorAll("input").forEach(inp => {
+    inp.addEventListener("change", () => {
+      const id = inp.dataset.sj;
+      app.cfg.subjects = inp.checked
+        ? [...new Set([...app.cfg.subjects, id])]
+        : app.cfg.subjects.filter(x => x !== id);
+      inp.closest(".level").classList.toggle("on", inp.checked);
+      /* Materi mengikuti mata uji: yang dimatikan materinya ikut dilepas supaya
+         hitungan di layar sejalan dengan isi pool, yang dinyalakan materinya
+         ikut terpilih supaya mata uji itu benar-benar menyumbang soal. */
+      const tersedia = topicsForSubjects(app.cfg.subjects);
+      app.cfg.topics = inp.checked
+        ? [...new Set([...app.cfg.topics, ...topicsForSubjects([id])])]
+        : app.cfg.topics.filter(t => tersedia.includes(t));
+      saveCfg(); renderLevels(); renderTopics(); renderPool();
+    });
+  });
 }
 
 export function renderLevels() {
@@ -39,7 +75,12 @@ export function renderLevels() {
 
 export function renderTopics() {
   const { byTopic } = counts();
-  $("topics").innerHTML = Object.keys(TOPICS).map(k => {
+  const daftar = topicsForSubjects(app.cfg.subjects);
+  if (!daftar.length) {
+    $("topics").innerHTML = `<p class="empty">Pilih mata uji dulu untuk melihat daftar materinya.</p>`;
+    return;
+  }
+  $("topics").innerHTML = daftar.map(k => {
     const n = byTopic[k] || 0;
     const on = app.cfg.topics.includes(k);
     return `<label class="topic${on ? " on" : ""}${n === 0 ? " off" : ""}" data-t="${k}">
@@ -61,10 +102,14 @@ export function renderTopics() {
 }
 
 export function renderPool() {
-  const n = pool().length;
+  const qs = pool();
+  const n = qs.length;
   const el = $("pool");
   $("count").max = Math.max(1, n);
-  if (!app.cfg.levels.length) {
+  if (!app.cfg.subjects.length) {
+    el.className = "pool warn";
+    el.innerHTML = "Belum ada mata uji yang dipilih. Pilih minimal satu mata uji.";
+  } else if (!app.cfg.levels.length) {
     el.className = "pool warn";
     el.innerHTML = "Belum ada level yang dipilih. Pilih minimal satu level kesulitan.";
   } else if (n === 0) {
@@ -72,8 +117,13 @@ export function renderPool() {
     el.innerHTML = "Tidak ada soal pada kombinasi level dan materi ini. Tambahkan materi atau level lain.";
   } else {
     el.className = "pool";
-    const lv = app.cfg.levels.map(levelName).join(" + ");
-    el.innerHTML = `Tersedia <b>${n}</b> soal dari level ${lv}. Sesi ini akan memakai <b>${Math.min(app.cfg.count, n)}</b> soal, diacak.`;
+    // sebut hanya yang benar-benar menyumbang soal, supaya keterangannya tidak
+    // menyebut level atau mata uji yang isinya nol
+    const isi = (dipilih, ambil, nama) =>
+      dipilih.filter(id => qs.some(q => ambil(q) === id)).map(nama).join(" + ");
+    const sj = isi(app.cfg.subjects, q => q.subject, subjectName);
+    const lv = isi(app.cfg.levels, q => q.level, levelName);
+    el.innerHTML = `Tersedia <b>${n}</b> soal ${sj} level ${lv}. Sesi ini akan memakai <b>${Math.min(app.cfg.count, n)}</b> soal, diacak.`;
   }
   $("presets").querySelectorAll(".chip").forEach(c => {
     const v = c.dataset.v === "all" ? n : +c.dataset.v;
@@ -81,7 +131,7 @@ export function renderPool() {
   });
   $("start").disabled = n === 0;
   $("start").textContent = n === 0
-    ? "Pilih level & materi dulu"
+    ? "Pilih mata uji & materi dulu"
     : `Mulai latihan · ${Math.min(app.cfg.count, n)} soal`;
 }
 
@@ -149,35 +199,38 @@ export function renderHistory() {
   $("clearHist").classList.remove("hidden");
   const rows = app.hist.slice(0, 6).map(h => {
     const pc = Math.round(h.correct / h.total * 100);
+    const sj = (h.subjects || []).map(subjectName).join(" + ");
     const lv = (h.levels || []).map(levelName).join(" + ");
     return `<div class="hrow">
-      <span class="dt">${h.date} · ${h.total} soal${lv ? ` · ${lv}` : ""}</span>
+      <span class="dt">${h.date} · ${h.total} soal${sj ? ` · ${sj}` : ""}${lv ? ` · ${lv}` : ""}</span>
       <span class="sc">${h.correct}/${h.total} · ${pc}%</span></div>`;
   }).join("");
 
-  const agg = {};
-  app.hist.forEach(h => Object.entries(h.byTopic || {}).forEach(([k, v]) => {
-    agg[k] = agg[k] || { c: 0, t: 0 };
-    agg[k].c += v.c; agg[k].t += v.t;
-  }));
-  const weak = Object.entries(agg).filter(([, v]) => v.t >= 3)
+  /* jumlahkan capaian seluruh riwayat pada satu sumbu (materi/mata uji/level) */
+  const rekap = ambil => {
+    const agg = {};
+    app.hist.forEach(h => Object.entries(ambil(h) || {}).forEach(([k, v]) => {
+      agg[k] = agg[k] || { c: 0, t: 0 };
+      agg[k].c += v.c; agg[k].t += v.t;
+    }));
+    return agg;
+  };
+  const ringkas = (agg, judul, label) => Object.keys(agg).length > 1
+    ? `<p class="note">${judul}: ${Object.entries(agg).map(([k, v]) =>
+        `${label(k)} ${Math.round(v.c / v.t * 100)}% (${v.c}/${v.t})`).join(", ")}.</p>` : "";
+
+  const sjHtml = ringkas(rekap(h => h.bySubject), "Capaian per mata uji", subjectName);
+  const lvHtml = ringkas(rekap(h => h.byLevel), "Capaian per level", levelName);
+
+  const weak = Object.entries(rekap(h => h.byTopic)).filter(([, v]) => v.t >= 3)
     .map(([k, v]) => ({ k, pc: v.c / v.t })).sort((a, b) => a.pc - b.pc).slice(0, 3);
   const weakHtml = weak.length
     ? `<p class="note">Materi dengan capaian terendah sejauh ini: ${weak.map(w =>
         `${topicName(w.k)} (${Math.round(w.pc * 100)}%)`).join(", ")}.</p>` : "";
 
-  const aggLv = {};
-  app.hist.forEach(h => Object.entries(h.byLevel || {}).forEach(([k, v]) => {
-    aggLv[k] = aggLv[k] || { c: 0, t: 0 };
-    aggLv[k].c += v.c; aggLv[k].t += v.t;
-  }));
-  const lvHtml = Object.keys(aggLv).length > 1
-    ? `<p class="note">Capaian per level: ${Object.entries(aggLv).map(([k, v]) =>
-        `${levelName(k)} ${Math.round(v.c / v.t * 100)}% (${v.c}/${v.t})`).join(", ")}.</p>` : "";
-
-  body.innerHTML = `<div class="hist">${rows}</div>${lvHtml}${weakHtml}`;
+  body.innerHTML = `<div class="hist">${rows}</div>${sjHtml}${lvHtml}${weakHtml}`;
 }
 
 export function renderSetup() {
-  renderLevels(); renderTopics(); renderPool(); renderHistory();
+  renderSubjects(); renderLevels(); renderTopics(); renderPool(); renderHistory();
 }

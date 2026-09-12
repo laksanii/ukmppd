@@ -1,3 +1,8 @@
+---
+subject: neurologi
+level: lanjut
+---
+
 # HOME WORK NEUROLOGI
 
 1. Wanita 25 tahun datang ke poli RS dengan keluhan kebas di ibu jari, telunjuk, jari tengah terutama tangan kiri. Pasien sehari-hari bekerja sebagai petugas administrasi di sebuah Perusahaan. Keluhan dirasakan membaik dengan mengibaskan tangan. Pemeriksaan fisik: tanda vital dbn dan tinnel sign (+) dan phalen sign (+). Pemeriksaan radiologi yang disarankan pada kasus diatas adalah:

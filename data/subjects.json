@@ -1,0 +1,27 @@
+[
+  {
+    "id": "neurologi",
+    "name": "Neurologi",
+    "blurb": "Bimbingan dan home work neurologi.",
+    "banks": {
+      "dasar": "neurologi-dasar.json",
+      "lanjut": "neurologi-lanjut.json"
+    }
+  },
+  {
+    "id": "anak",
+    "name": "Ilmu Kesehatan Anak",
+    "blurb": "Neonatologi, tumbuh kembang, infeksi anak, gizi, dan jantung bawaan.",
+    "banks": {
+      "lanjut": "anak-lanjut.json"
+    }
+  },
+  {
+    "id": "gastro",
+    "name": "Gastroenterologi",
+    "blurb": "Dispepsia, GERD, diare infeksi, IBD, dan keganasan saluran cerna.",
+    "banks": {
+      "lanjut": "gastro-lanjut.json"
+    }
+  }
+]

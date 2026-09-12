@@ -1,5 +1,5 @@
 /* Layar latihan: render soal, jawab, tandai, timer, sampai sesi selesai. */
-import { levelName, topicName } from "./bank.js";
+import { subjectName, levelName, topicName } from "./bank.js";
 import { $, LET, app, store, shuffle, showScreen } from "./state.js";
 import { renderResult } from "./result.js";
 
@@ -69,7 +69,7 @@ export function renderQ() {
   const q = S.qs[S.i], picked = S.ans[S.i], show = S.graded && picked !== null;
   $("qnum").textContent = `Soal ${S.i + 1} / ${S.qs.length}`;
   $("qtopic").textContent = topicName(q.topic);
-  $("qlevel").textContent = levelName(q.level);
+  $("qlevel").textContent = `${subjectName(q.subject)} · ${levelName(q.level)}`;
   renderClock();
   renderTrace();
   $("vignette").textContent = q.vignette;
@@ -135,20 +135,26 @@ export function finishSession(byTimer) {
   S.elapsed = Math.round((Date.now() - S.startedAt) / 1000);
   S.byTimer = !!byTimer;
 
-  const byTopic = {}, byLevel = {};
+  const byTopic = {}, byLevel = {}, bySubject = {};
   let correct = 0, answered = 0;
   S.qs.forEach((q, i) => {
     const a = S.ans[i];
     byTopic[q.topic] = byTopic[q.topic] || { c: 0, t: 0 };
     byLevel[q.level] = byLevel[q.level] || { c: 0, t: 0 };
+    bySubject[q.subject] = bySubject[q.subject] || { c: 0, t: 0 };
     byTopic[q.topic].t++;
     byLevel[q.level].t++;
+    bySubject[q.subject].t++;
     if (a !== null) {
       answered++;
-      if (a === q.answer) { correct++; byTopic[q.topic].c++; byLevel[q.level].c++; }
+      if (a === q.answer) {
+        correct++;
+        byTopic[q.topic].c++; byLevel[q.level].c++; bySubject[q.subject].c++;
+      }
     }
   });
-  S.correct = correct; S.answered = answered; S.byTopic = byTopic; S.byLevel = byLevel;
+  S.correct = correct; S.answered = answered;
+  S.byTopic = byTopic; S.byLevel = byLevel; S.bySubject = bySubject;
 
   if (app.cfg.review) {
     S.qs.forEach((q, i) => {
@@ -161,8 +167,8 @@ export function finishSession(byTimer) {
     const d = new Date();
     app.hist.unshift({
       date: `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}`,
-      total: S.qs.length, correct, byTopic, byLevel,
-      levels: Object.keys(byLevel), sec: S.elapsed
+      total: S.qs.length, correct, byTopic, byLevel, bySubject,
+      levels: Object.keys(byLevel), subjects: Object.keys(bySubject), sec: S.elapsed
     });
     app.hist = app.hist.slice(0, 50);
     store.set("neuro:hist", app.hist);

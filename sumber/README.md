@@ -12,7 +12,7 @@ sumber/
 Alur kerjanya:
 
 ```
-sumber/soal/*.md   ->   data/neurologi-*.json   ->   aplikasi
+sumber/soal/*.md   ->   data/<mata uji>-<level>.json   ->   aplikasi
    (mentah)              (siap pakai + pembahasan)
 ```
 
@@ -35,14 +35,21 @@ npm run import -- sumber/soal/psikiatri.md           # tulis ke data/
 npm run validate                                     # pastikan banknya sehat
 ```
 
-Tujuan penulisan diambil dari `level:` pada frontmatter naskah, atau dari opsi
-`--level <id>` / `--out data/namafile.json`. Soal yang vignette-nya sudah ada di
-bank dilewati, jadi mengimpor file yang sama dua kali tidak menggandakan isi.
+Tujuan penulisan diambil dari pasangan `subject:` dan `level:` pada frontmatter
+naskah, atau dari opsi `--subject <id> --level <id>` / `--out data/namafile.json`.
+Pasangan itu dicocokkan dengan `banks` pada `data/subjects.json`. Soal yang
+vignette-nya sudah ada di bank dilewati, jadi mengimpor file yang sama dua kali
+tidak menggandakan isi.
 
 Kalau naskah hanya berisi soal dan kunci tanpa pembahasan, importer mengisi
 `key` dan `why` dengan penanda `TODO:` dan menyebutkan nomor soal mana saja yang
 perlu dilengkapi. `npm run validate` (dan karenanya `npm run build`) akan menolak
 selama penanda itu masih ada, supaya soal setengah jadi tidak ikut ter-deploy.
+
+Soal yang naskah aslinya cacat, misalnya pilihan jawabannya terpotong atau
+kuncinya tidak ditandai, diberi baris `Lewati: <alasan>`. Soal itu tetap tersimpan
+di naskah sebagai catatan, tidak ikut diimpor, dan tidak membuat impor soal lain
+gagal.
 
 Format lengkap yang dikenali ada di `sumber/soal/_TEMPLATE.md`.
 
@@ -52,7 +59,7 @@ Simpan apa adanya, tidak perlu dirapikan dulu. Bentuk paling sederhana yang
 sudah bisa diimpor: soal bernomor, lima pilihan berhuruf, kunci ditandai tebal.
 
 ```markdown
-1. Wanita 25 tahun datang dengan keluhan ... Apakah diagnosis yang paling tepat?
+1. [kepala] Wanita 25 tahun datang dengan keluhan ... Apakah diagnosis yang paling tepat?
 a. Pilihan A
 b. Pilihan B
 **c. Pilihan C**
@@ -71,4 +78,7 @@ dicek ulang.
 
 - File materi berukuran besar (PDF slide, hasil scan) sebaiknya jangan di-commit;
   simpan lokal saja atau tambahkan polanya ke `.gitignore` supaya repo tetap ramping.
-- `neurologi-homework-01.md` adalah sumber dari 60 soal level Lanjut.
+- `neurologi-homework-01.md` adalah sumber dari 60 soal pertama Neurologi level Lanjut.
+- `anak.md`, `anak_1.md`, dan `gastro.md` adalah sumber bank Ilmu Kesehatan Anak dan
+  Gastroenterologi. Empat soal di dalamnya ditandai `Lewati:` karena naskah aslinya
+  terpotong; lengkapi naskahnya lalu impor ulang bila ingin ikut dipakai.

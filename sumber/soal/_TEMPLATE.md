@@ -1,4 +1,5 @@
 ---
+subject: neurologi
 level: lanjut
 topic: kepala
 ---
@@ -8,9 +9,11 @@ topic: kepala
   Jalankan:  npm run import -- sumber/soal/namafile.md
   Lihat dulu tanpa menulis apa pun:  npm run import -- sumber/soal/namafile.md --dry
 
-  Frontmatter di atas boleh dihapus kalau levelnya diberikan lewat opsi:
-    level:  id level tujuan, harus ada di data/levels.json
-    topic:  topik bawaan untuk semua soal di file ini, boleh ditimpa per soal
+  Frontmatter di atas boleh dihapus kalau tujuannya diberikan lewat opsi:
+    subject: mata uji tujuan, harus ada di data/subjects.json
+    level:   level tujuan, harus ada di data/levels.json
+    topic:   topik bawaan untuk semua soal di file ini, boleh ditimpa per soal
+  Pasangan subject x level menentukan file mana di data/ yang ditulis.
   File ini sendiri hanya contoh, tidak perlu diimpor.
 -->
 
@@ -43,3 +46,15 @@ b: Dix-Hallpike adalah manuver diagnostik, bukan terapi.
 c: Betahistin adalah terapi farmakologis.
 d: Benar. Brandt-Daroff adalah latihan habituasi mandiri untuk BPPV.
 e: Dimenhidrinat juga farmakologis dan menghambat kompensasi vestibular.
+
+3. [kepala] Laki-laki 40 tahun datang dengan nyeri kepala hebat sisi kanan yang
+belum bisa dipastikan karena pilihan jawaban di naskah asli terpotong.
+a. Pilihan A
+b. Pilihan B
+Lewati: pilihan jawaban di naskah asli tidak lengkap
+
+<!--
+  Baris "Lewati: <alasan>" menandai soal yang naskah aslinya cacat: soal itu
+  tetap tersimpan di sini sebagai catatan, tetapi tidak ikut diimpor dan tidak
+  membuat impor soal-soal lain gagal.
+-->

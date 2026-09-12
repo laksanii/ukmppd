@@ -1,6 +1,6 @@
 /* Titik masuk: memuat state tersimpan lalu memasang seluruh kontrol. */
 import "./style.css";
-import { BANK, LEVEL_IDS, TOPICS } from "./bank.js";
+import { BANK, LEVEL_IDS, SUBJECT_IDS, ALL_TOPICS, topicsForSubjects } from "./bank.js";
 import { $, LET, app, store, saveCfg, pool, wrongPool, DEFAULT_CFG, showScreen } from "./state.js";
 import { renderSetup, renderTopics, renderPool, renderPresets, renderToggles, renderHistory } from "./setup.js";
 import { startSession, move, pick, toggleFlag, finishSession } from "./quiz.js";
@@ -8,7 +8,7 @@ import { toggleReview } from "./result.js";
 
 /* --- kontrol layar persiapan --- */
 $("selAll").addEventListener("click", () => {
-  app.cfg.topics = Object.keys(TOPICS);
+  app.cfg.topics = topicsForSubjects(app.cfg.subjects);
   saveCfg(); renderTopics(); renderPool();
 });
 $("selNone").addEventListener("click", () => {
@@ -97,7 +97,7 @@ document.addEventListener("keydown", e => {
 
   /* Sinkronkan setelan tersimpan dengan isi data saat ini:
      - yang sudah tidak ada di data dibuang diam-diam;
-     - level atau materi yang BARU (belum pernah dilihat pemakai) langsung ikut
+     - mata uji, level, atau materi yang BARU (belum pernah dilihat pemakai) ikut
        terpilih, supaya penambahan bank soal tidak diam-diam terlewat. */
   const sync = (dipilih, pernahDilihat, semua) => {
     const ada = new Set(semua);
@@ -108,15 +108,25 @@ document.addEventListener("keydown", e => {
   };
   // dibaca dari `saved`, bukan dari app.cfg, karena DEFAULT_CFG sudah berisi
   // daftar lengkap sehingga akan menutupi config lama yang belum punya field ini
+  app.cfg.subjects = sync(app.cfg.subjects, saved && saved.seenSubjects, SUBJECT_IDS);
   app.cfg.levels = sync(app.cfg.levels, saved && saved.seenLevels, LEVEL_IDS);
-  app.cfg.topics = sync(app.cfg.topics, saved && saved.seenTopics, Object.keys(TOPICS));
+  app.cfg.topics = sync(app.cfg.topics, saved && saved.seenTopics, ALL_TOPICS)
+    .filter(t => topicsForSubjects(app.cfg.subjects).includes(t));
+  app.cfg.seenSubjects = [...SUBJECT_IDS];
   app.cfg.seenLevels = [...LEVEL_IDS];
-  app.cfg.seenTopics = Object.keys(TOPICS);
+  app.cfg.seenTopics = [...ALL_TOPICS];
   saveCfg();
 
+  /* uid soal dulunya "<level>:<id>" saat bank soal hanya berisi neurologi;
+     sekarang "<mata uji>:<level>:<id>". Tanpa pemetaan ini, kumpulan soal salah
+     yang sudah tersimpan di browser tidak dikenali lagi. */
+  const migrasiUid = simpanan => Object.fromEntries(
+    Object.keys(simpanan).map(k => [k.split(":").length === 2 ? `neurologi:${k}` : k, true]));
+
   app.hist = await store.get("neuro:hist", []) || [];
-  app.wrongSet = await store.get("neuro:wrong", {}) || {};
+  app.wrongSet = migrasiUid(await store.get("neuro:wrong", {}) || {});
   $("count").value = app.cfg.count;
-  $("bankNote").textContent = `${BANK.length} soal vignette · ${LEVEL_IDS.length} level kesulitan`;
+  $("bankNote").textContent =
+    `${BANK.length} soal vignette · ${SUBJECT_IDS.length} mata uji · ${LEVEL_IDS.length} level kesulitan`;
   renderPresets(); renderToggles(); renderSetup();
 })();

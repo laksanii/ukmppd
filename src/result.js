@@ -1,5 +1,5 @@
-/* Layar hasil: skor, capaian per level & per materi, dan pembahasan. */
-import { levelName, topicName } from "./bank.js";
+/* Layar hasil: skor, capaian per mata uji, level & materi, dan pembahasan. */
+import { subjectName, levelName, topicName } from "./bank.js";
 import { $, LET, app, fmtDur, showScreen } from "./state.js";
 
 function bars(entries, label) {
@@ -35,6 +35,10 @@ export function renderResult() {
   const nf = S.flags.filter(Boolean).length;
   if (nf) meta.push(`Ditandai ragu <b>${nf}</b>`);
   $("scMeta").innerHTML = meta.map(m => `<span>${m}</span>`).join("");
+
+  const sjEntries = Object.entries(S.bySubject);
+  $("subjectPanel").classList.toggle("hidden", sjEntries.length < 2);
+  if (sjEntries.length >= 2) $("subjectBars").innerHTML = bars(sjEntries, subjectName);
 
   const lvEntries = Object.entries(S.byLevel);
   $("levelPanel").classList.toggle("hidden", lvEntries.length < 2);
@@ -74,7 +78,7 @@ export function renderReview() {
       <div class="rev-h">
         <span class="tag ${state}">${label}</span>
         <span class="n">Soal ${i + 1} · ${topicName(q.topic)}${S.flags[i] ? " · ditandai ragu" : ""}</span>
-        <span class="lvtag">${levelName(q.level)}</span>
+        <span class="lvtag">${subjectName(q.subject)} · ${levelName(q.level)}</span>
       </div>
       <p class="rev-q">${q.vignette}</p>
       ${yours}

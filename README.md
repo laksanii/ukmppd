@@ -1,8 +1,9 @@
-# Latihan Neurologi UKMPPD
+# Latihan UKMPPD
 
-Aplikasi latihan soal UKMPPD dengan bank soal berjenjang. Sebelumnya berupa satu
-file HTML statis; sekarang dipecah jadi data JSON + modul JavaScript yang dibundel
-Vite, sehingga menambah soal atau level kesulitan tidak perlu menyentuh kode UI.
+Aplikasi latihan soal UKMPPD. Bank soalnya dipilah dua sumbu: **mata uji**
+(neurologi, ilmu kesehatan anak, gastroenterologi) dan **level kesulitan**
+(dasar, lanjut). Datanya berupa JSON terpisah dari modul JavaScript yang dibundel
+Vite, sehingga menambah soal, mata uji, atau level tidak perlu menyentuh kode UI.
 
 ## Menjalankan
 
@@ -49,10 +50,13 @@ src/
   result.js                layar hasil (skor, capaian, pembahasan)
   style.css
 data/
+  subjects.json            daftar mata uji + pemetaan level ke file soalnya
   levels.json              daftar level kesulitan
   topics.json              daftar materi
   neurologi-dasar.json     89 soal
-  neurologi-lanjut.json    60 soal
+  neurologi-lanjut.json    80 soal
+  anak-lanjut.json         101 soal
+  gastro-lanjut.json       58 soal
 sumber/
   materi/                  catatan & bahan bacaan mentah
   soal/                    naskah soal mentah sebelum diolah ke data/
@@ -63,6 +67,18 @@ scripts/
 
 Isi `data/` adalah bank soal yang dipakai aplikasi; isi `sumber/` adalah bahan
 mentahnya dan tidak ikut dimuat. Lihat `sumber/README.md`.
+
+Satu file soal di `data/` berisi tepat satu pasangan mata uji x level. Pemetaannya
+ada di `data/subjects.json`:
+
+```json
+{
+  "id": "anak",
+  "name": "Ilmu Kesehatan Anak",
+  "blurb": "Neonatologi, tumbuh kembang, infeksi anak, gizi, dan jantung bawaan.",
+  "banks": { "lanjut": "anak-lanjut.json" }
+}
+```
 
 ## Menambah soal
 
@@ -87,8 +103,9 @@ Buka file level yang sesuai di `data/`, tambahkan satu objek:
 ```
 
 Aturannya: `id` unik di dalam satu file, `topic` harus ada di `data/topics.json`,
-`options` dan `why` tepat lima item, `answer` indeks 0-4. Jalankan `npm run validate`
-untuk memastikan.
+`options` dan `why` tepat lima item, `answer` indeks 0-4. Mata uji dan level tidak
+ditulis di dalam soal, keduanya berasal dari posisi file itu pada `subjects.json`.
+Jalankan `npm run validate` untuk memastikan.
 
 Kalau soalnya banyak, jangan diketik langsung ke JSON. Simpan naskahnya sebagai
 Markdown di `sumber/soal/` lalu impor:
@@ -98,34 +115,60 @@ npm run import -- sumber/soal/psikiatri.md --dry   # pratinjau
 npm run import -- sumber/soal/psikiatri.md         # tulis ke data/
 ```
 
+Tujuan penulisannya diambil dari `subject:` dan `level:` pada frontmatter naskah.
+
 Formatnya ada di `sumber/soal/_TEMPLATE.md`. Bagian pembahasan yang belum ada di
 naskah diisi penanda `TODO:`, dan `npm run validate` menolak selama penanda itu
 belum dibereskan.
 
+## Menambah mata uji
+
+1. Buat file soal baru, misal `data/psikiatri-lanjut.json`, formatnya sama seperti di atas.
+2. Daftarkan di `data/subjects.json`:
+
+```json
+{
+  "id": "psikiatri",
+  "name": "Psikiatri",
+  "blurb": "Gangguan cemas, mood, psikotik, dan penyalahgunaan zat.",
+  "banks": { "lanjut": "psikiatri-lanjut.json" }
+}
+```
+
+3. Tambahkan kode materinya di `data/topics.json`.
+
+Tidak ada kode yang perlu diubah. Mata uji baru otomatis muncul di panel pemilih,
+membawa daftar materinya sendiri, ikut dihitung pada capaian per mata uji, dan
+tersimpan di riwayat.
+
 ## Menambah level kesulitan
 
-1. Buat file soal baru, misal `data/neurologi-hots.json`, formatnya sama seperti di atas.
-2. Daftarkan di `data/levels.json`:
+1. Daftarkan levelnya di `data/levels.json`:
 
 ```json
 {
   "id": "hots",
   "name": "HOTS",
-  "blurb": "Soal analisis multi-langkah.",
-  "file": "neurologi-hots.json"
+  "blurb": "Soal analisis multi-langkah."
 }
 ```
 
-Tidak ada kode yang perlu diubah. Level baru otomatis muncul di panel pemilih level,
-ikut dihitung pada capaian per level, dan tersimpan di riwayat.
+2. Tambahkan file soalnya pada `banks` mata uji yang memilikinya, misal
+   `"banks": { "dasar": "...", "lanjut": "...", "hots": "neurologi-hots.json" }`.
+
+Level yang belum punya file soal pada suatu mata uji tidak masalah: hitungannya
+nol dan tidak disebut pada keterangan jumlah soal.
 
 ## Menambah materi
 
 Tambahkan pasangan `"kode": "Nama Materi"` di `data/topics.json`, lalu pakai kodenya
-pada field `topic` soal.
+pada field `topic` soal. Daftar materi yang tampil di layar persiapan menyesuaikan
+mata uji yang sedang dipilih: hanya materi yang benar-benar dipakai soal yang muncul.
 
 ## Catatan
 
 - Progres disimpan di `localStorage` browser (kunci `neuro:cfg`, `neuro:hist`, `neuro:wrong`).
+- Soal ditandai lintas bank dengan uid `<mata uji>:<level>:<id>`. Kumpulan soal salah
+  yang tersimpan dengan format lama `<level>:<id>` dipetakan otomatis saat aplikasi dimuat.
 - `latihan-neurologi-ukmppd.html` adalah versi lama satu-file. Seluruh isinya sudah
   dipindah ke struktur di atas dan file itu tidak lagi dipakai.

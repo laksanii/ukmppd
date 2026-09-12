@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Latihan Neurologi UKMPPD</title>
+<title>Latihan UKMPPD</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -12,12 +12,20 @@
 <div class="wrap">
 
 <header class="masthead">
-  <h1>Latihan Neurologi UKMPPD</h1>
+  <h1>Latihan UKMPPD</h1>
   <p class="sub" id="bankNote">Memuat bank soal…</p>
 </header>
 
 <!-- ============ SETUP ============ -->
 <section id="setup">
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Mata uji</h2>
+      <span class="hint">Boleh dicampur</span>
+    </div>
+    <div class="levels" id="subjects"></div>
+  </div>
+
   <div class="panel">
     <div class="panel-head">
       <h2>Level kesulitan</h2>
@@ -107,6 +115,10 @@
     </div>
     <p class="verdict" id="verdict"></p>
     <div class="meta" id="scMeta"></div>
+  </div>
+  <div class="panel hidden" id="subjectPanel">
+    <div class="panel-head"><h2>Per mata uji</h2></div>
+    <div class="bars" id="subjectBars"></div>
   </div>
   <div class="panel hidden" id="levelPanel">
     <div class="panel-head"><h2>Per level</h2></div>
