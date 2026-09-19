@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "topic": "kardiologi",
+    "vignette": "Laki-laki 55 tahun datang ke IGD dengan keluhan nyeri dada kiri yang menjalar ke rahang dan lengan kiri sejak 1 jam yang lalu. Nyeri dirasakan seperti tertindih benda berat dan tidak membaik dengan istirahat. Keluhan disertai keringat dingin dan mual. Pada pemeriksaan fisik didapatkan TD 140/90 mmHg, Nadi 100 x/menit, RR 24 x/menit. Pemeriksaan EKG menunjukkan adanya ST elevasi pada sadapan V1-V4. Diagnosis yang paling tepat pada pasien ini adalah:",
+    "options": [
+      "Angina Pektoris Stabil",
+      "Angina Pektoris Tidak Stabil",
+      "Non-ST Elevation Myocardial Infarction (NSTEMI)",
+      "ST Elevation Myocardial Infarction (STEMI) Anteroseptal",
+      "ST Elevation Myocardial Infarction (STEMI) Inferior"
+    ],
+    "answer": 3,
+    "key": "Nyeri dada khas iskemik (>20 menit, tidak membaik istirahat, disertai keringat dingin dan mual) dengan ST elevasi di sadapan V1-V4 menunjukkan STEMI anteroseptal (area yang diperdarahi cabang septal & diagonal LAD). Tata laksana: reperfusi segera (PCI primer atau fibrinolitik bila PCI tidak tersedia dalam 120 menit).",
+    "why": [
+      "Salah. Angina stabil membaik dengan istirahat/nitrat dan tidak menimbulkan perubahan EKG berupa ST elevasi.",
+      "Salah. Angina tidak stabil tidak disertai ST elevasi maupun peningkatan biomarker jantung; di sini sudah terjadi infark dengan ST elevasi.",
+      "Salah. NSTEMI bermanifestasi ST depresi atau inversi gelombang T disertai peningkatan troponin, bukan ST elevasi.",
+      "Benar. ST elevasi di V1-V4 adalah gambaran khas oklusi LAD (area anteroseptal), sesuai klinis STEMI akut.",
+      "Salah. STEMI inferior ditandai ST elevasi di sadapan II, III, dan aVF, bukan V1-V4."
+    ]
+  }
+]

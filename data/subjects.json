@@ -23,5 +23,13 @@
     "banks": {
       "lanjut": "gastro-lanjut.json"
     }
+  },
+  {
+    "id": "kardiologi",
+    "name": "Kardiologi",
+    "blurb": "Sindrom koroner akut, aritmia, gagal jantung, dan penyakit katup.",
+    "banks": {
+      "lanjut": "kardiologi-lanjut.json"
+    }
   }
 ]
