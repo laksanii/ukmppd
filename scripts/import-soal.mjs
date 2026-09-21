@@ -186,7 +186,7 @@ if (galat.length) {
 /* ---------------- gabung ke bank ---------------- */
 const jalurTujuan = join(root, tujuan);
 const lama = existsSync(jalurTujuan) ? JSON.parse(readFileSync(jalurTujuan, "utf8")) : [];
-const sidik = v => v.toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 90);
+const sidik = v => v.toLowerCase().replace(/[^a-z0-9]/g, "");
 const sudahAda = new Set(lama.map(x => sidik(x.vignette)));
 let idBerikut = lama.reduce((m, x) => Math.max(m, x.id), 0) + 1;
 

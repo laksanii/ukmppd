@@ -736,6 +736,27 @@
   },
   {
     "id": 36,
+    "topic": "sth",
+    "vignette": "Anak 6 tahun dibawa ibunya ke puskesmas dengan keluhan keram perut, mual, muntah, diare dan tidak nafsu makan. Keluhan dirasakan sejak 1 bulan terakhir. Riwayat sering bermain tanpa alas kaki. Pada pemeriksaan fisik: erupsi pada kulit kaki. Hasil pemeriksaan feses yang ditemukan:",
+    "options": [
+      "Proglotid",
+      "Larva rhabditiform",
+      "Telur radialis heksakan",
+      "Telur berduri",
+      "Telur berbentuk tempayan"
+    ],
+    "answer": 4,
+    "key": "Pemeriksaan mikroskopis feses pada kasus ini menunjukkan gambaran telur berbentuk tempayan (barrel shape) dengan sumbat mukoid di kedua ujung, ciri khas telur Trichuris trichiura.",
+    "why": [
+      "Proglotid adalah bagian tubuh cacing pita (Taenia), bukan gambaran telur STH pada kasus ini.",
+      "Larva rhabditiform adalah ciri Strongyloides stercoralis, bukan gambaran telur pada kasus ini.",
+      "Telur radialis heksakan (embriofor radial berisi onkosfer) adalah ciri Taenia, bukan Trichuris.",
+      "Telur berduri adalah ciri Schistosoma, bukan Trichuris.",
+      "Benar. Telur berbentuk tempayan (barrel shape) adalah ciri khas Trichuris trichiura."
+    ]
+  },
+  {
+    "id": 37,
     "topic": "malaria",
     "vignette": "Wanita 23 tahun, hamil 20 minggu datang ke praktek dokter, ingin konsultasi. Pasien ingin pergi ke Pulau Flores bersama suaminya selama 2 bulan. Pasien takut mendengar disana merupakan daerah endemis malaria. Pemeriksaan tanda vital dalam batas normal. Profilaksis yang dapat diberikan pada wanita tersebut ialah:",
     "options": [
@@ -756,7 +777,7 @@
     ]
   },
   {
-    "id": 37,
+    "id": 38,
     "topic": "dbd",
     "vignette": "Anak usia 5 tahun dirawat karena DHF dengan tanda kebocoran plasma. Pasien mendapatkan terapi cairan intravena. Pada hari ketiga perawatan, pasien mengeluh sesak napas. Pemeriksaan rontgen didapatkan efusi pleura bilateral. Hematokrit pasien menurun dibanding sebelumnya dengan tanda hemodinamika stabil. Apakah yang menyebabkan keluhan kasus diatas:",
     "options": [
@@ -777,7 +798,7 @@
     ]
   },
   {
-    "id": 38,
+    "id": 39,
     "topic": "malaria",
     "vignette": "Laki-laki 33 tahun datang ke praktek dokter dengan keluhan telinga berdenging sejak 1 minggu, riwayat keluar sekret dan nyeri disangkal. Sebelumnya pasien menjalani pengobatan malaria. Pemeriksaan tanda vital dalam batas normal. Obat malaria yang dapat menyebabkan keluhan pasien adalah:",
     "options": [
@@ -798,7 +819,7 @@
     ]
   },
   {
-    "id": 39,
+    "id": 40,
     "topic": "schistosomiasis",
     "vignette": "Laki-laki 35 tahun datang ke puskesmas dengan keluhan nyeri perut disertai dengan BAB cair sejak 5 harian ini. Sudah minum obat tetapi belum juga membaik. Pasien sempat merasakan gatal di kedua kaki, keluhan dirasakan setelah bermain air di sebuah danau di daerah Sulawesi. Pemeriksaan fisik TD 120/60, HR 90, RR 20. Pemeriksaan feses tampak gambaran berikut. Stadium infektif pada kasus diatas adalah:",
     "options": [
@@ -819,7 +840,7 @@
     ]
   },
   {
-    "id": 40,
+    "id": 41,
     "topic": "tifoid",
     "vignette": "Wanita 20 tahun datang ke praktek dokter dengan keluhan demam sejak 1 minggu yang lalu, Keluhan juga disertai mual, dan konstipasi. Setelah dilakukan pemeriksaan, pasien didiagnosa menderita demam tifoid. Maka diet yang harus diberikan pada pasien:",
     "options": [
@@ -840,7 +861,7 @@
     ]
   },
   {
-    "id": 41,
+    "id": 42,
     "topic": "dbd",
     "vignette": "Anak 12 tahun dibawa keluarganya ke IGD RS dengan keluhan demam tinggi terus menerus sejak 2 hari yang lalu. Pasien juga mengeluh nyeri kepala, nyeri otot, dan nyeri ulu hati. Pada pemeriksaan klinis didapatkan suhu 39,4 oC, hepatomegali, ptechiae dan uji torniquet (+). Pemeriksaan serologi NS1 antigen (+). Apakah pemeriksaan laboratorium yang harus dievaluasi pada pasien tersebut:",
     "options": [
@@ -861,7 +882,7 @@
     ]
   },
   {
-    "id": 42,
+    "id": 43,
     "topic": "leptospirosis",
     "vignette": "Laki-laki 30 tahun datang ke Klinik Dokter dengan keluhan demam sejak 3 hari, keluhan juga disertai BAK sedikit dan bewarna kecoklatan. Pemeriksaan fisik: TD 110/80 temp 39 C, sklera ikterik, nyeri m.gastrocnemius dextra (+). Hasil laboratorium: leukositosis, hiperbilirubin, peningkatan creatinine kinase. Etiologi dari kasus diatas ialah:",
     "options": [
@@ -882,7 +903,28 @@
     ]
   },
   {
-    "id": 43,
+    "id": 44,
+    "topic": "leptospirosis",
+    "vignette": "Laki-laki 27 tahun, pembersih jalanan datang ke praktek dokter dengan keluhan demam, mata kuning dan nyeri otot sejak 1 minggu. Pemeriksaan fisik didapatkan: TD 120/80 mmHg, nadi 90, RR 22, temp 38.2 C, sklera ikterik, nyeri tekan m.gastrocnemius. Penularan dari penyakit ini:",
+    "options": [
+      "Airbone infection",
+      "Droplet infection",
+      "Kontak dengan manusia",
+      "Kontak dengan reservoir",
+      "Kontak dengan air yang terkontaminasi"
+    ],
+    "answer": 4,
+    "key": "Seperti kasus serupa sebelumnya, leptospirosis pada pembersih jalanan ditularkan melalui kontak kulit/mukosa dengan air atau lingkungan yang terkontaminasi urin hewan reservoir yang mengandung Leptospira.",
+    "why": [
+      "Bukan penularan airborne.",
+      "Bukan penularan droplet.",
+      "Bukan penularan kontak langsung antar manusia.",
+      "Kontak langsung dengan reservoir jarang menjadi jalur utama dibanding lingkungan terkontaminasi.",
+      "Benar. Leptospirosis menular melalui kontak dengan air/lingkungan yang terkontaminasi urin hewan reservoir."
+    ]
+  },
+  {
+    "id": 45,
     "topic": "malaria",
     "vignette": "Wanita 35 tahun dengan keluhan demam naik turun, berkeringat dingin, menggigil dan BAK warna hitam. Pasien memiliki riwayat pergi ke Papua 1 bulan yang lalu. Pemfis: TD 110/70 temp 39 C, nadi 100, konjungtiva anemis, sklera ikterik, schuffner 2. Hasil lab: Hb 7 mg/dL Hasil pemeriksaan darah tepi: banana shape gametosit dan schuffner dot. Terapi yang dapat diberikan adalah:",
     "options": [
@@ -903,7 +945,7 @@
     ]
   },
   {
-    "id": 44,
+    "id": 46,
     "topic": "taeniasis",
     "vignette": "Laki laki usia 30 tahun datang dengan keluhan keluar potongan cacing bewarna putih kekuningan yang dapat bergerak gerak saat ditaruh di lantai. Ukuran potongan cacing 2,5 x 0,5 cm dari pemeriksaan dibawah mikroskop tampak adanya segmentasi uterus berjumlah 15 buah dan berisi telur. Organisme penyebab keluhan diatas ialah:",
     "options": [
@@ -924,7 +966,7 @@
     ]
   },
   {
-    "id": 45,
+    "id": 47,
     "topic": "tifoid",
     "vignette": "Anak 12 tahun dibawa ibunya ke Puskesmas dengan keluhan badan demam sejak 16 hari. Keluhan demam diraskaan terutama malam hari, keluhan disertai nyeri kepala, batuk dan mual. Pemeriksaan fisik didapatkan bradikardi relative, temp 37.9 C. Apakah tanda patognomonis lain yang mungkin ditemukan pada kasus diatas adalah:",
     "options": [
@@ -945,7 +987,28 @@
     ]
   },
   {
-    "id": 46,
+    "id": 48,
+    "topic": "malaria",
+    "vignette": "Laki-laki 40 tahun dibawa ke IGD RS dengan keluhan demam naik turun, berkeringat dingin, menggigil dan BAK warna hitam. Pasien memiliki riwayat pergi ke Papua 1 bulan yang lalu. Pemeriksaan fisik didapatkan: TD 110/70, temp 39 C, nadi 100, konjungtiva anemis, sklera ikterik, schuffner 2. Hasil pemeriksaan darah tepi: banana shape, multiple ring form, eritrosit tidak membesar. Apa yang menyebabkan urine berwarna kehitaman pada kasus diatas",
+    "options": [
+      "Kompleks antigen antibody pada glomerulus ginjal",
+      "Adhesi eritrosit pada sel glomerulus",
+      "Sekuestrasi eritrosit pada arteri ginjal",
+      "Hemolisis intravascular massif",
+      "Fase aseksual pada plasmodium"
+    ],
+    "answer": 3,
+    "key": "Urin berwarna hitam pada malaria berat (blackwater fever) disebabkan hemolisis intravaskular masif eritrosit yang terinfeksi Plasmodium, melepaskan hemoglobin bebas yang difiltrasi ginjal.",
+    "why": [
+      "Kompleks antigen-antibodi pada glomerulus adalah mekanisme glomerulonefritis, bukan blackwater fever.",
+      "Adhesi eritrosit pada sel glomerulus bukan mekanisme utama hemoglobinuria.",
+      "Sekuestrasi eritrosit pada arteri ginjal bukan mekanisme langsung urin gelap.",
+      "Benar. Hemolisis intravaskular masif melepaskan hemoglobin bebas yang menyebabkan urin berwarna gelap/hitam.",
+      "Fase aseksual plasmodium berkaitan dengan siklus eritrositik namun bukan mekanisme langsung hemoglobinuria."
+    ]
+  },
+  {
+    "id": 49,
     "topic": "sth",
     "vignette": "Anak berusia 2 tahun BB 12 kg dibawa ibunya ke praktek dokter dengan keluhan perut kembung, mual dan muntah. Hasil pemeriksaan feses ditemukan gambaran telur decorticated, berdinding tebal. Tatalaksana yang tepat ialah",
     "options": [
@@ -966,7 +1029,28 @@
     ]
   },
   {
-    "id": 47,
+    "id": 50,
+    "topic": "sth",
+    "vignette": "Laki-laki 20 tahun datang ke Puskesmas dengan keluhan badan lemas sejak 1 bulan, keluhan disertai mual dan muntah. Pemeriksaan fisik: konjungtiva anemis. Pemeriksaan feses: ditemukan telur berdinding tipis dengan segmented ovum. Fase infektif dari diagnosis diatas ialah:",
+    "options": [
+      "Metasekaria",
+      "Sekaria",
+      "Mirasidium",
+      "Rhabditiform",
+      "Filariform"
+    ],
+    "answer": 4,
+    "key": "Telur berdinding tipis dengan ovum bersegmen adalah ciri telur cacing tambang; larva filariform merupakan stadium infektif yang menembus kulit manusia.",
+    "why": [
+      "Metasekaria adalah stadium infektif trematoda hati, bukan cacing tambang.",
+      "Serkaria adalah stadium infektif Schistosoma, bukan cacing tambang.",
+      "Mirasidium menginfeksi siput pada siklus Schistosoma, bukan manusia.",
+      "Rhabditiform adalah larva non-infektif yang berkembang di tanah.",
+      "Benar. Larva filariform adalah stadium infektif cacing tambang yang menembus kulit manusia."
+    ]
+  },
+  {
+    "id": 51,
     "topic": "dbd",
     "vignette": "Laki-laki 25 tahun dibawa ke IGD RS dengan keluhan lemas. Pasien sebelumnya mengalami demam sejak 5 hari, keluhan disertai nyeri kepala, nyeri otot dan nyeri ulu hati. Pemfis: TD tidak terukur, nadi teraba lemah, RR 30, Temp 37C. Hasil lab: Hb 15 g/dl hematokrit 55%, leukosit 3.400, trombosit 65.000. Temuan lain yang mungkin ditemukan ialah:",
     "options": [
@@ -987,7 +1071,7 @@
     ]
   },
   {
-    "id": 48,
+    "id": 52,
     "topic": "filariasis",
     "vignette": "Laki-laki 35 tahun datang ke praktek dokter dengan keluhan skrotum dan kaki membengkak. Selain itu, didapatkan juga urin warna seperti putih susu. Di tempat tinggal pasien, banyak kasus serupa terjadi. Pemeriksaan tanda vital dalam batas normal. Fase infeksius dari keluhan pasien adalah:",
     "options": [
@@ -1008,7 +1092,7 @@
     ]
   },
   {
-    "id": 49,
+    "id": 53,
     "topic": "oxyuris",
     "vignette": "Anak 8 tahun dibawa orangtuanya ke praktek dokter dengan keluhan malas makan, berat badan anak tidak naik. Anak sempat mengalami batuk lalu mengeluarkan cacing dengan panjang 7 cm berwarna putih seperti berikut. Diagnosis yang tepat adalah:",
     "options": [
@@ -1029,7 +1113,7 @@
     ]
   },
   {
-    "id": 50,
+    "id": 54,
     "topic": "dbd",
     "vignette": "Laki-laki 15 tahun dibawa orangtuanya ke puskesmas dengan keluhan demam tinggi sejak 3 hari, keluhan disertai mual, nyeri otot. Demam dirasakan terus menerus. Pemeriksaan fisik didapatkan sens: delirium, TD 80/palpasi, nadi 120, RR 30. Hasil lab: Hb 17, Ht 55%, leukosit 2.500, trombosit 20.000. Tipe demam yang terjadi:",
     "options": [
@@ -1050,7 +1134,7 @@
     ]
   },
   {
-    "id": 51,
+    "id": 55,
     "topic": "malaria",
     "vignette": "Laki-laki 40 tahun dengan keluhan demam, pasien sehari-hari bekerja di Papua sejak 2 tahun. Beberapa hari kemudian pasien koma, dan dirawat di RS dengan diagnose malaria komatus. Hasil pemeriksaan giemsa ditemukan gambaran accole (+). Tatalaksana yang dapat diberikan:",
     "options": [
@@ -1071,7 +1155,7 @@
     ]
   },
   {
-    "id": 52,
+    "id": 56,
     "topic": "sth",
     "vignette": "Anak 11 tahun dengan keluhan diare yang disertai lendir dan darah, keluhan disertai nyeri perut, mual muntah dan nafsu makan menurun. Pemeriksaan fisik: konjungtiva anemis dan perut sedikit distensi. Hasil pemeriksaan feses ditemukan telur yang lonjong dan ujungnya seperti tutup botol. Etiologi dari keluhan diatas adalah:",
     "options": [
@@ -1092,7 +1176,7 @@
     ]
   },
   {
-    "id": 53,
+    "id": 57,
     "topic": "malaria",
     "vignette": "Laki-laki 20 tahun datang ke praktek dokter dengan keluhan demam sejak 3 hari yang lalu. Keluhan demam disertai menggigil dan berkeringat banyak. Pasien baru saja pulang dari Kalimantan. Pemeriksaan darah tepi: ditemukan objek berbentuk pisang. Manakah stadium infeksi yang paling tepat:",
     "options": [
@@ -1113,7 +1197,7 @@
     ]
   },
   {
-    "id": 54,
+    "id": 58,
     "topic": "dbd",
     "vignette": "Anak 7 tahun dibawa ibunya ke poliklinik RS dengan keluhan demam sejak 3 hari. Keluhan disertai nyeri kepala, mual, muntah. Riw. mimisan (+). Teman sekolah pasien ada yang mengalami hal serupa. Pemeriksaan TD 100/70 mmhg, Nadi 120 x/meni, 2.24 x/menit, T 39, akral dingin dan lembab. Pemeriksaan penunjang yang dibutuhkan:",
     "options": [
@@ -1134,7 +1218,7 @@
     ]
   },
   {
-    "id": 55,
+    "id": 59,
     "topic": "malaria",
     "vignette": "Suatu keluarga ingin pergi liburan ke Papua selama 1 minggu. Keluarga terdiri dari 2 orang dewasa dan 1 orang anak berumur 5 tahun. keluarga berkonsultasi ke dokter, untuk diberikan obat mencegah infeksi malaria. Apakah terapi profilaksis yang diberikan pada anak:",
     "options": [
@@ -1155,7 +1239,7 @@
     ]
   },
   {
-    "id": 56,
+    "id": 60,
     "topic": "malaria",
     "vignette": "Wanita 22 tahun dengan keluhan demam, demam dirasakan berselang 3 hari, nyeri kepala (+), berkeringat. Riwayat berpergian ke Papua. Diperiksa dengan rapid test terdiagnosa malaria. Plasmodium penyebab kasus diatas:",
     "options": [
