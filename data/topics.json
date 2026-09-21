@@ -45,5 +45,16 @@
   "intoksikasi": "Keracunan & zat korosif",
   "fungsional": "IBS & dispepsia fungsional",
 
-  "kardiologi": "Sindrom koroner akut & iskemia jantung"
+  "kardiologi": "Sindrom koroner akut & iskemia jantung",
+
+  "sth": "Soil-transmitted helminth (Ascaris, Trichuris, cacing tambang, Strongyloides)",
+  "oxyuris": "Enterobiasis (Oxyuris vermicularis)",
+  "taeniasis": "Taeniasis & sistiserkosis",
+  "schistosomiasis": "Schistosomiasis",
+  "filariasis": "Filariasis limfatik",
+  "malaria": "Malaria",
+  "dbd": "Demam berdarah dengue",
+  "tifoid": "Demam tifoid",
+  "leptospirosis": "Leptospirosis",
+  "pes": "Pes (plague)"
 }

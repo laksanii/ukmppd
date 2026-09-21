@@ -1,0 +1,1178 @@
+[
+  {
+    "id": 1,
+    "topic": "sth",
+    "vignette": "Anak 6 tahun dibawa ibunya ke puskesmas dengan keluhan keram perut, mual, muntah, diare dan tidak nafsu makan. Keluhan dirasakan sejak 1 bulan terakhir. Riwayat sering bermain tanpa alas kaki. Pada pemeriksaan fisik: erupsi pada kulit kaki. Hasil pemeriksaan feses yang ditemukan gambaran berikut. Etiologi dari kasus diatas adalah:",
+    "options": [
+      "Ascariasis lumbricoides",
+      "Ancylostoma duodenale",
+      "Necator americanus",
+      "Trichuris trichura",
+      "Taenia saginata"
+    ],
+    "answer": 2,
+    "key": "Anak dengan riwayat bermain tanpa alas kaki, keluhan gastrointestinal kronik, dan erupsi kulit kaki (ground itch) khas untuk infeksi cacing tambang. Necator americanus adalah penyebab hookworm tersering di Indonesia, tertular melalui penetrasi larva filariform pada kulit kaki.",
+    "why": [
+      "Ascaris lumbricoides tidak menembus kulit kaki; penularannya melalui tertelan telur infektif.",
+      "Ancylostoma duodenale juga cacing tambang namun lebih dominan di kawasan Timur Tengah/Mediterania.",
+      "Benar. Necator americanus menembus kulit kaki menimbulkan ground itch lalu bermigrasi menimbulkan keluhan gastrointestinal.",
+      "Trichuris trichiura menular melalui tertelan telur, tidak menembus kulit.",
+      "Taenia saginata menular melalui daging sapi mentah, tidak menembus kulit kaki."
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "dbd",
+    "vignette": "Anak usia 10 tahun dibawa ke IGD RS oleh orang tuanya dengan keluhan demam tinggi selama 5 hari disertai dengan mual muntah terus menerus. Keluhan disertai adanya perdarahan dari gusi dan munculnya bintik-bintik merah pada kulitnya. TD 100/70 mmHg, HR 120 kali/menit, trombosit 50.000 sel/mikroL, Hb 15 g/dL, Ht 45%. Tatalaksana yang paling tepat adalah",
+    "options": [
+      "Kristaloid 5 cc/kgBB/jam dievaluasi 2 jam berikutnya",
+      "Kristaloid 10 cc/kgBB/jam dievaluasi 3 jam berikutnya",
+      "Koloid 5 cc/kgBB/jam dievaluasi 1 jam berikutnya",
+      "Kristaloid 10 cc/kgBB/jam dievaluasi 1 jam berikutnya",
+      "Kristaloid 7 cc/kgBB/jam dievaluasi 3 jam berikutnya"
+    ],
+    "answer": 4,
+    "key": "Pasien DHF dengan trombositopenia dan hemokonsentrasi ringan tanpa tanda syok menandakan kebocoran plasma awal. Protokol cairan bertingkat dimulai dari kristaloid 7 cc/kgBB/jam, dievaluasi tiap 3 jam sesuai perbaikan hematokrit dan hemodinamik sebelum diturunkan bertahap (7-5-3 cc/kgBB/jam).",
+    "why": [
+      "5 cc/kgBB/jam adalah tahap lanjutan setelah perbaikan, bukan dosis awal.",
+      "10 cc/kgBB/jam dipakai bila terdapat tanda syok, bukan pada kondisi awal tanpa syok.",
+      "Koloid dipakai pada syok berulang atau kebocoran plasma berat, bukan lini pertama.",
+      "10 cc/kgBB/jam evaluasi 1 jam adalah untuk kondisi yang lebih berat/syok.",
+      "Benar. Dosis awal protokol DHF tanpa syok adalah kristaloid 7 cc/kgBB/jam dievaluasi 3 jam berikutnya."
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "sth",
+    "vignette": "Anak usia 10 tahun dibawa ibunya ke puskesmas dengan keluhan BAB berdarah sejak 4 hari yang lalu. Keluhan disertai dengan nyeri perut. Pemeriksaan fisik: temp subfebri. Pemeriksaan anus didapatkan kemerahan di sekitar anus dan prolapse rekti (+). Bagaimana ciri khas telur dari cacing tersebut:",
+    "options": [
+      "Makronuklesu dan mikronukleus",
+      "Telur barrel shape",
+      "Memiliki dinding yang tipis",
+      "Memiliki dinding 3 lapis",
+      "Trofozoit dengan sitoplasma mengandung eritrosit kista berinti 4"
+    ],
+    "answer": 1,
+    "key": "Diare berdarah kronik dengan prolaps rekti pada anak khas untuk infeksi Trichuris trichiura (cacing cambuk), yang telurnya berbentuk tempayan (barrel shape) dengan sumbat mukoid di kedua kutub.",
+    "why": [
+      "Makronukleus dan mikronukleus adalah ciri Balantidium coli, bukan Trichuris.",
+      "Benar. Telur Trichuris trichiura berbentuk barrel/tempayan dengan sumbat mukoid di kedua kutub.",
+      "Dinding tipis adalah ciri telur cacing tambang (hookworm).",
+      "Dinding tiga lapis adalah ciri telur Ascaris lumbricoides yang fertil.",
+      "Trofozoit berinti eritrosit adalah ciri Entamoeba histolytica, bukan Trichuris."
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "sth",
+    "vignette": "Anak usia 7 tahun dibawa ibunya ke puskesmas dengan keluhan diare bercampur darah sejak 1 minggu terakhir. Ibu pasien mengatakan anak sering mengejan lama saat BAB. Pemeriksaan status lokalis tampak jaringan rectum keluar saat mengejan. Pemeriksaan feses didapatkan telur berbentuk khas seperti barrel. Mekanisme terjadinya komplikasi pada kasus diatas adalah:",
+    "options": [
+      "Invasi larva ke dinding usus yang menyebabkan inflamasi transmural",
+      "Migrasi cacing ke vesica felea yang menyebabkan obstruksi bilier",
+      "Reaksi alergi sistemik terhadap antigen cacing",
+      "Gangguan absorpsi nutrisi akibat destruksi vili usus halus",
+      "Cacing menempel pada mukosa colon dan menimbulkan inflamasi kronik dan tenesmus"
+    ],
+    "answer": 4,
+    "key": "Trichuris trichiura menempel pada mukosa kolon menggunakan bagian anterior yang tipis, menimbulkan inflamasi kronik dan tenesmus sehingga pada infeksi berat terjadi prolaps rekti akibat mengejan berulang.",
+    "why": [
+      "Invasi larva transmural adalah mekanisme migrasi Ascaris/Strongyloides di paru, bukan Trichuris di kolon.",
+      "Migrasi ke vesika felea adalah komplikasi Ascaris lumbricoides dewasa, bukan Trichuris.",
+      "Trichuris tidak menimbulkan reaksi alergi sistemik yang dominan.",
+      "Destruksi vili usus halus adalah mekanisme Giardia/Strongyloides, bukan Trichuris di kolon.",
+      "Benar. Cacing menempel pada mukosa kolon menimbulkan inflamasi kronik dan tenesmus yang berujung prolaps rekti."
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "sth",
+    "vignette": "Anak 8 tahun dibawa orangtuanya karena sering merasa lemas, nafsu makan menurun. Pemeriksaan fisik: tanda-tanda vital baik. Konjungtiva anemis (+), sklera ikterik (-). Pasien sering main diluar tanpa alas kaki. Pemeriksaan feses didapatkan gambaran berikut. Apakah yang menyebabkan keadaan pasien tersebut:",
+    "options": [
+      "Teriinfeksi telur cacing infektif",
+      "Teriinfeksi metasekaria cacing",
+      "Sekaria menembus kulit",
+      "Teriinfeksi larva filariform",
+      "Melalui gigitan nyamuk"
+    ],
+    "answer": 3,
+    "key": "Anak dengan riwayat bermain tanpa alas kaki, anemia, dan telur cacing tambang pada feses tertular melalui larva filariform yang menembus kulit kaki dan bermigrasi ke usus halus untuk menghisap darah.",
+    "why": [
+      "Telur cacing infektif adalah cara penularan Ascaris/Trichuris (fecal-oral), bukan cacing tambang.",
+      "Metaserkaria adalah bentuk infektif trematoda seperti Fasciolopsis, bukan cacing tambang.",
+      "Serkaria menembus kulit adalah mekanisme Schistosoma, bukan cacing tambang.",
+      "Benar. Larva filariform cacing tambang menembus kulit kaki dan menjadi bentuk infektif.",
+      "Gigitan nyamuk adalah cara penularan filariasis atau malaria, bukan cacing tambang."
+    ]
+  },
+  {
+    "id": 6,
+    "topic": "schistosomiasis",
+    "vignette": "Laki-laki 30 tahun datang ke praktek dokter dengan keluhan diare kronik dan disertai nyeri abdomen. Pasien sehari-hari bekerja sebagai nelayan di Sulawesi. Pemeriksaan feses didapatkan gambaran telur cacing dengan lateral spine. Patomekanisme transmisi pada penyakit diatas adalah:",
+    "options": [
+      "Tertelan telur cacing sehingga berkembang di lumen usus halus",
+      "Sekaria yang dilepaskan dari siput, menembus kulit dan bermigrasi menuju hepar untuk berkembang menjadi dewasa",
+      "Larva masuk melalui gigitan serangga kemudian berkembang di jaringan paru",
+      "Tertelan kista cacing dari daging mentah, kemudian berkembang di otot rangka",
+      "Mikrofilaria yang ditularkan melalui gigitan nyamuk culex dan bermigrasi ke sistem limfatik"
+    ],
+    "answer": 1,
+    "key": "Nelayan yang sering kontak air tawar di Sulawesi dengan telur cacing berduri lateral menandakan schistosomiasis. Serkaria yang dilepaskan siput air tawar menembus kulit, lalu bermigrasi melalui sirkulasi ke hepar untuk matang menjadi cacing dewasa sebelum bermigrasi ke pleksus vena.",
+    "why": [
+      "Tertelan telur bukan cara penularan schistosomiasis; penularan terjadi melalui penetrasi kulit oleh serkaria.",
+      "Benar. Serkaria dari siput menembus kulit lalu bermigrasi ke hepar untuk berkembang menjadi cacing dewasa.",
+      "Larva masuk melalui gigitan serangga adalah mekanisme filariasis, bukan schistosomiasis.",
+      "Tertelan kista dari daging mentah adalah mekanisme taeniasis/trikinosis, bukan schistosomiasis.",
+      "Mikrofilaria melalui gigitan nyamuk adalah mekanisme filariasis, bukan schistosomiasis."
+    ]
+  },
+  {
+    "id": 7,
+    "topic": "sth",
+    "vignette": "Laki-laki 20 tahun datang ke Puskesmas dengan keluhan badan lemas sejak 1 bulan, keluhan disertai mual dan muntah. Pemeriksaan fisik: konjungtiva anemis, TD 110/70, nadi 100, RR 22, temp 37C. Pasien sehari-hari bekerja sebagai tukang kebun. Pemeriksaan feses: ditemukan telur cacing. Fase infektif dari penyakit diatas adalah:",
+    "options": [
+      "Metasekaria",
+      "Sekaria",
+      "Mirasidium",
+      "Rhabditiform",
+      "Filariform"
+    ],
+    "answer": 4,
+    "key": "Pekerja kebun dengan anemia dan telur cacing tambang pada feses tertular melalui larva filariform yang menembus kulit kaki; ini merupakan stadium infektif cacing tambang setelah larva rhabditiform berkembang di tanah lembab.",
+    "why": [
+      "Metasekaria adalah bentuk infektif trematoda hati, bukan cacing tambang.",
+      "Serkaria adalah bentuk infektif Schistosoma, bukan cacing tambang.",
+      "Mirasidium adalah stadium yang menginfeksi siput pada siklus Schistosoma, bukan manusia.",
+      "Rhabditiform adalah larva non-infektif yang berkembang di tanah sebelum menjadi filariform.",
+      "Benar. Larva filariform adalah stadium infektif cacing tambang yang menembus kulit manusia."
+    ]
+  },
+  {
+    "id": 8,
+    "topic": "sth",
+    "vignette": "Wanita 20 tahun datang ke puskesmas dengan keluhan pucat sejak 2 minggu yang lalu. Keluhan disertai demam, mual dan muntah. Pemeriksaan fisik: TD 120/80 mmHg, nadi 90 x, RR 20 x, konjungtiva anemis dan perut sedikit membuncit. Pemeriksaan tinja ditemukan telur berdinding tebal 3 lapis berbentuk oval. Etiologi dari kasus diatas ialah",
+    "options": [
+      "Strongiloides stercoralis",
+      "Ancylostoma duodenale",
+      "Ascariasis lumbricoides",
+      "Taena solium",
+      "Schistosoma hematobium"
+    ],
+    "answer": 2,
+    "key": "Telur berdinding tebal tiga lapis berbentuk oval dengan lapisan albuminoid bergerigi di luar adalah ciri khas telur Ascaris lumbricoides yang fertil, menimbulkan anemia dan gangguan gizi akibat kompetisi nutrisi di usus halus.",
+    "why": [
+      "Strongyloides stercoralis pada feses biasanya ditemukan larva rhabditiform, bukan telur berdinding tebal.",
+      "Ancylostoma duodenale memiliki telur berdinding tipis, bukan tebal tiga lapis.",
+      "Benar. Telur berdinding tebal tiga lapis oval adalah ciri Ascaris lumbricoides.",
+      "Taenia solium memiliki telur bulat dengan dinding radialis (embriofor), bukan tiga lapis oval seperti Ascaris.",
+      "Schistosoma hematobium memiliki telur dengan duri terminal, bukan berdinding tebal tiga lapis."
+    ]
+  },
+  {
+    "id": 9,
+    "topic": "schistosomiasis",
+    "vignette": "Laki laki 30 tahun datang ke praktek dokter dengan keluhan diare disertai darah dan muncul bentol-bentol di kulit. Pasien tinggal di daerah danau lindu Sulawesi. Pada pemeriksaan faeses ditemukann telur dengan lateral spine. Tatalaksana yang tepat adalah:",
+    "options": [
+      "Albendazole 400 mg",
+      "Pirantel pamoat 10 mg/kgbb",
+      "Praziquantel 10 mg/kgbb",
+      "Praziquantel 40 mg/kgbb",
+      "Praziquantel 60 mg/kgbb"
+    ],
+    "answer": 3,
+    "key": "Terapi definitif schistosomiasis adalah praziquantel dosis tunggal 40 mg/kgBB yang efektif membunuh cacing dewasa di pleksus vena.",
+    "why": [
+      "Albendazol adalah terapi untuk STH, bukan schistosomiasis.",
+      "Pirantel pamoat adalah terapi untuk cacing tambang/Ascaris, bukan schistosomiasis.",
+      "Dosis praziquantel 10 mg/kgBB terlalu rendah untuk schistosomiasis (dosis ini untuk taeniasis).",
+      "Benar. Dosis standar praziquantel untuk schistosomiasis adalah 40 mg/kgBB dosis tunggal.",
+      "Dosis 60 mg/kgBB berlebihan dan bukan dosis standar untuk schistosomiasis."
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "malaria",
+    "vignette": "Laki-laki 40 tahun dibawa ke IGD RS dengan keluhan demam naik turun, berkeringat dingin, menggigil dan BAK warna hitam. Pasien memiliki riwayat pergi ke Papua 1 bulan yang lalu. Pemeriksaan fisik: TD 110/70, temp 39 C, nadi 100, konjungtiva anemis, sklera ikterik, schuffner 2. Hasil lab: Hb 7 mg/dl Hasil pemeriksaan darah tepi: banana shape, multiple ring form, eritrosit tidak membesar. Hasil pemeriksaan penunjang yang mungkin ditemukan:",
+    "options": [
+      "Oliguria",
+      "Ketonuria",
+      "Proteinuria",
+      "Hemoglobinuria",
+      "Mikrofilaria pada pemeriksaan hapusan darah"
+    ],
+    "answer": 3,
+    "key": "Riwayat perjalanan ke Papua dengan demam periodik, BAK hitam (blackwater fever), dan gambaran banana shape serta multiple ring form pada apusan darah menunjukkan malaria falciparum berat dengan hemolisis intravaskular masif sehingga terjadi hemoglobinuria.",
+    "why": [
+      "Oliguria dapat menyertai malaria berat namun bukan pemeriksaan penunjang spesifik untuk BAK hitam.",
+      "Ketonuria tidak berkaitan dengan hemolisis pada malaria.",
+      "Proteinuria dapat menyertai namun bukan penyebab utama urin berwarna hitam.",
+      "Benar. Hemolisis intravaskular masif pada malaria berat menghasilkan hemoglobinuria yang menyebabkan urin gelap/hitam.",
+      "Mikrofilaria pada hapusan darah adalah temuan filariasis, bukan malaria."
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "pes",
+    "vignette": "Wanita 44 tahun dibawa ke UGD RS dengan keluhan sesak napas yang disertai batuk dan demam sejak 3 hari. Keluhan diawali dengan adanya benjolan di ketiak, selangkangan dan leher yang dirasakan sangat nyeri. Tetangga pasien banyak mengalami hal serupa. Pemeriksaan fisik: TD 120/80 mmHg, nadi 90x, RR 20x, temp 39 C, ronki di kedua lapang paru. Hasil rontgen didapatkan infiltrate di kedua paru. Pasien tinggal di daerah kumuh dimana banyak tikus berkeliaran. Etiologi yang mungkin pada kasus diatas ialah",
+    "options": [
+      "Leptospira sp",
+      "Yersinia pestis",
+      "Bacillus anthrachis",
+      "Streptococcus pneumonia",
+      "Klebsiella sp"
+    ],
+    "answer": 1,
+    "key": "Demam dan limfadenitis nyeri (bubo) di aksila/inguinal/leher yang progresif menjadi gejala pernapasan dengan infiltrat paru bilateral pada lingkungan banyak tikus menandakan pes (plague) yang disebabkan Yersinia pestis, ditularkan dari tikus melalui pinjal.",
+    "why": [
+      "Leptospira sp menimbulkan demam dan mialgia namun tidak khas bubo dan pneumonia sekunder seperti pes.",
+      "Benar. Yersinia pestis menyebabkan pes dengan bubo yang dapat berkembang menjadi pneumonic plague.",
+      "Bacillus anthracis menyebabkan antraks dengan lesi kulit eschar atau gejala inhalasi berbeda, bukan bubo khas.",
+      "Streptococcus pneumoniae menyebabkan pneumonia komunitas tanpa bubo di ketiak/selangkangan.",
+      "Klebsiella sp menyebabkan pneumonia namun tidak berkaitan dengan bubo dan riwayat tikus."
+    ]
+  },
+  {
+    "id": 12,
+    "topic": "pes",
+    "vignette": "Laki-laki 30 tahun dibawa ke IGD RS dengan keluhan demam, lemas, gemetar, mual muntah, diare sejak 5 hari yang lalu. Keluhan juga disertai perdarahan dari mulut hidung 2 hari yang lalu. Pasien saat ini tidak mau makan minum. Pemeriksaan fisik: TD 80/60 mmHg, nadi 120 x, RR 27 x, temp 39.1C. Dokter melakukan pemeriksaan kultur dan ditemukan adanya bakteri Yersinia pestis. Diagnosis yang sesuai pada pasien adala:",
+    "options": [
+      "Leptospirosis ringan",
+      "Leptospirosis berat",
+      "Bubonic plaque",
+      "Pneumonic plaque",
+      "Septicemic plaque"
+    ],
+    "answer": 4,
+    "key": "Pasien dengan kultur Yersinia pestis, syok, dan perdarahan mukosa tanpa bubo atau gejala respirasi dominan menandakan pes septikemik (septicemic plague), yaitu penyebaran hematogen langsung.",
+    "why": [
+      "Leptospirosis ringan tidak sesuai karena kultur mengonfirmasi Yersinia pestis, bukan Leptospira.",
+      "Leptospirosis berat juga tidak sesuai dengan hasil kultur Yersinia pestis.",
+      "Bubonic plague ditandai bubo yang jelas, namun tidak disebutkan pada kasus ini.",
+      "Pneumonic plague ditandai gejala respirasi dominan seperti batuk dan infiltrat paru, tidak disebutkan di sini.",
+      "Benar. Sepsis berat dengan syok dan perdarahan tanpa bubo atau gejala paru dominan sesuai septicemic plague."
+    ]
+  },
+  {
+    "id": 13,
+    "topic": "oxyuris",
+    "vignette": "Anak perempuan 5 tahun dibawa ibunya ke praktek dokter dengan keluhan nyeri di daerah kemaluan, keluhan disertai keputihan dan sulit BAK. Sejak 1 minggu anak sering terbangun malam hari karena anusnya gatal sehingga digaruk. Ibu pasien pernah menemukan benda putih seperti parutan kelapa pada feses anak. Patofisiologi yang menyebabkan keluhan anak adalah:",
+    "options": [
+      "Kedua kondisi tidak ada kaitannya",
+      "Rasa gatal menyebar dari perianal hingga vagina",
+      "Garukan yang kuat menyebabkan infeksi pada vagina",
+      "Migrasi cacing betina ke vagina menimbulkan vaginitis",
+      "Penyebaran secara sistemik sehingga terjadi gatal"
+    ],
+    "answer": 3,
+    "key": "Anak perempuan dengan pruritus ani nokturnal dan cacing seperti parutan kelapa (khas Enterobius vermicularis) dapat mengalami vulvovaginitis akibat migrasi cacing betina gravid dari anus menuju vagina saat bertelur di perianal malam hari.",
+    "why": [
+      "Kedua kondisi berkaitan erat melalui migrasi cacing, bukan tidak berhubungan.",
+      "Rasa gatal tidak menyebar melalui kulit, melainkan cacing yang bermigrasi secara langsung.",
+      "Garukan dapat menimbulkan infeksi sekunder namun bukan mekanisme utama vaginitis pada kasus ini.",
+      "Benar. Cacing betina gravid Enterobius vermicularis bermigrasi ke vagina dan menimbulkan vaginitis.",
+      "Tidak ada penyebaran sistemik pada infeksi Enterobius; penularan bersifat lokal-mekanis."
+    ]
+  },
+  {
+    "id": 14,
+    "topic": "malaria",
+    "vignette": "Laki-laki 35 tahun dibawa ke IGD RS dengan penurunan kesadaran. Sebelumnya pasien mengalami demam menggigil yang berulang. Pemeriksaan fisik: temp 40 C, kesadaran delirium. Hasil apusan darah tepi: eritrosit berbentuk cincin accole. Mekanisme yang menyebabkan penurunan kesadaran pada kasus diatas adalah:",
+    "options": [
+      "Desekuestrasi parasit",
+      "Sekuestrasi parasit",
+      "Resetting parasit",
+      "Aglutinasi eritrosit",
+      "Adhesi eritrosit"
+    ],
+    "answer": 1,
+    "key": "Penurunan kesadaran pada malaria berat (malaria serebral) terjadi akibat sekuestrasi eritrosit terinfeksi Plasmodium falciparum pada mikrovaskular otak, menyebabkan obstruksi aliran darah dan hipoksia jaringan.",
+    "why": [
+      "Desekuestrasi bukan istilah patofisiologi yang dikenal pada malaria serebral.",
+      "Benar. Sekuestrasi eritrosit terinfeksi pada mikrosirkulasi otak menyebabkan malaria serebral.",
+      "Rosetting berperan namun bukan mekanisme utama penurunan kesadaran dibanding sekuestrasi.",
+      "Aglutinasi eritrosit bukan mekanisme utama malaria serebral.",
+      "Adhesi eritrosit adalah bagian dari proses sekuestrasi, namun istilah yang paling tepat menjawab mekanisme ini adalah sekuestrasi."
+    ]
+  },
+  {
+    "id": 15,
+    "topic": "tifoid",
+    "vignette": "Laki-laki 22 tahun datang ke praktek dokter dengan keluhan demam naik turun sejak 1 minggu. Keluhan disertai nyeri perut dan nafsu makan menurun. Pasien sering jajan di luar. Pemeriksaan fisik temp 38.9 C, beslaq (+). Bagaimana proses masuknya infeksi pada kasus diatas:",
+    "options": [
+      "Pathogen masuk melalui oral, menginvasi epitel usus halus dan peyer's patches sebelum menyebar melalui kelenjar limfe dan aliran darah",
+      "Pathogen masuk melalui mukosa oral yang luka, menyebar secara lokal di jaringan mukosa dan memasuki sirkulasi darah",
+      "Pathogen masuk melalui droplet, menginfeksi saluran nafas dan menyebar melalui alveolus",
+      "Pathogen masuk melalui gigitan vektor, berkembang biak di eritrosit dan menyebabkan gangguan GI",
+      "Pathogen masuk melalui oral dan kemnudian menginvasi jaringan hepar"
+    ],
+    "answer": 0,
+    "key": "Demam tifoid disebabkan Salmonella typhi yang masuk melalui mulut, menembus epitel usus halus dan menginvasi Peyer's patches, kemudian menyebar melalui kelenjar limfe mesenterika dan aliran darah (bakteremia primer) sebelum menimbulkan gejala sistemik.",
+    "why": [
+      "Benar. Salmonella typhi masuk oral, menginvasi Peyer's patches, lalu menyebar limfatik dan hematogen.",
+      "Mukosa oral yang luka bukan jalur utama masuknya Salmonella typhi.",
+      "Droplet dan saluran napas adalah jalur infeksi patogen respirasi, bukan tifoid.",
+      "Gigitan vektor adalah jalur penularan malaria/filariasis, bukan tifoid.",
+      "Salmonella typhi memang dapat mencapai hepar, tetapi jalur awal patogenesis yang tepat adalah invasi Peyer's patches terlebih dahulu."
+    ]
+  },
+  {
+    "id": 16,
+    "topic": "leptospirosis",
+    "vignette": "Laki-laki 30 tahun datang ke praktek dokter dengan keluhan demam sejak 4 hari. Keluhan juga disertai mual muntah dan nyeri otot betis. Demam berkurang setelah minum paracetamol, namun muncul kembali. Riwayat kerja bakti membersihkan gorong-gorong. Pemeriksaan fisik: TD 120/80 nadi 90, RR 22, temp 38 C, nyeri tekan otot betis, sklera ikterik. Profilaksis yang dapat diberikan ialah:",
+    "options": [
+      "Doksisiklin 100 mg/hari",
+      "Doksisiklin 200 mg/hari",
+      "Doksisiklin 200 mg/minggu",
+      "Penisilin G 1,5 juta IU",
+      "Makrolide"
+    ],
+    "answer": 2,
+    "key": "Profilaksis leptospirosis pada individu dengan risiko paparan tinggi (misalnya kerja bakti membersihkan gorong-gorong) adalah doksisiklin 200 mg dosis tunggal per minggu selama periode risiko.",
+    "why": [
+      "Dosis 100 mg/hari adalah dosis terapi, bukan profilaksis mingguan.",
+      "Dosis 200 mg/hari terlalu tinggi untuk regimen profilaksis.",
+      "Benar. Profilaksis leptospirosis menggunakan doksisiklin 200 mg dosis tunggal per minggu selama periode risiko.",
+      "Penisilin G digunakan untuk terapi leptospirosis berat, bukan profilaksis.",
+      "Makrolide bukan regimen profilaksis standar leptospirosis."
+    ]
+  },
+  {
+    "id": 17,
+    "topic": "dbd",
+    "vignette": "Laki-laki 20 tahun dibawa ke IGD RS dengan keluhan demam sejak 3 hari, keluhan disertai nyeri pada sendi dan muntah. Pemeriksaan fisik: TD 80/60, nadi 110, RR 24, temp 39 C tampak ptekiae di extremitas atas dan bawah. Hasil lab: Hb 12, HCT 58%, trombosit 80.000, leukosit 3.600. Pasien diberikan resusitasi cairan namun TD masih 80/60 mmHg. Tatalaksana selanjutnya yang tepat adalah:",
+    "options": [
+      "Lanjut pemberian cairan RL 20 ml/kgbb bolus cepat",
+      "Pemberian cairan RL 10-20 ml/kgbb dalam 1 jam",
+      "Pemberian cairan RL 15-20 ml/kgbb + koloid 10- 20 ml/kgbb dalam 1 jam",
+      "Pemberian transfuse trombosit concentrate",
+      "Pemberian NaCl 0,9% 10 ml/kgbb secepatnya"
+    ],
+    "answer": 0,
+    "key": "Pasien DHF dengan syok yang tidak membaik meski telah diresusitasi cairan awal memerlukan bolus cepat kristaloid tambahan 20 ml/kgBB untuk mengatasi syok refrakter sebelum mempertimbangkan koloid.",
+    "why": [
+      "Benar. Bila syok belum teratasi setelah resusitasi awal, diberikan bolus cepat kristaloid 20 ml/kgBB.",
+      "Pemberian dalam rentang 1 jam terlalu lambat untuk kondisi syok yang belum teratasi.",
+      "Kombinasi koloid dipertimbangkan bila bolus kristaloid kedua tetap gagal, bukan langkah pertama setelah syok menetap.",
+      "Transfusi trombosit tidak diindikasikan tanpa perdarahan aktif signifikan.",
+      "NaCl 0,9% dosis rendah tidak adekuat untuk syok yang menetap."
+    ]
+  },
+  {
+    "id": 18,
+    "topic": "filariasis",
+    "vignette": "Laki-laki 28 tahun datang ke Puskesmas dengan keluhan kaki kanan bengkak, sampai ke paha dan sampai skrotum juga membengkak. Pasien mengaku jika BAK tampak keluar cairan seperti susu. Beberapa tetangga pasien juga mengalami keluhan yang sama. Bagaimana patofisiologi dari keluhan pasien:",
+    "options": [
+      "Peradangan pada pembuluh limfe akibat parasit",
+      "Obstruksi pembuluh limfa oleh parasit",
+      "Tumor jinak pada kelenjar getah bening",
+      "Infeksi menular seksual pada kelenjar getah bening",
+      "Peradangan kelenjar getah bening"
+    ],
+    "answer": 1,
+    "key": "Edema tungkai hingga skrotum disertai kencing seperti susu (chyluria) pada daerah endemis filariasis menunjukkan obstruksi pembuluh limfe oleh cacing dewasa yang menyebabkan limfedema kronik dan refluks limfe ke saluran kemih.",
+    "why": [
+      "Peradangan pembuluh limfe (limfangitis akut) dapat terjadi namun manifestasi kronik utama disebabkan obstruksi.",
+      "Benar. Obstruksi pembuluh limfe oleh cacing dewasa menyebabkan limfedema kronik dan chyluria.",
+      "Tidak ada dasar tumor jinak pada kasus infeksi parasit ini.",
+      "Bukan infeksi menular seksual; ini penularan melalui gigitan nyamuk.",
+      "Peradangan kelenjar getah bening saja tidak menjelaskan obstruksi kronik dan chyluria."
+    ]
+  },
+  {
+    "id": 19,
+    "topic": "sth",
+    "vignette": "Anak 12 tahun dengan keluhan nyeri perut, BAB cair dan gatal disekitar anus. Sebelumnya anak mengeluh adanya peninggian kulit berwarna kemerahan di kaki dan kemudia hilang sendiri dalam 2 hari. Pemeriksaan feses: larva langsing panjang tidak berselubung, ujung posterior bercabang berbentuk huruf W. Etiologi yang mungkin ialah:",
+    "options": [
+      "Ancylostoma duodenale",
+      "Ancylostoma brazilliense",
+      "Strongyloides stercoralis",
+      "Necator americanus",
+      "Ascariasis lumbricoides"
+    ],
+    "answer": 2,
+    "key": "Larva langsing tanpa selubung dengan ujung posterior bercabang seperti huruf W pada pemeriksaan feses adalah ciri khas larva rhabditiform Strongyloides stercoralis, disertai riwayat lesi kulit yang menghilang sendiri (larva currens).",
+    "why": [
+      "Ancylostoma duodenale ditemukan sebagai telur pada feses rutin, bukan larva berujung W.",
+      "Ancylostoma braziliense menyebabkan cutaneous larva migrans pada hewan, larvanya tidak berujung W khas ini.",
+      "Benar. Larva rhabditiform dengan ujung posterior bercabang seperti huruf W khas Strongyloides stercoralis.",
+      "Necator americanus juga ditemukan sebagai telur pada pemeriksaan rutin, bukan larva berujung W.",
+      "Ascaris lumbricoides ditemukan sebagai telur, tidak menghasilkan larva pada pemeriksaan feses rutin."
+    ]
+  },
+  {
+    "id": 20,
+    "topic": "sth",
+    "vignette": "Laki laki 35 tahun datang ke puskesmas mengeluh gatal di kaki kanan disertai nyeri sejak 3 hari. Pasien adalah seorang pekerja kebun yang memiliki kebiasaan bekerja tanpa alas kaki. Pada pemeriksaan ditemukan lesi sebagai berikut: strongloidosis. Apa saran anda kepada pasien ini:",
+    "options": [
+      "Minum obat cacing saat bekerja",
+      "Semprot pestisida di taman",
+      "Buat jamban jauh dari rumah",
+      "Cuci kaki saat sudah selesai bekerja",
+      "Pakai alas kaki saat bekerja"
+    ],
+    "answer": 4,
+    "key": "Pencegahan infeksi cacing tambang/Strongyloides pada pekerja kebun tanpa alas kaki adalah edukasi memakai alas kaki saat bekerja untuk mencegah penetrasi larva filariform melalui kulit.",
+    "why": [
+      "Obat cacing saat bekerja bukan tindakan pencegahan penularan langsung.",
+      "Semprot pestisida tidak menyasar larva cacing di tanah secara efektif.",
+      "Jamban jauh dari rumah mengurangi kontaminasi tanah namun bukan saran langsung untuk pasien saat bekerja di kebun terkontaminasi.",
+      "Mencuci kaki setelah bekerja dilakukan setelah paparan sudah terjadi, kurang efektif mencegah penetrasi larva.",
+      "Benar. Memakai alas kaki saat bekerja mencegah penetrasi larva filariform melalui kulit kaki."
+    ]
+  },
+  {
+    "id": 21,
+    "topic": "leptospirosis",
+    "vignette": "Laki-laki 24 tahun datang ke Poliklinik RS dengan keluhan demam yang disertai nyeri pada otot betis sejak 2 hari yang lalu. Keluhan disertai rasa mual dan muntah. Pemeriksaan fisik: TD 120/70, nadi 88, RR 22, temp 38 C, sklera ikterik (+), nyeri tekan m.gastrocnemius. Pemeriksaan lab: leukosit 15.500, SGOT 120, SGPT 110. Sebelumnya lingkungan rumah pasien terkena banjir akibat hujan yang deras. Pasien memiliki riwayat alergi terhadap betalaktam. Terapi antibiotik yang dapat diberikan pada pasien adalah:",
+    "options": [
+      "Penisilin G 1.5 juta IU/8 jam",
+      "Amoksilin 3 x 500 mg selama 7 hari",
+      "Ceftriaxone 1 gr/hari selama 7 hari",
+      "Azitromisin 1 x 500 mg selama 5-7 hari",
+      "Doksisiklin 2 x 100 mg selama 5-7 hari"
+    ],
+    "answer": 4,
+    "key": "Leptospirosis pasca banjir dengan nyeri betis, ikterus, dan peningkatan transaminase pada pasien alergi betalaktam diterapi dengan doksisiklin 2x100 mg selama 5-7 hari sebagai alternatif penisilin.",
+    "why": [
+      "Penisilin G merupakan lini pertama namun dikontraindikasikan pada alergi betalaktam.",
+      "Amoksisilin juga golongan betalaktam sehingga dikontraindikasikan pada pasien ini.",
+      "Ceftriaxone (sefalosporin) berpotensi reaksi silang pada alergi betalaktam, bukan pilihan aman pertama.",
+      "Azitromisin bukan regimen standar leptospirosis meski dapat dipertimbangkan pada kondisi tertentu; doksisiklin lebih disukai.",
+      "Benar. Doksisiklin adalah alternatif efektif untuk leptospirosis pada pasien alergi betalaktam."
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "tifoid",
+    "vignette": "Wanita 30 tahun G2P1A0 usia kehamilan 20 minggu datang ke klinik dengan keluhan demam dan badan lemas. Keluhan demam dirasakan sejak 5 hari dan memberat saat menjelang malam hari. Pemeriksaan fisik: TD 110/80, bradikardi relative, beslaq (+). Pemeriksaan lab didapatkan Hb 10 g/dl, leukosit 3.200, trombosit 330.000. widal titer 1/320 Tatalaksana yang dapat diberikan adalah:",
+    "options": [
+      "Kloramfenikol 4 x 500 mg selama 14 hari",
+      "Kloramfenikol 3 x 500 mg selama 14 hari",
+      "Ciprofloksasin 2 x 500 mg selama 10 hari",
+      "Cefixime 2 x 100 mg selama 10 hari",
+      "Amoksilin 3 x 500 mg selama 10 hari"
+    ],
+    "answer": 3,
+    "key": "Demam tifoid pada kehamilan diterapi dengan antibiotik yang relatif aman untuk janin seperti sefiksim oral, karena kloramfenikol dan fluorokuinolon dihindari pada kehamilan.",
+    "why": [
+      "Kloramfenikol 4x500mg berisiko toksisitas dan bukan pilihan utama pada kehamilan.",
+      "Kloramfenikol 3x500mg tetap memiliki risiko yang sama pada kehamilan.",
+      "Ciprofloksasin relatif dihindari pada kehamilan karena risiko pada kartilago janin.",
+      "Benar. Cefixime relatif aman digunakan pada kehamilan sebagai terapi tifoid.",
+      "Amoksisilin dapat dipertimbangkan namun bukan pilihan utama dibanding sefalosporin oral pada kasus dengan titer widal tinggi ini."
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "tifoid",
+    "vignette": "Wanita 20 tahun dengan keluhan demam sejak 1 minggu, keluhan demam dirasakan memberat saat menjelang sore. Keluhan juga disertai mual muntah dan sulit BAB. Pasien sering membeli jajan sembarangan. Pemfis: TD 110/70, nadi 88, RR 22, temp 38 C. Tubex test (+). Pasien memiliki riwayat alergi tiamfenikol. Tatalaksana yang tepat adalah:",
+    "options": [
+      "Amoksilin 3 x 500 mg selama 10 hari",
+      "Ciprofloksasin 3 x 500 mg selama 7 hari",
+      "Kloramfenikol 4 x 500 mg selama 10 hari",
+      "Ciprofloksasin 2 x 500 mg selama 3 hari",
+      "Kotrimokasazole 2 x 960 mg selama 14 hari"
+    ],
+    "answer": 1,
+    "key": "Demam tifoid dengan riwayat alergi tiamfenikol diterapi dengan fluorokuinolon seperti siprofloksasin 3x500 mg selama 7 hari sebagai lini alternatif pada dewasa non-hamil.",
+    "why": [
+      "Amoksisilin bukan pilihan lini pertama pada kasus ini; siprofloksasin lebih tepat.",
+      "Benar. Siprofloksasin 3x500 mg selama 7 hari adalah alternatif efektif tifoid pada pasien alergi tiamfenikol.",
+      "Kloramfenikol dikontraindikasikan karena riwayat alergi golongan tiamfenikol.",
+      "Durasi 3 hari terlalu singkat untuk terapi tifoid.",
+      "Kotrimoksazol bukan regimen lini pertama standar untuk tifoid dewasa saat ini."
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "sth",
+    "vignette": "Anak 15 tahun dibawa ke IGD RS dengan keluhan BAB berdarah sejak 3 hari. Keluhan disertai badan lemas, dan mual muntah Pemeriksaan fisik tanda vital dalam batas normal. Pemeriksaan feses tampak gambaran berikut. Komplikasi yang dapat terjadi pada kasus diatas adalah:",
+    "options": [
+      "Vaginitis",
+      "Anemia megaloblastic",
+      "Prolapse rekti",
+      "Prolapse uterus",
+      "Disentri amoeba"
+    ],
+    "answer": 2,
+    "key": "Infeksi Trichuris trichiura berat pada anak dapat menimbulkan diare kronik berdarah dan mengejan berlebihan sehingga terjadi prolaps rekti sebagai komplikasi khas.",
+    "why": [
+      "Vaginitis adalah komplikasi Enterobius vermicularis, bukan Trichuris.",
+      "Anemia megaloblastik dikaitkan dengan Diphyllobothrium latum, bukan Trichuris.",
+      "Benar. Prolaps rekti adalah komplikasi khas trikuriasis berat pada anak.",
+      "Prolaps uterus tidak berkaitan dengan infeksi cacing usus ini.",
+      "Disentri amoeba adalah penyakit terpisah akibat Entamoeba histolytica, bukan komplikasi Trichuris."
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "tifoid",
+    "vignette": "Laki-laki 22 tahun datang dengan keluhan demam naik turun, nyeri kepala dan disertai tidak bisa BAB. Keluhan tersebut dialami sejak 10 hari yang lalu, saat ini pasien demam menerus disertai nyeri perut dan diare. Pemeriksaan fisik didapatkan lidah kotor dan hepatosplenomegaly. Pemeriksaan penunjang yang tepat:",
+    "options": [
+      "Kultur urin",
+      "Kultur darah",
+      "Kultur feses",
+      "Pemeriksaan gram",
+      "Kultur sumsum tulang"
+    ],
+    "answer": 4,
+    "key": "Pada demam tifoid stadium lanjut (>1 minggu), kultur darah sering sudah negatif; kultur sumsum tulang memiliki sensitivitas tertinggi untuk mendeteksi Salmonella typhi karena bakteri bersembunyi di sistem retikuloendotelial.",
+    "why": [
+      "Kultur urin memiliki sensitivitas rendah dan bukan baku emas tifoid.",
+      "Kultur darah sensitif pada minggu pertama namun menurun pada minggu-minggu berikutnya.",
+      "Kultur feses lebih bermakna pada fase karier, bukan diagnosis akut fase lanjut.",
+      "Pemeriksaan gram tidak spesifik untuk Salmonella typhi.",
+      "Benar. Kultur sumsum tulang memiliki sensitivitas tertinggi terutama pada fase lanjut penyakit."
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "malaria",
+    "vignette": "Laki-laki 33 tahun datang ke Puskesmas dengan keluhan demam naik turun sejak 1 minggu. Pasien mengatakan bahwa sebelum demam pasien menggigil kedinginan namun ketika panas turun, pasien berkeringat banyak. Riwayat 1 minggu yang lalu pasien baru saja berlibur ke pulau Nias. Pemeriksaan fisik: TD 110/80 mmHg, nadi 80, RR 20, temp 37.9 C. Hasil laboratorium didapatkan eritrosit membesar dan parasite didalam eritrosit dengan bentuk bulan sabit. Tatalaksana defenitif yang dapat diberikan:",
+    "options": [
+      "DHP 3 hari",
+      "DHP 3 hari + primakuin 14 hari",
+      "DHP 3 hari + kina",
+      "DHP 3 hari + primakuin dosis tunggal",
+      "Kina + primakuin"
+    ],
+    "answer": 3,
+    "key": "Gametosit berbentuk bulan sabit/pisang menandakan malaria falciparum, diterapi dengan ACT (DHP) selama 3 hari ditambah primakuin dosis tunggal untuk memutus penularan gametosit.",
+    "why": [
+      "DHP saja tanpa primakuin tidak memutus rantai penularan gametosit falciparum.",
+      "Primakuin 14 hari adalah regimen untuk malaria vivax/ovale guna eradikasi hipnozoit, bukan falciparum.",
+      "Kina bukan kombinasi standar lini pertama malaria falciparum tanpa komplikasi saat ini.",
+      "Benar. DHP 3 hari ditambah primakuin dosis tunggal adalah terapi definitif malaria falciparum tanpa komplikasi.",
+      "Kina + primakuin bukan regimen lini pertama malaria falciparum tanpa komplikasi."
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "malaria",
+    "vignette": "Laki-laki 30 tahun dengan keluhan demam naik turun sejak 1 minggu. Pasien mengatakan bahwa sebelum demam pasien menggigil kedinginan. Riwayat 1 minggu yang lalu pasien baru saja berlibur ke Kalimantan Pemeriksaan fisik: TD 110/80 mmHg, nadi 80, RR 20, temp 37.9 C. Hasil laboratorium didapatkan eritrosit berukuran lebih besar, schuffner dot (+), tropozoid berbentuk amoeboid dan banana shaped (+). Tatalaksana defenitif kasus diatas:",
+    "options": [
+      "DHP 3 hari",
+      "DHP 3 hari + primakuin 14 hari",
+      "DHP 3 hari + kina",
+      "DHP 3 hari + primakuin dosis tunggal",
+      "Kina + primakuin"
+    ],
+    "answer": 1,
+    "key": "Eritrosit membesar dengan schuffner dot positif dan tropozoit amoeboid menandakan malaria vivax, yang memerlukan DHP 3 hari ditambah primakuin 14 hari untuk mengeradikasi hipnozoit di hati guna mencegah relaps.",
+    "why": [
+      "DHP saja tanpa primakuin tidak mengeradikasi hipnozoit sehingga risiko relaps tinggi.",
+      "Benar. DHP 3 hari dan primakuin 14 hari adalah terapi definitif malaria vivax untuk mengeradikasi hipnozoit.",
+      "Kina bukan kombinasi lini pertama pada vivax tanpa komplikasi.",
+      "Primakuin dosis tunggal hanya cukup untuk membunuh gametosit falciparum, tidak mengeradikasi hipnozoit vivax.",
+      "Kina + primakuin bukan regimen lini pertama pada vivax tanpa komplikasi saat ini."
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "filariasis",
+    "vignette": "Laki-laki 30 tahun dengan keluhan kencing seperti susu, keluhan disertai demam, pembengkakan pada ekstremitas kiri dan nyeri tekan. Hasil sediaan darah tepi: tampak parasit dengan inti tidak teratur, inti sampai ke ekor dan perbandingan cephalocaudal 2:1. Etiologi dari kasus diatas:",
+    "options": [
+      "Wuchereria bancrofti",
+      "Brugia malayi",
+      "Brugia timori",
+      "Loa-loa",
+      "Onchocerca volvulus"
+    ],
+    "answer": 1,
+    "key": "Mikrofilaria dengan inti tidak teratur hingga ke ujung ekor dan rasio sefalokaudal sekitar 2:1 merupakan ciri khas Brugia malayi, penyebab filariasis limfatik dengan gejala chyluria dan limfedema.",
+    "why": [
+      "Wuchereria bancrofti memiliki inti teratur dan tidak mencapai ujung ekor.",
+      "Benar. Brugia malayi memiliki dua kelompok inti di ekor dengan rasio sefalokaudal sekitar 2:1.",
+      "Brugia timori memiliki mikrofilaria lebih panjang dengan sheath merah muda pada pewarnaan Giemsa, berbeda dari deskripsi ini.",
+      "Loa-loa memiliki inti hingga ujung ekor namun ditemukan di Afrika, bukan pola khas ini di Indonesia.",
+      "Onchocerca volvulus tidak bersirkulasi di darah tepi (mikrofilaria berada di kulit), berbeda dari sediaan darah tepi ini."
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "leptospirosis",
+    "vignette": "Laki-laki 22 tahun datang ke IGDRS dengan keluhan demam tinggi sejak 5 hari yang disertai nyeri otot betis, mata tampak kuning dan urin berwarna gelap. Pasien sehari-hari bekerja sebagai petani. Pemeriksaan fisik didapatkan ikterik (+), tanda perdarahan ringan dan gangguan fungsi ginjal. Bagaimana patomekanisme yang mendasari keluhan pasien:",
+    "options": [
+      "Invasi bakteri menyebabkan vasculitis sistemik difus dan kerusakan endotel kapiler sehingga terjadi kebocoran vascular, ikterik dan gagal ginjal",
+      "Invasi bakteri memicu aktivasi endotel sistemik dengan disfungsi mikrosirkulasi luas",
+      "Infeksi bakteri menimbulkan inflamasi hepatoseluler berat sehingga terjadi ikterus",
+      "Aktivasi imun sistemik akibat infeksi bakteri yang memicu pelepasan sitokin berlebihan",
+      "Infeksi bakteri secara ascending infection yang menyebabkan inflamasi pada glomerulus"
+    ],
+    "answer": 0,
+    "key": "Leptospirosis berat (Weil's disease) dengan ikterus, gangguan ginjal, dan perdarahan disebabkan invasi Leptospira yang menimbulkan vaskulitis sistemik difus dan kerusakan endotel kapiler sehingga terjadi kebocoran vaskular, ikterus, dan gagal ginjal.",
+    "why": [
+      "Benar. Vaskulitis sistemik difus akibat kerusakan endotel kapiler adalah dasar patomekanisme leptospirosis berat.",
+      "Aktivasi endotel sistemik tanpa vaskulitis difus kurang menjelaskan spektrum lengkap perdarahan-ikterik-gagal ginjal.",
+      "Inflamasi hepatoseluler berat saja tidak menjelaskan gangguan ginjal dan perdarahan sistemik.",
+      "Pelepasan sitokin berperan namun bukan mekanisme sentral yang menjelaskan trias ikterik-perdarahan-gagal ginjal leptospirosis.",
+      "Ascending infection ke glomerulus adalah mekanisme infeksi saluran kemih, bukan leptospirosis."
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "dbd",
+    "vignette": "Laki-laki 30 tahun datang ke IGD RS dengan keluhan demam, Demam dirasakan terus menerus sejak 4 hari. Keluhan disertai dengan bintik-bintik kemerahan pada tubuh dan mimisan. Pemeriksaan fisik didapatkan TD 90mmHg/palpasi. Rumple leed test (+), tromsbosit 48.000. Apakah tatalaksana yang diberikan pada kasus diatas:",
+    "options": [
+      "PCT + kristaloid",
+      "PCT+ koloid",
+      "PCT + konsentrat trombosit",
+      "PCT+ antibiotic",
+      "Aspirin + antibiotik"
+    ],
+    "answer": 0,
+    "key": "DHF dengan petekie, epistaksis, hipotensi, dan trombositopenia diterapi suportif dengan antipiretik parasetamol dan resusitasi cairan kristaloid, tanpa pemberian aspirin karena risiko perdarahan.",
+    "why": [
+      "Benar. Terapi suportif DHF adalah PCT untuk demam dan kristaloid untuk mengatasi kebocoran plasma/hipotensi.",
+      "Koloid diberikan pada kondisi syok berat atau kebocoran plasma masif, bukan lini pertama di sini.",
+      "Transfusi konsentrat trombosit tidak rutin diberikan tanpa perdarahan aktif masif.",
+      "Antibiotik tidak diperlukan karena DBD disebabkan virus, bukan bakteri.",
+      "Aspirin dikontraindikasikan pada DBD karena meningkatkan risiko perdarahan."
+    ]
+  },
+  {
+    "id": 31,
+    "topic": "dbd",
+    "vignette": "Anak 10 tahun dibawa orangtuanya ke IGD RS dengan keluhan demam tinggi sejak 4 hari. Mimisan (+). Pemeriksaan fisik: TD 80/palpasi, Nadi 120 x/l, RR 28 x/1, temp 39 C. Lab: Hb 13 g/dl Ht 40%, leukosit 2.100, trombosit 50.000. Patofisiologi penyebab kasus diatas ialah",
+    "options": [
+      "Infeksi primer virus dengan serotipe berbeda",
+      "Infeksi primer virus dengan serotipe sama",
+      "Infeksi sekunder virus dengan serotipe berbeda",
+      "Infeksi sekunder virus dengan serotipe sama",
+      "Infeksi tersier virus dengann serotipe sama"
+    ],
+    "answer": 2,
+    "key": "DBD berat pada anak umumnya terjadi akibat infeksi sekunder oleh virus dengue dengan serotipe berbeda dari infeksi primer, menimbulkan fenomena antibody-dependent enhancement yang memperberat respons imun dan kebocoran plasma.",
+    "why": [
+      "Infeksi primer dengan serotipe berbeda bukan istilah yang tepat karena infeksi primer berarti belum pernah terpapar dengue sebelumnya.",
+      "Infeksi primer dengan serotipe sama juga tidak sesuai konsep infeksi primer maupun mekanisme antibody-dependent enhancement.",
+      "Benar. Infeksi sekunder oleh serotipe dengue berbeda menimbulkan antibody-dependent enhancement yang memperberat penyakit.",
+      "Infeksi sekunder dengan serotipe sama umumnya tidak menimbulkan enhancement seberat serotipe berbeda.",
+      "Infeksi tersier bukan konsep patogenesis dengue yang dikenal secara umum."
+    ]
+  },
+  {
+    "id": 32,
+    "topic": "sth",
+    "vignette": "Anak 6 tahun dibawa orangtuanya ke puskesmas dengan keluhan kurang nafsu makan sejak 6 bulan, keluhan juga disertai anak sering lemas. Hasil pemeriksaan feses ditemukan telur berdinding tebal. Cacing tersebut mencapai dewasa pada organ:",
+    "options": [
+      "Usus halus",
+      "Usus besar",
+      "Faring",
+      "Hepar",
+      "Paru-paru"
+    ],
+    "answer": 0,
+    "key": "Ascaris lumbricoides dewasa hidup dan mencapai kematangan di lumen usus halus (jejunum), tempat cacing menghisap nutrisi dan menimbulkan gangguan gizi pada anak.",
+    "why": [
+      "Benar. Ascaris lumbricoides dewasa bermukim dan matang di usus halus.",
+      "Usus besar adalah tempat hidup Trichuris trichiura, bukan Ascaris.",
+      "Faring dilalui saat migrasi larva namun bukan tempat cacing dewasa menetap.",
+      "Hepar adalah tempat migrasi larva Fasciola, bukan tempat menetap Ascaris dewasa.",
+      "Paru-paru dilalui larva Ascaris saat siklus Loeffler namun bukan tempat cacing dewasa menetap."
+    ]
+  },
+  {
+    "id": 33,
+    "topic": "leptospirosis",
+    "vignette": "Laki-laki 27 tahun, pembersih jalanan datang ke praktek dokter dengan keluhan demam, mata kuning dan nyeri otot sejak 1 minggu. Pemeriksaan fisik didapatkan: TD 110/80 mmHg, nadi 88, RR 20, temp 38.2 C, sklera ikterik, nyeri tekan m.gastrocnemius. Penularan dari penyakit ini:",
+    "options": [
+      "Airbone infection",
+      "Droplet infection",
+      "Kontak dengan manusia",
+      "Kontak dengan reservoir",
+      "Kontak dengan air yang terkontaminasi"
+    ],
+    "answer": 4,
+    "key": "Leptospirosis ditularkan melalui kontak kulit atau mukosa dengan air, tanah, atau lumpur yang terkontaminasi urin hewan reservoir (terutama tikus) yang mengandung Leptospira.",
+    "why": [
+      "Bukan penularan airborne; leptospirosis menular melalui kontak langsung dengan sumber terkontaminasi.",
+      "Bukan penularan droplet antar manusia.",
+      "Bukan penularan langsung antar manusia (person-to-person jarang terjadi).",
+      "Kontak langsung dengan reservoir jarang menjadi jalur utama dibanding lingkungan yang terkontaminasi urinnya.",
+      "Benar. Leptospirosis menular melalui kontak dengan air/tanah yang terkontaminasi urin hewan reservoir."
+    ]
+  },
+  {
+    "id": 34,
+    "topic": "oxyuris",
+    "vignette": "Anak 5 tahun dibawa orangtuanya karna gatal pada anus terutama malam hari. Pada pemeriksaan status lokalis tampak anus merah dan terdapat lecet. Dilakukan pemeriksaan scotch tape dijumpai cacing dengan bentuk seperti parutan kelapa. Etiologi dari kasus diatas adalah:",
+    "options": [
+      "Oxyuris vermicularis",
+      "Trichuris trichiura",
+      "Ascaris lumbricoides",
+      "Ancylostoma duodenale",
+      "Taenia solium"
+    ],
+    "answer": 0,
+    "key": "Pruritus ani nokturnal pada anak dengan hasil scotch tape menemukan cacing kecil putih seperti parutan kelapa adalah khas infeksi Oxyuris (Enterobius) vermicularis, yang bertelur di daerah perianal pada malam hari.",
+    "why": [
+      "Benar. Oxyuris vermicularis menimbulkan pruritus ani nokturnal khas dengan cacing tampak seperti parutan kelapa.",
+      "Trichuris trichiura menimbulkan diare berdarah kronik, bukan pruritus ani nokturnal khas dengan cacing di scotch tape.",
+      "Ascaris lumbricoides tidak menimbulkan pruritus ani nokturnal khas ini.",
+      "Ancylostoma duodenale menimbulkan anemia, bukan pruritus ani nokturnal.",
+      "Taenia solium menimbulkan proglotid pada feses, bukan cacing kecil di perianal malam hari."
+    ]
+  },
+  {
+    "id": 35,
+    "topic": "dbd",
+    "vignette": "Anak 10 tahun dibawa ke IGD RS dengan demam sejak 4 hari yang lalu demam terus-menerus keluhan disertai dengan nyeri sendi. Pemeriksaan fisik didapatkan berat badan 30 kg, suhu 38°C TD: 80/60 mmHg, Nadi 120 x, RR 28 x. Hasil lab: Hb 17 gr/dl leukosit 3.500 trombosit 35.000, Ht 51%. Terapi yang dapat diberikan adalah:",
+    "options": [
+      "Kristaloid 300-600 cc evaluasi 20-30 menit",
+      "Kristaloid 1.000-2.000 cc evaluasi 20-30 menit",
+      "Koloid 300-600 cc evaluasi 20-30 menit",
+      "Koloid 1.000-2.000 cc evaluasi 20-30 menit",
+      "Transfusi PRC 2 bag"
+    ],
+    "answer": 1,
+    "key": "Anak DHF berat badan 30 kg dengan tanda syok (hemokonsentrasi, trombositopenia berat, tekanan darah rendah) memerlukan resusitasi kristaloid sekitar 1.000-2.000 cc (10-20 ml/kgBB) dievaluasi tiap 20-30 menit sesuai protokol syok dengue.",
+    "why": [
+      "Volume 300-600 cc terlalu kecil untuk anak berat 30 kg dalam kondisi syok.",
+      "Benar. Volume kristaloid 1.000-2.000 cc sesuai perhitungan 10-20 ml/kgBB untuk anak 30 kg dalam kondisi syok.",
+      "Koloid volume ini terlalu kecil dan bukan cairan lini pertama pada syok awal.",
+      "Koloid bukan cairan lini pertama pada resusitasi awal syok dengue.",
+      "Transfusi PRC tidak diindikasikan tanpa perdarahan aktif signifikan atau penurunan Hb bermakna."
+    ]
+  },
+  {
+    "id": 36,
+    "topic": "malaria",
+    "vignette": "Wanita 23 tahun, hamil 20 minggu datang ke praktek dokter, ingin konsultasi. Pasien ingin pergi ke Pulau Flores bersama suaminya selama 2 bulan. Pasien takut mendengar disana merupakan daerah endemis malaria. Pemeriksaan tanda vital dalam batas normal. Profilaksis yang dapat diberikan pada wanita tersebut ialah:",
+    "options": [
+      "Klorokuin 5 mg/kgbb setiap minggu",
+      "Doksisiklin 100 mg/hari",
+      "Meflokuin 3.5-4 mg/kgbb setiap minggu",
+      "Proguanil 3 mg/kgbb setiap hari",
+      "Kina + klindamisin selama 7 hari"
+    ],
+    "answer": 0,
+    "key": "Profilaksis malaria pada ibu hamil yang bepergian ke daerah endemis diberikan klorokuin 5 mg/kgBB setiap minggu karena relatif aman pada kehamilan dibandingkan doksisiklin atau regimen lain.",
+    "why": [
+      "Benar. Klorokuin 5 mg/kgBB per minggu adalah profilaksis yang relatif aman pada kehamilan.",
+      "Doksisiklin dikontraindikasikan pada kehamilan karena efek pada gigi dan tulang janin.",
+      "Meflokuin dapat dipertimbangkan namun bukan pilihan utama dibanding klorokuin pada area yang masih sensitif klorokuin.",
+      "Proguanil biasanya dikombinasikan dengan klorokuin, bukan diberikan tunggal sebagai profilaksis utama.",
+      "Kina + klindamisin adalah regimen terapi, bukan profilaksis."
+    ]
+  },
+  {
+    "id": 37,
+    "topic": "dbd",
+    "vignette": "Anak usia 5 tahun dirawat karena DHF dengan tanda kebocoran plasma. Pasien mendapatkan terapi cairan intravena. Pada hari ketiga perawatan, pasien mengeluh sesak napas. Pemeriksaan rontgen didapatkan efusi pleura bilateral. Hematokrit pasien menurun dibanding sebelumnya dengan tanda hemodinamika stabil. Apakah yang menyebabkan keluhan kasus diatas:",
+    "options": [
+      "Replikasi virus dengue di jaringan pleura yang menyebabkan infllamasi dan pembentukan eksudat",
+      "Trombositopenia berat menyebabkan perdarahan spontan ke rongga pleura",
+      "Aktivasi sistem koagulasi oleh virus dengue yang menyebabkan destruksi alveolus",
+      "Infeksi bakteri sekunder pada paru",
+      "Pemberian cairan IV yang agresif saat fase reabsorpsi menyebabkan overload cairan intravascular"
+    ],
+    "answer": 4,
+    "key": "Efusi pleura yang timbul pada fase reabsorpsi (hari ke-3 perawatan) dengan hematokrit menurun dan hemodinamik stabil menandakan kelebihan cairan akibat pemberian IV yang tetap agresif saat cairan ekstravaskular mulai kembali ke intravaskular.",
+    "why": [
+      "Replikasi virus di jaringan pleura bukan mekanisme efusi pleura pada dengue.",
+      "Trombositopenia berat menyebabkan perdarahan, bukan efusi pleura akibat overload cairan.",
+      "Dengue tidak menimbulkan destruksi alveolus melalui koagulasi seperti ini.",
+      "Tidak ada indikasi infeksi bakteri sekunder pada skenario ini.",
+      "Benar. Pemberian cairan IV berlebihan saat fase reabsorpsi menyebabkan overload cairan dan efusi pleura."
+    ]
+  },
+  {
+    "id": 38,
+    "topic": "malaria",
+    "vignette": "Laki-laki 33 tahun datang ke praktek dokter dengan keluhan telinga berdenging sejak 1 minggu, riwayat keluar sekret dan nyeri disangkal. Sebelumnya pasien menjalani pengobatan malaria. Pemeriksaan tanda vital dalam batas normal. Obat malaria yang dapat menyebabkan keluhan pasien adalah:",
+    "options": [
+      "Doksisiklin",
+      "Klorokuin",
+      "Quinine",
+      "Meflokuin",
+      "Primakuin"
+    ],
+    "answer": 2,
+    "key": "Tinitus setelah pengobatan malaria merupakan efek samping khas kina (quinine) yang bersifat ototoksik, dikenal sebagai sindrom cinchonism.",
+    "why": [
+      "Doksisiklin tidak khas menyebabkan tinitus.",
+      "Klorokuin dapat menyebabkan gangguan penglihatan pada penggunaan jangka panjang, bukan tinitus akut khas.",
+      "Benar. Kina menyebabkan sindrom cinchonism dengan gejala tinitus, sakit kepala, dan gangguan penglihatan.",
+      "Meflokuin lebih dikenal menyebabkan efek neuropsikiatri, bukan tinitus khas.",
+      "Primakuin dikenal menyebabkan hemolisis pada defisiensi G6PD, bukan tinitus."
+    ]
+  },
+  {
+    "id": 39,
+    "topic": "schistosomiasis",
+    "vignette": "Laki-laki 35 tahun datang ke puskesmas dengan keluhan nyeri perut disertai dengan BAB cair sejak 5 harian ini. Sudah minum obat tetapi belum juga membaik. Pasien sempat merasakan gatal di kedua kaki, keluhan dirasakan setelah bermain air di sebuah danau di daerah Sulawesi. Pemeriksaan fisik TD 120/60, HR 90, RR 20. Pemeriksaan feses tampak gambaran berikut. Stadium infektif pada kasus diatas adalah:",
+    "options": [
+      "Schistosoma hematobium",
+      "Schistosoma mansoni",
+      "Telur cacing",
+      "Serkaria",
+      "Metaserkaria"
+    ],
+    "answer": 3,
+    "key": "Schistosomiasis (danau di Sulawesi, gatal kaki setelah kontak air) tertular melalui serkaria yang dilepaskan siput air tawar dan menembus kulit sebagai stadium infektif bagi manusia.",
+    "why": [
+      "Schistosoma hematobium adalah nama spesies, bukan stadium infektif.",
+      "Schistosoma mansoni juga nama spesies, bukan stadium infektif.",
+      "Telur cacing adalah stadium yang dikeluarkan tubuh manusia, bukan stadium infektif bagi manusia.",
+      "Benar. Serkaria adalah stadium infektif Schistosoma yang menembus kulit manusia.",
+      "Metaserkaria adalah stadium infektif trematoda lain seperti Fasciolopsis, bukan Schistosoma."
+    ]
+  },
+  {
+    "id": 40,
+    "topic": "tifoid",
+    "vignette": "Wanita 20 tahun datang ke praktek dokter dengan keluhan demam sejak 1 minggu yang lalu, Keluhan juga disertai mual, dan konstipasi. Setelah dilakukan pemeriksaan, pasien didiagnosa menderita demam tifoid. Maka diet yang harus diberikan pada pasien:",
+    "options": [
+      "Tinggi kalori, rendah serat",
+      "Rendah kalori, rendah serat",
+      "Rendah protein, tinggi serat",
+      "Rendah kalori, tinggi serat",
+      "Tinggi kalori, rendah protein"
+    ],
+    "answer": 0,
+    "key": "Diet pada demam tifoid dianjurkan tinggi kalori untuk pemulihan energi dan rendah serat untuk mengurangi trauma mekanik pada usus yang mengalami inflamasi/ulserasi Peyer's patches.",
+    "why": [
+      "Benar. Diet tifoid adalah tinggi kalori untuk pemulihan dan rendah serat untuk mengurangi trauma mekanik usus.",
+      "Rendah kalori tidak memenuhi kebutuhan energi pemulihan pasien tifoid.",
+      "Rendah protein tidak sesuai karena protein tetap dibutuhkan untuk penyembuhan jaringan.",
+      "Rendah kalori tidak tepat dan tinggi serat berisiko trauma mekanik pada usus yang mengalami ulserasi.",
+      "Rendah protein tidak sesuai karena protein dibutuhkan untuk penyembuhan jaringan."
+    ]
+  },
+  {
+    "id": 41,
+    "topic": "dbd",
+    "vignette": "Anak 12 tahun dibawa keluarganya ke IGD RS dengan keluhan demam tinggi terus menerus sejak 2 hari yang lalu. Pasien juga mengeluh nyeri kepala, nyeri otot, dan nyeri ulu hati. Pada pemeriksaan klinis didapatkan suhu 39,4 oC, hepatomegali, ptechiae dan uji torniquet (+). Pemeriksaan serologi NS1 antigen (+). Apakah pemeriksaan laboratorium yang harus dievaluasi pada pasien tersebut:",
+    "options": [
+      "Hitung limfosit dan Hb",
+      "Hb dan hematokrit",
+      "Trombosit dan hematokrit",
+      "Protein plasma dan hematokrit",
+      "Hb dan trombosit"
+    ],
+    "answer": 2,
+    "key": "Pemantauan pasien DBD (NS1 positif, tanda kebocoran plasma) difokuskan pada trombosit dan hematokrit untuk mendeteksi progresi kebocoran plasma dan risiko syok secara dini.",
+    "why": [
+      "Hitung limfosit dan Hb bukan parameter pemantauan utama progresivitas DBD.",
+      "Hb dan hematokrit penting namun trombosit juga wajib dipantau bersamaan untuk menilai fase kritis.",
+      "Benar. Trombosit dan hematokrit adalah parameter utama pemantauan fase kritis DBD.",
+      "Protein plasma bukan parameter rutin pemantauan DBD di fasilitas primer.",
+      "Hb dan trombosit penting namun hematokrit lebih krusial untuk menilai hemokonsentrasi/kebocoran plasma dibanding Hb saja."
+    ]
+  },
+  {
+    "id": 42,
+    "topic": "leptospirosis",
+    "vignette": "Laki-laki 30 tahun datang ke Klinik Dokter dengan keluhan demam sejak 3 hari, keluhan juga disertai BAK sedikit dan bewarna kecoklatan. Pemeriksaan fisik: TD 110/80 temp 39 C, sklera ikterik, nyeri m.gastrocnemius dextra (+). Hasil laboratorium: leukositosis, hiperbilirubin, peningkatan creatinine kinase. Etiologi dari kasus diatas ialah:",
+    "options": [
+      "M.leprae",
+      "L. interorgans",
+      "E. coli",
+      "S. thypi",
+      "L. pneumophilia"
+    ],
+    "answer": 1,
+    "key": "Demam dengan oliguria, urin gelap, ikterus, nyeri otot betis, leukositosis, hiperbilirubin, dan peningkatan creatinine kinase khas leptospirosis berat yang disebabkan Leptospira interrogans.",
+    "why": [
+      "Mycobacterium leprae menyebabkan lepra, tidak sesuai gambaran klinis akut ini.",
+      "Benar. Leptospira interrogans adalah penyebab leptospirosis dengan gambaran klinis ini.",
+      "E. coli tidak khas menimbulkan nyeri m.gastrocnemius dan pola ikterik-renal seperti ini.",
+      "Salmonella typhi tidak menimbulkan nyeri otot betis khas dan peningkatan creatinine kinase.",
+      "Legionella pneumophila menimbulkan pneumonia atipikal, bukan gambaran klinis ini."
+    ]
+  },
+  {
+    "id": 43,
+    "topic": "malaria",
+    "vignette": "Wanita 35 tahun dengan keluhan demam naik turun, berkeringat dingin, menggigil dan BAK warna hitam. Pasien memiliki riwayat pergi ke Papua 1 bulan yang lalu. Pemfis: TD 110/70 temp 39 C, nadi 100, konjungtiva anemis, sklera ikterik, schuffner 2. Hasil lab: Hb 7 mg/dL Hasil pemeriksaan darah tepi: banana shape gametosit dan schuffner dot. Terapi yang dapat diberikan adalah:",
+    "options": [
+      "Azitromisin",
+      "Penisilin",
+      "DHP + primakuin oral",
+      "Kina + doksisiklin + primakuin oral",
+      "Artesunat IV"
+    ],
+    "answer": 2,
+    "key": "Malaria dengan riwayat ke Papua serta gambaran banana shape gametosit dan schuffner dot mengarah pada infeksi P. vivax; pada kasus ini pasien masih dapat menerima obat oral sehingga diberikan ACT (DHP) dikombinasikan primakuin oral sesuai pedoman nasional.",
+    "why": [
+      "Azitromisin bukan terapi definitif lini pertama malaria.",
+      "Penisilin tidak memiliki aktivitas antimalaria.",
+      "Benar. DHP dikombinasikan primakuin oral adalah terapi definitif sesuai gambaran schuffner dot (P. vivax) pada pasien yang masih dapat menerima obat oral.",
+      "Kina + doksisiklin + primakuin oral adalah regimen alternatif, bukan lini pertama bila ACT masih efektif.",
+      "Artesunat IV diprioritaskan bila terdapat tanda malaria berat seperti penurunan kesadaran/tidak dapat menerima obat oral, yang tidak ditekankan pada kasus ini."
+    ]
+  },
+  {
+    "id": 44,
+    "topic": "taeniasis",
+    "vignette": "Laki laki usia 30 tahun datang dengan keluhan keluar potongan cacing bewarna putih kekuningan yang dapat bergerak gerak saat ditaruh di lantai. Ukuran potongan cacing 2,5 x 0,5 cm dari pemeriksaan dibawah mikroskop tampak adanya segmentasi uterus berjumlah 15 buah dan berisi telur. Organisme penyebab keluhan diatas ialah:",
+    "options": [
+      "Taenia saginata",
+      "Ascariasis lumbricoide",
+      "Taenia solium",
+      "Cysticercosis",
+      "Ancilostoma duodenale"
+    ],
+    "answer": 0,
+    "key": "Proglotid gravid berwarna putih kekuningan yang aktif bergerak dengan cabang uterus yang banyak (>12) khas Taenia saginata, berbeda dari Taenia solium yang memiliki cabang uterus lebih sedikit.",
+    "why": [
+      "Benar. Proglotid dengan cabang uterus banyak (>12) yang aktif bergerak khas Taenia saginata.",
+      "Ascaris lumbricoides tidak menghasilkan proglotid, melainkan cacing gilig utuh.",
+      "Taenia solium memiliki cabang uterus lebih sedikit (7-13) dibanding gambaran pada kasus ini.",
+      "Sistiserkosis adalah bentuk larva Taenia solium yang menginfeksi jaringan, bukan proglotid pada feses.",
+      "Ancylostoma duodenale tidak menghasilkan proglotid, ditemukan sebagai telur pada feses."
+    ]
+  },
+  {
+    "id": 45,
+    "topic": "tifoid",
+    "vignette": "Anak 12 tahun dibawa ibunya ke Puskesmas dengan keluhan badan demam sejak 16 hari. Keluhan demam diraskaan terutama malam hari, keluhan disertai nyeri kepala, batuk dan mual. Pemeriksaan fisik didapatkan bradikardi relative, temp 37.9 C. Apakah tanda patognomonis lain yang mungkin ditemukan pada kasus diatas adalah:",
+    "options": [
+      "Takikardi",
+      "Hepatosplenomegali",
+      "Koplik spot",
+      "Ptekiae",
+      "Rose spot"
+    ],
+    "answer": 4,
+    "key": "Tanda patognomonis lain pada demam tifoid selain bradikardia relatif adalah rose spot, yaitu makula eritematosa kecil di dinding perut akibat emboli septik kecil pada kapiler kulit.",
+    "why": [
+      "Takikardia justru berlawanan dengan gambaran khas bradikardia relatif pada tifoid.",
+      "Hepatosplenomegali dapat ditemukan namun bukan tanda patognomonis spesifik seperti rose spot.",
+      "Koplik spot adalah tanda patognomonis campak, bukan tifoid.",
+      "Petekie lebih khas pada demam berdarah dengue, bukan tifoid.",
+      "Benar. Rose spot adalah tanda patognomonis demam tifoid."
+    ]
+  },
+  {
+    "id": 46,
+    "topic": "sth",
+    "vignette": "Anak berusia 2 tahun BB 12 kg dibawa ibunya ke praktek dokter dengan keluhan perut kembung, mual dan muntah. Hasil pemeriksaan feses ditemukan gambaran telur decorticated, berdinding tebal. Tatalaksana yang tepat ialah",
+    "options": [
+      "Albendazole 100 mg dosis tunggal",
+      "Albendazole 200 mg dosis tunggal",
+      "Pirantel pamoat 125 mg dosis tunggal",
+      "Pirantel pamoat 100 mg dosis tunggal",
+      "Pirantel pamoat 200 mg dosis tunggal"
+    ],
+    "answer": 3,
+    "key": "Anak dengan telur Ascaris (decorticated, berdinding tebal) diterapi pirantel pamoat 10 mg/kgBB dosis tunggal; untuk berat badan 12 kg maka dosis yang sesuai sekitar 100 mg.",
+    "why": [
+      "Albendazol 100 mg adalah dosis untuk anak di bawah 2 tahun pada beberapa pedoman, namun pilihan yang diminta pada kasus ini adalah pirantel pamoat.",
+      "Albendazol 200 mg adalah dosis untuk anak lebih besar/dewasa, bukan yang diminta pada kasus ini.",
+      "Dosis pirantel pamoat 125 mg sedikit melebihi perhitungan 10 mg/kgBB untuk berat 12 kg.",
+      "Benar. Dosis pirantel pamoat 10 mg/kgBB untuk anak 12 kg adalah sekitar 100 mg dosis tunggal.",
+      "Dosis 200 mg pirantel pamoat berlebihan untuk berat badan anak 12 kg."
+    ]
+  },
+  {
+    "id": 47,
+    "topic": "dbd",
+    "vignette": "Laki-laki 25 tahun dibawa ke IGD RS dengan keluhan lemas. Pasien sebelumnya mengalami demam sejak 5 hari, keluhan disertai nyeri kepala, nyeri otot dan nyeri ulu hati. Pemfis: TD tidak terukur, nadi teraba lemah, RR 30, Temp 37C. Hasil lab: Hb 15 g/dl hematokrit 55%, leukosit 3.400, trombosit 65.000. Temuan lain yang mungkin ditemukan ialah:",
+    "options": [
+      "Limfadenopati",
+      "Turgor kembali lambat",
+      "Hepatosplenomegaly",
+      "Peristaltic meningkat",
+      "CRT > 2 detik"
+    ],
+    "answer": 4,
+    "key": "Pasien dengan tanda syok dengue (tekanan darah tidak terukur, nadi lemah, hematokrit meningkat, trombositopenia) menunjukkan tanda perfusi buruk seperti capillary refill time (CRT) memanjang lebih dari 2 detik.",
+    "why": [
+      "Limfadenopati tidak khas pada syok dengue akut.",
+      "Turgor kembali lambat lebih menggambarkan dehidrasi akibat kehilangan cairan bebas, bukan tanda utama syok dengue akibat kebocoran plasma.",
+      "Hepatosplenomegali dapat ditemukan pada dengue namun bukan tanda kegawatan syok yang paling relevan di sini.",
+      "Peristaltik meningkat tidak khas pada syok dengue.",
+      "Benar. CRT memanjang lebih dari 2 detik adalah tanda perfusi buruk pada syok dengue."
+    ]
+  },
+  {
+    "id": 48,
+    "topic": "filariasis",
+    "vignette": "Laki-laki 35 tahun datang ke praktek dokter dengan keluhan skrotum dan kaki membengkak. Selain itu, didapatkan juga urin warna seperti putih susu. Di tempat tinggal pasien, banyak kasus serupa terjadi. Pemeriksaan tanda vital dalam batas normal. Fase infeksius dari keluhan pasien adalah:",
+    "options": [
+      "Larva stadium 3",
+      "Cacing dewasa",
+      "Mikrofilaria",
+      "Culex",
+      "Larva rhabditiform"
+    ],
+    "answer": 0,
+    "key": "Filariasis limfatik (edema skrotum dan tungkai, kencing seperti susu) ditularkan oleh nyamuk yang menyuntikkan larva infektif stadium 3 (L3) ke dalam kulit manusia.",
+    "why": [
+      "Benar. Larva stadium 3 (L3) adalah bentuk infektif filariasis yang ditularkan nyamuk ke manusia.",
+      "Cacing dewasa berkembang di dalam tubuh manusia setelah infeksi, bukan bentuk yang ditularkan nyamuk.",
+      "Mikrofilaria adalah bentuk yang beredar di darah manusia dan dihisap nyamuk, bukan bentuk infektif bagi manusia.",
+      "Culex adalah nama vektor nyamuk, bukan stadium parasit.",
+      "Larva rhabditiform adalah stadium STH, bukan filariasis."
+    ]
+  },
+  {
+    "id": 49,
+    "topic": "oxyuris",
+    "vignette": "Anak 8 tahun dibawa orangtuanya ke praktek dokter dengan keluhan malas makan, berat badan anak tidak naik. Anak sempat mengalami batuk lalu mengeluarkan cacing dengan panjang 7 cm berwarna putih seperti berikut. Diagnosis yang tepat adalah:",
+    "options": [
+      "Ancylostomiasis",
+      "Clonorchis sinensis",
+      "Taeniasis",
+      "Sindrom loeffer",
+      "Infeksi oxyuris vermicularis"
+    ],
+    "answer": 4,
+    "key": "Anak dengan gangguan nafsu makan, berat badan tidak naik, dan riwayat mengeluarkan cacing kecil berwarna putih pada kasus ini ditandai sebagai infeksi Oxyuris vermicularis.",
+    "why": [
+      "Ancylostomiasis (cacing tambang) tidak keluar sebagai cacing utuh yang tampak dari mulut.",
+      "Clonorchis sinensis hidup di saluran empedu, bukan cacing yang dibatukkan dari mulut.",
+      "Taeniasis melibatkan proglotid yang keluar dari anus, bukan cacing yang dibatukkan dari mulut.",
+      "Sindrom Loeffler adalah reaksi pneumonitis eosinofilik akibat migrasi larva, tanpa disertai keluarnya cacing utuh dari mulut.",
+      "Benar. Pada kasus ini gambaran cacing yang keluar sesuai dengan infeksi Oxyuris vermicularis."
+    ]
+  },
+  {
+    "id": 50,
+    "topic": "dbd",
+    "vignette": "Laki-laki 15 tahun dibawa orangtuanya ke puskesmas dengan keluhan demam tinggi sejak 3 hari, keluhan disertai mual, nyeri otot. Demam dirasakan terus menerus. Pemeriksaan fisik didapatkan sens: delirium, TD 80/palpasi, nadi 120, RR 30. Hasil lab: Hb 17, Ht 55%, leukosit 2.500, trombosit 20.000. Tipe demam yang terjadi:",
+    "options": [
+      "Demam siklik",
+      "Demam bifasik",
+      "Demam continue",
+      "Demam remitten",
+      "Demam intermitten"
+    ],
+    "answer": 1,
+    "key": "Infeksi dengue klasik dikenal dengan pola demam bifasik (saddleback fever), yaitu demam tinggi yang diikuti penurunan sesaat sebelum naik kembali.",
+    "why": [
+      "Demam siklik lebih menggambarkan pola paroksismal berkala seperti malaria, bukan dengue.",
+      "Benar. Pola demam bifasik (saddleback) khas pada infeksi dengue.",
+      "Demam kontinu khas pada tifoid, bukan dengue.",
+      "Demam remiten dapat ditemukan pada berbagai infeksi namun bukan istilah khas untuk pola demam dengue klasik.",
+      "Demam intermiten khas pada malaria, bukan dengue."
+    ]
+  },
+  {
+    "id": 51,
+    "topic": "malaria",
+    "vignette": "Laki-laki 40 tahun dengan keluhan demam, pasien sehari-hari bekerja di Papua sejak 2 tahun. Beberapa hari kemudian pasien koma, dan dirawat di RS dengan diagnose malaria komatus. Hasil pemeriksaan giemsa ditemukan gambaran accole (+). Tatalaksana yang dapat diberikan:",
+    "options": [
+      "Artesunat IV selama 3 hari",
+      "Artesunat IM selama 3 hari",
+      "Artesunat dan amodiakuin selama 3 hari",
+      "ACT 3 hari dan primakuin single dose",
+      "DHP 3 hari dan primakuin 14 hari"
+    ],
+    "answer": 0,
+    "key": "Malaria serebral (koma, accole positif) merupakan malaria berat yang memerlukan terapi parenteral segera, yaitu artesunat intravena sebagai lini pertama malaria berat.",
+    "why": [
+      "Benar. Artesunat IV adalah terapi lini pertama malaria berat termasuk malaria serebral.",
+      "Artesunat IM dapat digunakan bila IV tidak tersedia, namun IV adalah rute pilihan utama.",
+      "Amodiakuin dikombinasikan pada terapi lanjutan oral, bukan terapi parenteral awal malaria berat.",
+      "ACT oral tidak sesuai untuk pasien koma yang tidak dapat menerima obat oral.",
+      "DHP oral tidak sesuai untuk pasien koma yang membutuhkan terapi parenteral segera."
+    ]
+  },
+  {
+    "id": 52,
+    "topic": "sth",
+    "vignette": "Anak 11 tahun dengan keluhan diare yang disertai lendir dan darah, keluhan disertai nyeri perut, mual muntah dan nafsu makan menurun. Pemeriksaan fisik: konjungtiva anemis dan perut sedikit distensi. Hasil pemeriksaan feses ditemukan telur yang lonjong dan ujungnya seperti tutup botol. Etiologi dari keluhan diatas adalah:",
+    "options": [
+      "Ascariasis lumbricoides",
+      "Necator americanus",
+      "Oxyuris vermicularis",
+      "Taenia saginata",
+      "Trichuris trichiura"
+    ],
+    "answer": 4,
+    "key": "Telur lonjong dengan ujung menyerupai tutup botol (bipolar plug) pada anak dengan diare berlendir dan darah khas ditemukan pada infeksi Trichuris trichiura.",
+    "why": [
+      "Ascaris lumbricoides memiliki telur oval berdinding tebal bergerigi, bukan berbentuk tutup botol.",
+      "Necator americanus memiliki telur berdinding tipis lonjong tanpa sumbat kutub, bukan tutup botol.",
+      "Oxyuris vermicularis memiliki telur asimetris pipih sebelah, bukan tutup botol.",
+      "Taenia saginata memiliki telur bulat dengan embriofor radial, bukan tutup botol lonjong.",
+      "Benar. Telur lonjong dengan ujung seperti tutup botol adalah ciri khas Trichuris trichiura."
+    ]
+  },
+  {
+    "id": 53,
+    "topic": "malaria",
+    "vignette": "Laki-laki 20 tahun datang ke praktek dokter dengan keluhan demam sejak 3 hari yang lalu. Keluhan demam disertai menggigil dan berkeringat banyak. Pasien baru saja pulang dari Kalimantan. Pemeriksaan darah tepi: ditemukan objek berbentuk pisang. Manakah stadium infeksi yang paling tepat:",
+    "options": [
+      "P. falciparum stadium trofozoit muda",
+      "P. falciparum stadium trofozoit matang",
+      "P. falciparum stadium trofozoit",
+      "P. falciparum stadium gametosit",
+      "P. falciparum stadium hipnozoit"
+    ],
+    "answer": 3,
+    "key": "Objek berbentuk pisang pada apusan darah tepi pasien malaria falciparum menandakan stadium gametosit, bentuk seksual parasit yang khas berbentuk bulan sabit/pisang.",
+    "why": [
+      "Trofozoit muda berbentuk cincin, bukan pisang.",
+      "Trofozoit matang berbentuk lebih padat dan ireguler, bukan pisang.",
+      "Trofozoit secara umum tidak berbentuk pisang khas.",
+      "Benar. Gametosit P. falciparum berbentuk pisang/bulan sabit khas.",
+      "Hipnozoit adalah stadium dorman di hati pada P. vivax/ovale, tidak ditemukan pada apusan darah tepi."
+    ]
+  },
+  {
+    "id": 54,
+    "topic": "dbd",
+    "vignette": "Anak 7 tahun dibawa ibunya ke poliklinik RS dengan keluhan demam sejak 3 hari. Keluhan disertai nyeri kepala, mual, muntah. Riw. mimisan (+). Teman sekolah pasien ada yang mengalami hal serupa. Pemeriksaan TD 100/70 mmhg, Nadi 120 x/meni, 2.24 x/menit, T 39, akral dingin dan lembab. Pemeriksaan penunjang yang dibutuhkan:",
+    "options": [
+      "Hb, Ht, NS1, trombosit",
+      "Leukosit, Hb, hitung jenis",
+      "IgM dan IgG anti dengue",
+      "Tubex dan darah rutin",
+      "Elektrolit dan darah rutin"
+    ],
+    "answer": 0,
+    "key": "Anak dengan demam disertai tanda bahaya (mimisan, akral dingin, takikardi) diduga DBD memerlukan pemeriksaan Hb, Ht, NS1 antigen, dan trombosit untuk konfirmasi diagnosis dan menilai derajat kebocoran plasma.",
+    "why": [
+      "Benar. Hb, Ht, NS1, dan trombosit adalah pemeriksaan penunjang utama kecurigaan DBD.",
+      "Hitung jenis leukosit kurang spesifik dibanding kombinasi NS1 dan trombosit untuk DBD.",
+      "IgM dan IgG anti-dengue lebih bermanfaat pada fase lanjut (>5 hari), bukan fase akut awal seperti kasus ini.",
+      "Tubex adalah pemeriksaan untuk tifoid, bukan DBD.",
+      "Elektrolit penting pada penatalaksanaan namun bukan pemeriksaan utama penegakan diagnosis awal DBD."
+    ]
+  },
+  {
+    "id": 55,
+    "topic": "malaria",
+    "vignette": "Suatu keluarga ingin pergi liburan ke Papua selama 1 minggu. Keluarga terdiri dari 2 orang dewasa dan 1 orang anak berumur 5 tahun. keluarga berkonsultasi ke dokter, untuk diberikan obat mencegah infeksi malaria. Apakah terapi profilaksis yang diberikan pada anak:",
+    "options": [
+      "Mefloquin 4 mg/kgbb/minggu",
+      "Doksisiklin 2 mg/kgbb",
+      "Atovaquone 0,5 mg/kgbb",
+      "Kina 10 mg/kgbb/kal",
+      "Klorokuin 500 mg/hari"
+    ],
+    "answer": 4,
+    "key": "Profilaksis malaria pada anak yang bepergian ke daerah endemis seperti Papua tetap menggunakan klorokuin sebagai basis regimen profilaksis, dengan dosis disesuaikan terhadap berat badan anak.",
+    "why": [
+      "Mefloquin bukan pilihan utama profilaksis anak dibanding klorokuin pada regimen ini.",
+      "Doksisiklin dikontraindikasikan pada anak di bawah 8 tahun karena efek pada gigi dan tulang.",
+      "Atovaquone-proguanil dapat digunakan pada anak namun bukan pilihan yang dimaksud pada opsi ini.",
+      "Kina adalah terapi, bukan regimen profilaksis rutin.",
+      "Benar. Klorokuin tetap menjadi pilihan profilaksis pada anak di daerah endemis, dengan penyesuaian dosis sesuai berat badan."
+    ]
+  },
+  {
+    "id": 56,
+    "topic": "malaria",
+    "vignette": "Wanita 22 tahun dengan keluhan demam, demam dirasakan berselang 3 hari, nyeri kepala (+), berkeringat. Riwayat berpergian ke Papua. Diperiksa dengan rapid test terdiagnosa malaria. Plasmodium penyebab kasus diatas:",
+    "options": [
+      "Plasmodium falciparum",
+      "Plasmodium vivax",
+      "Plasmodium ovale",
+      "Plasmodium malariae",
+      "Plasmodium Tropicana"
+    ],
+    "answer": 3,
+    "key": "Demam berselang setiap 3 hari (pola kuartana, siklus 72 jam) pada pasien dengan riwayat ke Papua yang terkonfirmasi rapid test malaria menandakan infeksi Plasmodium malariae, khas dengan pola demam intermiten kuartan.",
+    "why": [
+      "Plasmodium falciparum umumnya menimbulkan demam ireguler/kontinu, bukan pola kuartan berselang 3 hari.",
+      "Plasmodium vivax menimbulkan pola tertiana (demam berselang 1 hari/48 jam), bukan kuartan.",
+      "Plasmodium ovale juga menimbulkan pola tertiana, bukan kuartan.",
+      "Benar. Plasmodium malariae menimbulkan pola demam kuartan dengan interval berselang 3 hari (siklus 72 jam).",
+      "\"Plasmodium tropicana\" bukan spesies Plasmodium yang dikenal secara ilmiah."
+    ]
+  }
+]
