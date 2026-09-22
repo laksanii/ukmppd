@@ -90,13 +90,23 @@ baris.forEach((brs, idx) => {
   // judul bagian: "# HOME WORK NEUROLOGI" -> diabaikan
   if (/^#{1,6}\s+[^\d]/.test(b)) return;
 
-  // awal soal: "1. vignette", "## 1. vignette", "1. [kepala] vignette"
-  const mSoal = b.match(/^#{0,6}\s*(\d+)\.\s+(?:\[([a-zA-Z0-9_-]+)\]\s*)?(.*)$/);
+  // awal soal: "1. vignette", "## 1. vignette", "1. [kepala] vignette",
+  // "1. [Gambar] vignette" (soal ada asset gambar, ditandai sebagai placeholder
+  // sampai fitur gambar sungguhan dibuat)
+  const mSoal = b.match(/^#{0,6}\s*(\d+)\.\s+(.*)$/);
   if (mSoal && !/^[a-e][.)]/i.test(b)) {
     simpan();
+    let sisa = mSoal[2];
+    let gambar = false, kodeTopik = null;
+    let mTag;
+    while ((mTag = sisa.match(/^\[([a-zA-Z0-9_-]+)\]\s*/))) {
+      if (/^gambar$/i.test(mTag[1])) gambar = true;
+      else kodeTopik = mTag[1];
+      sisa = sisa.slice(mTag[0].length);
+    }
     q = {
-      no: +mSoal[1], baris: no, topic: mSoal[2] || topikDefault,
-      vignette: mSoal[3] ? [mSoal[3]] : [], options: [], answer: null,
+      no: +mSoal[1], baris: no, topic: kodeTopik || topikDefault,
+      vignette: sisa ? [gambar ? `[Gambar] ${sisa}` : sisa] : [], options: [], answer: null,
       key: [], why: new Array(5).fill(null)
     };
     mode = "vignette";

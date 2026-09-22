@@ -10,12 +10,12 @@
       "Trichuris trichura",
       "Taenia saginata"
     ],
-    "answer": 2,
-    "key": "Riwayat bermain tanpa alas kaki, keluhan gastrointestinal kronik, dan erupsi kulit kaki (ground itch) khas infeksi cacing tambang; Necator americanus adalah penyebab hookworm tersering di Indonesia.",
+    "answer": 1,
+    "key": "Riwayat bermain tanpa alas kaki dengan ground itch dan keluhan gastrointestinal kronik khas infeksi cacing tambang; gambaran pada pemeriksaan feses pada kasus ini sesuai dengan Ancylostoma duodenale sebagai etiologi.",
     "why": [
       "Ascaris lumbricoides tertular lewat telur infektif yang tertelan, bukan menembus kulit.",
-      "Ancylostoma duodenale juga cacing tambang tetapi lebih dominan di Timur Tengah/Mediterania.",
-      "Benar. Necator americanus menembus kulit kaki menimbulkan ground itch lalu bermigrasi menyebabkan keluhan gastrointestinal.",
+      "Benar. Ancylostoma duodenale menembus kulit kaki (ground itch) dan menimbulkan keluhan gastrointestinal kronik seperti pada kasus ini.",
+      "Necator americanus juga cacing tambang dengan cara penularan serupa, namun gambaran pada pemeriksaan yang ditemukan lebih sesuai dengan Ancylostoma duodenale.",
       "Trichuris trichiura tertular lewat telur tertelan, tidak menembus kulit.",
       "Taenia saginata tertular lewat daging sapi mentah, tidak menembus kulit kaki."
     ]
@@ -346,14 +346,14 @@
       "Pemberian transfuse trombosit concentrate",
       "Pemberian NaCl 0,9% 10 ml/kgbb secepatnya"
     ],
-    "answer": 0,
-    "key": "Pasien DHF dengan syok yang tidak membaik meski sudah resusitasi awal memerlukan lanjutan bolus cepat kristaloid 20 ml/kgBB sesuai tata laksana syok dengue.",
+    "answer": 2,
+    "key": "Syok dengue yang tidak membaik meski sudah diberi resusitasi cairan awal merupakan syok berkepanjangan (prolonged shock); tatalaksana selanjutnya adalah kombinasi kristaloid 15-20 ml/kgbb dan koloid 10-20 ml/kgbb dalam 1 jam.",
     "why": [
-      "Benar. Bila syok belum teratasi setelah resusitasi awal, lanjutkan bolus cepat kristaloid 20 ml/kgBB.",
-      "Regimen 10-20 ml/kgBB dalam 1 jam adalah tata laksana awal, bukan lanjutan bila masih syok.",
-      "Kombinasi koloid pada tahap ini dipakai bila syok berulang setelah bolus kristaloid gagal, bukan langkah pertama lanjutan.",
-      "Transfusi trombosit tidak rutin diberikan pada syok dengue tanpa perdarahan masif.",
-      "NaCl 0,9% dosis kecil tidak adekuat untuk syok yang belum teratasi."
+      "Bolus cepat RL 20 ml/kgbb sudah diberikan sebagai lini awal dan tidak berhasil, sehingga tidak diulang begitu saja tanpa kombinasi koloid.",
+      "Dosis ini adalah tahap awal resusitasi syok, bukan pilihan pada syok yang menetap setelah resusitasi awal.",
+      "Benar. Pada syok yang menetap setelah resusitasi awal, kombinasi kristaloid 15-20 ml/kgbb dan koloid 10-20 ml/kgbb dalam 1 jam adalah langkah berikutnya.",
+      "Transfusi trombosit tidak diindikasikan hanya berdasarkan trombositopenia tanpa perdarahan aktif bermakna.",
+      "NaCl 0,9% dosis kecil tidak adekuat untuk syok yang menetap."
     ]
   },
   {
@@ -430,14 +430,14 @@
       "Azitromisin 1 x 500 mg selama 5-7 hari",
       "Doksisiklin 2 x 100 mg selama 5-7 hari"
     ],
-    "answer": 4,
-    "key": "Leptospirosis dengan riwayat alergi betalaktam diterapi dengan doksisiklin 2x100 mg selama 5-7 hari sebagai alternatif.",
+    "answer": 3,
+    "key": "Leptospirosis berat dengan ikterik dan peningkatan transaminase menunjukkan keterlibatan hepar; pada pasien alergi betalaktam dengan gangguan fungsi hati, azitromisin dipilih dibanding doksisiklin yang berisiko hepatotoksik.",
     "why": [
-      "Penisilin G merupakan kontraindikasi karena pasien alergi betalaktam.",
-      "Amoksisilin juga golongan betalaktam sehingga kontraindikasi.",
-      "Ceftriaxone golongan betalaktam sehingga kontraindikasi pada pasien ini.",
-      "Azitromisin bukan lini utama terapi leptospirosis meski bisa jadi alternatif pada kondisi tertentu.",
-      "Benar. Doksisiklin 2x100 mg selama 5-7 hari adalah alternatif untuk leptospirosis pada pasien alergi betalaktam."
+      "Penisilin G merupakan betalaktam dan dikontraindikasikan pada pasien dengan riwayat alergi betalaktam.",
+      "Amoksisilin merupakan betalaktam dan dikontraindikasikan pada pasien dengan riwayat alergi betalaktam.",
+      "Ceftriaxone merupakan sefalosporin (golongan betalaktam) sehingga berisiko reaksi silang pada pasien alergi betalaktam.",
+      "Benar. Azitromisin merupakan alternatif non-betalaktam yang lebih aman diberikan pada leptospirosis dengan gangguan fungsi hati.",
+      "Doksisiklin berisiko hepatotoksik dan kurang ideal pada pasien dengan peningkatan transaminase yang mengindikasikan keterlibatan hepar."
     ]
   },
   {
@@ -472,14 +472,14 @@
       "Ciprofloksasin 2 x 500 mg selama 3 hari",
       "Kotrimokasazole 2 x 960 mg selama 14 hari"
     ],
-    "answer": 1,
-    "key": "Tifoid dengan Tubex test positif pada pasien alergi tiamfenikol (turunan kloramfenikol) diterapi dengan fluorokuinolon seperti ciprofloxacin.",
+    "answer": 4,
+    "key": "Pasien tifoid dengan alergi tiamfenikol (satu golongan dengan kloramfenikol) tidak dapat diberikan kloramfenikol; pilihan lini kedua dengan dosis dan durasi yang tepat adalah kotrimoksazol 2 x 960 mg selama 14 hari.",
     "why": [
-      "Amoksisilin bukan pilihan utama dan bukan alternatif spesifik untuk alergi tiamfenikol.",
-      "Benar. Ciprofloxacin 3x500 mg selama 7 hari adalah alternatif tifoid pada pasien alergi golongan kloramfenikol.",
-      "Kloramfenikol dihindari karena pasien alergi golongan ini (tiamfenikol).",
-      "Durasi 3 hari terlalu singkat untuk terapi tifoid dengan ciprofloxacin.",
-      "Kotrimoksazol bukan lini pertama dan durasi 14 hari tidak sesuai regimen standar."
+      "Amoksisilin dapat dipakai pada tifoid, namun durasi 10 hari pada pilihan ini kurang sesuai dengan regimen standar (umumnya 14 hari).",
+      "Ciprofloxacin merupakan alternatif yang tepat, namun frekuensi 3 kali sehari pada pilihan ini tidak sesuai regimen standar (seharusnya 2 kali sehari).",
+      "Kloramfenikol tidak dapat diberikan karena pasien memiliki riwayat alergi tiamfenikol yang merupakan golongan yang sama.",
+      "Ciprofloxacin dengan frekuensi yang tepat, namun durasi 3 hari terlalu singkat untuk terapi tifoid (seharusnya 10-14 hari).",
+      "Benar. Kotrimoksazol 2 x 960 mg selama 14 hari adalah alternatif lini kedua yang tepat pada tifoid dengan alergi kloramfenikol/tiamfenikol."
     ]
   },
   {
@@ -514,14 +514,14 @@
       "Pemeriksaan gram",
       "Kultur sumsum tulang"
     ],
-    "answer": 4,
-    "key": "Kultur sumsum tulang memiliki sensitivitas tertinggi untuk diagnosis definitif demam tifoid terutama bila sudah mendapat antibiotik sebelumnya.",
+    "answer": 2,
+    "key": "Pada demam tifoid minggu kedua, ekskresi kuman Salmonella typhi melalui feses meningkat sehingga kultur feses menjadi pemeriksaan penunjang yang tepat pada fase ini.",
     "why": [
-      "Kultur urin sensitivitasnya rendah untuk diagnosis tifoid.",
-      "Kultur darah baik namun sensitivitasnya lebih rendah dibanding kultur sumsum tulang terutama pada fase lanjut.",
-      "Kultur feses lebih berguna pada fase karier/lanjut, sensitivitas lebih rendah dari sumsum tulang.",
-      "Pemeriksaan gram tidak spesifik untuk Salmonella typhi.",
-      "Benar. Kultur sumsum tulang adalah baku emas dengan sensitivitas tertinggi untuk diagnosis definitif tifoid."
+      "Kultur urin lebih bermakna pada minggu ketiga infeksi, belum optimal pada kasus ini.",
+      "Kultur darah paling sensitif pada minggu pertama demam, sensitivitasnya menurun pada minggu kedua seperti kasus ini.",
+      "Benar. Pada minggu kedua demam tifoid, ekskresi kuman melalui feses meningkat sehingga kultur feses menjadi pemeriksaan yang tepat.",
+      "Pemeriksaan gram tidak spesifik untuk mendiagnosis Salmonella typhi.",
+      "Kultur sumsum tulang memang sensitif namun bersifat invasif dan bukan pilihan lini pertama dibanding kultur feses pada fase ini."
     ]
   },
   {
@@ -724,14 +724,14 @@
       "Koloid 1.000-2.000 cc evaluasi 20-30 menit",
       "Transfusi PRC 2 bag"
     ],
-    "answer": 1,
-    "key": "Anak DHF dengan kebocoran plasma bermakna berat 30 kg memerlukan kristaloid dosis awal syok sekitar 1.000-2.000 cc dievaluasi 20-30 menit.",
+    "answer": 0,
+    "key": "Pasien anak BB 30 kg dengan tanda syok dengue diberikan resusitasi awal kristaloid 10-20 ml/kgBB (setara 300-600 cc) dievaluasi dalam 20-30 menit sesuai berat badan.",
     "why": [
-      "300-600 cc terlalu kecil untuk syok pada anak berat 30 kg.",
-      "Benar. Kristaloid 1.000-2.000 cc dievaluasi 20-30 menit sesuai tata laksana syok dengue pada anak berat ini.",
-      "Koloid volume kecil tidak sesuai untuk resusitasi awal syok pada berat badan ini.",
-      "Koloid bukan cairan lini pertama pada resusitasi awal syok dengue.",
-      "Transfusi PRC diberikan bila ada perdarahan bermakna, bukan lini pertama syok akibat kebocoran plasma."
+      "Benar. Dosis kristaloid awal pada syok dengue adalah 10-20 ml/kgBB; untuk BB 30 kg setara 300-600 cc, dievaluasi 20-30 menit.",
+      "Volume 1.000-2.000 cc jauh melebihi dosis kristaloid awal yang dianjurkan untuk BB 30 kg dan berisiko overload cairan.",
+      "Koloid bukan cairan resusitasi lini pertama pada syok dengue awal, kristaloid lebih diutamakan.",
+      "Volume ini terlalu besar dan koloid bukan pilihan awal pada syok dengue.",
+      "Transfusi PRC diindikasikan bila ada perdarahan bermakna dengan penurunan Hb, bukan pada kondisi hemokonsentrasi seperti kasus ini."
     ]
   },
   {
@@ -745,14 +745,14 @@
       "Telur berduri",
       "Telur berbentuk tempayan"
     ],
-    "answer": 4,
-    "key": "Telur berbentuk tempayan (barrel) pada feses anak dengan erupsi kulit kaki dan riwayat bermain tanpa alas kaki menunjukkan infeksi Trichuris trichiura.",
+    "answer": 1,
+    "key": "Pada infeksi cacing tambang (Ancylostoma duodenale), bila sampel feses tidak segera diperiksa, telur akan menetas sehingga ditemukan larva rhabditiform pada pemeriksaan mikroskopis feses.",
     "why": [
-      "Proglotid adalah bagian cacing pita, bukan gambaran telur cacing ini.",
-      "Larva rhabditiform adalah stadium cacing tambang/Strongyloides, bukan telur berbentuk tempayan.",
-      "Telur radialis heksakan khas Taenia, bukan telur tempayan.",
-      "Telur berduri (lateral/terminal spine) khas Schistosoma, bukan bentuk tempayan.",
-      "Benar. Telur berbentuk tempayan dengan sumbat mukoid khas Trichuris trichiura."
+      "Proglotid adalah segmen tubuh cacing pita (Taenia), bukan gambaran pada infeksi cacing tambang.",
+      "Benar. Larva rhabditiform dapat ditemukan pada pemeriksaan feses cacing tambang, terutama bila sampel tidak segera diperiksa sehingga telur sempat menetas.",
+      "Telur radialis heksakan adalah ciri telur Taenia, bukan cacing tambang.",
+      "Telur berduri (lateral spine) adalah ciri telur Schistosoma, bukan cacing tambang.",
+      "Telur berbentuk tempayan (barrel shape) adalah ciri telur Trichuris trichiura, bukan cacing tambang."
     ]
   },
   {
@@ -766,14 +766,14 @@
       "Proguanil 3 mg/kgbb setiap hari",
       "Kina + klindamisin selama 7 hari"
     ],
-    "answer": 0,
-    "key": "Profilaksis malaria pada kehamilan yang bepergian ke daerah endemis adalah klorokuin karena relatif aman untuk janin, sedangkan doksisiklin dan meflokuin memiliki keterbatasan pada kehamilan.",
+    "answer": 2,
+    "key": "Wilayah NTT (Flores) merupakan daerah endemis malaria dengan resistensi klorokuin tinggi; profilaksis pilihan pada ibu hamil trimester 2-3 di daerah resisten klorokuin adalah meflokuin 3,5-4 mg/kgBB setiap minggu.",
     "why": [
-      "Benar. Klorokuin 5 mg/kgbb per minggu adalah profilaksis yang aman digunakan pada kehamilan.",
-      "Doksisiklin dikontraindikasikan pada kehamilan karena efek pada gigi dan tulang janin.",
-      "Meflokuin dapat dipertimbangkan namun bukan pilihan utama pertama pada kehamilan dibanding klorokuin di sini.",
-      "Proguanil biasanya dikombinasi dengan klorokuin, bukan digunakan tunggal sebagai pilihan utama di sini.",
-      "Kina + klindamisin adalah regimen terapi malaria, bukan profilaksis rutin."
+      "Klorokuin tidak direkomendasikan di wilayah dengan resistensi klorokuin tinggi seperti Indonesia bagian timur.",
+      "Doksisiklin dikontraindikasikan pada kehamilan karena efek pada pertumbuhan gigi dan tulang janin.",
+      "Benar. Meflokuin aman digunakan pada kehamilan trimester 2-3 dan efektif di daerah resisten klorokuin.",
+      "Proguanil umumnya dikombinasikan dengan klorokuin/atovakuon, bukan pilihan tunggal pada daerah resisten klorokuin.",
+      "Kina + klindamisin adalah terapi untuk malaria aktif, bukan profilaksis."
     ]
   },
   {
@@ -787,14 +787,14 @@
       "Infeksi bakteri sekunder pada paru",
       "Pemberian cairan IV yang agresif saat fase reabsorpsi menyebabkan overload cairan intravascular"
     ],
-    "answer": 4,
-    "key": "Efusi pleura yang muncul pada fase reabsorpsi DHF akibat pemberian cairan intravena yang berlebihan saat cairan ekstravaskular mulai kembali ke intravaskular, menyebabkan overload.",
+    "answer": 0,
+    "key": "Efusi pleura pada DHF hari ketiga dengan hematokrit menurun dan hemodinamik stabil menggambarkan proses inflamasi terkait infeksi dengue yang menyebabkan kebocoran plasma ke rongga pleura, bukan akibat overload cairan (yang biasanya disertai hematokrit tetap tinggi/meningkat).",
     "why": [
-      "Replikasi virus di jaringan pleura bukan mekanisme efusi pleura pada DHF.",
-      "Trombositopenia menyebabkan perdarahan, bukan efusi pleura akibat overload cairan.",
-      "Aktivasi koagulasi yang merusak alveolus bukan mekanisme khas efusi pleura fase reabsorpsi.",
-      "Infeksi bakteri sekunder tidak sesuai dengan waktu dan pola klinis kasus ini.",
-      "Benar. Pemberian cairan IV agresif saat fase reabsorpsi menyebabkan overload cairan intravaskular dan efusi pleura."
+      "Benar. Proses inflamasi terkait infeksi dengue menyebabkan peningkatan permeabilitas vaskular dan kebocoran plasma ke rongga pleura.",
+      "Trombositopenia menyebabkan risiko perdarahan, tetapi efusi pleura pada DHF bersifat kebocoran plasma, bukan perdarahan aktif ke rongga pleura.",
+      "Tidak ada bukti aktivasi koagulasi yang menyebabkan destruksi alveolus pada kasus ini.",
+      "Tidak ada tanda infeksi bakteri sekunder pada kasus ini.",
+      "Hematokrit yang menurun dengan hemodinamik stabil justru menunjukkan fase reabsorpsi normal, bukan overload cairan akibat pemberian IV berlebihan."
     ]
   },
   {
@@ -934,14 +934,14 @@
       "Kina + doksisiklin + primakuin oral",
       "Artesunat IV"
     ],
-    "answer": 2,
-    "key": "Malaria berat dengan banana shape gametosit dan schuffner dot pada riwayat ke Papua diterapi DHP ditambah primakuin oral untuk eradikasi dan pemutusan transmisi.",
+    "answer": 4,
+    "key": "Malaria berat dengan Hb 7 g/dl (anemia berat) dan gambaran gametosit pisang (P. falciparum) memerlukan terapi parenteral; artesunat IV adalah pilihan utama pada malaria berat.",
     "why": [
-      "Azitromisin bukan lini pertama terapi malaria definitif.",
       "Penisilin tidak memiliki aktivitas antimalaria.",
-      "Benar. DHP dikombinasikan primakuin oral adalah terapi definitif malaria pada kasus ini.",
-      "Kina + doksisiklin + primakuin adalah regimen alternatif/malaria berat tertentu, bukan lini pertama standar di sini.",
-      "Artesunat IV diberikan pada malaria berat dengan penurunan kesadaran/tidak bisa oral, tidak sesuai gambaran klinis kasus ini."
+      "Azitromisin bukan lini utama untuk malaria berat.",
+      "DHP merupakan terapi oral, tidak sesuai untuk malaria berat yang membutuhkan terapi parenteral segera.",
+      "Kina + doksisiklin + primakuin oral adalah alternatif bila artesunat tidak tersedia, namun bukan pilihan utama malaria berat.",
+      "Benar. Artesunat IV adalah terapi lini pertama pada malaria berat."
     ]
   },
   {
@@ -955,14 +955,14 @@
       "Cysticercosis",
       "Ancilostoma duodenale"
     ],
-    "answer": 0,
-    "key": "Proglotid bergerak dengan 15 cabang uterus berisi telur khas Taenia saginata.",
+    "answer": 2,
+    "key": "Proglotid gravid yang motil (bergerak aktif) dan jumlah cabang uterus pada kasus ini sesuai dengan Taenia solium sebagai etiologi.",
     "why": [
-      "Benar. Taenia saginata memiliki proglotid gravid dengan cabang uterus lateral yang lebih banyak (sekitar 15-30) berisi telur.",
-      "Ascariasis lumbricoides tidak menghasilkan proglotid.",
-      "Taenia solium memiliki jumlah cabang uterus lebih sedikit dibanding T. saginata.",
-      "Cysticercosis adalah infeksi larva Taenia solium di jaringan, bukan proglotid usus.",
-      "Ancylostoma duodenale tidak menghasilkan proglotid."
+      "Taenia saginata umumnya memiliki cabang uterus lebih banyak (15-20 atau lebih); gambaran pada kasus ini lebih sesuai Taenia solium.",
+      "Ascaris lumbricoides tidak membentuk proglotid bersegmen berisi telur seperti pada kasus ini.",
+      "Benar. Proglotid gravid dengan segmentasi uterus dan ukuran pada kasus ini sesuai dengan Taenia solium.",
+      "Cysticercosis adalah bentuk larva Taenia solium yang menginfeksi jaringan, bukan cacing dewasa yang keluar sebagai proglotid.",
+      "Ancylostoma duodenale (cacing tambang) tidak membentuk proglotid bersegmen."
     ]
   },
   {
@@ -1018,14 +1018,14 @@
       "Pirantel pamoat 100 mg dosis tunggal",
       "Pirantel pamoat 200 mg dosis tunggal"
     ],
-    "answer": 3,
-    "key": "Telur decorticated berdinding tebal pada feses anak dengan gejala gastrointestinal menunjukkan ascariasis; tata laksana lini pertama yang sesuai berat badan anak adalah pirantel pamoat dosis tunggal.",
+    "answer": 2,
+    "key": "Dosis pirantel pamoat adalah 10 mg/kgBB dosis tunggal; untuk anak BB 12 kg, dosis yang sesuai adalah 125 mg (dibulatkan dari perhitungan 120 mg).",
     "why": [
-      "Dosis albendazole ini tidak sesuai regimen standar ascariasis pada kasus ini.",
-      "Dosis albendazole ini juga tidak sesuai regimen standar yang tepat untuk kasus ini.",
-      "Dosis pirantel pamoat ini melebihi perhitungan yang sesuai untuk berat badan anak ini.",
-      "Benar. Pirantel pamoat dosis tunggal sesuai berat badan adalah tata laksana ascariasis pada anak ini.",
-      "Dosis pirantel pamoat ini melebihi perhitungan yang sesuai untuk berat badan anak ini."
+      "Albendazole merupakan alternatif lain untuk STH, namun dosisnya tidak dihitung berdasarkan berat badan seperti pirantel pamoat yang dipilih pada kasus ini.",
+      "Sama seperti pilihan A, dosis albendazole ini bukan hasil perhitungan berdasarkan berat badan pasien.",
+      "Benar. Dosis pirantel pamoat 10 mg/kgBB untuk BB 12 kg adalah sekitar 120 mg, dibulatkan menjadi 125 mg dosis tunggal.",
+      "Dosis 100 mg terlalu rendah dibanding perhitungan 10 mg/kgBB untuk BB 12 kg.",
+      "Dosis 200 mg melebihi perhitungan 10 mg/kgBB untuk BB 12 kg."
     ]
   },
   {
@@ -1102,14 +1102,14 @@
       "Sindrom loeffer",
       "Infeksi oxyuris vermicularis"
     ],
-    "answer": 4,
-    "key": "Sesuai temuan klinis dan jawaban kunci pada kasus ini, diagnosis yang ditegakkan adalah infeksi Oxyuris vermicularis.",
+    "answer": 3,
+    "key": "Anak dengan gangguan pertumbuhan (malas makan, BB tidak naik) disertai batuk yang mengeluarkan cacing muda merupakan gambaran sindrom Loeffler akibat migrasi larva Ascaris lumbricoides melalui paru.",
     "why": [
-      "Ancylostomiasis biasanya bermanifestasi anemia dan ground itch, bukan cacing yang keluar saat batuk.",
-      "Clonorchis sinensis berkaitan dengan saluran empedu, bukan gambaran klinis kasus ini.",
-      "Taeniasis ditandai proglotid pada feses, bukan cacing yang dibatukkan.",
-      "Sindrom Loeffler adalah reaksi hipersensitivitas paru transien akibat migrasi larva, bukan diagnosis definitif kasus ini.",
-      "Benar. Berdasarkan temuan kasus, diagnosis yang ditegakkan adalah infeksi Oxyuris vermicularis."
+      "Ancylostomiasis (cacing tambang) tidak bermigrasi melalui paru hingga terbatuk keluar sebagai cacing sepanjang ini.",
+      "Clonorchis sinensis menginfeksi saluran empedu, tidak menimbulkan batuk mengeluarkan cacing dari paru.",
+      "Taeniasis (cacing pita) tidak bermigrasi melalui paru; proglotidnya keluar lewat anus, bukan lewat batuk.",
+      "Benar. Migrasi larva Ascaris lumbricoides melalui paru menimbulkan sindrom Loeffler dengan batuk, kadang disertai keluarnya larva/cacing muda.",
+      "Oxyuris vermicularis (cacing kremi) menyebabkan gatal perianal, tidak bermigrasi ke paru maupun menyebabkan batuk mengeluarkan cacing."
     ]
   },
   {
@@ -1123,14 +1123,14 @@
       "Demam remitten",
       "Demam intermitten"
     ],
-    "answer": 1,
-    "key": "Demam tifoid klasik menunjukkan pola demam bifasik (step-ladder pattern) yang meningkat bertahap dari hari ke hari.",
+    "answer": 2,
+    "key": "Vignette secara eksplisit menyebutkan demam dirasakan terus menerus tanpa reda, sesuai dengan pola demam kontinu (demam continue) yang khas pada demam tifoid.",
     "why": [
-      "Demam siklik lebih khas malaria dengan periodisitas tertentu.",
-      "Benar. Demam tifoid khas berpola bifasik/step-ladder, meningkat bertahap setiap hari terutama sore-malam.",
-      "Demam kontinu tanpa fluktuasi signifikan lebih menggambarkan fase lanjut tanpa terapi.",
-      "Demam remiten khas pada kondisi lain seperti abses, bukan pola khas awal tifoid.",
-      "Demam intermiten lebih khas malaria dengan periodisitas jelas."
+      "Demam siklik naik turun tidak sesuai dengan deskripsi demam yang dirasakan terus menerus pada kasus ini.",
+      "Demam bifasik (dua puncak terpisah periode bebas demam) tidak sesuai dengan gambaran demam terus menerus pada kasus ini.",
+      "Benar. Demam yang dirasakan terus-menerus tanpa reda sesuai dengan pola demam kontinu (continue) yang khas pada tifoid.",
+      "Demam remitten memiliki fluktuasi suhu namun tidak pernah kembali normal, berbeda dengan gambaran demam tetap tinggi terus-menerus pada kasus ini.",
+      "Demam intermitten (naik turun mencapai normal) tidak sesuai dengan deskripsi demam terus-menerus pada kasus ini."
     ]
   },
   {
@@ -1228,14 +1228,14 @@
       "Kina 10 mg/kgbb/kal",
       "Klorokuin 500 mg/hari"
     ],
-    "answer": 4,
-    "key": "Regimen profilaksis malaria pada anak perlu mempertimbangkan batasan usia obat; doksisiklin dikontraindikasikan pada anak kecil, sehingga klorokuin dipilih sesuai regimen pada kasus ini.",
+    "answer": 2,
+    "key": "Untuk profilaksis malaria pada anak yang bepergian ke Papua (daerah resisten klorokuin), atovakuon-proguanil merupakan pilihan yang aman dan sesuai dosis berat badan pada anak, sedangkan doksisiklin dikontraindikasikan pada anak di bawah 8 tahun.",
     "why": [
-      "Mefloquin bukan regimen yang dipilih pada kasus ini.",
-      "Doksisiklin dikontraindikasikan pada anak di bawah 8 tahun.",
-      "Atovaquone-proguanil bukan regimen yang dipilih pada kasus ini.",
-      "Kina adalah obat terapi, bukan regimen profilaksis rutin.",
-      "Benar. Klorokuin dipilih sebagai regimen profilaksis pada anak sesuai kasus ini."
+      "Mefloquin merupakan alternatif, namun dosis berdasarkan berat badan pada anak lebih sesuai menggunakan atovakuon-proguanil untuk kasus ini.",
+      "Doksisiklin dikontraindikasikan pada anak berusia di bawah 8 tahun karena risiko terhadap pertumbuhan gigi dan tulang.",
+      "Benar. Atovakuon-proguanil dengan dosis berdasarkan berat badan merupakan profilaksis yang aman dan sesuai untuk anak di daerah endemis malaria resisten klorokuin.",
+      "Kina merupakan terapi untuk malaria aktif, bukan untuk profilaksis.",
+      "Klorokuin tidak direkomendasikan di daerah dengan resistensi klorokuin tinggi seperti Papua, dan dosis 500 mg/hari tidak sesuai untuk regimen profilaksis pada anak."
     ]
   },
   {
