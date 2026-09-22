@@ -31,5 +31,13 @@
     "banks": {
       "lanjut": "kardiologi-lanjut.json"
     }
+  },
+  {
+    "id": "tropmed",
+    "name": "Tropmed & Parasitologi",
+    "blurb": "Malaria, dengue, tifoid, leptospirosis, pes, dan infeksi parasit usus.",
+    "banks": {
+      "lanjut": "tropmed-lanjut.json"
+    }
   }
 ]
