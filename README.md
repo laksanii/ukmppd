@@ -117,24 +117,40 @@ Description=UKMPPD admin tool
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/ukmppd
+WorkingDirectory=/home/<user>/ukmppd-admin
 ExecStart=/usr/bin/node admin/server.mjs
 Environment=PORT=4600
 Environment=GAMBAR_DIR=/var/www/ukmppd/public/gambar
 Restart=on-failure
-User=www-data
+User=<user>
 
 [Install]
 WantedBy=multi-user.target
 ```
 
+`<user>` harus user yang checkout `ukmppd-admin`-nya (`git clone
+git@github.com:...` di `$HOME`-nya) **dan** yang kunci SSH-nya (`~/.ssh/id_ed25519`)
+sudah terdaftar dengan akses push ke repo ini — proses publish jalan sebagai
+user itu, jadi butuh akses git yang sama. Biasanya bukan `www-data` (jarang
+punya home dir + kunci SSH sendiri); pakai user login normal di VPS.
+
+Folder `GAMBAR_DIR` harus ada dan bisa ditulis oleh `<user>` itu, tapi tetap
+bisa dibaca Nginx (`www-data`) supaya gambar tersaji:
+
+```bash
+sudo mkdir -p /var/www/ukmppd/public/gambar
+sudo chown <user>:www-data /var/www/ukmppd/public/gambar
+sudo chmod 2755 /var/www/ukmppd/public/gambar   # setgid: subfolder baru ikut grup www-data
+```
+
 `GAMBAR_DIR` diarahkan ke folder gambar di dalam document root Nginx yang
 sudah live, supaya gambar yang baru diupload langsung tersaji tanpa perlu
 deploy (lihat "Gambar soal" di bawah). Buka port `4600` di firewall VPS kalau
-mau diakses dari luar. Tidak ada sistem login berlapis — proteksinya cuma
-token acak yang di-generate otomatis ke `admin/.token` saat pertama jalan
-(dicetak juga ke log). Simpan token itu baik-baik; siapa pun yang punya
-token bisa menulis soal dan men-trigger `git push`.
+mau diakses dari luar (kalau firewallnya aktif — cek `sudo ufw status`).
+Tidak ada sistem login berlapis — proteksinya cuma token acak yang
+di-generate otomatis ke `admin/.token` saat pertama jalan (dicetak juga ke
+log, atau `cat admin/.token` di checkout-nya). Simpan token itu baik-baik;
+siapa pun yang punya token bisa menulis soal dan men-trigger `git push`.
 
 **Menambah mata uji/level/topik baru** bukan lewat UI admin (jarang
 dilakukan, dan taksonomi lintas tabel), tapi lewat CLI kecil:
