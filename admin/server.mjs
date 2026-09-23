@@ -23,6 +23,7 @@ import { publish } from "./lib/git-publish.mjs";
 const HERE = dirname(fileURLToPath(import.meta.url));
 const TOKEN_PATH = join(HERE, ".token");
 const PORT = process.env.PORT || 4600;
+const HOST = process.env.HOST || "0.0.0.0";
 
 function loadOrCreateToken() {
   if (existsSync(TOKEN_PATH)) return readFileSync(TOKEN_PATH, "utf8").trim();
@@ -99,7 +100,7 @@ app.post("/api/publish", async (req, res) => {
   res.json(result);
 });
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Admin tool jalan di http://0.0.0.0:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`Admin tool jalan di http://${HOST}:${PORT}`);
   console.log(`Token akses (sekali lihat, disimpan di admin/.token): ${TOKEN}`);
 });

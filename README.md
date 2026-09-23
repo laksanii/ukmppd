@@ -120,6 +120,7 @@ After=network.target
 WorkingDirectory=/home/<user>/ukmppd-admin
 ExecStart=/usr/bin/node admin/server.mjs
 Environment=PORT=4600
+Environment=HOST=127.0.0.1
 Environment=GAMBAR_DIR=/var/www/ukmppd/public/gambar
 Restart=on-failure
 User=<user>
@@ -145,8 +146,29 @@ sudo chmod 2755 /var/www/ukmppd/public/gambar   # setgid: subfolder baru ikut gr
 
 `GAMBAR_DIR` diarahkan ke folder gambar di dalam document root Nginx yang
 sudah live, supaya gambar yang baru diupload langsung tersaji tanpa perlu
-deploy (lihat "Gambar soal" di bawah). Buka port `4600` di firewall VPS kalau
-mau diakses dari luar (kalau firewallnya aktif — cek `sudo ufw status`).
+deploy (lihat "Gambar soal" di bawah).
+
+`HOST=127.0.0.1` sengaja membuat service ini cuma bisa diakses dari VPS itu
+sendiri (bukan lewat IP publik langsung) — akses dari luar lewat Nginx
+sebagai reverse proxy di subdomain terpisah (mis. `admin-ukmppd.mahesvara.net`),
+supaya bisa pakai TLS lewat Certbot seperti domain utama:
+
+```nginx
+server {
+    server_name admin-ukmppd.mahesvara.net;
+    location / {
+        proxy_pass http://127.0.0.1:4600;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+```
+
+lalu `sudo certbot --nginx -d admin-ukmppd.mahesvara.net` seperti domain
+utama. Kalau DNS subdomain itu di-proxy lewat Cloudflare (orange cloud),
+pastikan dulu ada A/AAAA record yang mengarah ke VPS supaya validasi HTTP-01
+certbot bisa tembus ke origin.
+
 Tidak ada sistem login berlapis — proteksinya cuma token acak yang
 di-generate otomatis ke `admin/.token` saat pertama jalan (dicetak juga ke
 log, atau `cat admin/.token` di checkout-nya). Simpan token itu baik-baik;
