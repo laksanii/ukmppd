@@ -4,6 +4,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { ROOT } from "../../scripts/lib/db.mjs";
 import { validateBank } from "../../scripts/lib/validate.mjs";
+import { GAMBAR_DIR } from "./bank-io.mjs";
 
 const run = promisify(execFile);
 
@@ -17,7 +18,7 @@ async function git(args) {
 }
 
 export async function publish(message) {
-  const { errors, warnings, total } = validateBank();
+  const { errors, warnings, total } = validateBank({ gambarDir: GAMBAR_DIR });
   if (errors.length) {
     return { ok: false, stage: "validate", errors, warnings };
   }

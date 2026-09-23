@@ -90,7 +90,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
 });
 
 app.get("/api/validate", (req, res) => {
-  const { errors, warnings, total } = validateBank({ root: ROOT });
+  const { errors, warnings, total } = validateBank({ root: ROOT, gambarDir: GAMBAR_DIR });
   res.json({ errors, warnings, total });
 });
 

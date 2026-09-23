@@ -5,10 +5,14 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { ROOT, openDb, rowToQuestion } from "./db.mjs";
 
-export function validateBank({ root = ROOT } = {}) {
+export function validateBank({ root = ROOT, gambarDir = join(root, "public", "gambar") } = {}) {
   const db = openDb();
   const errs = [];
   const warns = [];
+  // Gambar sengaja tidak ikut git (lihat README), jadi checkout CI/segar
+  // tidak akan pernah punya folder ini - kalau tidak ada, lewati pengecekan
+  // gambar sama sekali daripada menggagalkan build tiap ada soal bergambar.
+  const gambarAda = existsSync(gambarDir);
 
   const levels = db.prepare("SELECT * FROM levels ORDER BY sort").all();
   const subjects = db.prepare("SELECT * FROM subjects ORDER BY sort").all();
@@ -48,8 +52,11 @@ export function validateBank({ root = ROOT } = {}) {
     else if (q.why[q.answer] && !/^benar/i.test(q.why[q.answer])) {
       warns.push(`${at}: why pada pilihan kunci sebaiknya diawali "Benar."`);
     }
-    if (q.image && !existsSync(join(root, "public", q.image))) {
-      errs.push(`${at}: file gambar "public/${q.image}" tidak ditemukan`);
+    if (q.image && gambarAda) {
+      const rel = q.image.replace(/^gambar\//, "");
+      if (!existsSync(join(gambarDir, rel))) {
+        errs.push(`${at}: file gambar "${q.image}" tidak ditemukan di ${gambarDir}`);
+      }
     }
   }
 
