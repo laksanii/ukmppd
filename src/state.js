@@ -44,22 +44,27 @@ export const store = {
 };
 
 /* ---------------- konfigurasi ---------------- */
-export const DEFAULT_CFG = {
-  subjects: [...SUBJECT_IDS],
-  levels: [...LEVEL_IDS],
-  topics: [...ALL_TOPICS],
-  // mata uji, level & materi yang sudah pernah tampil di layar pemakai; dipakai
-  // untuk mengenali tambahan bank soal baru saat aplikasi diperbarui
-  seenSubjects: [...SUBJECT_IDS],
-  seenLevels: [...LEVEL_IDS],
-  seenTopics: [...ALL_TOPICS],
-  count: 20,
-  fb: true,        // pembahasan langsung
-  timer: false,    // hitung mundur
-  track: true,     // simpan skor & progres
-  review: true,    // kumpulkan soal salah
-  secPerQ: 80
-};
+/* Fungsi, bukan const: bank soal dimuat async (lihat bank.js loadBank()),
+   jadi SUBJECT_IDS dkk baru terisi setelah itu selesai. Dipanggil dari
+   main.js setelah loadBank() resolve. */
+export function defaultCfg() {
+  return {
+    subjects: [...SUBJECT_IDS],
+    levels: [...LEVEL_IDS],
+    topics: [...ALL_TOPICS],
+    // mata uji, level & materi yang sudah pernah tampil di layar pemakai; dipakai
+    // untuk mengenali tambahan bank soal baru saat aplikasi diperbarui
+    seenSubjects: [...SUBJECT_IDS],
+    seenLevels: [...LEVEL_IDS],
+    seenTopics: [...ALL_TOPICS],
+    count: 20,
+    fb: true,        // pembahasan langsung
+    timer: false,    // hitung mundur
+    track: true,     // simpan skor & progres
+    review: true,    // kumpulkan soal salah
+    secPerQ: 80
+  };
+}
 
 export const TOGGLE_DEFS = [
   { k: "fb", nm: "Pembahasan tiap soal", ds: "Jawaban benar dan alasan tiap pilihan langsung muncul setelah kamu menjawab." },
@@ -68,9 +73,10 @@ export const TOGGLE_DEFS = [
   { k: "review", nm: "Kumpulkan soal salah", ds: "Soal yang kamu jawab salah bisa ditinjau di akhir dan diulang jadi sesi tersendiri." }
 ];
 
-/* state global yang dipakai lintas modul */
+/* state global yang dipakai lintas modul. cfg diisi main.js setelah bank
+   soal selesai dimuat (lihat defaultCfg() di atas). */
 export const app = {
-  cfg: { ...DEFAULT_CFG },
+  cfg: null,
   hist: [],
   wrongSet: {},
   S: null            // sesi yang sedang berjalan

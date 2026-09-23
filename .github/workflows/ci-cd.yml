@@ -92,6 +92,6 @@ jobs:
           ssh -p "$VPS_PORT" "$VPS_USER@$VPS_HOST" "rm -rf '$remote_tmp' && mkdir -p '$remote_tmp'"
           rsync -az --delete -e "ssh -p $VPS_PORT" dist/ "$VPS_USER@$VPS_HOST:$remote_tmp/"
           ssh -p "$VPS_PORT" "$VPS_USER@$VPS_HOST" \
-            "sudo rsync -a --delete '$remote_tmp/' /var/www/ukmppd/public/ && \
+            "sudo rsync -a --delete --exclude='/gambar/' '$remote_tmp/' /var/www/ukmppd/public/ && \
              sudo chown -R root:www-data /var/www/ukmppd/public && \
              rm -rf '$remote_tmp'"

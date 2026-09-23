@@ -1,5 +1,6 @@
-/* Ubah naskah soal Markdown di sumber/soal/ menjadi bank soal JSON di data/.
-   Lihat sumber/soal/_TEMPLATE.md untuk format yang dikenali.
+/* Ubah naskah soal Markdown di sumber/soal/ menjadi baris di
+   public/data/bank.sqlite. Lihat sumber/soal/_TEMPLATE.md untuk format yang
+   dikenali.
 
    Pemakaian:
      npm run import -- sumber/soal/psikiatri.md
@@ -7,11 +8,11 @@
      npm run import -- sumber/soal/psikiatri.md --topic kepala
      npm run import -- sumber/soal/psikiatri.md --dry      (lihat hasil, tanpa menulis)
 */
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-import { dirname, join, resolve } from "node:path";
+import { readFileSync, existsSync } from "node:fs";
+import { resolve } from "node:path";
+import { ROOT, openDb } from "./lib/db.mjs";
 
-const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const root = ROOT;
 const LET = ["a", "b", "c", "d", "e"];
 const TODO = "TODO: ";
 
@@ -25,11 +26,10 @@ for (let i = 0; i < argv.length; i++) {
   else if (a === "--level") opt.level = argv[++i];
   else if (a === "--subject") opt.subject = argv[++i];
   else if (a === "--topic") opt.topic = argv[++i];
-  else if (a === "--out") opt.out = argv[++i];
   else if (a.startsWith("--")) fatal(`opsi tidak dikenal: ${a}`);
   else bebas.push(a);
 }
-if (bebas.length !== 1) fatal("pemakaian: npm run import -- <file.md> [--subject id] [--level id] [--topic kode] [--out data/x.json] [--dry]");
+if (bebas.length !== 1) fatal("pemakaian: npm run import -- <file.md> [--subject id] [--level id] [--topic kode] [--dry]");
 
 const berkas = resolve(root, bebas[0]);
 if (!existsSync(berkas)) fatal(`file tidak ditemukan: ${bebas[0]}`);
@@ -51,28 +51,18 @@ if (mfm) {
   teks = teks.slice(mfm[0].length);
 }
 
-const topics = JSON.parse(readFileSync(join(root, "data/topics.json"), "utf8"));
-const levels = JSON.parse(readFileSync(join(root, "data/levels.json"), "utf8"));
-const subjects = JSON.parse(readFileSync(join(root, "data/subjects.json"), "utf8"));
+const db = openDb();
+const topics = Object.fromEntries(db.prepare("SELECT code, name FROM topics").all().map(t => [t.code, t.name]));
+const levels = db.prepare("SELECT id FROM levels").all();
+const subjects = db.prepare("SELECT id FROM subjects").all();
 const topikDefault = opt.topic || fm.topic || null;
 const levelId = opt.level || fm.level || null;
 const subjectId = opt.subject || fm.subject || null;
 
-/* Tujuan tulis ditentukan pasangan mata uji x level, sesuai "banks" pada
-   data/subjects.json. --out tetap bisa dipakai untuk menimpa penentuan itu. */
-let tujuan = opt.out || fm.file;
-if (!tujuan && (subjectId || levelId)) {
-  if (!subjectId) fatal(`mata uji belum ditentukan. Beri --subject <id> atau tulis subject: di frontmatter. Yang tersedia: ${subjects.map(s => s.id).join(", ")}`);
-  if (!levelId) fatal(`level belum ditentukan. Beri --level <id> atau tulis level: di frontmatter. Yang tersedia: ${levels.map(l => l.id).join(", ")}`);
-  const sj = subjects.find(s => s.id === subjectId);
-  if (!sj) fatal(`mata uji "${subjectId}" tidak ada di data/subjects.json. Yang tersedia: ${subjects.map(s => s.id).join(", ")}`);
-  if (!levels.some(l => l.id === levelId)) fatal(`level "${levelId}" tidak ada di data/levels.json. Yang tersedia: ${levels.map(l => l.id).join(", ")}`);
-  const file = sj.banks && sj.banks[levelId];
-  if (!file) fatal(`mata uji "${subjectId}" belum punya bank untuk level "${levelId}". Tambahkan dulu pasangan itu di "banks" pada data/subjects.json.`);
-  tujuan = `data/${file}`;
-}
-if (!tujuan) fatal("tujuan tidak diketahui. Beri --subject <id> --level <id>, atau --out data/namafile.json, atau tulis subject: dan level: di frontmatter naskah.");
-if (!tujuan.startsWith("data/")) tujuan = `data/${tujuan}`;
+if (!subjectId) fatal(`mata uji belum ditentukan. Beri --subject <id> atau tulis subject: di frontmatter. Yang tersedia: ${subjects.map(s => s.id).join(", ")}`);
+if (!levelId) fatal(`level belum ditentukan. Beri --level <id> atau tulis level: di frontmatter. Yang tersedia: ${levels.map(l => l.id).join(", ")}`);
+if (!subjects.some(s => s.id === subjectId)) fatal(`mata uji "${subjectId}" tidak ada di tabel subjects. Yang tersedia: ${subjects.map(s => s.id).join(", ")}. Tambah dulu lewat: npm run taxonomy -- add-subject`);
+if (!levels.some(l => l.id === levelId)) fatal(`level "${levelId}" tidak ada di tabel levels. Yang tersedia: ${levels.map(l => l.id).join(", ")}. Tambah dulu lewat: npm run taxonomy -- add-level`);
 
 /* ---------------- parser ---------------- */
 const baris = teks.split("\n");
@@ -92,7 +82,7 @@ baris.forEach((brs, idx) => {
 
   // awal soal: "1. vignette", "## 1. vignette", "1. [kepala] vignette",
   // "1. [Gambar] vignette" (soal ada asset gambar, ditandai sebagai placeholder
-  // sampai fitur gambar sungguhan dibuat)
+  // sampai gambar sungguhan ditambahkan lewat admin tool)
   const mSoal = b.match(/^#{0,6}\s*(\d+)\.\s+(.*)$/);
   if (mSoal && !/^[a-e][.)]/i.test(b)) {
     simpan();
@@ -167,7 +157,7 @@ const perluDiisi = [];
 const hasil = soal.filter(q => !q.lewati).map(q => {
   const at = `soal ${q.no}`;
   if (!q.topic) galat.push(`${at}: topik belum ditentukan. Tambah "[kode]" setelah nomor, baris "Topik: kode", frontmatter topic:, atau opsi --topic`);
-  else if (!topics[q.topic]) galat.push(`${at}: topik "${q.topic}" tidak ada di data/topics.json`);
+  else if (!topics[q.topic]) galat.push(`${at}: topik "${q.topic}" tidak ada di tabel topics`);
   if (q.options.length !== 5) galat.push(`${at}: pilihan ada ${q.options.length}, harus 5`);
   if (q.answer === null) galat.push(`${at}: kunci belum ditandai (tebalkan pilihannya atau tulis "Kunci: c")`);
   const vignette = rapikan(q.vignette.join(" "));
@@ -194,28 +184,26 @@ if (galat.length) {
 }
 
 /* ---------------- gabung ke bank ---------------- */
-const jalurTujuan = join(root, tujuan);
-const lama = existsSync(jalurTujuan) ? JSON.parse(readFileSync(jalurTujuan, "utf8")) : [];
 const sidik = v => v.toLowerCase().replace(/[^a-z0-9]/g, "");
+const lama = db.prepare("SELECT vignette FROM questions WHERE subject_id = ? AND level_id = ?").all(subjectId, levelId);
 const sudahAda = new Set(lama.map(x => sidik(x.vignette)));
-let idBerikut = lama.reduce((m, x) => Math.max(m, x.id), 0) + 1;
 
 const baru = [], duplikat = [];
 for (const q of hasil) {
   if (sudahAda.has(sidik(q.vignette))) { duplikat.push(q); continue; }
   sudahAda.add(sidik(q.vignette));
-  baru.push({ id: idBerikut++, ...q });
+  baru.push(q);
 }
 
 console.log(`\nNaskah  : ${bebas[0]}`);
-console.log(`Tujuan  : ${tujuan}${lama.length ? ` (sudah ada ${lama.length} soal)` : " (file baru)"}`);
+console.log(`Tujuan  : ${subjectId}/${levelId} (sudah ada ${lama.length} soal)`);
 console.log(`Terbaca : ${hasil.length} soal`);
 if (dilewati.length) {
   console.log(`Ditandai lewati: ${dilewati.length} soal`);
   dilewati.forEach(q => console.log(`  - soal ${q.no}: ${q.lewati}`));
 }
 if (duplikat.length) console.log(`Duplikat: ${duplikat.length} soal (vignette-nya sudah ada di bank)`);
-console.log(`Ditambah: ${baru.length} soal${baru.length ? `, id ${baru[0].id}-${baru[baru.length - 1].id}` : ""}`);
+console.log(`Ditambah: ${baru.length} soal`);
 
 const topikDipakai = {};
 baru.forEach(q => topikDipakai[q.topic] = (topikDipakai[q.topic] || 0) + 1);
@@ -224,15 +212,28 @@ if (baru.length) console.log(`Topik   : ${Object.entries(topikDipakai).map(([k, 
 if (perluDiisi.length) {
   console.log(`\nMasih perlu diisi tangan (pembahasan/alasan belum ada di naskah):`);
   console.log(`  soal nomor ${perluDiisi.join(", ")}`);
-  console.log(`  cari penanda "${TODO.trim()}" di ${tujuan}. npm run validate akan menolak selama penanda ini masih ada.`);
+  console.log(`  cari penanda "${TODO.trim()}" lewat admin tool atau query SQL. npm run validate akan menolak selama penanda ini masih ada.`);
 }
 
 if (opt.dry) {
-  console.log(`\n--dry: tidak ada file yang ditulis. Contoh hasil soal pertama:\n`);
+  console.log(`\n--dry: tidak ada yang ditulis. Contoh hasil soal pertama:\n`);
   console.log(JSON.stringify(baru[0] || hasil[0], null, 2));
+  db.close();
   process.exit(0);
 }
-if (!baru.length) { console.log("\nTidak ada yang ditulis."); process.exit(0); }
+if (!baru.length) { console.log("\nTidak ada yang ditulis."); db.close(); process.exit(0); }
 
-writeFileSync(jalurTujuan, JSON.stringify([...lama, ...baru], null, 2) + "\n");
-console.log(`\nDitulis ke ${tujuan}. Jalankan: npm run validate`);
+const insQuestion = db.prepare(`INSERT INTO questions
+  (subject_id, level_id, topic, vignette, image, options, answer, key, why)
+  VALUES (@subject_id, @level_id, @topic, @vignette, @image, @options, @answer, @key, @why)`);
+db.transaction(() => {
+  for (const q of baru) {
+    insQuestion.run({
+      subject_id: subjectId, level_id: levelId, topic: q.topic, vignette: q.vignette,
+      image: null, options: JSON.stringify(q.options), answer: q.answer, key: q.key, why: JSON.stringify(q.why)
+    });
+  }
+})();
+db.close();
+
+console.log(`\nDitulis ke public/data/bank.sqlite. Jalankan: npm run validate`);

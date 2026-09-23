@@ -121,6 +121,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-v
   padding:22px 24px;margin-bottom:14px;
 }
 @media (min-width:640px){.vignette{font-size:1.125rem}}
+.vignette-img{display:block;max-width:100%;max-height:420px;margin:0 0 14px;border:1px solid var(--line);background:var(--surface)}
 
 /* ---------- options ---------- */
 .opts{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
@@ -195,6 +196,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-v
 .rev-h .tag.sk{background:var(--muted)}
 .rev-h .n{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
 .rev-q{font-family:var(--serif);font-size:.98rem;line-height:1.55;margin-bottom:8px}
+.rev-img{display:block;max-width:100%;max-height:320px;margin-bottom:8px;border:1px solid var(--line)}
 .rev-a{font-size:.86rem;line-height:1.5;color:var(--muted)}
 .rev-a b{color:var(--ink);font-weight:600}
 .rev-e{font-size:.86rem;line-height:1.55;margin-top:7px;padding-left:11px;border-left:2px solid var(--line)}

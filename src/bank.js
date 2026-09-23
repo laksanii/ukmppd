@@ -1,49 +1,81 @@
-/* Pemuat bank soal.
-   Bank soal dipilah dua sumbu: mata uji (data/subjects.json) dan level
-   kesulitan (data/levels.json). Satu file JSON di data/ berisi soal untuk
-   satu pasangan mata uji x level.
+/* Pemuat bank soal. Sumber datanya public/data/bank.sqlite (satu database
+   untuk mata uji, level, topik, dan seluruh soal), dibaca lewat sql.js
+   (SQLite lewat WASM) langsung di browser saat aplikasi dimuat.
 
-   Menambah bank soal cukup dengan: taruh file JSON di data/, lalu daftarkan
-   pada "banks" mata uji yang sesuai. Tidak ada kode yang perlu diubah. */
-import TOPICS from "../data/topics.json";
-import levelManifest from "../data/levels.json";
-import subjectManifest from "../data/subjects.json";
+   Menambah bank soal sekarang lewat admin tool (lihat README), bukan lagi
+   dengan menambah file JSON. */
+import initSqlJs from "sql.js";
 
-const files = import.meta.glob("../data/*.json", { eager: true, import: "default" });
+export let LEVELS = [];
+export let LEVEL_IDS = [];
+export let SUBJECTS = [];
+export let SUBJECT_IDS = [];
+export let SUBJECT_BY_ID = {};
+export let LEVEL_BY_ID = {};
+export let BANK = [];
+export let TOPICS = {};
+export let ALL_TOPICS = [];
 
-export const LEVELS = levelManifest;
-export const LEVEL_IDS = LEVELS.map(l => l.id);
-const LEVEL_ORDER = Object.fromEntries(LEVEL_IDS.map((id, i) => [id, i]));
+const rowsOf = (db, sql) => {
+  const res = db.exec(sql);
+  if (!res.length) return [];
+  const { columns, values } = res[0];
+  return values.map(row => Object.fromEntries(columns.map((c, i) => [c, row[i]])));
+};
 
-export const SUBJECTS = subjectManifest.map(sj => {
-  const questions = Object.entries(sj.banks)
-    .sort((a, b) => (LEVEL_ORDER[a[0]] ?? 99) - (LEVEL_ORDER[b[0]] ?? 99))
-    .flatMap(([level, file]) => {
-      const raw = files[`../data/${file}`];
-      if (!raw) throw new Error(`Mata uji "${sj.id}" level "${level}": data/${file} tidak ditemukan`);
-      // uid dipakai untuk menandai soal salah lintas bank, karena id soal
-      // hanya unik di dalam satu file.
-      return raw.map(q => ({ ...q, subject: sj.id, level, uid: `${sj.id}:${level}:${q.id}` }));
-    });
-  return { ...sj, questions };
-});
+export async function loadBank() {
+  const base = import.meta.env.BASE_URL;
+  const SQL = await initSqlJs({ locateFile: f => `${base}vendor/${f}` });
+  const buf = await fetch(`${base}data/bank.sqlite`).then(r => {
+    if (!r.ok) throw new Error(`gagal memuat bank.sqlite (${r.status})`);
+    return r.arrayBuffer();
+  });
+  const db = new SQL.Database(new Uint8Array(buf));
 
-export const SUBJECT_IDS = SUBJECTS.map(s => s.id);
-export const SUBJECT_BY_ID = Object.fromEntries(SUBJECTS.map(s => [s.id, s]));
-export const LEVEL_BY_ID = Object.fromEntries(LEVELS.map(l => [l.id, l]));
-export const BANK = SUBJECTS.flatMap(s => s.questions);
+  LEVELS = rowsOf(db, "SELECT id, name, blurb FROM levels ORDER BY sort");
+  LEVEL_IDS = LEVELS.map(l => l.id);
+  LEVEL_BY_ID = Object.fromEntries(LEVELS.map(l => [l.id, l]));
+
+  TOPICS = Object.fromEntries(rowsOf(db, "SELECT code, name FROM topics").map(t => [t.code, t.name]));
+
+  const subjectRows = rowsOf(db, "SELECT id, name, blurb FROM subjects ORDER BY sort");
+  const questionRows = rowsOf(db, "SELECT * FROM questions");
+
+  SUBJECTS = subjectRows.map(sj => {
+    const questions = questionRows
+      .filter(r => r.subject_id === sj.id)
+      .sort((a, b) => (LEVEL_IDS.indexOf(a.level_id) - LEVEL_IDS.indexOf(b.level_id)) || (a.id - b.id))
+      .map(r => ({
+        id: r.id,
+        subject: r.subject_id,
+        level: r.level_id,
+        topic: r.topic,
+        vignette: r.vignette,
+        image: r.image || undefined,
+        options: JSON.parse(r.options),
+        answer: r.answer,
+        key: r.key,
+        why: JSON.parse(r.why),
+        uid: `${sj.id}:${r.level_id}:${r.id}`
+      }));
+    return { ...sj, questions };
+  });
+
+  SUBJECT_IDS = SUBJECTS.map(s => s.id);
+  SUBJECT_BY_ID = Object.fromEntries(SUBJECTS.map(s => [s.id, s]));
+  BANK = SUBJECTS.flatMap(s => s.questions);
+  ALL_TOPICS = topicsForSubjects(SUBJECT_IDS);
+
+  db.close();
+}
 
 export const subjectName = id => SUBJECT_BY_ID[id]?.name || id;
 export const levelName = id => LEVEL_BY_ID[id]?.name || id;
 export const topicName = id => TOPICS[id] || id;
 
 /* topik yang benar-benar dipakai oleh soal pada mata uji tertentu, urut
-   mengikuti urutan di topics.json */
-const topicsOf = ids => {
+   mengikuti urutan di tabel topics */
+export function topicsForSubjects(ids) {
   const ada = new Set(BANK.filter(q => ids.includes(q.subject)).map(q => q.topic));
   return Object.keys(TOPICS).filter(t => ada.has(t));
-};
-export const topicsForSubjects = topicsOf;
-export const ALL_TOPICS = topicsOf(SUBJECT_IDS);
-
-export { TOPICS };
+}

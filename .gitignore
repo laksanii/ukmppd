@@ -2,3 +2,8 @@ node_modules/
 dist/
 .vite/
 .DS_Store
+admin/.token
+public/vendor/
+public/gambar/
+public/data/bank.sqlite-wal
+public/data/bank.sqlite-shm

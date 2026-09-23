@@ -73,6 +73,14 @@ export function renderQ() {
   renderClock();
   renderTrace();
   $("vignette").textContent = q.vignette;
+  const img = $("vignetteImg");
+  if (q.image) {
+    img.src = `${import.meta.env.BASE_URL}${q.image}`;
+    img.classList.remove("hidden");
+  } else {
+    img.removeAttribute("src");
+    img.classList.add("hidden");
+  }
   $("opts").innerHTML = q.options.map((o, k) => {
     let cls = "opt";
     if (show) {

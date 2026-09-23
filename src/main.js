@@ -1,7 +1,7 @@
 /* Titik masuk: memuat state tersimpan lalu memasang seluruh kontrol. */
 import "./style.css";
-import { BANK, LEVEL_IDS, SUBJECT_IDS, ALL_TOPICS, topicsForSubjects } from "./bank.js";
-import { $, LET, app, store, saveCfg, pool, wrongPool, DEFAULT_CFG, showScreen } from "./state.js";
+import { BANK, LEVEL_IDS, SUBJECT_IDS, ALL_TOPICS, topicsForSubjects, loadBank } from "./bank.js";
+import { $, LET, app, store, saveCfg, pool, wrongPool, defaultCfg, showScreen } from "./state.js";
 import { renderSetup, renderTopics, renderPool, renderPresets, renderToggles, renderHistory } from "./setup.js";
 import { startSession, move, pick, toggleFlag, finishSession } from "./quiz.js";
 import { toggleReview } from "./result.js";
@@ -92,8 +92,16 @@ document.addEventListener("keydown", e => {
 
 /* --- init --- */
 (async function init() {
+  try {
+    await loadBank();
+  } catch (e) {
+    $("bankNote").textContent = "Gagal memuat bank soal. Muat ulang halaman, atau coba lagi nanti.";
+    console.error(e);
+    return;
+  }
+
   const saved = await store.get("neuro:cfg", null);
-  if (saved) app.cfg = { ...DEFAULT_CFG, ...saved };
+  app.cfg = saved ? { ...defaultCfg(), ...saved } : defaultCfg();
 
   /* Sinkronkan setelan tersimpan dengan isi data saat ini:
      - yang sudah tidak ada di data dibuang diam-diam;

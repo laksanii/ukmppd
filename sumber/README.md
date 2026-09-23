@@ -12,14 +12,13 @@ sumber/
 Alur kerjanya:
 
 ```
-sumber/soal/*.md   ->   data/<mata uji>-<level>.json   ->   aplikasi
+sumber/soal/*.md   ->   public/data/bank.sqlite   ->   aplikasi
    (mentah)              (siap pakai + pembahasan)
 ```
 
 ## Penamaan file
 
-Awali dengan nama mata ujian supaya urut sendiri dan sejalan dengan penamaan di
-`data/`:
+Awali dengan nama mata ujian supaya urut sendiri dan gampang dicari:
 
 ```
 sumber/soal/neurologi-homework-01.md
@@ -30,16 +29,17 @@ sumber/materi/neurologi-stroke.md
 ## Mengimpor naskah jadi bank soal
 
 ```bash
-npm run import -- sumber/soal/psikiatri.md --dry     # lihat hasil, tidak menulis apa pun
-npm run import -- sumber/soal/psikiatri.md           # tulis ke data/
-npm run validate                                     # pastikan banknya sehat
+npm run import -- sumber/soal/psikiatri.md --subject psikiatri --level lanjut --dry   # lihat hasil, tidak menulis apa pun
+npm run import -- sumber/soal/psikiatri.md --subject psikiatri --level lanjut         # tulis ke bank.sqlite
+npm run validate                                                                       # pastikan banknya sehat
 ```
 
 Tujuan penulisan diambil dari pasangan `subject:` dan `level:` pada frontmatter
-naskah, atau dari opsi `--subject <id> --level <id>` / `--out data/namafile.json`.
-Pasangan itu dicocokkan dengan `banks` pada `data/subjects.json`. Soal yang
-vignette-nya sudah ada di bank dilewati, jadi mengimpor file yang sama dua kali
-tidak menggandakan isi.
+naskah, atau dari opsi `--subject <id> --level <id>`. Mata uji dan levelnya
+harus sudah terdaftar (`npm run taxonomy -- list`, tambah dulu lewat
+`npm run taxonomy -- add-subject`/`add-level` kalau belum ada). Soal yang
+vignette-nya sudah ada di kombinasi mata uji + level yang sama dilewati, jadi
+mengimpor file yang sama dua kali tidak menggandakan isi.
 
 Kalau naskah hanya berisi soal dan kunci tanpa pembahasan, importer mengisi
 `key` dan `why` dengan penanda `TODO:` dan menyebutkan nomor soal mana saja yang

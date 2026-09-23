@@ -5,16 +5,26 @@
   "type": "module",
   "description": "Latihan soal UKMPPD dengan bank soal berjenjang",
   "scripts": {
+    "postinstall": "node scripts/copy-sqljs-wasm.mjs",
     "dev": "vite",
     "build": "npm run validate && vite build",
     "preview": "vite preview",
     "validate": "node scripts/validate-bank.mjs",
-    "import": "node scripts/import-soal.mjs"
+    "import": "node scripts/import-soal.mjs",
+    "taxonomy": "node scripts/taxonomy.mjs",
+    "migrate:sqlite": "node scripts/migrate-json-to-sqlite.mjs",
+    "manage": "node admin/server.mjs"
   },
   "devDependencies": {
     "vite": "^7.1.5"
   },
   "allowScripts": {
     "esbuild@0.28.2": true
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.2.1",
+    "multer": "^2.4.0",
+    "sql.js": "^1.14.2"
   }
 }

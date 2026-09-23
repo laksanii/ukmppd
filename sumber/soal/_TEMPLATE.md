@@ -10,11 +10,11 @@ topic: kepala
   Lihat dulu tanpa menulis apa pun:  npm run import -- sumber/soal/namafile.md --dry
 
   Frontmatter di atas boleh dihapus kalau tujuannya diberikan lewat opsi:
-    subject: mata uji tujuan, harus ada di data/subjects.json
-    level:   level tujuan, harus ada di data/levels.json
+    subject: mata uji tujuan, harus sudah terdaftar (npm run taxonomy -- list)
+    level:   level tujuan, harus sudah terdaftar (npm run taxonomy -- list)
     topic:   topik bawaan untuk semua soal di file ini, boleh ditimpa per soal
-  Pasangan subject x level menentukan file mana di data/ yang ditulis.
-  File ini sendiri hanya contoh, tidak perlu diimpor.
+  Pasangan subject x level menentukan baris mana di public/data/bank.sqlite
+  yang ditulis. File ini sendiri hanya contoh, tidak perlu diimpor.
 -->
 
 # Judul naskah bebas, baris berawalan # diabaikan

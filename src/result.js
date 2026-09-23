@@ -80,6 +80,7 @@ export function renderReview() {
         <span class="n">Soal ${i + 1} · ${topicName(q.topic)}${S.flags[i] ? " · ditandai ragu" : ""}</span>
         <span class="lvtag">${subjectName(q.subject)} · ${levelName(q.level)}</span>
       </div>
+      ${q.image ? `<img class="rev-img" src="${import.meta.env.BASE_URL}${q.image}" alt="Gambar penyerta soal">` : ""}
       <p class="rev-q">${q.vignette}</p>
       ${yours}
       <p class="rev-a">Kunci <b>${LET[q.answer]}. ${q.options[q.answer]}</b></p>

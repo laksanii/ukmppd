@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin bank soal UKMPPD</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div id="gate" class="gate">
+  <div class="gate-box">
+    <h1>Admin bank soal</h1>
+    <p>Masukkan token akses (lihat log server saat pertama jalan, atau isi <code>admin/.token</code>).</p>
+    <input type="password" id="tokenInput" placeholder="Token">
+    <button id="tokenSubmit">Masuk</button>
+    <p class="err hidden" id="tokenErr">Token salah.</p>
+  </div>
+</div>
+
+<div id="app" class="app hidden">
+  <header class="bar">
+    <h1>Admin bank soal UKMPPD</h1>
+    <div class="pick">
+      <select id="subjectSel"></select>
+      <select id="levelSel"></select>
+      <span id="countInfo" class="muted"></span>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="list-pane">
+      <button id="addBtn" class="btn primary full">+ Tambah soal</button>
+      <div id="list" class="list"></div>
+    </aside>
+
+    <main class="form-pane">
+      <form id="qform" class="hidden">
+        <h2 id="formTitle">Soal baru</h2>
+
+        <label>Topik
+          <select id="fTopic" required></select>
+        </label>
+
+        <label>Vignette
+          <textarea id="fVignette" rows="5" required></textarea>
+        </label>
+
+        <label>Gambar (opsional)
+          <input type="file" id="fImageFile" accept="image/*">
+        </label>
+        <div id="imgPreviewWrap" class="img-preview hidden">
+          <img id="imgPreview" alt="Pratinjau gambar">
+          <button type="button" id="imgRemove" class="btn ghost small">Lepas gambar</button>
+        </div>
+
+        <div class="opts">
+          <p class="lbl">Pilihan &amp; kunci jawaban</p>
+          <div id="optRows"></div>
+        </div>
+
+        <label>Pembahasan kunci (key)
+          <textarea id="fKey" rows="3" required></textarea>
+        </label>
+
+        <div class="whys">
+          <p class="lbl">Alasan tiap pilihan (why)</p>
+          <div id="whyRows"></div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Simpan</button>
+          <button type="button" id="deleteBtn" class="btn danger hidden">Hapus soal</button>
+          <button type="button" id="cancelBtn" class="btn ghost">Batal</button>
+          <span id="formMsg" class="msg"></span>
+        </div>
+      </form>
+      <p id="emptyHint" class="muted">Pilih soal di sebelah kiri, atau klik "Tambah soal".</p>
+    </main>
+  </div>
+
+  <footer class="publish">
+    <input type="text" id="commitMsg" placeholder="Pesan commit (opsional)">
+    <button id="publishBtn" class="btn primary">Validasi &amp; publish</button>
+    <pre id="publishOut" class="publish-out hidden"></pre>
+  </footer>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
