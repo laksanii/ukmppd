@@ -517,14 +517,14 @@ c. Aspirin
 d. Heparin
 e. Clopidrogel
 
-74. [Gambar] Seorang pasien laki-laki usia 54 tahun dibawa temannya ke IGD RSU Cut Meutia dengan penurunan kesadaran mendadak di warung kopi. Tidak ada denyut nadi, tidak ada nafas. Setelah dipasang EKG hasilnya sebagai berikut. Apakah diagnosis yang tepat pada pasien tersebut?
+74. Seorang pasien laki-laki usia 54 tahun dibawa temannya ke IGD RSU Cut Meutia dengan penurunan kesadaran mendadak di warung kopi. Tidak ada denyut nadi, tidak ada nafas. Setelah dipasang EKG hasilnya sebagai berikut. Apakah diagnosis yang tepat pada pasien tersebut?
 a. Supraventrikel takikardi
 b. Atrial fibrilasi
 c. Ventrikel takikardi
 d. Atrial flutter
 **e. Ventrikel fibrilasi**
 
-75. [Gambar] Seorang laki-laki usia 60 tahun datang ke IGD dengan keluhan nyeri dada sebelah kiri sejak 1 jam yang lalu. Nyeri menjalar ke punggung serta lengan kiri bagian bawah seperti di tusuk-tusuk. Nyeri berlangsung >20 menit. Pemeriksaan vital sign dalam batas normal. Kemudian pasien dilakukan EKG dengan hasil sebagai berikut. Apakah diagnosis yang tepat pada pasien tersebut?
+75. Seorang laki-laki usia 60 tahun datang ke IGD dengan keluhan nyeri dada sebelah kiri sejak 1 jam yang lalu. Nyeri menjalar ke punggung serta lengan kiri bagian bawah seperti di tusuk-tusuk. Nyeri berlangsung >20 menit. Pemeriksaan vital sign dalam batas normal. Kemudian pasien dilakukan EKG dengan hasil sebagai berikut. Apakah diagnosis yang tepat pada pasien tersebut?
 a. NSTEMI
 **b. STEMI**
 c. Angina pectoris stabil
